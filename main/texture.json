@@ -7,7 +7,7 @@
             "Textured"
         ],
         "textureImage": "https://raw.githubusercontent.com/imnotkoolkid/custom-kirka/refs/heads/main/textures/texture.png",
-        "id": "texture",
+        "id": "texture1",
         "discord": "",
         "label": "featured"
     },
@@ -19,7 +19,7 @@
             "Textured"
         ],
         "textureImage": "https://raw.githubusercontent.com/imnotkoolkid/custom-kirka/refs/heads/main/textures/Matrix.png",
-        "id": "Matrix",
+        "id": "texture2",
         "discord": "https://discorddrop.netlify.app/?wait=1&id=1263461034627301387",
         "label": "featured"
     },
@@ -31,7 +31,7 @@
             "Textured"
         ],
         "textureImage": "https://raw.githubusercontent.com/imnotkoolkid/custom-kirka/refs/heads/main/textures/image%20(13).png",
-        "id": "image_13",
+        "id": "texture3",
         "discord": ""
     },
     {
@@ -42,7 +42,7 @@
             "Textured"
         ],
         "textureImage": "https://raw.githubusercontent.com/imnotkoolkid/custom-kirka/refs/heads/main/textures/image%20(7).png",
-        "id": "image_7",
+        "id": "texture4",
         "discord": "",
         "label": "featured"
     },
@@ -54,7 +54,7 @@
             "LessTextured"
         ],
         "textureImage": "http://raw.githubusercontent.com/imnotkoolkid/custom-kirka/refs/heads/main/textures/image%20(1).png",
-        "id": "image_1",
+        "id": "texture5",
         "discord": ""
     },
     {
@@ -65,7 +65,7 @@
             "Smooth"
         ],
         "textureImage": "https://raw.githubusercontent.com/imnotkoolkid/custom-kirka/refs/heads/main/textures/image.png",
-        "id": "image_14",
+        "id": "texture6",
         "discord": "https://discorddrop.netlify.app/?wait=1&id=1269597878532309054"
     },
     {
@@ -76,7 +76,7 @@
             "Textured"
         ],
         "textureImage": "https://raw.githubusercontent.com/imnotkoolkid/custom-kirka/refs/heads/main/textures/image%20(11).png",
-        "id": "image_11",
+        "id": "texture7",
         "discord": "",
         "label": "featured"
     },
@@ -88,7 +88,7 @@
             "Smooth"
         ],
         "textureImage": "https://raw.githubusercontent.com/imnotkoolkid/custom-kirka/refs/heads/main/textures/img(19).webp",
-        "id": "image_19",
+        "id": "texture8",
         "discord": "https://discorddrop.netlify.app/?wait=1&id=1269597878532309054"
     },
     {
@@ -99,7 +99,7 @@
             "Textured"
         ],
         "textureImage": "https://raw.githubusercontent.com/imnotkoolkid/custom-kirka/refs/heads/main/textures/Iced_Emerald.png",
-        "id": "Iced_Emerald",
+        "id": "texture19",
         "discord": ""
     },
     {
@@ -110,7 +110,7 @@
             "Textured"
         ],
         "textureImage": "https://raw.githubusercontent.com/imnotkoolkid/custom-kirka/refs/heads/main/textures/image%20(14).png",
-        "id": "image_14",
+        "id": "texture10",
         "discord": ""
     },
     {
@@ -120,7 +120,7 @@
             "Textured"
         ],
         "textureImage": "https://raw.githubusercontent.com/imnotkoolkid/custom-kirka/refs/heads/main/textures/image%20(10).png",
-        "id": "image_10",
+        "id": "texture11",
         "discord": ""
     },
     {
@@ -131,7 +131,7 @@
             "Simplified"
         ],
         "textureImage": "https://raw.githubusercontent.com/imnotkoolkid/custom-kirka/refs/heads/main/textures/image%20(15).png",
-        "id": "image_15",
+        "id": "texture12",
         "discord": ""
     },
     {
@@ -142,7 +142,7 @@
             "Textured"
         ],
         "textureImage": "https://raw.githubusercontent.com/imnotkoolkid/custom-kirka/refs/heads/main/textures/image%20(16).png",
-        "id": "image_16",
+        "id": "texture13",
         "discord": ""
     },
     {
@@ -152,7 +152,7 @@
             "Simplified"
         ],
         "textureImage": "https://raw.githubusercontent.com/imnotkoolkid/custom-kirka/refs/heads/main/textures/image%20(8).png",
-        "id": "image_8",
+        "id": "texture14",
         "discord": ""
     },
     {
@@ -163,7 +163,7 @@
             "Smooth"
         ],
         "textureImage": "https://raw.githubusercontent.com/imnotkoolkid/custom-kirka/refs/heads/main/textures/texture3.png",
-        "id": "texture3",
+        "id": "texture15",
         "discord": ""
     },
     {
@@ -174,7 +174,7 @@
             "Textured"
         ],
         "textureImage": "https://raw.githubusercontent.com/imnotkoolkid/custom-kirka/refs/heads/main/textures/imagine1_updated.png",
-        "id": "imagine1_updated",
+        "id": "texture16",
         "discord": ""
     },
     {
@@ -185,7 +185,7 @@
             "Textured"
         ],
         "textureImage": "https://raw.githubusercontent.com/imnotkoolkid/custom-kirka/refs/heads/main/textures/image%20(17).png",
-        "id": "image_17",
+        "id": "texture17",
         "discord": ""
     },
     {
@@ -196,7 +196,7 @@
             "Textured"
         ],
         "textureImage": "https://raw.githubusercontent.com/imnotkoolkid/custom-kirka/refs/heads/main/textures/image%20(3).png",
-        "id": "image_3",
+        "id": "texture18",
         "discord": ""
     },
     {
@@ -207,7 +207,7 @@
             "Textured"
         ],
         "textureImage": "https://raw.githubusercontent.com/imnotkoolkid/custom-kirka/refs/heads/main/textures/image.png",
-        "id": "image",
+        "id": "texture19",
         "discord": ""
     },
     {
@@ -218,7 +218,7 @@
             "Simplified"
         ],
         "textureImage": "https://raw.githubusercontent.com/imnotkoolkid/custom-kirka/refs/heads/main/textures/image%20(12).png",
-        "id": "image_12",
+        "id": "texture20",
         "discord": ""
     },
     {
@@ -229,7 +229,7 @@
             "Textured"
         ],
         "textureImage": "https://raw.githubusercontent.com/imnotkoolkid/custom-kirka/refs/heads/main/textures/image%20(6).png",
-        "id": "image_6",
+        "id": "texture21",
         "discord": ""
     },
     {
@@ -240,7 +240,7 @@
             "Textured"
         ],
         "textureImage": "https://raw.githubusercontent.com/imnotkoolkid/custom-kirka/refs/heads/main/textures/image%20(2).png",
-        "id": "image_2",
+        "id": "texture22",
         "discord": ""
     },
     {
@@ -251,7 +251,7 @@
             "Textured"
         ],
         "textureImage": "https://raw.githubusercontent.com/imnotkoolkid/custom-kirka/refs/heads/main/textures/image%20(4).png",
-        "id": "image_4",
+        "id": "texture23",
         "discord": ""
     },
     {
@@ -262,7 +262,7 @@
             "Smooth"
         ],
         "textureImage": "https://raw.githubusercontent.com/imnotkoolkid/custom-kirka/refs/heads/main/textures/image%20(5).png",
-        "id": "image_5",
+        "id": "texture24",
         "discord": ""
     },
     {
@@ -273,7 +273,7 @@
             "Textured"
         ],
         "textureImage": "https://raw.githubusercontent.com/imnotkoolkid/custom-kirka/refs/heads/main/textures/texture5.png",
-        "id": "texture5",
+        "id": "texture25",
         "discord": ""
     },
     {
@@ -284,7 +284,7 @@
             "Textured"
         ],
         "textureImage": "https://raw.githubusercontent.com/imnotkoolkid/custom-kirka/refs/heads/main/textures/image%20(9).png",
-        "id": "image_9",
+        "id": "texture26",
         "discord": ""
     }
 ]
