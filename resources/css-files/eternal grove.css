@@ -1,0 +1,628 @@
+/* Home */
+:root {
+    --asscentColor: #fb7f73;
+}
+
+/* Removes Element */
+.interface .logo,
+.text-icon {
+    display: none !important;
+}
+
+/* Removes Background */
+.box,
+.input,
+.quests,
+.quest,
+.tip,
+.amount,
+.reward,
+.progress-line,
+.card-cont,
+.progress[data-v-49c6809c],
+.icon-btn,
+.left-icons,
+.background,
+.title,
+.card-list,
+.head,
+.changelog-item,
+.card,
+.live-streams {
+    background: transparent !important;
+    border: none !important;
+}
+
+/* Custom Backgorund */
+#app > div.interface.text-2 > div.background {
+    background-image: url("https://www.pixground.com/wp-content/uploads/2023/04/Red-Japanese-Painting-AI-Generated-4K-Wallpaper-jpg.webp") !important;
+    background-size: cover !important;
+}
+#app > div.interface.text-2 > div.background > div.pattern-bg,
+#app > div.interface.text-2 > div.background > div.bg-radial {
+    display: none !important
+}
+
+/* Text Color */
+.level-value,
+.levels,
+.clan-tag,
+.top-name,
+.list-labels,
+.active,
+.level,
+.header,
+.lvl-leader,
+.label-primary,
+.awards-span,
+.champions-league,
+.champions-scores,
+.all-scores-label,
+.stat-name,
+.progress-level-value,
+.amount{
+    color: var(--asscentColor) !important;
+}
+.tab:hover,
+.nav:hover {
+    color: var(--asscentColor) !important;
+}
+
+
+/* Inv & Friends */
+#right-icons [data-v-ae524044] {
+    height: 3.2rem;
+}
+#right-icons > div.icon-btn.text-1 {
+    width: 139px;
+    font-size: 18px;
+    height: 65px;
+}
+#right-icons [data-v-1cbd79ff] {
+    width: 139px;
+    font-size: 18px;
+    height: 65px;
+}
+#right-icons [data-v-b8de1e14] {
+    display: none;
+}
+.right-icons .gun-img {
+    display: none;
+}
+.right-icons .icon-btn {
+    background: transparent !important;
+    border-bottom: transparent !important;
+    border: none !important;
+}
+
+/* Server & Play */
+.select-mod,
+.select-region {
+    background: transparent !important;
+    border-right: none !important;
+    border-left: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+}
+.select-regions-cont[data-v-6ef47e92] {
+    background: transparent !important;
+    border-right: none !important;
+    border-left: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+}
+.join-using-link {
+    background: transparent !important;
+    border-right: none !important;
+    border-left: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+}
+
+#play-btn {
+    background: rgba(68, 68, 68, 0) !important;
+    box-shadow: 4px 4px 10px #0000 !important;
+}
+
+#play-btn .border-top,
+#play-btn .border-bottom {
+    background: none;
+}
+
+.triangle[data-v-02c36fca] {
+    display: none !important;
+}
+/* Transparent Play Button */
+#play-btn {
+    background: linear-gradient(to right, rgba(239,207,207,0.75), rgba(251,127,116,0.6)) !important;
+    box-shadow: 4px 4px 10px #faaba3 !important;
+}
+
+#play-btn .border-top,
+#play-btn .border-bottom {
+    background: none;
+}
+
+/*	Ad Removal */
+#ad-bottom,
+#ad-left,
+#google_ads_iframe_\/421469808\,19506225\/kirka\.io_336x280_0__container__ {
+    visibility: hidden;
+}
+.className {
+    display: none !important;
+}
+/* Mode Selection */
+.select-mods-cont,
+.select-mods-cont > hr {
+    background: transparent!important;
+    border: none !important;
+}
+.custom-checkbox > input:checked + span[data-v-47e1b746]:before {
+    background-color: var(--asscentColor);
+    border-color: var(--asscentColor);
+}
+
+/* Check Box */
+.private-btn > span[data-v-47e1b746] {
+    content: url(https://i.imgur.com/Iz5OQRV.png);
+    position: fixed;
+    left: 10rem;
+    width: 40px;
+    bottom: 13.2rem
+}
+
+.private-btn > input:checked + span[data-v-47e1b746] {
+    content: url(https://i.imgur.com/8d9Ag9x.png);
+}
+
+.custom-checkbox > span[data-v-47e1b746]:before {
+    border-radius: 50px;
+    background-color: white;
+    border: none;
+}
+
+.custom-checkbox > input:checked + span[data-v-47e1b746]:before {
+    background-color: #373737;
+}
+/* Kill Sign */
+#app > div.game-interface > div.ach-cont > div.achive-cont > svg > path,
+#app > div.game-interface > div.desktop-game-interface > div.kill-bar-cont > div > svg {
+    fill: var(--asscentColor) !important
+}
+
+/* chat */
+.desktop-game-interface #WMNn {
+    transform: scale(0);
+    transition-duration: 0.25s !important;
+}
+
+.desktop-game-interface #WMNn:focus {
+    transform: scale(1);
+}
+.clans,
+.hub-container,
+.mobile-fullscreen,
+.add-friends,
+.tab-bar,
+.top-items,
+.subject,
+.inventory .avatar,
+.inventory .bottom {
+    background: transparent !important;
+}
+
+.head-text,
+.reset-time,
+.info-awards,
+.news,
+.list-cont,
+.card-profile,
+.profile .k-d,
+.profile .statistics,
+.profile-cont .progress[data-v-d2be3bc6]{
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.tabs {
+    background: transparent !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    border-right: none !important;
+}
+
+.active-tab,
+.tab {
+    background: transparent !important;
+    border-right: none !important;
+    border-left: none !important;
+}
+
+.limit {
+    border-left: none !important;
+}
+
+.top-bar,
+.home,
+.name-page {
+    display: none !important;
+}
+
+.container {
+    background: transparent !important;
+    backdrop-filter: blur(20px);
+    box-shadow: none !important;
+}
+
+.champions-list {
+    box-shadow: none !important;
+}
+
+.subjects,
+.gun {
+    background: transparent !important;
+    border: none !important;
+}
+.top[data-v-319b95e8] {
+    background: transparent !important;
+    border-right: none !important;
+    border-left: none !important;
+}
+.item[data-v-319b95e8] {
+    background: transparent !important;
+    border-right: none !important;
+    border-left: none !important;
+}
+.champions-list[data-v-3ade8f70] {
+    background: transparent !important;
+    border-right: none !important;
+    border-left: none !important;
+}
+.items .item[data-v-3ade8f70] {
+    background: transparent !important;
+    border-right: none !important;
+    border-left: none !important;
+}
+.card-head[data-v-5b2dc87c] {
+    background: transparent !important;
+    border-right: none !important;
+    border-left: none !important;
+}
+.list-container[data-v-3bcb580a] {
+    background: transparent !important;
+    border-right: none !important;
+    border-left: none !important;
+}
+.card-cont[data-v-040b7087] {
+    background: transparent !important;
+    border-right: none !important;
+    border-left: none !important;
+}
+.description[data-v-040b7087] {
+    background: transparent !important;
+    border-right: none !important;
+    border-left: none !important;
+}
+.all-scores[data-v-040b7087] {
+    background: transparent !important;
+    border-right: none !important;
+    border-left: none !important;
+}
+.champions-stat[data-v-040b7087] {
+    background: transparent !important;
+    border-right: none !important;
+    border-left: none !important;
+}
+.item-content[data-v-3bcb580a] {
+    background: transparent !important;
+    border-right: none !important;
+    border-left: none !important;
+}
+.server[data-v-679cb6a8] {
+    background: transparent !important;
+    border-bottom: transparent !important;
+    border: none !important;
+}  
+.player[data-v-68ad001e] {
+    background: transparent !important;
+    border-bottom: transparent !important;
+    border: none !important;
+}
+.right-container[data-v-68ad001e] {
+    background: transparent !important;
+    border-bottom: transparent !important;
+    border: none !important;
+}
+.messages[data-v-76a3fe0a] {
+    background: transparent !important;
+    border-bottom: transparent !important;
+    border: none !important;
+}
+.input[data-v-29d4a917] {
+    background: transparent !important;
+    border-bottom: transparent !important;
+    border: none !important;
+}
+.timer[data-v-1d4749de] {
+    background: transparent !important;
+    border-bottom: transparent !important;
+    border: none !important;
+}
+.bg[data-v-1d4749de] {
+    background: transparent !important;
+    border-bottom: transparent !important;
+    border: none !important;
+}
+.kill-bar-cont[data-v-e06e1414] {
+    background: transparent !important;
+    border-bottom: transparent !important;
+    border: none !important;
+}
+.head[data-v-a204db68] {
+    background: transparent !important;
+    border-bottom: transparent !important;
+    border: none !important;
+}
+.list[data-v-a204db68] {
+    background: transparent !important;
+    border-bottom: transparent !important;
+    border: none !important;
+}
+div.info-key-cont.enter,
+.hp-title,
+.mWwn,
+.instruction {
+    display: none !important;
+}
+.mini-map-cont .name{
+    position: fixed;
+    top: 20px !important;
+    left: 30px
+}
+.hp {
+    margin-right: 20%;
+}
+
+.hp-progress {
+    background-color: var(--asscentColor) !important;
+}
+.cont-endurance {
+    margin-left: 1.9%;
+}
+.endurance-progress {
+    background-color:  !important;
+    flex-direction: column !important;
+}
+.hit {
+    content: url(https://iili.io/6vn07V.gif);
+    margin-left: 4px;
+    margin-top: 3px;
+}
+.player[data-v-3a61646a] {
+    background: transparent !important;
+    border-bottom: transparent !important;
+    border: none !important;
+}
+.progress,
+.progress-helper{
+    background: var(--asscentColor) !important;
+    display: block !important;
+    box-shadow: 0px 0px 20px 6px var(--asscentColor);
+}
+.progress[data-v-5aafd15a]{
+    box-shadow: 0px 0px 20px 6px var(--asscentColor);
+    background: var(--asscentColor) !important;
+}
+
+img.top-logo {
+    content: url(https://iili.io/sYlhzB.png) !important
+}
+
+img.bottom-logo {
+    content: url(https://iili.io/sYlhzB.png) !important
+}
+/* Miscellaneous */
+
+.left[data-v-42d60e0a]{
+    background:transparent !important;
+}
+.avatar[data-v-7dd84507]{
+    border: 4px solid #fb7f73 !important;
+    border-radius: 20px !important;
+}
+.levels{
+    background: black !important
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(251,127,116,0.75), rgba(0,0,0,0)); !important
+}
+::-webkit-scrollbar:horizontal {
+    background-color: transparent !important;
+}
+::-webkit-scrollbar-thumb:horizontal{
+        background: rgba(255,0,0,0) !important;
+        border-radius: 10px;
+}
+div.container-card{
+    background: rgba(0,0,0,0) !important;
+    border: none !important;
+    background-color: rgba(251,127,116,0.7) !important;
+}
+div.friend{
+    background: transparent !important;
+}
+.add[data-v-197190ba], .delete[data-v-197190ba] {
+    background-color: transparent !important;
+    border-left: solid 2px transparent !important;
+}
+div.level-cont{
+    background-color: transparent !important;
+    border-right: transparent !important;
+}
+.server{
+    background-color: transparent !important;
+}
+div.messages{
+    background: transparent !important;
+}
+.levels{
+    background:transparent !important;
+}
+div.card-cont.soc-group:hover {
+    border-radius: 15px !important;
+    background: #fb7f73 !important;
+}
+div.card-cont.soc-group {
+    border-radius: 15px !important;
+    background: transparent !important;
+    padding-top: 20px
+}
+div.settings{
+    border-radius: 15px !important;
+    padding-top: 12px !important;
+}
+.interface .settings:hover{
+    border-radius: 15px !important;
+    background: #fb7f73 !important;
+}
+div.select-mods-cont {
+    backdrop-filter: blur(10px)!important;
+    bottom: 270px !important
+}
+div#dailyQuests {
+    backdrop-filter: blur(10px) !important;
+}
+.interface .select-regions-cont {
+    background: transparent;
+    border: transparent;
+    bottom: 270px;
+    backdrop-filter: blur(8px)
+}
+.bg-gradient{
+    display: none !important;
+}
+img.award-img{
+    display: none !important
+}
+.gun-img[data-v-0684cd73]{
+    display: none !important;
+}
+img.cup{
+    display: none !important;
+}
+div#dailyQuests.quests {
+    opacity: 0;
+    transition-duration: 0.5s;
+}
+div#dailyQuests.quests:hover {
+    opacity: 1;
+}
+div.right-container{
+    background: transparent !important;
+}
+.right-container[data-v-36af671e] {
+    background: transparent !important;
+}
+div.player{
+    background: transparent !important;
+}
+div.level{
+    background: transparent !important;
+}
+.center[data-v-3894613f],
+.top[data-v-3894613f],
+.bottom[data-v-3894613f]{
+    background: transparent;
+}
+.end-modal {
+    background: url(https://www.pixground.com/wp-content/uploads/2023/04/Red-Japanese-Painting-AI-Generated-4K-Wallpaper-jpg.webp) !important;
+    background-size: 100% !important;
+}
+.end-modal .bottom{
+  display: none;
+}
+.button[data-v-02c36fca]{
+    border-radius: 6rem !important;
+    border: 0.02em solid transparent !important        
+}
+div.timer{
+    border-radius:6rem !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    height: 50px !important;
+    position: relative !important;
+    left: 686px !important;
+    font-size: 60px !important;
+    color: var(--asscentColor) !important
+}
+div.kill-death{
+    display: none !important;
+}
+div.team-score{
+    position: fixed !important;
+    top: 56rem !important;
+}
+.red {
+    background: transparent !important;
+    border: 3px solid #ff4d42;
+    box-shadow: none !important;
+}
+
+.blue{
+    background-color: transparent !important;
+    border: 3px solid #3d73cc;
+    box-shadow: none !important;
+}
+div.tab-parkour-info{
+    background: transparent !important;
+    backdrop-filter: blur(10px) !important;
+    box-shadow: none !important;
+}
+div.tab-info{
+    background: transparent !important;
+    backdrop-filter: blur(10px) !important;
+    box-shadow: none !important;
+    padding-top: 2rem !important
+}
+div.border-top,
+div.border-bottom{
+    background: transparent !important;
+}
+button.button.right-btn.invite2.rectangle,
+button.button.right-btn.rectangle,
+button#continue.button{
+    background-color: #fb7f73 !important;
+}
+button.button.right-btn.exit-btn.rectangle{
+    background: #e73131 !important
+}
+div.card-cont.user-info{
+    position: relative !important;
+    padding-bottom: 340px !important;
+    left: 36rem !important;
+    top: 22rem !important;
+    opacity: 0 !important;
+}
+div.card.progress{
+    box-shadow: none !important;
+}
+div.rewards{
+    background: transparent !important;
+}
+div.time-left{
+    background: transparent !important;
+}
+div.moneys{
+    flex-direction: row !important;
+    position: fixed !important;
+    top: 1.15rem !important;
+    left: 0.5rem !important;
+    height:  !important;
+}
+div.background-leaders{
+    background: transparent !important
+}
+.interface .nickname:after {
+    content: url(https://i.imgur.com/04xjPnU.png) !important;
+}
