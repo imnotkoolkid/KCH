@@ -1,0 +1,53 @@
+{
+  "killIcons": [
+    {
+      "id": "kill_icon1",
+      "name": "Kill Icon 1",
+      "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/kill%20icons/kill_icon1.webp",
+      "owner": "Unknown",
+      "discord": ""
+    },
+    {
+      "id": "kill_icon2",
+      "name": "Kill Icon 2",
+      "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/kill%20icons/kill_icon2.webp",
+      "owner": "Unknown",
+      "discord": ""
+    },
+    {
+      "id": "kill_icon3",
+      "name": "Kill Icon 3",
+      "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/kill%20icons/kill_icon3.webp",
+      "owner": "Unknown",
+      "discord": ""
+    },
+    {
+      "id": "kill_icon4",
+      "name": "Kill Icon 4",
+      "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/kill%20icons/kill_icon4.webp",
+      "owner": "Unknown",
+      "discord": ""
+    },
+    {
+      "id": "kill_icon5",
+      "name": "Kill Icon 5",
+      "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/kill%20icons/kill_icon5.webp",
+      "owner": "Unknown",
+      "discord": ""
+    },
+    {
+      "id": "kill_icon6",
+      "name": "Kill Icon 6",
+      "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/kill%20icons/kill_icon6.webp",
+      "owner": "Unknown",
+      "discord": ""
+    },
+    {
+      "id": "kill_icon7",
+      "name": "Kill Icon 7",
+      "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/kill%20icons/kill_icon7.webp",
+      "owner": "Unknown",
+      "discord": ""
+    }
+  ]
+}

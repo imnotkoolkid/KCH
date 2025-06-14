@@ -1,0 +1,108 @@
+{
+    "scripts": [
+        {
+            "name": "Custom Skin Link",
+            "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/coustomskinlink.js",
+            "owner": "Owner",
+            "discord": "",
+            "description": "Allows users to apply custom skin links in the game.",
+            "previewImage": "https://user-images.githubusercontent.com/125906244/222392475-9117630a-8ca6-4781-b220-a4905fd40ece.png"
+        },
+        {
+            "name": "WASD Shown",
+            "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/WasdShown.js",
+            "owner": "Owner",
+            "discord": "https://discord.com/users/1234567890",
+            "description": "Displays WASD key indicators on the screen.",
+            "previewImage": "https://user-images.githubusercontent.com/125906244/222392682-731b2782-8e77-4989-b767-5973cb4565c9.png"
+        },
+        {
+            "name": "Clock",
+            "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/clock.js",
+            "owner": "Owner",
+            "discord": "https://discord.com/users/1234567890",
+            "description": "Adds an in-game clock display.",
+            "previewImage": ""
+        },
+        {
+            "name": "Rp4yUId",
+            "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/Rp4yUId.js",
+            "owner": "Owner",
+            "discord": "https://discord.com/users/1234567890",
+            "description": "Unique identifier script for players.",
+            "previewImage": "files/previews/rp4yuid.webp"
+        },
+        {
+            "name": "Quest Info",
+            "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/Questinfo.js",
+            "owner": "Owner",
+            "discord": "https://discord.com/users/1234567890",
+            "description": "Shows detailed quest information.",
+            "previewImage": "files/previews/quest-info.webp"
+        },
+        {
+            "name": "Player Count",
+            "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/Playercount.js",
+            "owner": "Owner",
+            "discord": "https://discord.com/users/1234567890",
+            "description": "Displays the current player count.",
+            "previewImage": "files/previews/player-count.webp"
+        },
+        {
+            "name": "Open All Chests",
+            "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/Open%20All%20Chests.js",
+            "owner": "Owner",
+            "discord": "https://discord.com/users/1234567890",
+            "description": "Automatically opens all chests in the game.",
+            "previewImage": "files/previews/open-chests.webp"
+        },
+        {
+            "name": "Open All Cards",
+            "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/Open%20All%20Cards.js",
+            "owner": "Owner",
+            "discord": "https://discord.com/users/1234567890",
+            "description": "Opens all cards in one click.",
+            "previewImage": "files/previews/open-cards.webp"
+        },
+        {
+            "name": "More Tab Stats",
+            "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/MoreTabstats.js",
+            "owner": "Owner",
+            "discord": "https://discord.com/users/1234567890",
+            "description": "Enhances tab with additional statistics.",
+            "previewImage": "files/previews/tab-stats.webp"
+        },
+        {
+            "name": "Fabinglbs",
+            "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/Fabinglbs.js",
+            "owner": "Owner",
+            "discord": "https://discord.com/users/1234567890",
+            "description": "Custom script for specific game enhancements.",
+            "previewImage": "files/previews/fabinglbs.webp"
+        },
+        {
+            "name": "Clan Checker",
+            "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/Clan_checker.js",
+            "owner": "Owner",
+            "discord": "https://discord.com/users/1234567890",
+            "description": "Checks clan membership status.",
+            "previewImage": "files/previews/clan-checker.webp"
+        },
+        {
+            "name": "Always Show Tab",
+            "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/AlwaysShowTab.js",
+            "owner": "Owner",
+            "discord": "https://discord.com/users/1234567890",
+            "description": "Keeps the tab always visible.",
+            "previewImage": "files/previews/show-tab.webp"
+        },
+        {
+            "name": "7 Day Activity",
+            "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/7dayactivity.js",
+            "owner": "Owner",
+            "discord": "https://discord.com/users/1234567890",
+            "description": "Tracks player activity over 7 days.",
+            "previewImage": "files/previews/7day-activity.webp"
+        }
+    ]
+}
