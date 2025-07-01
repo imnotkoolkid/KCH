@@ -12,6 +12,18 @@
       "downloadUrl": ""
     },
     {
+      "title": "cyberpunk",
+      "description": "Very extensive cyberpunk style css with unique elements",
+      "homeImage": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/css-imgs/cyberpunk.webp",
+      "ingameImage": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/css-imgs/cyberpunk_ingame.webp",
+      "tags": ["Cyberpunk", "Gamer", "Pro"],
+      "availability": "free",
+      "owner": "punitxsingh",
+      "discord": "https://discorddrop.netlify.app/?wait=1&id=884448772694876191",
+      "label": "featured",
+      "downloadUrl": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/css-files/cyberpunk.css"
+    },
+    {
       "title": "DEXTER",
       "description": "UI theme inspired by the concert stage. With purple lighting",
       "homeImage": "https://raw.githubusercontent.com/imnotkoolkid/custom-kirka/refs/heads/main/images/dexter.webp",
@@ -72,18 +84,6 @@
       "downloadUrl": ""
     },
     {
-      "title": "CyberCity",
-      "description": "Dark monochromatic & very minimal theme",
-      "homeImage": "https://raw.githubusercontent.com/imnotkoolkid/custom-kirka/refs/heads/main/images/cybercity.webp",
-      "ingameImage": "https://raw.githubusercontent.com/imnotkoolkid/custom-kirka/refs/heads/main/images/cybercity_ingame.webp",
-      "tags": ["Neon", "Gamer", "Cyberpunk"],
-      "availability": "free",
-      "owner": "punitxsingh",
-      "discord": "https://discorddrop.netlify.app/?wait=1&id=884448772694876191",
-      "label": "",
-      "downloadUrl": "https://raw.githubusercontent.com/imnotkoolkid/custom-kirka/refs/heads/main/css/cybercity.css"
-    },
-    {
       "title": "Reincarnated nameless",
       "description": "Revived nameless client css for 5mil",
       "homeImage": "https://raw.githubusercontent.com/imnotkoolkid/custom-kirka/refs/heads/main/images/Reincarnated%20nameless.webp",
@@ -106,6 +106,18 @@
       "discord": "https://discorddrop.netlify.app/?wait=1&id=1269597878532309054",
       "label": "featured",
       "downloadUrl": ""
+    },
+        {
+      "title": "CyberCity",
+      "description": "Dark monochromatic & very minimal theme",
+      "homeImage": "https://raw.githubusercontent.com/imnotkoolkid/custom-kirka/refs/heads/main/images/cybercity.webp",
+      "ingameImage": "https://raw.githubusercontent.com/imnotkoolkid/custom-kirka/refs/heads/main/images/cybercity_ingame.webp",
+      "tags": ["Neon", "Gamer", "Cyberpunk"],
+      "availability": "free",
+      "owner": "punitxsingh",
+      "discord": "https://discorddrop.netlify.app/?wait=1&id=884448772694876191",
+      "label": "",
+      "downloadUrl": "https://raw.githubusercontent.com/imnotkoolkid/custom-kirka/refs/heads/main/css/cybercity.css"
     },
     {
       "title": "Black Water",
