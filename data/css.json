@@ -107,7 +107,7 @@
       "label": "featured",
       "downloadUrl": ""
     },
-        {
+       {
       "title": "CyberCity",
       "description": "Dark monochromatic & very minimal theme",
       "homeImage": "https://raw.githubusercontent.com/imnotkoolkid/custom-kirka/refs/heads/main/images/cybercity.webp",
@@ -152,7 +152,7 @@
       "availability": "free",
       "owner": "Scymic",
       "discord": "https://discorddrop.netlify.app/?wait=1&id=666443021369475073",
-      "label": "",
+      "label": "featured",
       "downloadUrl": "https://raw.githubusercontent.com/imnotkoolkid/custom-kirka/refs/heads/main/css/Discord%20Dark.css"
     },
     {
@@ -312,18 +312,6 @@
       "downloadUrl": "https://raw.githubusercontent.com/imnotkoolkid/custom-kirka/refs/heads/main/css/cat%20gamer.css"
     },
     {
-      "title": "SolarFlare",
-      "description": "Deep oranges and black grid visuals make up a slick, futuristic world in solar light",
-      "homeImage": "https://raw.githubusercontent.com/imnotkoolkid/custom-kirka/refs/heads/main/images/SolarFlare.webp",
-      "ingameImage": "https://raw.githubusercontent.com/imnotkoolkid/custom-kirka/refs/heads/main/images/SolarFlare_ingame.webp",
-      "tags": ["Orange", "Bright", "RetroFuture"],
-      "availability": "free",
-      "owner": "SniperCAT",
-      "discord": "https://discorddrop.netlify.app/?wait=1&id=833924945302126594",
-      "label": "",
-      "downloadUrl": "https://raw.githubusercontent.com/imnotkoolkid/custom-kirka/refs/heads/main/css/SolarFlare.css"
-    },
-    {
       "title": "B L A N K ",
       "description": "Clean plain white css",
       "homeImage": "https://raw.githubusercontent.com/imnotkoolkid/custom-kirka/refs/heads/main/images/B%20L%20A%20N%20K.webp",
@@ -334,6 +322,30 @@
       "discord": "https://discorddrop.netlify.app/?wait=1&id=1306198758421168178",
       "label": "",
       "downloadUrl": "https://raw.githubusercontent.com/imnotkoolkid/custom-kirka/refs/heads/main/css/B%20L%20A%20N%20K.css"
+    },
+    {
+      "title": "Kaoruko Waguri",
+      "description": "Kaoruko Waguri / pastel",
+      "homeImage": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/css-imgs/Kaoruko%20Waguri.webp",
+      "ingameImage": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/css-imgs/Kaoruko%20Waguri_ingame.webp",
+      "tags": ["Anime", "Minimal", "Pastel"],
+      "availability": "free",
+      "owner": "Grinox",
+      "discord": "https://discorddrop.netlify.app/?wait=1&id=1269597878532309054",
+      "label": "",
+      "downloadUrl": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/css-files/Kaoruko%20Waguri.css"
+    },
+    {
+      "title": "GOKU",
+      "description": "Modified Kaoruko Waguri by SniperCAT",
+      "homeImage": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/css-imgs/goku.webp",
+      "ingameImage": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/css-imgs/goku_ingame.webp",
+      "tags": ["Anime", "Dark", "Teal"],
+      "availability": "free",
+      "owner": "Grinox",
+      "discord": "https://discorddrop.netlify.app/?wait=1&id=1269597878532309054",
+      "label": "",
+      "downloadUrl": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/css-files/Goku.css"
     },
     {
       "title": "DemonAkuma",
