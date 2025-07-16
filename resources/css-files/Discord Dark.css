@@ -76,7 +76,7 @@ div.interface.text-2 > img#logo.logo {
 .className {
     display: none !important;
 }
-.left-icons[data-v-6b2cd64b] {
+.left-icons {
     background: #121214 !important;
     box-shadow: 0 0 10px #121214, 0 0 10px #121214 !important;
 }
@@ -156,7 +156,9 @@ div.interface.text-2 > img#logo.logo {
 /* .list-weapons */ {
     display: none !important;
 }
-
+.background-leaders {
+    background: radial-gradient(39.55% 50% at 50% 50%,#424242 0,rgba(0, 0, 0, 0) 100%) !important;
+}
 /*Quests*/
 .quests {
     background-color: #121214 !important;
