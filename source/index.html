@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kirka Community Hub – Custom CSS, Crosshairs, Textures & more for kirka.io</title>
+    <link rel="icon" type="image/png" href="assets/icon.png">
+    <link rel="stylesheet" href="src/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <meta name="description"
+        content="Discover and download custom CSS themes, crosshairs, textures, clients, scripts and more for kirka.io. The community hub for Kirka.io customizations.">
+    <meta name="keywords"
+        content="Kirka.io, Kirka CSS, Kirka crosshairs, Kirka textures, Kirka clients, Kirka scripts, Kirka Community Hub">
+
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://kirkacommunityhub.pages.dev/">
+    <meta property="og:title" content="Kirka Community Hub – Custom CSS, Crosshairs, Textures & more">
+    <meta property="og:description"
+        content="Discover and download custom CSS, crosshairs, textures, scripts, and clients for kirka.io">
+    <meta property="og:image" content="https://kirkacommunityhub.pages.dev/assets/icon.png">
+    <meta property="og:url" content="https://kirkacommunityhub.pages.dev/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kirka Community Hub">
+    <meta name="theme-color" content="#1bd96a">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kirka Community Hub">
+    <meta name="twitter:description"
+        content="Discover and download custom CSS, crosshairs, textures, scripts, and clients for kirka.io">
+    <meta name="twitter:image" content="https://kirkacommunityhub.pages.dev/assets/icon.png">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Kirka Community Hub",
+  "url": "https://kirkacommunityhub.pages.dev/",
+  "description": "Kirka Community Hub is a community platform for downloading custom CSS, crosshairs, textures, skyboxes, scripts, and clients for Kirka.io.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Kirka Community Hub"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://kirkacommunityhub.pages.dev/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How to add custom CSS in Kirka.io?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To add custom CSS in Kirka.io, copy the CSS code or URL from Kirka Community Hub then you can follow the step by step guide in the faq section."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are Kirka clients safe?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Community clients listed on our hub are open-source and reviewed. For safety, always download Kirka clients only from official GitHub links and avoid unknown third-party sources."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How to get custom crosshair in Kirka?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can download custom Kirka crosshairs from Kirka Community Hub. then apply them through your game settings or client customization options."
+      }
+    }
+  ]
+}
+</script>
+
+</head>
+
+<body>
+    <header id="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="assets/icon.png" alt="Kirka Logo">
+                <span>Kirka Community Hub</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="#customizations" class="nav-link">Customizations</a>
+                <a href="#apps" class="nav-link">Tools</a>
+                <a href="#clients" class="nav-link">Clients</a>
+                <a href="#social" class="nav-link">Social</a>
+                <a href="#faqs" class="nav-link">FAQs</a>
+            </nav>
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    <main>
+        <div class="hero-wrapper">
+            <div class="container hero">
+                <img src="assets/icon.png" alt="Logo" class="hero-logo-large">
+                <h1>The place for Kirka<br><span id="hero-rotating-text">customizations</span></h1>
+                <p>Discover and download custom CSS, crosshairs, textures and more.<br>Open source and community driven.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#customizations" class="btn btn-primary">Start Browsing</a>
+                    <a href="https://github.com/imnotkoolkid/KCH/tree/main/resources" target="_blank"
+                        class="btn btn-secondary">All Assets</a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <section class="feature-section" id="customizations">
+                <div class="feature-text">
+                    <h2>CSS</h2>
+                    <p>Preview css themes instantly and copy/download
+                        code with one click.</p>
+                    <a href="css.html" class="btn btn-secondary">Browse Themes <i data-lucide="chevron-right"></i></a>
+                </div>
+                <div class="feature-visual">
+                    <div class="feature-img-container" id="css-image-slider">
+                        <div class="loader"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="feature-section reverse">
+                <div class="feature-text">
+                    <h2>Crosshairs</h2>
+                    <p>Download custom crosshairs to improve precision. Get the competitive edge.</p>
+                    <a href="crosshairs.html" class="btn btn-secondary">Browse Crosshairs <i
+                            data-lucide="chevron-right"></i></a>
+                </div>
+                <div class="feature-visual" style="background:#000">
+                    <div class="feature-img-container">
+                        <div class="loader"></div>
+                        <img src="assets/crosshair-thumbnail.gif" alt="Crosshair" style="filter:invert(1)"
+                            onload="this.previousElementSibling.style.display='none'">
+                    </div>
+                </div>
+            </section>
+            <section class="feature-section">
+                <div class="feature-text">
+                    <h2>Textures</h2>
+                    <p>Custom map textures that improve visibility and enhance your gameplay experience.</p>
+                    <a href="textures.html" class="btn btn-secondary">Browse Textures <i
+                            data-lucide="chevron-right"></i></a>
+                </div>
+                <div class="feature-visual">
+                    <div class="feature-img-container">
+                        <div class="loader"></div>
+                        <img src="assets/texture-thumbnail.gif" style="filter:contrast(150%)" alt="Textures"
+                            onload="this.previousElementSibling.style.display='none'">
+                    </div>
+                </div>
+            </section>
+            <section class="feature-section reverse">
+                <div class="feature-text">
+                    <h2>Asset Library</h2>
+                    <p>Scripts, Skyboxes, Kill Icons, and Sounds. The full repository of assets for your customizations.
+                    </p>
+                    <a href="assets.html" class="btn btn-secondary">Browse Assets <i
+                            data-lucide="chevron-right"></i></a>
+                </div>
+                <div class="feature-visual">
+                    <div class="feature-img-container">
+                        <div class="loader"></div>
+                        <img src="assets/assets-thumbnail.gif" style="filter:contrast(150%)" alt="Assets"
+                            onload="this.previousElementSibling.style.display='none'">
+                    </div>
+                </div>
+            </section>
+            <section class="feature-section" id="apps">
+                <div class="feature-text">
+                    <h2>Tools & Resources</h2>
+                    <p>Other cummunity driven tools and resources for Kirka.io</p>
+                    <a href="#" class="btn btn-secondary">Browse Tools <i data-lucide="chevron-right"></i></a>
+                </div>
+                <div class="feature-visual visual-content" style="border: none; background-color: #00000000;">
+                    <div class="mock-window">
+                        <div class="mock-list-container">
+                            <a href="https://sillimons.fun/" class="mock-list-item" target="_blank">
+                                <div class="mock-icon">
+                                    <img src="https://www.google.com/s2/favicons?domain=sillimons.fun&sz=64" alt="Sillimons" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+                                    <i data-lucide="globe" style="color:var(--mod-green); display:none;"></i>
+                                </div>
+                                <div class="mock-info">
+                                    <h4>Sillimons</h4>
+                                    <p>Sillimons trading related website for kirka.io items, prices and more.</p>
+                                    <div class="mock-stats">
+                                        <span><i data-lucide="external-link"></i> Open Tool</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="https://www.smudgy.store/kirka" class="mock-list-item" target="_blank">
+                                <div class="mock-icon">
+                                    <img src="https://www.google.com/s2/favicons?domain=smudgy.store&sz=64" alt="Smudgy Store" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+                                    <i data-lucide="globe" style="color:var(--mod-green); display:none;"></i>
+                                </div>
+                                <div class="mock-info">
+                                    <h4>Smudgy Store</h4>
+                                    <p>Multipurpose Kirka website with various tools.</p>
+                                    <div class="mock-stats">
+                                        <span><i data-lucide="external-link"></i> Open Tool</span>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="https://css.daymian.xyz/css/" class="mock-list-item" target="_blank">
+                                <div class="mock-icon">
+                                    <img src="https://www.google.com/s2/favicons?domain=daymian.xyz&sz=64" alt="Daymian CSS" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+                                    <i data-lucide="globe" style="color:var(--mod-green); display:none;"></i>
+                                </div>
+                                <div class="mock-info">
+                                    <h4>Daymian CSS</h4>
+                                    <p>a free collection of Kirka CSS themes and styles for everyone to use.</p>
+                                    <div class="mock-stats">
+                                        <span><i data-lucide="external-link"></i> Open Tool</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="https://kirka.lukeskywalk.com/" class="mock-list-item" target="_blank">
+                                <div class="mock-icon">
+                                    <img src="https://www.google.com/s2/favicons?domain=lukeskywalk.com&sz=64" alt="Lukeskywalk" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+                                    <i data-lucide="globe" style="color:var(--mod-green); display:none;"></i>
+                                </div>
+                                <div class="mock-info">
+                                    <h4>Lukeskywalk Kirka tools</h4>
+                                    <p>KirkaTrades tools portal with global chat, price list, item list skin viewer and much more.</p>
+                                    <div class="mock-stats">
+                                        <span><i data-lucide="external-link"></i> Open Tool</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="feature-section reverse" id="clients">
+                <div class="feature-text">
+                    <h2>Kirka Clients</h2>
+                    <p>Discover various clients for Kirka, offering customizations, performance boosts, and more.</p>
+                    <a href="clients.html" class="btn btn-secondary">Browse Clients <i
+                            data-lucide="chevron-right"></i></a>
+                </div>
+                <div class="feature-visual">
+                    <div class="launcher-window">
+                        <div class="window-bar">
+                            <div class="dot red"></div>
+                            <div class="dot yellow"></div>
+                            <div class="dot green"></div>
+                        </div>
+                        <div class="window-content">
+                            <div class="client-logo">CLIENT</div>
+                            <div class="loading-bar">
+                                <div class="loading-progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="social">
+                <div class="grid-section-title">
+                    <h2>Social</h2>
+                </div>
+                <div class="launcher-banner"
+                    style="background:linear-gradient(90deg,rgba(88,101,242,0.05),transparent);margin:0 0 60px 0">
+                    <div class="launcher-content">
+                        <h3 style="color:#5865F2">Join the Community</h3>
+                        <p>Connect with top clans, find scrims, and chat with other developers in the Discord.</p>
+                        <a href="social.html" class="btn btn-secondary"
+                            style="border-color:#5865F2;color:#5865F2;background:none"
+                            onmouseover="this.style.background='#5865F2';this.style.color='black'"
+                            onmouseout="this.style.background='none';this.style.color='#5865F2'">Find Clans</a>
+                    </div>
+                    <div class="launcher-visual" style="background:transparent;border:none">
+                        <i class="fab fa-discord" style="font-size:8rem;color:#5865F2"></i>
+                    </div>
+                </div>
+            </section>
+            <section id="faqs" class="faq-section">
+                <div class="grid-section-title">
+                    <h2 class="fade-in">Frequently Asked Questions</h2>
+                </div>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            How do I add custom CSS to Kirka?
+                            <i data-lucide="chevron-down" class="faq-arrow"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p><b>There are two ways to add custom CSS to Kirka:</b></p><br>
+                            <p><strong>Option 1: Browser Extension</strong><br>
+                            <p style="margin-top: 7px;">
+                                Install the Stylus extension from <a class="faq-links"
+                                    href="https://chromewebstore.google.com/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne?hl=en"
+                                    target="_blank">Chrome Web Store</a> or <a class="faq-links"
+                                    href="https://addons.mozilla.org/en-US/firefox/addon/styl-us/"
+                                    target="_blank">Firefox Add-ons</a>. After installation, start the extension, click
+                                "Manage," and a new page will open. In the left menu under Style Manager, click the "+"
+                                icon. Paste your CSS code into the text field, enter a name for your style in the name
+                                field (marked with "?" in the left bar), and click "Save." Close the window, navigate to
+                                Kirka, and open
+                                the Stylus extension menu. Enable the checkbox for your CSS style and activate the
+                                extension (if not already done).</p>
+                            </p><br>
+                            <p> <strong>Option 2: Use a Kirka Client</strong><br>
+                            <p style="margin-top: 7px;">
+                                Download any kirka client from <a class="faq-links" href="clients.html">KCH Clients
+                                    list</a>. Once
+                                installed follow the guide of the client.</p>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Will customizations affect my fps?
+                            <i data-lucide="chevron-down" class="faq-arrow"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>It depends on the specific customization:</p>
+                            <ul style="margin-left: 20px; opacity: 0.8; line-height: 1.6;">
+                                <li>CSS themes with simple changes generally have minimal to no impact on performance.
+                                </li>
+                                <li>CSS themes with many animations or effects might slightly reduce FPS on low-end
+                                    devices.</li>
+                                <li>Crosshairs ,Textures, Skyboxes have virtually no impact on game performance.</li>
+                                <li>performance impact due to scripts is entirely dependent on the script itself.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Are customizations safe to use?
+                            <i data-lucide="chevron-down" class="faq-arrow"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <strong>CSS , Crosshairs ,Textures & Skyboxes</strong> are 100% safe to use.
+                            <p style="margin-top: 10px;">
+                                However, be cautious with <strong>3rd party clients</strong> and
+                                <strong>scripts</strong>.
+                                Always download them from trusted sources and avoid anything that promises unfair
+                                advantages.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="container footer-content">
+            <div>
+                <a href="#" class="footer-logo">
+                    <img src="assets/icon.png" width="30">
+                    <span>Kirka Community Hub</span>
+                </a>
+                <p style="color:var(--text-muted);font-size:0.9rem;max-width:300px">
+                    Not affiliated with Kirka.io.<br>Built by the community, for the community.
+                </p>
+            </div>
+            <div class="footer-links-wrapper">
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://github.com/imnotkoolkid/kch" target="_blank">github</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="contribution.html">contribution</a></li>
+                        <li><a href="submit-content.html">Submit Content</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="tos.html">Terms Of Service</a></li>
+                        <li><a href="report.html">Report</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="src/index.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>

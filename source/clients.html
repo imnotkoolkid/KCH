@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Kirka Community Hub - Clients</title>
+    <link rel="stylesheet" href="src/pages.css">
+    <link rel="icon" type="image/png" href="assets/icon.png">
+    <meta name="description" content="Browse and download Kirka.io game clients and custom launchers from the community.">
+    <meta name="keywords" content="Kirka clients, Kirka.io launcher, Kirka game client, Kirka Community Hub">
+
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://kirkacommunityhub.pages.dev/clients.html">
+    <meta property="og:title" content="Kirka Community Hub - Clients">
+    <meta property="og:description" content="Browse and download Kirka.io game clients and custom launchers from the community.">
+    <meta property="og:image" content="https://kirkacommunityhub.pages.dev/assets/icon.png">
+    <meta property="og:url" content="https://kirkacommunityhub.pages.dev/clients.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kirka Community Hub">
+    <meta name="theme-color" content="#1bd96a">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kirka Community Hub - Clients">
+    <meta name="twitter:description" content="Browse and download Kirka.io game clients and custom launchers from the community.">
+    <meta name="twitter:image" content="https://kirkacommunityhub.pages.dev/assets/icon.png">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg: #080c10;
+            --surface: #0d1318;
+            --surface2: #111820;
+            --border-card: rgba(255, 255, 255, 0.07);
+            --border-hover: rgba(74, 222, 128, 0.4);
+            --green-dim: rgba(27, 217, 106, 0.12);
+            --green-glow: rgba(27, 217, 106, 0.06);
+            --text-sub: #99a8b8;
+            --card-bg: #161b22;
+            --header-bg: rgba(14, 18, 23, 0.765);
+        }
+
+        main { flex: 1; }
+
+        .hero {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 140px 24px 60px;
+        }
+
+        .hero h1 {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: clamp(2.8rem, 6vw, 4.5rem);
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: -1px;
+            margin-bottom: 16px;
+        }
+
+        .hero h1 span { color: var(--green); }
+
+        .client-grid {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 20px;
+            padding: 0 28px 100px;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .grid-status {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 60px 0;
+            color: var(--text-sub);
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+        }
+
+        .grid-status .spinner {
+            width: 36px;
+            height: 36px;
+            border: 3px solid rgba(27, 217, 106, 0.15);
+            border-top-color: var(--green);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin: 0 auto 16px;
+        }
+
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        .client-card {
+            background: var(--surface);
+            border: 1px solid var(--border-card);
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .client-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 30% 0%, var(--green-glow) 0%, transparent 60%);
+            opacity: 0;
+            transition: opacity 0.4s;
+            pointer-events: none;
+        }
+
+        .client-card:hover {
+            transform: scale(1.01);
+            border-color: var(--green-hover);
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(27, 217, 106, 0.08);
+        }
+
+        .client-card:hover::before { opacity: 1; }
+
+        .card-top {
+            padding: 28px 28px 24px;
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            border-bottom: 1px solid var(--border-card);
+        }
+
+        .client-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 14px;
+            object-fit: contain;
+            background: var(--surface2);
+            border: 1px solid var(--border-card);
+            padding: 8px;
+            display: block;
+            flex-shrink: 0;
+        }
+
+        .card-title-block {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .client-owner {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--green);
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .client-owner::before {
+            content: '';
+            display: inline-block;
+            width: 16px;
+            height: 2px;
+            background: var(--green);
+            border-radius: 2px;
+        }
+
+        .client-name {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1.65rem;
+            font-weight: 700;
+            color: var(--text);
+            letter-spacing: 0.3px;
+            line-height: 1;
+        }
+
+        .card-body {
+            padding: 22px 28px;
+            flex: 1;
+        }
+
+        .client-desc {
+            font-size: 0.925rem;
+            color: var(--text-sub);
+            line-height: 1.65;
+            margin-bottom: 20px;
+        }
+
+        .platforms-label {
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+
+        .platform-row {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .platform-badge {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-sub);
+            background: var(--surface2);
+            border: 1px solid var(--border-card);
+            padding: 5px 12px;
+            border-radius: 8px;
+            transition: border-color 0.2s;
+        }
+
+        .client-card:hover .platform-badge {
+            border-color: rgba(27, 217, 106, 0.15);
+        }
+
+        .platform-badge svg {
+            width: 13px;
+            height: 13px;
+        }
+
+        .card-stats {
+            display: flex;
+            border-top: 1px solid var(--border-card);
+        }
+
+        .stat {
+            flex: 1;
+            padding: 14px 0;
+            text-align: center;
+            border-right: 1px solid var(--border-card);
+        }
+
+        .stat:last-child { border-right: none; }
+
+        .stat-val {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text);
+            display: block;
+        }
+
+        .stat-key {
+            font-size: 0.62rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            display: block;
+            margin-top: 2px;
+        }
+
+        .card-footer {
+            padding: 20px 28px 28px;
+        }
+
+        .download-btn {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 24px;
+            background: var(--green-dim);
+            border: 1px solid rgba(27, 217, 106, 0.28);
+            border-radius: 12px;
+            color: var(--green);
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: background 0.2s, border-color 0.2s, transform 0.15s, box-shadow 0.2s;
+        }
+
+        .download-btn:hover {
+            background: rgba(27, 217, 106, 0.22);
+            border-color: rgba(27, 217, 106, 0.55);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 20px rgba(27, 217, 106, 0.12);
+        }
+
+        .download-btn svg {
+            width: 17px;
+            height: 17px;
+        }
+
+        @media (max-width: 640px) {
+            .client-grid {
+                grid-template-columns: 1fr;
+                padding: 0 16px 80px;
+            }
+            .card-top  { padding: 20px; }
+            .card-body { padding: 18px 20px; }
+            .card-footer { padding: 16px 20px 20px; }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="assets/icon.png" onerror="this.style.display='none'">
+                <span>Kirka Community Hub</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link"><i data-lucide="chevron-left"></i> Back</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Game <span>Clients</span></h1>
+        </section>
+        <div class="client-grid" id="clientGrid">
+            <div class="grid-status">
+                <div class="spinner"></div>
+                Loading clients…
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div>
+                <a href="#" class="footer-logo"><img src="assets/icon.png" width="30"><span>Kirka Community Hub</span></a>
+                <p style="color:var(--text-muted);font-size:0.9rem;max-width:300px">Not affiliated with Kirka.io.<br>Built by the community, for the community.</p>
+            </div>
+            <div class="footer-links-wrapper">
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul><li><a href="https://github.com/imnotkoolkid/kch" target="_blank">github</a></li></ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="contribution.html">contribution</a></li>
+                        <li><a href="submit-content.html">Submit Content</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="tos.html">Terms Of Service</a></li>
+                        <li><a href="report.html">Report</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        const PLATFORM_ICONS = {
+            'windows': 'monitor',
+            'macos':   'apple',
+            'linux':   'terminal'
+        };
+
+        function buildCard(client) {
+            const card = document.createElement('div');
+            card.className = 'client-card';
+
+            const iconHtml = client.icon
+                ? `<img src="${client.icon}" class="client-icon" alt="${client.name}" onerror="this.style.display='none'">`
+                : ``;
+
+            const platformBadges = (client.platforms || []).map(p => {
+                const key   = p.toLowerCase();
+                const icon  = PLATFORM_ICONS[key] || 'monitor';
+                return `<span class="platform-badge"><i data-lucide="${icon}"></i> ${p}</span>`;
+            }).join('');
+
+            card.innerHTML = `
+                <div class="card-top">
+                    ${iconHtml}
+                    <div class="card-title-block">
+                        <div class="client-owner">${client.owner}</div>
+                        <h2 class="client-name">${client.name}</h2>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p class="client-desc">${client.description}</p>
+                    <div class="platforms-label">Available On</div>
+                    <div class="platform-row">${platformBadges}</div>
+                </div>
+                <div class="card-stats">
+                    <div class="stat">
+                        <span class="stat-val">${client.source}</span>
+                        <span class="stat-key">Source</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-val">${client.development}</span>
+                        <span class="stat-key">Development</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="${client.downloadUrl}" class="download-btn" target="_blank">
+                        <i data-lucide="download"></i> Download Client
+                    </a>
+                </div>`;
+
+            return card;
+        }
+
+        async function loadClients() {
+            const grid = document.getElementById('clientGrid');
+
+            try {
+                const res = await fetch('https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/data/clients.json');
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                const clients = await res.json();
+
+                grid.innerHTML = ''; 
+
+                if (!clients.length) {
+                    grid.innerHTML = '<div class="grid-status">No clients found.</div>';
+                    return;
+                }
+
+                clients.forEach(client => grid.appendChild(buildCard(client)));
+
+            } catch (err) {
+                grid.innerHTML = `<div class="grid-status">
+                     Failed to load clients — ${err.message}<br>
+                    <small>Make sure <code>clients.json</code> is in the same directory.</small>
+                </div>`;
+                console.error('[ClientGrid]', err);
+            }
+
+            lucide.createIcons();
+        }
+
+        loadClients();
+    </script>
+</body>
+
+</html>

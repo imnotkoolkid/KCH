@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Kirka Community Hub - Contribution</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="src/pages.css">
+    <link rel="icon" type="image/png" href="assets/icon.png">
+    <meta name="description" content="Learn how to contribute to Kirka Community Hub — an open source, community-driven project for Kirka.io.">
+    <meta name="keywords" content="Kirka contribution, Kirka open source, Kirka Community Hub, contribute kirka.io">
+    <meta name="author" content="imnotkoolkid">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://kirkacommunityhub.pages.dev/contribution.html">
+    <meta property="og:title" content="Kirka Community Hub - Contribution">
+    <meta property="og:description" content="Learn how to contribute to the Kirka Community Hub — an open source, community-driven project.">
+    <meta property="og:image" content="https://kirkacommunityhub.pages.dev/assets/icon.png">
+    <meta property="og:url" content="https://kirkacommunityhub.pages.dev/contribution.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kirka Community Hub">
+    <meta name="theme-color" content="#1bd96a">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kirka Community Hub - Contribution">
+    <meta name="twitter:description" content="Learn how to contribute to the Kirka Community Hub — an open source, community-driven project.">
+    <meta name="twitter:image" content="https://kirkacommunityhub.pages.dev/assets/icon.png">
+    <style>
+        .contrib-hero {
+            padding: 110px 24px 60px;
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        .contrib-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(27, 217, 106, 0.1);
+            border: 1px solid rgba(27, 217, 106, 0.25);
+            color: #1bd96a;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 6px 14px;
+            border-radius: 50px;
+            margin-bottom: 28px;
+        }
+
+        .contrib-eyebrow svg {
+            width: 13px;
+            height: 13px;
+        }
+
+        .contrib-hero h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            line-height: 1.15;
+            color: var(--text);
+            margin-bottom: 18px;
+        }
+
+        .contrib-hero h1 span {
+            color: #1bd96a;
+        }
+
+        .contrib-hero p.lead {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            line-height: 1.75;
+            max-width: 640px;
+            margin-bottom: 32px;
+        }
+
+        .contrib-author-card {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 14px 20px;
+            text-decoration: none;
+            transition: border-color 0.2s, background 0.2s;
+            margin-bottom: 12px;
+        }
+
+        .contrib-author-card:hover {
+            border-color: rgba(27, 217, 106, 0.4);
+            background: rgba(27, 217, 106, 0.05);
+        }
+
+        .contrib-author-avatar {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #1bd96a33, #1bd96a88);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contrib-author-avatar svg {
+            width: 20px;
+            height: 20px;
+            color: #1bd96a;
+        }
+
+        .contrib-author-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .contrib-author-name {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .contrib-author-sub {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .contrib-author-badge {
+            margin-left: auto;
+            font-size: 0.72rem;
+            font-weight: 700;
+            background: rgba(27, 217, 106, 0.12);
+            color: #1bd96a;
+            border: 1px solid rgba(27, 217, 106, 0.25);
+            padding: 4px 10px;
+            border-radius: 50px;
+            white-space: nowrap;
+        }
+
+        .contrib-divider {
+            height: 1px;
+            background: var(--border);
+            margin: 0 24px 60px;
+            max-width: 812px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contrib-sections {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 24px 80px;
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+        }
+
+        .contrib-section {
+            display: grid;
+            grid-template-columns: 240px 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .contrib-section-label {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding-top: 4px;
+        }
+
+        .contrib-section-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: rgba(27, 217, 106, 0.1);
+            border: 1px solid rgba(27, 217, 106, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 4px;
+        }
+
+        .contrib-section-icon svg {
+            width: 18px;
+            height: 18px;
+            color: #1bd96a;
+        }
+
+        .contrib-section-label h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .contrib-section-label p {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .contrib-section-body {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px 30px;
+        }
+
+        .contrib-section-body h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 12px;
+        }
+
+        .contrib-section-body p {
+            font-size: 0.93rem;
+            color: var(--text-muted);
+            line-height: 1.75;
+            margin-bottom: 20px;
+        }
+
+        .contrib-section-body p:last-child {
+            margin-bottom: 0;
+        }
+
+        .contrib-ways {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .contrib-way {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 16px 18px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            background: rgba(255, 255, 255, 0.02);
+            transition: border-color 0.2s, background 0.2s;
+        }
+
+        .contrib-way:hover {
+            border-color: rgba(27, 217, 106, 0.3);
+            background: rgba(27, 217, 106, 0.04);
+        }
+
+        .contrib-way-dot {
+            width: 28px;
+            height: 28px;
+            border-radius: 8px;
+            background: rgba(27, 217, 106, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .contrib-way-dot svg {
+            width: 14px;
+            height: 14px;
+            color: #1bd96a;
+        }
+
+        .contrib-way-text strong {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 4px;
+        }
+
+        .contrib-way-text span {
+            font-size: 0.83rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .contrib-cta-row {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 24px;
+        }
+
+        .contrib-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 11px 22px;
+            border-radius: 50px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            font-family: var(--font);
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s;
+            border: none;
+        }
+
+        .contrib-btn svg {
+            width: 15px;
+            height: 15px;
+        }
+
+        .contrib-btn-primary {
+            background: #1bd96a;
+            color: #0e1217;
+        }
+
+        .contrib-btn-primary:hover {
+            background: #14b858;
+        }
+
+        .contrib-btn-outline {
+            background: transparent;
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+
+        .contrib-btn-outline:hover {
+            border-color: rgba(27, 217, 106, 0.4);
+            color: #1bd96a;
+            background: rgba(27, 217, 106, 0.05);
+        }
+
+        .contrib-note {
+            background: rgba(27, 217, 106, 0.06);
+            border: 1px solid rgba(27, 217, 106, 0.18);
+            border-radius: 12px;
+            padding: 16px 20px;
+            font-size: 0.87rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-top: 16px;
+        }
+
+        .contrib-note strong {
+            color: #1bd96a;
+        }
+
+        @media (max-width: 700px) {
+            .contrib-section {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .contrib-section-label {
+                flex-direction: row;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+
+            .contrib-section-label h3 {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="assets/icon.png" onerror="this.style.display='none'">
+                <span>Kirka Community Hub</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link"><i data-lucide="chevron-left"></i> Back</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <div class="contrib-hero">
+            <div class="contrib-eyebrow">
+                Open Source 
+            </div>
+            <h1>Built by the community,<br><span>for the community.</span></h1>
+            <p class="lead">
+                Kirka Community Hub is a solo, open source project by  <a href="https://discord.com/users/841926384838115358" target="_blank" rel="noopener"> <strong
+                    style="color:var(--text)">imnotkoolkid</strong></a>
+                a hub for everything Kirka.io . Every contribution, big or small, keeps this place alive and growing.
+            </p>
+      
+        </div>
+
+        <div class="contrib-divider"></div>
+
+        <!-- Sections -->
+        <div class="contrib-sections">
+
+            <!-- About the project -->
+            <div class="contrib-section">
+                <div class="contrib-section-label">
+                    <div class="contrib-section-icon"><i data-lucide="info"></i></div>
+                    <h3>About the project</h3>
+                </div>
+                <div class="contrib-section-body">
+                    <h4>What is Kirka Community Hub?</h4>
+                    <p>
+                        Kirka Community Hub is a community-driven website built to be the go-to resource providing website for
+                        the Kirka.io.
+                        It shares a catalogue of custom CSS themes, crosshairs, textures, clients ,scripts , skyboxes , kill icons and more shared resources by the cummunity.
+                    </p>
+                    <p>
+                        The entire codebase is open source and available on <a href="http://github/imnotkoolkid/kirka-community-hub" style="color: #14b858;"><strong>GitHub</strong></a>.
+                    </p>
+                </div>
+            </div>
+
+            <!-- How to contribute -->
+            <div class="contrib-section">
+                <div class="contrib-section-label">
+                    <div class="contrib-section-icon"><i data-lucide="git-pull-request"></i></div>
+                    <h3>How to contribute</h3>
+                </div>
+                <div class="contrib-section-body">
+                    <h4>Every bit helps</h4>
+                    <p>This project grows because people add to it. If you’ve built something cool, found a bug, or just have an idea you can help out.</p>
+                    <div class="contrib-ways">  
+                        <div class="contrib-way">
+                            <div class="contrib-way-dot"><i data-lucide="palette"></i></div>
+                            <div class="contrib-way-text">
+                                <strong>Submit CSS</strong>
+                               <span>Made a custom CSS theme for Kirka.io? Submit it to the catalogue, or help keep older themes working with the latest version of the game.</span>
+                            </div>
+                        </div>
+                        <div class="contrib-way">
+                            <div class="contrib-way-dot"><i data-lucide="code-2"></i></div>
+                            <div class="contrib-way-text">
+                                <strong>Help build the site</strong>
+                                <span>Front-end work, bug fixes, new features, refactors are open for pull requests on
+                                    GitHub.</span>
+                            </div>
+                        </div>
+                        <div class="contrib-way">
+                            <div class="contrib-way-dot"><i data-lucide="bug"></i></div>
+                            <div class="contrib-way-text">
+                                <strong>Report bugs or issues</strong>
+                                <span>Spotted something broken or weird? Open an issue on the GitHub repo so it can be
+                                    tracked and fixed or report it on discord.</span>
+                            </div>
+                        </div>
+                        <div class="contrib-way">
+                            <div class="contrib-way-dot"><i data-lucide="lightbulb"></i></div>
+                            <div class="contrib-way-text">
+                                <strong>Suggest ideas</strong>
+                                <span>Have a feature request or idea for what the hub should include? Drop it as a
+                                    GitHub issue or reach out on Discord.</span>
+                            </div>
+                        </div>
+                        <div class="contrib-way">
+                            <div class="contrib-way-dot"><i data-lucide="megaphone"></i></div>
+                            <div class="contrib-way-text">
+                                <strong>Spread the word</strong>
+                                <span>Share the hub with other Kirka players. Growing the community is one of the most
+                                    impactful things you can do.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Get started -->
+            <div class="contrib-section">
+                <div class="contrib-section-label">
+                    <div class="contrib-section-icon"><i data-lucide="flag"></i></div>
+                    <h3>Get started</h3>
+                </div>
+                <div class="contrib-section-body">
+                    <h4>Ready to help out?</h4>
+                    <p>
+                        The GitHub repo is the best place to start for code contributions browse open issues, fork the
+                        project, and submit a pull request. For content submissions like CSS, crosshairs, textures, clients, scripts, skyboxes, kill icons and more head to the Submit
+                        Content page. If you want to get in touch directly, message imnotkoolkid on Discord.
+                    </p>
+                    <div class="contrib-cta-row">
+                        <a href="https://github.com/imnotkoolkid/kch" target="_blank" rel="noopener"
+                            class="contrib-btn contrib-btn-primary">
+                            <i data-lucide="github"></i>
+                            View on GitHub
+                        </a>
+                        <a href="submit-content.html" class="contrib-btn contrib-btn-outline">
+                            <i data-lucide="upload"></i>
+                            Submit Content
+                        </a>
+                        <a href="https://discord.com/users/841926384838115358" target="_blank" rel="noopener"
+                            class="contrib-btn contrib-btn-outline">
+                            <i data-lucide="message-circle"></i>
+                            Contact on Discord
+                        </a>
+                    </div>
+          
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div>
+                <a href="#" class="footer-logo"><img src="assets/icon.png" width="30"><span>Kirka Community
+                        Hub</span></a>
+                <p style="color:var(--text-muted);font-size:0.9rem;max-width:300px">Not affiliated with
+                    Kirka.io.<br>Built by the community, for the community.</p>
+            </div>
+            <div class="footer-links-wrapper">
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://github.com/imnotkoolkid/kirka-community-hub">github</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="contribution.html">contribution</a></li>
+                        <li><a href="submit-content.html">Submit Content</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="tos.html">Terms Of Service</a></li>
+                        <li><a href="report.html">Report</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kirka Community Hub - Terms of Service</title>
+    <link rel="icon" type="image/png" href="assets/icon.png">
+    <meta name="description" content="Read the Terms of Service for Kirka Community Hub — a community platform for Kirka.io resources.">
+    <meta name="keywords" content="Kirka Community Hub terms, Kirka ToS, kirka.io terms of service">
+    <meta name="author" content="imnotkoolkid">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://kirkacommunityhub.pages.dev/tos.html">
+    <meta property="og:title" content="Kirka Community Hub - Terms of Service">
+    <meta property="og:description" content="Read the Terms of Service for Kirka Community Hub.">
+    <meta property="og:image" content="https://kirkacommunityhub.pages.dev/assets/icon.png">
+    <meta property="og:url" content="https://kirkacommunityhub.pages.dev/tos.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kirka Community Hub">
+    <meta name="theme-color" content="#1bd96a">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kirka Community Hub - Terms of Service">
+    <meta name="twitter:description" content="Read the Terms of Service for Kirka Community Hub.">
+    <meta name="twitter:image" content="https://kirkacommunityhub.pages.dev/assets/icon.png">
+    <link rel="stylesheet" href="src/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <style>
+        .tos-hero {
+            padding: 140px 0 60px;
+            text-align: center;
+            background:
+                radial-gradient(circle at 50% 0%, rgba(27, 217, 106, .08) 0%, transparent 70%),
+                linear-gradient(rgba(255, 255, 255, .04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, .04) 1px, transparent 1px);
+            background-size: 100% 100%, 50px 50px, 50px 50px;
+            border-bottom: 1px solid var(--mod-card-border);
+            position: relative;
+        }
+
+        .tos-hero::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+            background: linear-gradient(transparent, var(--mod-bg));
+            pointer-events: none;
+        }
+
+        .tos-hero h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            margin-bottom: 14px;
+        }
+
+
+        .tos-wrapper {
+            max-width: 90%;
+            margin: 60px auto 80px;
+            padding: 0 20px;
+        }
+
+        .tos-toc {
+            background: var(--mod-card-bg);
+            border: 1px solid var(--mod-card-border);
+            border-radius: 12px;
+            padding: 28px 32px;
+            margin-bottom: 48px;
+        }
+
+        .tos-toc h3 {
+            font-size: .75rem;
+            text-transform: uppercase;
+            letter-spacing: .1em;
+            color: var(--mod-green);
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .tos-toc ol {
+            list-style: none;
+            counter-reset: toc-counter;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px 24px;
+        }
+
+        @media (max-width: 560px) {
+            .tos-toc ol {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .tos-toc ol li {
+            counter-increment: toc-counter;
+        }
+
+        .tos-toc ol li a {
+            color: var(--text-muted);
+            font-size: .9rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: color .2s;
+        }
+
+        .tos-toc ol li a::before {
+            content: counter(toc-counter, decimal-leading-zero);
+            font-size: .75rem;
+            font-weight: 700;
+            color: var(--mod-green);
+            opacity: .7;
+            min-width: 22px;
+        }
+
+        .tos-toc ol li a:hover {
+            color: var(--text-main);
+        }
+
+        .tos-section {
+            margin-bottom: 44px;
+            scroll-margin-top: 90px;
+        }       header {
+            position: fixed;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 99%;
+            z-index: 1000;
+            background: var(--header-bg);
+            backdrop-filter: blur(12px);
+            height: 62px;
+            border-radius: 5px;
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 24px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 800;
+            font-size: 1.1rem;
+        }
+
+        .logo img {
+            width: 32px;
+            height: 32px;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: .9rem;
+            font-weight: 600;
+            transition: color .2s;
+        }
+
+        .nav-link:hover {
+            color: var(--text);
+        }
+
+        .nav-link svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .tos-section-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 18px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid var(--mod-card-border);
+        }
+
+        .tos-section-number {
+            background: rgba(27, 217, 106, .1);
+            border: 1px solid rgba(27, 217, 106, .2);
+            color: var(--mod-green);
+            font-size: .75rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+            white-space: nowrap;
+        }
+
+        .tos-section h2 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .tos-section p {
+            color: var(--text-muted);
+            font-size: .95rem;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+
+        .tos-list {
+            list-style: none;
+            margin: 10px 0 14px;
+        }
+
+        .tos-list li {
+            color: var(--text-muted);
+            font-size: .92rem;
+            line-height: 1.7;
+            padding: 6px 0 6px 24px;
+            position: relative;
+            border-bottom: 1px solid rgba(48, 54, 61, .4);
+        }
+
+        .tos-list li:last-child {
+            border-bottom: none;
+        }
+
+        .tos-list li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--mod-green);
+            opacity: .6;
+        }
+
+        .tos-callout,
+        .tos-warning {
+            border-radius: 0 8px 8px 0;
+            padding: 14px 18px;
+            margin: 16px 0;
+            color: var(--text-muted);
+            font-size: .9rem;
+            line-height: 1.7;
+        }
+
+        .tos-callout {
+            background: rgba(27, 217, 106, .04);
+            border: 1px solid rgba(27, 217, 106, .15);
+            border-left: 3px solid var(--mod-green);
+        }
+
+        .tos-warning {
+            background: rgba(255, 180, 0, .04);
+            border: 1px solid rgba(255, 180, 0, .15);
+            border-left: 3px solid #ffb400;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-container"><a href="index.html" class="logo"><img src="assets/icon.png"
+                    onerror="this.style.display='none'"><span>Kirka Community Hub</span></a>
+            <nav class="nav-menu"><a href="index.html" class="nav-link"><i data-lucide="chevron-left"></i> Back</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="tos-hero">
+            <div class="container">
+                <h1>Terms of Service</h1>
+            </div>
+        </div>
+
+        <div class="tos-wrapper">
+            <div class="tos-toc">
+                <h3><i data-lucide="list" style="margin-right:6px"></i>Contents</h3>
+                <ol>
+                    <li><a href="#s1">Acceptance of Terms</a></li>
+                    <li><a href="#s2">Nature of the Service</a></li>
+                    <li><a href="#s3">No Ownership of Third-Party Content</a></li>
+                    <li><a href="#s4">User Responsibility</a></li>
+                    <li><a href="#s5">Limitation of Liability</a></li>
+                    <li><a href="#s6">Third-Party Clients & Applications</a></li>
+                    <li><a href="#s7">No Responsibility for Software Behavior</a></li>
+                    <li><a href="#s8">Copyright Infringement & Takedowns</a></li>
+                </ol>
+            </div>
+
+            <div class="tos-section" id="s1">
+                <div class="tos-section-header"><span class="tos-section-number">01</span>
+                    <h2>Acceptance of Terms</h2>
+                </div>
+                <p>By accessing or using this website, you agree to be bound by these Terms of Service. If you do not
+                    agree to these terms, you must discontinue use of the website.</p>
+            </div>
+
+            <div class="tos-section" id="s2">
+                <div class="tos-section-header"><span class="tos-section-number">02</span>
+                    <h2>Nature of the Service</h2>
+                </div>
+                <p>This website operates solely as a hosting and indexing platform for user-submitted and third-party
+                    content. The website does not create, develop, own, or claim authorship of any content hosted,
+                    uploaded, or linked on the platform. Hosted content includes but is not limited to:</p>
+                <ul class="tos-list">
+                    <li>CSS themes</li>
+                    <li>Crosshairs</li>
+                    <li>Textures</li>
+                    <li>Scripts</li>
+                    <li>Game clients</li>
+                    <li>Sound effects</li>
+                    <li>Skyboxes</li>
+                </ul>
+            </div>
+
+            <div class="tos-section" id="s3">
+                <div class="tos-section-header"><span class="tos-section-number">03</span>
+                    <h2>No Ownership of Third-Party Content</h2>
+                </div>
+                <p>All trademarks, copyrighted materials, game assets, sounds, images, and other intellectual property
+                    displayed or distributed through this website remain the property of their respective owners. This website does not claim ownership of third-party content, does not
+                    guarantee that uploaded or submitted content is properly licensed, and acts solely as a passive
+                    hosting and sharing platform.</p>
+                <div class="tos-callout">Users are solely responsible for ensuring that any content they upload, share, or download complies
+                    with applicable copyright and intellectual property laws.</div>
+          
+            </div>
+
+            <div class="tos-section" id="s4">
+                <div class="tos-section-header"><span class="tos-section-number">04</span>
+                    <h2>User Responsibility</h2>
+                </div>
+                <p>By uploading or submitting content to the website, users represent and warrant that:</p>
+                <ul class="tos-list">
+                    <li>They own the content or have the necessary rights, licenses, or permissions to distribute it
+                    </li>
+                    <li>The content does not infringe upon any third-party rights</li>
+                </ul>
+                <div class="tos-callout">The website assumes no responsibility or liability for user-uploaded content.</div>
+              
+            </div>
+
+            <div class="tos-section" id="s5">
+                <div class="tos-section-header"><span class="tos-section-number">05</span>
+                    <h2>Limitation of Liability</h2>
+                </div>
+                <p>The website is provided on an "as is" and "as available" basis without warranties of any kind,
+                    express or implied. Under no circumstances shall the website, its owners, or operators be liable
+                    for:</p>
+                <ul class="tos-list">
+                    <li>Copyright violations committed by users</li>
+                    <li>Damages resulting from downloaded content</li>
+                    <li>Account bans or penalties imposed by third-party games or services</li>
+                    <li>Any direct, indirect, incidental, consequential, or special damages arising from use of the
+                        platform</li>
+                </ul>
+                <div class="tos-warning"><i data-lucide="alert-triangle"
+                        style="color:#ffb400;margin-right:8px"></i>Users access and download content at their own risk.
+                </div>
+            </div>
+
+            <div class="tos-section" id="s6">
+                <div class="tos-section-header"><span class="tos-section-number">06</span>
+                    <h2>Third-Party Clients & Applications</h2>
+                </div>
+                <p>The website provides access to or hosts downloadable third-party clients, applications, or software
+                    tools created by independent developers. These applications are not developed, owned, or maintained
+                    by the website.</p>
+                <p>The website makes no guarantee regarding the safety, security, or functionality of third-party
+                    software, does not inspect or audit source code of submitted applications, and does not warrant that
+                    such software is free from vulnerabilities, malicious code, or harmful components.</p>
+                <div class="tos-warning"><i data-lucide="alert-triangle"
+                        style="color:#ffb400;margin-right:8px"></i>Users download and install third-party software
+                    entirely at their own risk.</div>
+            </div>
+
+            <div class="tos-section" id="s7">
+                <div class="tos-section-header"><span class="tos-section-number">07</span>
+                    <h2>No Responsibility for Software Behavior</h2>
+                </div>
+                <p>The website is not responsible for any consequences resulting from the use of third-party software,
+                    including:</p>
+                <ul class="tos-list">
+                    <li>Account suspensions or bans resulting from the use of third-party clients</li>
+                    <li>Data loss</li>
+                    <li>Security breaches</li>
+                    <li>Malware, spyware, or harmful components</li>
+                    <li>Damage to devices or operating systems</li>
+                    <li>Network misuse or abuse</li>
+                </ul>
+                <p>Users are solely responsible for evaluating the trustworthiness and safety of any third-party
+                    software before installation.</p>
+            </div>
+
+            <div class="tos-section" id="s8">
+                <div class="tos-section-header"><span class="tos-section-number">08</span>
+                    <h2>Copyright Infringement & Takedown Requests</h2>
+                </div>
+                <p>If you are the copyright owner of any CSS theme, script, image, texture, skybox, sound, client, or
+                    other material available on this website ( or are authorized to act on behalf of the copyright owner
+                    ) you may request removal of the content.</p>
+                <div class="tos-callout">To
+                    submit a takedown request, please use the <a href="report.html"
+                        style="color:var(--mod-green);text-decoration:underline">Report section</a> of the website and
+                    provide sufficient information to identify the material in question.</div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div>
+                <a href="index.html" class="footer-logo">
+                    <img src="assets/icon.png" width="30">
+                    <span>Kirka Community Hub</span>
+                </a>
+                <p style="color:var(--text-muted);font-size:.9rem;max-width:300px">Not affiliated with
+                    Kirka.io.<br>Built by the community, for the community.</p>
+            </div>
+            <div class="footer-links-wrapper">
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://github.com/imnotkoolkid/kch" target="_blank">github</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="contribution.html">contribution</a></li>
+                        <li><a href="submit-content.html">Submit Content</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="tos.html">Terms Of Service</a></li>
+                        <li><a href="report.html">Report</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        lucide.createIcons()
+    </script>
+</body>
+
+</html>

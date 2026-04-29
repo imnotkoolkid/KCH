@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Kirka Community Hub - Submit Content</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/pages.css">
+    <link rel="icon" type="image/png" href="assets/icon.png">
+    <meta name="description" content="Submit your CSS themes, crosshairs, textures, scripts, skyboxes, kill icons, sounds and clients to the Kirka Community Hub.">
+    <meta name="keywords" content="Kirka submit, Kirka Community Hub submit, share Kirka content, Kirka.io custom content">
+    <meta name="author" content="imnotkoolkid">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://kirkacommunityhub.pages.dev/submit-content.html">
+    <meta property="og:title" content="Kirka Community Hub - Submit Content">
+    <meta property="og:description" content="Submit your CSS themes, crosshairs, textures, scripts, skyboxes, kill icons, sounds and clients to the Kirka Community Hub.">
+    <meta property="og:image" content="https://kirkacommunityhub.pages.dev/assets/icon.png">
+    <meta property="og:url" content="https://kirkacommunityhub.pages.dev/submit-content.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kirka Community Hub">
+    <meta name="theme-color" content="#1bd96a">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kirka Community Hub - Submit Content">
+    <meta name="twitter:description" content="Submit your CSS themes, crosshairs, textures, scripts, skyboxes, kill icons, sounds and clients to the Kirka Community Hub.">
+    <meta name="twitter:image" content="https://kirkacommunityhub.pages.dev/assets/icon.png">
+    <style>
+        .submit-hero {
+            padding: 110px 24px 48px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .submit-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(27, 217, 106, 0.1);
+            border: 1px solid rgba(27, 217, 106, 0.25);
+            color: #1bd96a;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 6px 14px;
+            border-radius: 50px;
+            margin-bottom: 26px;
+        }
+        .submit-eyebrow svg { width: 13px; height: 13px; }
+
+        .submit-hero h1 {
+            font-size: clamp(1.9rem, 4.5vw, 2.8rem);
+            font-weight: 800;
+            line-height: 1.15;
+            color: var(--text);
+            margin-bottom: 16px;
+        }
+        .submit-hero h1 span { color: #1bd96a; }
+
+        .submit-hero p.lead {
+            font-size: 1rem;
+            color: var(--text-muted);
+            line-height: 1.75;
+            max-width: 620px;
+            margin-bottom: 24px;
+        }
+
+        .submit-contact-strip {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .submit-contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 0.87rem;
+            font-weight: 700;
+            font-family: var(--font);
+            text-decoration: none;
+            transition: all 0.2s;
+            border: 1px solid var(--border);
+            color: var(--text);
+            background: var(--card-bg);
+        }
+        .submit-contact-btn svg { width: 15px; height: 15px; }
+        .submit-contact-btn:hover {
+            border-color: rgba(27, 217, 106, 0.4);
+            color: #1bd96a;
+            background: rgba(27, 217, 106, 0.05);
+        }
+        .submit-contact-btn.primary {
+            background: #1bd96a;
+            color: #0e1217;
+            border-color: transparent;
+        }
+        .submit-contact-btn.primary:hover { background: #14b858; color: #0e1217; }
+
+        /* ── ToS notice ── */
+        .tos-notice {
+            max-width: 900px;
+            margin: 0 auto 44px;
+            padding: 0 24px;
+        }
+        .tos-notice-inner {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            background: rgba(251, 191, 36, 0.07);
+            border: 1px solid rgba(251, 191, 36, 0.25);
+            border-radius: 14px;
+            padding: 18px 22px;
+        }
+        .tos-notice-inner svg { width: 18px; height: 18px; color: #fbbf24; flex-shrink: 0; margin-top: 1px; }
+        .tos-notice-inner p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.7; }
+        .tos-notice-inner a { color: #fbbf24; text-decoration: underline; font-weight: 600; }
+
+        /* ── Accordion / Dropdowns ── */
+        .submit-body {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px 80px;
+        }
+
+        .accordion-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .accordion-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: border-color 0.2s;
+        }
+        .accordion-item.open {
+            border-color: rgba(27, 217, 106, 0.3);
+        }
+
+        .accordion-trigger {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 18px 22px;
+            cursor: pointer;
+            user-select: none;
+            width: 100%;
+            background: none;
+            border: none;
+            font-family: var(--font);
+            text-align: left;
+            transition: background 0.15s;
+        }
+        .accordion-trigger:hover {
+            background: rgba(255, 255, 255, 0.02);
+        }
+        .accordion-item.open .accordion-trigger {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .accordion-icon {
+            width: 40px; height: 40px;
+            border-radius: 11px;
+            background: rgba(27, 217, 106, 0.1);
+            border: 1px solid rgba(27, 217, 106, 0.2);
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+        }
+        .accordion-icon svg { width: 17px; height: 17px; color: #1bd96a; }
+
+        .accordion-title {
+            flex: 1;
+        }
+        .accordion-title strong {
+            display: block;
+            font-size: 0.97rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 2px;
+        }
+        .accordion-title span {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .accordion-chevron {
+            width: 20px; height: 20px;
+            color: var(--text-muted);
+            flex-shrink: 0;
+            transition: transform 0.25s ease;
+        }
+        .accordion-item.open .accordion-chevron {
+            transform: rotate(180deg);
+            color: #1bd96a;
+        }
+
+        .accordion-body {
+            display: none;
+            padding: 22px;
+            animation: fade .2s ease;
+        }
+        .accordion-item.open .accordion-body {
+            display: block;
+        }
+
+        @keyframes fade {
+            from { opacity: 0; transform: translateY(6px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ── Req card ── */
+        .req-card {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 14px;
+        }
+        .req-card-header {
+            padding: 12px 18px;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.07em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .req-card-header svg { width: 13px; height: 13px; }
+
+        .req-list { list-style: none; padding: 6px 0; }
+        .req-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 10px 18px;
+            border-bottom: 1px solid rgba(48,54,61,0.5);
+            font-size: 0.89rem;
+            color: var(--text-muted);
+            line-height: 1.65;
+            transition: background 0.15s;
+        }
+        .req-list li:last-child { border-bottom: none; }
+        .req-list li:hover { background: rgba(255,255,255,0.02); }
+
+        .req-bullet {
+            width: 20px; height: 20px;
+            border-radius: 6px;
+            background: rgba(27, 217, 106, 0.1);
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+        .req-bullet svg { width: 11px; height: 11px; color: #1bd96a; }
+
+        .req-list li strong { color: var(--text); font-weight: 700; }
+        .req-list li code {
+            background: rgba(255,255,255,0.07);
+            color: #86efac;
+            font-size: 0.81rem;
+            padding: 1px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+
+        /* ── Note ── */
+        .req-note {
+            background: rgba(27, 217, 106, 0.06);
+            border: 1px solid rgba(27, 217, 106, 0.18);
+            border-radius: 10px;
+            padding: 13px 16px;
+            font-size: 0.86rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 14px;
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+        }
+        .req-note svg { width: 15px; height: 15px; color: #1bd96a; flex-shrink: 0; margin-top: 2px; }
+        .req-note strong { color: #1bd96a; }
+
+        /* ── Sound table ── */
+        .sound-table-wrapper {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 14px;
+        }
+        .sound-table { width: 100%; border-collapse: collapse; font-size: 0.86rem; }
+        .sound-table thead tr { border-bottom: 1px solid var(--border); }
+        .sound-table thead th {
+            text-align: left;
+            padding: 11px 16px;
+            color: var(--text-muted);
+            font-size: 0.77rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+        .sound-table tbody tr { border-bottom: 1px solid rgba(48,54,61,0.5); }
+        .sound-table tbody tr:last-child { border-bottom: none; }
+        .sound-table tbody tr:hover { background: rgba(255,255,255,0.02); }
+        .sound-table tbody td { padding: 9px 16px; color: var(--text-muted); vertical-align: top; }
+        .sound-table tbody td code {
+            background: rgba(255,255,255,0.07);
+            color: #86efac;
+            font-size: 0.79rem;
+            padding: 1px 5px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+        .sound-table tbody td:first-child { color: var(--text); font-weight: 600; }
+
+        /* ── CTA ── */
+        .submit-cta {
+            background: rgba(27, 217, 106, 0.04);
+            border: 1px solid rgba(27, 217, 106, 0.15);
+            border-radius: 12px;
+            padding: 18px 22px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .submit-cta-text h4 { font-size: 0.95rem; font-weight: 700; color: var(--text); }
+
+        .submit-cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 11px 22px;
+            border-radius: 50px;
+            font-size: 0.87rem;
+            font-weight: 700;
+            font-family: var(--font);
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+            background: #1bd96a;
+            color: #0e1217;
+            white-space: nowrap;
+        }
+        .submit-cta-btn svg { width: 15px; height: 15px; }
+        .submit-cta-btn:hover { background: #14b858; }
+
+        @media (max-width: 600px) {
+            .submit-cta { flex-direction: column; align-items: flex-start; }
+            .accordion-trigger { padding: 14px 16px; }
+            .accordion-body { padding: 16px; }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="assets/icon.png" onerror="this.style.display='none'">
+                <span>Kirka Community Hub</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link"><i data-lucide="chevron-left"></i> Back</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="submit-hero">
+            <div class="submit-eyebrow">Submit Content</div>
+            <h1>Share your work with<br><span>the community.</span></h1>
+            <p class="lead">
+                Want your CSS themes, crosshairs, textures, clients, scripts, skyboxes, kill icons or sounds hosted on Kirka Community Hub?
+                Contact <strong style="color:var(--text)">imnotkoolkid</strong> on Discord with your submission, check the requirements for your content type below before reaching out.
+            </p>
+            <div class="submit-contact-strip">
+                <a href="tos.html" class="submit-contact-btn">
+                    <i data-lucide="file-text"></i> Read the ToS
+                </a>
+            </div>
+        </div>
+
+        <div class="submit-body">
+            <div class="accordion-list">
+
+                <!-- CSS -->
+                <div class="accordion-item" id="acc-css">
+                    <button class="accordion-trigger" onclick="toggleAccordion('acc-css')">
+                        <div class="accordion-icon"><i data-lucide="palette"></i></div>
+                        <div class="accordion-title">
+                            <strong>CSS Themes</strong>
+                            <span>Custom stylesheets for Kirka.io — free, paid, or showcase.</span>
+                        </div>
+                        <i data-lucide="chevron-down" class="accordion-chevron"></i>
+                    </button>
+                    <div class="accordion-body">
+                        <div class="req-note">
+                            <i data-lucide="info"></i>
+                          <span>For <strong>paid</strong> and <strong>showcase</strong> submissions, you don’t need to include a <code>.css</code> file. For paid themes, users will contact you directly on Discord to purchase. Free submissions must include either the <code>.css</code> file or a GitHub raw link.</span>
+                        </div>
+                        <div class="req-card">
+                            <div class="req-card-header"><i data-lucide="list-checks"></i> Submission Requirements</div>
+                            <ul class="req-list">
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>CSS Code</strong> — A <code>.css</code> file or direct GitHub raw link. No locally loaded assets.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Tags</strong> — Three relevant tags (e.g. <code>minimal</code>, <code>dark</code>, <code>cyberpunk</code>).</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Availability Tag</strong> — One of: <code>free</code>, <code>paid</code>, or <code>showcase</code>.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Unique Name</strong> — A distinct, original name for your theme.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Short Description</strong> — A concise summary of your CSS theme. <em style="color:#6b7a95">(optional)</em></span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Preview Screenshots</strong> — One home screen image and one in-game image.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Discord Contact</strong> — Format: <code>https://discord.com/users/your_user_id</code></span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Username</strong> — A unique username to identify your submission.</span></li>
+                            </ul>
+                        </div>
+                        <div class="submit-cta">
+                            <div class="submit-cta-text"><h4>Ready to submit?</h4></div>
+                            <a href="https://discord.com/users/841926384838115358" target="_blank" rel="noopener" class="submit-cta-btn"><i data-lucide="message-circle"></i> Submit via Discord</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CROSSHAIRS -->
+                <div class="accordion-item" id="acc-crosshair">
+                    <button class="accordion-trigger" onclick="toggleAccordion('acc-crosshair')">
+                        <div class="accordion-icon"><i data-lucide="crosshair"></i></div>
+                        <div class="accordion-title">
+                            <strong>Crosshairs</strong>
+                            <span>Custom aim reticles for Kirka.io.</span>
+                        </div>
+                        <i data-lucide="chevron-down" class="accordion-chevron"></i>
+                    </button>
+                    <div class="accordion-body">
+                        <div class="req-card">
+                            <div class="req-card-header"><i data-lucide="list-checks"></i> Submission Requirements</div>
+                            <ul class="req-list">
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Crosshair Image</strong> — A <code>.png</code> or <code>.webp</code> file, or a direct GitHub raw link.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Tags</strong> — Relevant tags (e.g. <code>pink</code>, <code>dot</code>, <code>minimal</code>).</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Unique Name</strong> — A distinct name for your crosshair. <em style="color:#6b7a95">(optional)</em></span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Username</strong> — A unique username to identify your submission.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Discord Contact</strong> — Format: <code>https://discord.com/users/your_user_id</code></span></li>
+                            </ul>
+                        </div>
+                        <div class="submit-cta">
+                            <div class="submit-cta-text"><h4>Ready to submit?</h4></div>
+                            <a href="https://discord.com/users/841926384838115358" target="_blank" rel="noopener" class="submit-cta-btn"><i data-lucide="message-circle"></i> Submit via Discord</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TEXTURES -->
+                <div class="accordion-item" id="acc-textures">
+                    <button class="accordion-trigger" onclick="toggleAccordion('acc-textures')">
+                        <div class="accordion-icon"><i data-lucide="layers"></i></div>
+                        <div class="accordion-title">
+                            <strong>Textures</strong>
+                            <span>Custom texture packs for Kirka.io.</span>
+                        </div>
+                        <i data-lucide="chevron-down" class="accordion-chevron"></i>
+                    </button>
+                    <div class="accordion-body">
+                        <div class="req-card">
+                            <div class="req-card-header"><i data-lucide="list-checks"></i> Submission Requirements</div>
+                            <ul class="req-list">
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Texture Image</strong> — A <code>.png</code> or <code>.webp</code> file, or a direct GitHub raw link.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Tags</strong> — Three relevant tags (e.g. <code>purple</code>, <code>dark</code>, <code>textured</code>).</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Unique Name</strong> — A distinct name for your texture. <em style="color:#6b7a95">(optional)</em></span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Username</strong> — A unique username to identify your submission.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Discord Contact</strong> — Format: <code>https://discord.com/users/your_user_id</code></span></li>
+                            </ul>
+                        </div>
+                        <div class="submit-cta">
+                            <div class="submit-cta-text"><h4>Ready to submit?</h4></div>
+                            <a href="https://discord.com/users/841926384838115358" target="_blank" rel="noopener" class="submit-cta-btn"><i data-lucide="message-circle"></i> Submit via Discord</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SCRIPTS -->
+                <div class="accordion-item" id="acc-scripts">
+                    <button class="accordion-trigger" onclick="toggleAccordion('acc-scripts')">
+                        <div class="accordion-icon"><i data-lucide="code-2"></i></div>
+                        <div class="accordion-title">
+                            <strong>Scripts</strong>
+                            <span>Userscripts, tools and utilities for Kirka.io.</span>
+                        </div>
+                        <i data-lucide="chevron-down" class="accordion-chevron"></i>
+                    </button>
+                    <div class="accordion-body">
+                        <div class="req-card">
+                            <div class="req-card-header"><i data-lucide="list-checks"></i> Submission Requirements</div>
+                            <ul class="req-list">
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Script Code</strong> — A <code>.js</code> file or direct GitHub raw link. No locally loaded assets.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Unique Name</strong> — A distinct, original name for your script.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Short Description</strong> — What your script does and how it works.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Preview Screenshots</strong> — Images of your script in action. <em style="color:#6b7a95">(optional)</em></span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Discord Contact</strong> — Format: <code>https://discord.com/users/your_user_id</code></span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Username</strong> — A unique username to identify your submission.</span></li>
+                            </ul>
+                        </div>
+                        <div class="submit-cta">
+                            <div class="submit-cta-text"><h4>Ready to submit?</h4></div>
+                            <a href="https://discord.com/users/841926384838115358" target="_blank" rel="noopener" class="submit-cta-btn"><i data-lucide="message-circle"></i> Submit via Discord</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SKYBOXES -->
+                <div class="accordion-item" id="acc-skyboxes">
+                    <button class="accordion-trigger" onclick="toggleAccordion('acc-skyboxes')">
+                        <div class="accordion-icon"><i data-lucide="cloud"></i></div>
+                        <div class="accordion-title">
+                            <strong>Skyboxes</strong>
+                            <span>Custom sky environments for Kirka.io.</span>
+                        </div>
+                        <i data-lucide="chevron-down" class="accordion-chevron"></i>
+                    </button>
+                    <div class="accordion-body">
+                        <div class="req-note">
+                            <i data-lucide="info"></i>
+                            <span>If your skybox has multiple images, include <strong>all faces</strong> with clear labels: <code>up</code>, <code>down</code>, <code>front</code>, <code>back</code>, <code>left</code>, <code>right</code>.</span>
+                        </div>
+                        <div class="req-card">
+                            <div class="req-card-header"><i data-lucide="list-checks"></i> Submission Requirements</div>
+                            <ul class="req-list">
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Skybox Image(s)</strong> — <code>.png</code> or <code>.webp</code> files or direct GitHub raw links. If multiple images, label each face: <code>up</code> / <code>down</code> / <code>front</code> / <code>back</code> / <code>left</code> / <code>right</code>.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Unique Name</strong> — A distinct, original name for your skybox.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Discord Contact</strong> — Format: <code>https://discord.com/users/your_user_id</code></span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Username</strong> — A unique username to identify your submission.</span></li>
+                            </ul>
+                        </div>
+                        <div class="submit-cta">
+                            <div class="submit-cta-text"><h4>Ready to submit?</h4></div>
+                            <a href="https://discord.com/users/841926384838115358" target="_blank" rel="noopener" class="submit-cta-btn"><i data-lucide="message-circle"></i> Submit via Discord</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KILL ICONS -->
+                <div class="accordion-item" id="acc-killicons">
+                    <button class="accordion-trigger" onclick="toggleAccordion('acc-killicons')">
+                        <div class="accordion-icon"><i data-lucide="skull"></i></div>
+                        <div class="accordion-title">
+                            <strong>Kill Icons</strong>
+                            <span>Custom kill feed icons for Kirka.io.</span>
+                        </div>
+                        <i data-lucide="chevron-down" class="accordion-chevron"></i>
+                    </button>
+                    <div class="accordion-body">
+                        <div class="req-card">
+                            <div class="req-card-header"><i data-lucide="list-checks"></i> Submission Requirements</div>
+                            <ul class="req-list">
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Kill Icon Image</strong> — A <code>.png</code> or <code>.webp</code> file, or a direct GitHub raw link.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Unique Name</strong> — A distinct, original name for your kill icon.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Discord Contact</strong> — Format: <code>https://discord.com/users/your_user_id</code></span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Username</strong> — A unique username to identify your submission.</span></li>
+                            </ul>
+                        </div>
+                        <div class="submit-cta">
+                            <div class="submit-cta-text"><h4>Ready to submit?</h4></div>
+                            <a href="https://discord.com/users/841926384838115358" target="_blank" rel="noopener" class="submit-cta-btn"><i data-lucide="message-circle"></i> Submit via Discord</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SOUNDS -->
+                <div class="accordion-item" id="acc-sounds">
+                    <button class="accordion-trigger" onclick="toggleAccordion('acc-sounds')">
+                        <div class="accordion-icon"><i data-lucide="volume-2"></i></div>
+                        <div class="accordion-title">
+                            <strong>Sound Packs</strong>
+                            <span>Custom audio packs for Kirka.io.</span>
+                        </div>
+                        <i data-lucide="chevron-down" class="accordion-chevron"></i>
+                    </button>
+                    <div class="accordion-body">
+                        <div class="req-note">
+                            <i data-lucide="info"></i>
+                            <span>Label each file by its role using the names below. For alternate versions of a file, append <strong><code>(alt)</code></strong> after the name — e.g. <code>Kill 1 (alt)</code>.</span>
+                        </div>
+                        <div class="req-card">
+                            <div class="req-card-header"><i data-lucide="list-checks"></i> Submission Requirements</div>
+                            <ul class="req-list">
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Sound Files</strong> — <code>.mp3</code> or <code>.weba</code> files or direct GitHub raw links. Label every file by its role (see reference table below).</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Unique Name</strong> — A distinct, original name for your sound pack.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Discord Contact</strong> — Format: <code>https://discord.com/users/your_user_id</code></span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Username</strong> — A unique username to identify your submission.</span></li>
+                            </ul>
+                        </div>
+                        <div class="sound-table-wrapper">
+                            <table class="sound-table">
+                                <thead>
+                                    <tr><th>Label</th><th>Description</th><th>Alt version naming</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Earth</td><td>Footstep on earth</td><td><code>Earth (alt)</code></td></tr>
+                                    <tr><td>Grass</td><td>Footstep on grass</td><td><code>Grass (alt)</code></td></tr>
+                                    <tr><td>Mud</td><td>Footstep on mud</td><td><code>Mud (alt)</code></td></tr>
+                                    <tr><td>Sand</td><td>Footstep on sand</td><td><code>Sand (alt)</code></td></tr>
+                                    <tr><td>Stone</td><td>Footstep on stone</td><td><code>Stone (alt)</code></td></tr>
+                                    <tr><td>Hit</td><td>Hit / damage received</td><td><code>Hit (alt)</code></td></tr>
+                                    <tr><td>Kill 1 – Kill 5</td><td>Kill feedback (5 variations)</td><td><code>Kill 1 (alt)</code>, etc.</td></tr>
+                                    <tr><td>Use 1 – Use 7</td><td>Interaction / use sounds (7 variations)</td><td><code>Use 3 (alt)</code>, etc.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="submit-cta">
+                            <div class="submit-cta-text"><h4>Ready to submit?</h4></div>
+                            <a href="https://discord.com/users/841926384838115358" target="_blank" rel="noopener" class="submit-cta-btn"><i data-lucide="message-circle"></i> Submit via Discord</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CLIENTS -->
+                <div class="accordion-item" id="acc-clients">
+                    <button class="accordion-trigger" onclick="toggleAccordion('acc-clients')">
+                        <div class="accordion-icon"><i data-lucide="monitor"></i></div>
+                        <div class="accordion-title">
+                            <strong>Clients</strong>
+                            <span>Game clients and custom launchers for Kirka.io.</span>
+                        </div>
+                        <i data-lucide="chevron-down" class="accordion-chevron"></i>
+                    </button>
+                    <div class="accordion-body">
+                        <div class="req-card">
+                            <div class="req-card-header"><i data-lucide="list-checks"></i> Submission Requirements</div>
+                            <ul class="req-list">
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Unique Name</strong> — A distinct, original name for your client.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Username</strong> — A unique username to identify your submission.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Client Icon</strong> — An icon image for the client (<code>.png</code> or <code>.webp</code>).</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Short Description</strong> — A brief overview of what the client offers and its key features.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Supported Platforms</strong> — List supported platforms (e.g. <code>Windows</code>, <code>macOS</code>, <code>Linux</code>, <code>Browser</code>).</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Source</strong> — Specify <code>open source</code> or <code>closed source</code>. If open source, include the repository link.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Download Page URL</strong> — The link where users can download or access the client.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Discord Contact</strong> — Format: <code>https://discord.com/users/your_user_id</code></span></li>
+                            </ul>
+                        </div>
+                        <div class="submit-cta">
+                            <div class="submit-cta-text"><h4>Ready to submit?</h4></div>
+                            <a href="https://discord.com/users/841926384838115358" target="_blank" rel="noopener" class="submit-cta-btn"><i data-lucide="message-circle"></i> Submit via Discord</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="tos-notice" style="max-width:100%; margin: 28px 0 0; padding: 0;">
+                <div class="tos-notice-inner">
+                    <i data-lucide="triangle-alert"></i>
+                    <p>Before submitting, read and agree to the <a href="tos.html">Terms of Service</a>. Submissions that violate the ToS will not be accepted. By submitting you confirm the content is your own work or that you have the right to share it.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div>
+                <a href="#" class="footer-logo"><img src="assets/icon.png" width="30"><span>Kirka Community Hub</span></a>
+                <p style="color:var(--text-muted);font-size:0.9rem;max-width:300px">Not affiliated with Kirka.io.<br>Built by the community, for the community.</p>
+            </div>
+            <div class="footer-links-wrapper">
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul><li><a href="https://github.com/imnotkoolkid/kch">github</a></li></ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="contribution.html">contribution</a></li>
+                        <li><a href="submit-content.html">Submit Content</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="tos.html">Terms Of Service</a></li>
+                        <li><a href="report.html">Report</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        function toggleAccordion(id) {
+            const item = document.getElementById(id);
+            const isOpen = item.classList.contains('open');
+            // Close all
+            document.querySelectorAll('.accordion-item').forEach(el => el.classList.remove('open'));
+            // Open clicked if it was closed
+            if (!isOpen) item.classList.add('open');
+        }
+    </script>
+</body>
+
+</html>

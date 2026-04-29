@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kirka Community Hub - Report Content</title>
+    <link rel="icon" type="image/png" href="assets/icon.png">
+    <meta name="description" content="Report copyright-infringing or problematic content on Kirka Community Hub.">
+    <meta name="keywords" content="Kirka report content, Kirka takedown, Kirka Community Hub report">
+    <meta name="author" content="imnotkoolkid">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://kirkacommunityhub.pages.dev/report.html">
+    <meta property="og:title" content="Kirka Community Hub - Report Content">
+    <meta property="og:description" content="Report copyright-infringing or problematic content on Kirka Community Hub.">
+    <meta property="og:image" content="https://kirkacommunityhub.pages.dev/assets/icon.png">
+    <meta property="og:url" content="https://kirkacommunityhub.pages.dev/report.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kirka Community Hub">
+    <meta name="theme-color" content="#1bd96a">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kirka Community Hub - Report Content">
+    <meta name="twitter:description" content="Report copyright-infringing or problematic content on Kirka Community Hub.">
+    <meta name="twitter:image" content="https://kirkacommunityhub.pages.dev/assets/icon.png">
+    <link rel="stylesheet" href="src/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <style>
+        .report-hero {
+            padding: 140px 0 60px;
+            text-align: center;
+            background:
+                radial-gradient(circle at 50% 0%, rgba(27, 217, 106, .08) 0%, transparent 70%),
+                linear-gradient(rgba(255, 255, 255, .04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, .04) 1px, transparent 1px);
+            background-size: 100% 100%, 50px 50px, 50px 50px;
+            border-bottom: 1px solid var(--mod-card-border);
+            position: relative;
+        }
+
+        .report-hero::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+            background: linear-gradient(transparent, var(--mod-bg));
+            pointer-events: none;
+        }
+
+        .report-hero h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            margin-bottom: 14px;
+        }
+
+        .report-wrapper {
+            max-width: 90%;
+            margin: 60px auto 80px;
+            padding: 0 20px;
+        }
+
+        header {
+            position: fixed;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 99%;
+            z-index: 1000;
+            background: var(--header-bg);
+            backdrop-filter: blur(12px);
+            height: 62px;
+            border-radius: 5px;
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 24px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 800;
+            font-size: 1.1rem;
+        }
+
+        .logo img {
+            width: 32px;
+            height: 32px;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: .9rem;
+            font-weight: 600;
+            transition: color .2s;
+        }
+
+        .nav-link:hover { color: var(--text); }
+        .nav-link svg { width: 16px; height: 16px; }
+
+        .report-section {
+            margin-bottom: 44px;
+            scroll-margin-top: 90px;
+        }
+
+        .report-section-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 18px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid var(--mod-card-border);
+        }
+
+        .report-section-number {
+            background: rgba(27, 217, 106, .1);
+            border: 1px solid rgba(27, 217, 106, .2);
+            color: var(--mod-green);
+            font-size: .75rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+            white-space: nowrap;
+        }
+
+        .report-section h2 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .report-section p {
+            color: var(--text-muted);
+            font-size: .95rem;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+
+        .report-list {
+            list-style: none;
+            margin: 10px 0 14px;
+        }
+
+        .report-list li {
+            color: var(--text-muted);
+            font-size: .92rem;
+            line-height: 1.7;
+            padding: 6px 0 6px 24px;
+            position: relative;
+            border-bottom: 1px solid rgba(48, 54, 61, .4);
+        }
+
+        .report-list li:last-child { border-bottom: none; }
+
+        .report-list li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--mod-green);
+            opacity: .6;
+        }
+
+        .tos-callout,
+        .tos-warning {
+            border-radius: 0 8px 8px 0;
+            padding: 14px 18px;
+            margin: 16px 0;
+            color: var(--text-muted);
+            font-size: .9rem;
+            line-height: 1.7;
+        }
+
+        .tos-callout {
+            background: rgba(27, 217, 106, .04);
+            border: 1px solid rgba(27, 217, 106, .15);
+            border-left: 3px solid var(--mod-green);
+        }
+
+        .tos-warning {
+            background: rgba(255, 180, 0, .04);
+            border: 1px solid rgba(255, 180, 0, .15);
+            border-left: 3px solid #ffb400;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="assets/icon.png" onerror="this.style.display='none'">
+                <span>Kirka Community Hub</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link"><i data-lucide="chevron-left"></i> Back</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="report-hero">
+            <div class="container">
+                <h1>Report Content</h1>
+            </div>
+        </div>
+
+        <div class="report-wrapper">
+
+            <div class="report-section">
+                <div class="report-section-header">
+                    <span class="report-section-number">01</span>
+                    <h2>Overview</h2>
+                </div>
+                <p>If someone has uploaded content that belongs to you (or includes any part of your original work) without permission, you may request a review and removal of your work whether it is the entire project or only a portion used within another project.</p>
+            </div>
+
+            <div class="report-section">
+                <div class="report-section-header">
+                    <span class="report-section-number">02</span>
+                    <h2>This Applies To</h2>
+                </div>
+                <p>This includes, but is not limited to:</p>
+                <ul class="report-list">
+                    <li>Full CSS files</li>
+                    <li>Modified or partially edited versions of your work</li>
+                    <li>Assets embedded within CSS (images, fonts, sounds, etc.)</li>
+                    <li>Code included in scripts or clients</li>
+                    <li>Textures, crosshairs, or other visual assets</li>
+                    <li>Any portion of your original content used without proper authorization</li>
+                </ul>
+                <p>If you believe your work has been used without permission, you may submit a removal request.</p>
+            </div>
+
+            <div class="report-section">
+                <div class="report-section-header">
+                    <span class="report-section-number">03</span>
+                    <h2>How to Submit</h2>
+                </div>
+                <p>Please contact <strong style="color:var(--text-main)"><a href="https://discord.com/users/841926384838115358" target="_blank" rel="noopener" style="color: var(--mod-green);">imnotkoolkid</a></strong> to submit your takedown request:</p>
+                <p>When submitting your report, please include:</p>
+                <ul class="report-list">
+                    <li>A direct link to the content on our website</li>
+                    <li>Proof that you are the original creator or rights holder</li>
+                </ul>
+                <div class="tos-warning">
+                    <i data-lucide="alert-triangle" style="color:#ffb400;margin-right:8px"></i>Incomplete, misleading, or false reports will be ignored.
+                </div>
+            </div>
+
+            <div class="report-section">
+                <div class="report-section-header">
+                    <span class="report-section-number">04</span>
+                    <h2>What Happens Next</h2>
+                </div>
+                <p>Once your request has been reviewed, appropriate action will be taken. This may include removing or modifying the reported content within a reasonable timeframe.</p>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div>
+                <a href="index.html" class="footer-logo">
+                    <img src="assets/icon.png" width="30">
+                    <span>Kirka Community Hub</span>
+                </a>
+                <p style="color:var(--text-muted);font-size:.9rem;max-width:300px">Not affiliated with
+                    Kirka.io.<br>Built by the community, for the community.</p>
+            </div>
+            <div class="footer-links-wrapper">
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://github.com/imnotkoolkid/kch">github</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="contribution.html">contribution</a></li>
+                        <li><a href="submit-content.html">Submit Content</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="tos.html">Terms Of Service</a></li>
+                        <li><a href="report.html">Report</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons()</script>
+</body>
+
+</html>

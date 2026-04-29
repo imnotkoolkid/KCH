@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Kirka Community Hub - Textures</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="src/pages.css">
+    <link rel="icon" type="image/png" href="assets/icon.png">
+    <meta name="description" content="Discover and download custom texture packs for kirka.io — browse community-made textures.">
+    <meta name="keywords" content="Kirka textures, Kirka.io texture pack, Kirka custom textures, Kirka Community Hub">
+    <meta name="author" content="imnotkoolkid">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://kirkacommunityhub.pages.dev/textures.html">
+    <meta property="og:title" content="Kirka Community Hub - Textures">
+    <meta property="og:description" content="Discover and download a large catalogue of custom textures for kirka.io">
+    <meta property="og:image" content="https://kirkacommunityhub.pages.dev/assets/icon.png">
+    <meta property="og:url" content="https://kirkacommunityhub.pages.dev/textures.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kirka Community Hub">
+    <meta name="theme-color" content="#1bd96a">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kirka Community Hub - Textures">
+    <meta name="twitter:description" content="Discover and download a large catalogue of custom textures for kirka.io">
+    <meta name="twitter:image" content="https://kirkacommunityhub.pages.dev/assets/icon.png">
+    <style>
+        .card-img {
+            object-position: top;
+        }
+
+        .preview-main-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-container"><a href="index.html" class="logo"><img src="assets/icon.png"
+                    onerror="this.style.display='none'"><span>Kirka Community Hub</span></a>
+            <nav class="nav-menu"><a href="index.html" class="nav-link"><i data-lucide="chevron-left"></i> Back</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="tabs-wrapper">
+            <div class="tabs-container"><button class="tab-item active"
+                    onclick="setActive(this,'tab-Home')">Home</button><button class="tab-item"
+                    onclick="setActive(this,'tab-Featured')">Featured</button><button class="tab-item"
+                    onclick="setActive(this,'tab-All')">All</button><button class="tab-item"
+                    onclick="setActive(this,'tab-Liked')">Liked</button></div>
+        </div>
+        <div class="container">
+            <div class="tab-content active" id="tab-Home">
+                <div id="home-mount"></div>
+                <div class="card-carousel" id="home-carousel">
+                    <div class="card-carousel-inner" id="carousel-inner-all"></div>
+                </div>
+            </div>
+            <div class="tab-content" id="tab-Featured">
+                <div class="tab-placeholder" id="featured-placeholder"><i data-lucide="star"></i>
+                    <h2>Featured</h2>
+                    <p>Hand-picked and highlighted textures from the community.</p>
+                </div>
+                <div class="featured-grid" id="featured-list"></div>
+            </div>
+            <div class="tab-content" id="tab-All">
+                <div id="all-mount"></div>
+                <div class="all-grid" id="all-grid"></div>
+            </div>
+            <div class="tab-content" id="tab-Liked">
+                <div class="tab-placeholder" id="liked-placeholder"><i data-lucide="heart"></i>
+                    <h2>Liked</h2>
+                    <p>Textures you've liked will show up here.</p>
+                </div>
+                <div class="all-grid" id="liked-grid" style="display: none;"></div>
+            </div>
+        </div>
+    </main>
+
+    <div class="preview-overlay" id="preview-overlay" onclick="handleOverlayClick(event)">
+        <div class="preview-modal" id="preview-modal">
+            <div class="preview-img-section loader-container"><img class="preview-main-img" id="preview-img" src=""
+                    alt="" draggable="false">
+                <div class="loader"></div>
+                <div class="zoom-indicator" id="zoom-indicator"></div>
+            </div>
+            <div class="preview-body">
+                <div class="preview-header">
+                    <div class="preview-title-block">
+                        <div class="preview-title" id="preview-title"></div>
+                        <div class="preview-owner" id="preview-owner"></div>
+                    </div>
+                </div>
+                <div class="preview-tags" id="preview-tags"></div>
+                <div class="preview-actions" id="preview-actions"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast-container" id="toast-container"></div>
+    <footer>
+        <div class="container footer-content">
+            <div>
+                <a href="#" class="footer-logo"><img src="assets/icon.png" width="30"><span>Kirka Community
+                        Hub</span></a>
+                <p style="color:var(--text-muted);font-size:0.9rem;max-width:300px">Not affiliated with
+                    Kirka.io.<br>Built by the community, for the community.</p>
+            </div>
+            <div class="footer-links-wrapper">
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://github.com/imnotkoolkid/kch" target="_blank">github</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="contribution.html">contribution</a></li>
+                        <li><a href="submit-content.html">Submit Content</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="tos.html">Terms Of Service</a></li>
+                        <li><a href="report.html">Report</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const TEXTURE_JSON_URL = 'https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/data/texture.json',
+            d = document,
+            ls = localStorage;
+        let allItems = [],
+            liked = new Set(),
+            cur = null,
+            scale = 1,
+            posX = 0,
+            posY = 0,
+            isDragging = false,
+            startX, startY;
+
+        const $ = id => d.getElementById(id),
+            noResHTML = msg => `<div class="no-results-msg"><h3>No results found</h3><p>${msg}</p></div>`,
+            showToast = (msg, icon = 'check') => {
+                let t = d.createElement('div');
+                t.className = 'toast';
+                t.innerHTML = `<i data-lucide="${icon}"></i><span>${msg}</span>`;
+                $('toast-container').appendChild(t);
+                lucide.createIcons();
+                setTimeout(() => t.remove(), 2200);
+            };
+
+        const handleDownload = (url, id) => {
+            if (!url) return;
+            fetch(url).then(r => r.ok ? r.blob() : Promise.reject()).then(blob => {
+                let a = d.createElement('a');
+                let filename = url.split('/').pop() || (id + '.png');
+                a.href = URL.createObjectURL(blob);
+                a.download = filename;
+                d.body.appendChild(a);
+                a.click();
+                d.body.removeChild(a);
+                URL.revokeObjectURL(a.href);
+            }).catch(() => showToast('Download failed.', 'alert-circle'));
+        };
+
+        const updateImg = () => {
+            let img = $('preview-img');
+            img.style.transform = `translate(-50%,-50%) translate(${posX}px,${posY}px) scale(${scale})`;
+            $('zoom-indicator').textContent = `${Math.round(scale * 100)}%`;
+            $('zoom-indicator').style.opacity = scale === 1 ? '0' : '1';
+        };
+
+        const toggleLike = i => {
+            if (!i) return;
+            let t = i.id,
+                idx = allItems.indexOf(i),
+                now = !liked.has(t);
+            now ? liked.add(t) : liked.delete(t);
+            ls.setItem('likedTextures', JSON.stringify([...liked]));
+            d.querySelectorAll(`.card[data-idx="${idx}"] .btn-icon`).forEach(b => {
+                b.classList.toggle('liked', now);
+                b.title = now ? 'Unlike' : 'Like';
+            });
+            if (cur && cur.id === t) {
+                let btn = Array.from(d.querySelectorAll('.preview-actions .preview-btn')).find(b => b.innerHTML.includes('heart'));
+                if (btn) {
+                    btn.classList.toggle('liked', now);
+                    btn.innerHTML = `<i data-lucide="heart"></i> ${now ? 'Unlike' : 'Like'}`;
+                    lucide.createIcons();
+                }
+            }
+            renderLiked();
+        };
+
+        const idToSlug = id => encodeURIComponent(id.trim().toLowerCase());
+        const slugToId = s => decodeURIComponent(s).toLowerCase();
+
+        /* ── Preview Modal ── */
+        const openPreview = i => {
+            cur = i;
+            let img = $('preview-img'),
+                loader = d.querySelector('.preview-img-section .loader');
+            loader.style.display = 'block';
+            img.onload = () => loader.style.display = 'none';
+            img.onerror = () => {
+                loader.style.display = 'none';
+                img.src = '';
+                img.style.background = '#000';
+            };
+            img.src = i.textureImage || '';
+            $('preview-title').textContent = i.id;
+            let own = $('preview-owner');
+            i.discord ? own.innerHTML = `by <a href="${i.discord}" target="_blank">${i.owner || 'Unknown'}</a>` : own.textContent = `by ${i.owner || 'Unknown'}`;
+            $('preview-tags').innerHTML = (i.tags || []).map(t => `<span class="preview-tag">${t}</span>`).join('');
+            let ac = $('preview-actions'),
+                isLk = liked.has(i.id),
+                safeUrl = (i.textureImage || '').replace(/'/g, "\\'"),
+                safeId = (i.id || '').replace(/'/g, "\\'");
+            ac.innerHTML = `<button class="preview-btn primary" onclick="handleDownload('${safeUrl}','${safeId}')"><i data-lucide="download"></i> Download</button><button class="preview-btn" onclick="copyTextureLink('${safeUrl}')"><i data-lucide="link"></i> Copy Link</button><button class="preview-btn" onclick="shareCurrentPage()"><i data-lucide="share-2"></i> Share</button>`;
+            scale = 1;
+            posX = 0;
+            posY = 0;
+            updateImg();
+            $('preview-overlay').classList.add('visible');
+            d.body.style.overflow = 'hidden';
+            lucide.createIcons();
+            history.pushState({ previewOpen: true }, '', `#${idToSlug(i.id)}`);
+        };
+
+        const closePreview = () => {
+            $('preview-overlay').classList.remove('visible');
+            d.body.style.overflow = '';
+            cur = null;
+            history.pushState({ previewOpen: false }, '', location.pathname + location.search);
+        };
+
+        const handleOverlayClick = e => {
+            if (e.target === $('preview-overlay')) closePreview();
+        };
+
+        d.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closePreview();
+        });
+
+        const copyTextureLink = async url => {
+            try {
+                await navigator.clipboard.writeText(url);
+                showToast('Link copied to clipboard!');
+            } catch {
+                showToast('Failed to copy link.', 'alert-circle');
+            }
+        };
+
+        const shareCurrentPage = () => {
+            navigator.clipboard.writeText(location.href).then(() => showToast('Link copied to clipboard!')).catch(() => showToast('Failed to copy link.', 'alert-circle'));
+        };
+
+        const isLiked = i => liked.has(i.id);
+
+        const createCard = i => {
+            let t = (i.tags || []).map(t => `<span class="tag">${t}</span>`).join(''),
+                star = i.label === 'featured' ? '<div class="featured-star-badge"><i data-lucide="star"></i></div>' : '',
+                idx = allItems.indexOf(i),
+                likedClass = isLiked(i) ? 'liked' : '',
+                safeUrl = (i.textureImage || '').replace(/'/g, "\\'"),
+                safeId = (i.id || '').replace(/'/g, "\\'");
+            return `<div class="card" onclick="openPreview(allItems[${idx}])" data-idx="${idx}"><div class="card-img-wrapper loader-container">${star}<img class="card-img" src="${i.textureImage || ''}" alt="" loading="lazy" onload="this.parentNode.querySelector('.loader').style.display='none';"><div class="loader"></div></div><div class="card-body"><div class="card-owner">by ${i.owner || 'Unknown'}</div><div class="card-actions"><div class="card-tags">${t}</div></div><div class="card-actions"><button class="btn-icon" title="Download" onclick="handleDownload('${safeUrl}','${safeId}'); event.stopPropagation()"><i data-lucide="download"></i></button><button class="btn-icon ${likedClass}" title="${isLiked(i) ? 'Unlike' : 'Like'}" onclick="toggleLike(allItems[${idx}]); event.stopPropagation()"><i data-lucide="heart"></i></button></div></div></div>`;
+        };
+
+        let homeCtrl, allCtrl;
+
+        const renderHome = f => {
+            let car = $('home-carousel'),
+                inn = $('carousel-inner-all'),
+                sm = homeCtrl ? homeCtrl.isActive() : false;
+            car.classList.toggle('search-mode', sm);
+            inn.classList.toggle('search-mode', sm);
+            if (!f.length) inn.innerHTML = noResHTML(sm ? 'Try different tags' : 'No items match');
+            else if (sm) inn.innerHTML = f.map(createCard).join('');
+            else {
+                inn.innerHTML = f.map(createCard).join('') + f.map(createCard).join('');
+                inn.style.animation = 'none';
+                void inn.offsetWidth;
+                inn.style.animation = `scroll ${Math.max(20, f.length * 4)}s linear infinite`;
+            }
+            lucide.createIcons();
+        };
+
+        const renderAllGrid = f => {
+            $('all-grid').innerHTML = f.length ? f.map(createCard).join('') : noResHTML('Try different tags');
+            lucide.createIcons();
+        };
+
+        const renderFeatured = () => {
+            let f = allItems.filter(i => i.label === 'featured');
+            $('featured-placeholder').style.display = f.length ? 'none' : 'flex';
+            $('featured-list').innerHTML = f.map(createCard).join('');
+            lucide.createIcons();
+        };
+
+        const renderLiked = () => {
+            let l = allItems.filter(i => liked.has(i.id)),
+                grid = $('liked-grid'),
+                ph = $('liked-placeholder');
+            if (l.length) {
+                grid.innerHTML = l.map(createCard).join('');
+                grid.style.display = 'grid';
+                ph.style.display = 'none';
+            } else {
+                grid.innerHTML = '';
+                grid.style.display = 'none';
+                ph.style.display = 'flex';
+            }
+            lucide.createIcons();
+        };
+
+        const setActive = (el, id) => {
+            d.querySelectorAll('.tab-item, .tab-content').forEach(e => e.classList.remove('active'));
+            el.classList.add('active');
+            $(id).classList.add('active');
+            if (id === 'tab-Featured') renderFeatured();
+            if (id === 'tab-All' && allCtrl) renderAllGrid(allCtrl.getFiltered());
+            if (id === 'tab-Liked') renderLiked();
+        };
+
+        const buildTagsUI = (p, m) => {
+            $(m).innerHTML = `<div class="search-area"><div class="tags-scroll-row"><button class="tags-scroll-btn" id="${p}-tl"><i data-lucide="chevron-left"></i></button><div class="tags-container" id="${p}-tags"></div><button class="tags-scroll-btn" id="${p}-tr"><i data-lucide="chevron-right"></i></button></div></div>`;
+            lucide.createIcons();
+        };
+
+        const createTagsController = (p, onUp) => {
+            let tags = new Set(),
+                S = s => $(p + s),
+                tagsEl = S('-tags');
+            const filtered = () => allItems.filter(i => !tags.size || [...tags].every(t => (i.tags || []).includes(t)));
+            tagsEl.innerHTML = [...new Set(allItems.flatMap(i => i.tags || []))].sort().map(t => `<span class="tag-item" data-tag="${t}">${t}</span>`).join('');
+            tagsEl.querySelectorAll('.tag-item').forEach(el => el.addEventListener('click', () => {
+                let t = el.dataset.tag;
+                tags[tags.has(t) ? 'delete' : 'add'](t);
+                el.classList.toggle('selected');
+                onUp(filtered());
+            }));
+            S('-tl').addEventListener('click', () => tagsEl.scrollBy({ left: -150, behavior: 'smooth' }));
+            S('-tr').addEventListener('click', () => tagsEl.scrollBy({ left: 150, behavior: 'smooth' }));
+            tagsEl.addEventListener('wheel', e => {
+                if (Math.abs(e.deltaY) > 0) {
+                    e.preventDefault();
+                    tagsEl.scrollLeft += e.deltaY;
+                }
+            });
+            return { getFiltered: filtered, isActive: () => tags.size > 0 };
+        };
+
+        const handleHash = () => {
+            let h = location.hash;
+            if (!h || h.length < 2) return;
+            let slug = h.substring(1);
+            let i = allItems.find(i => i.id.trim().toLowerCase() === slugToId(slug));
+            if (i) {
+                openPreview(i);
+            } else {
+                window.location.href = '404.html';
+            }
+        };
+
+        window.addEventListener('popstate', () => {
+            let h = location.hash;
+            if (h && h.length > 1) {
+                handleHash();
+            } else {
+                if ($('preview-overlay').classList.contains('visible')) {
+                    $('preview-overlay').classList.remove('visible');
+                    d.body.style.overflow = '';
+                    cur = null;
+                }
+            }
+        });
+
+        (async () => {
+            try {
+                allItems = await (await fetch(TEXTURE_JSON_URL)).json();
+                liked = new Set(JSON.parse(ls.getItem('likedTextures') || '[]'));
+                buildTagsUI('home', 'home-mount');
+                buildTagsUI('all', 'all-mount');
+                homeCtrl = createTagsController('home', renderHome);
+                allCtrl = createTagsController('all', renderAllGrid);
+                renderHome(homeCtrl.getFiltered());
+                renderLiked();
+                handleHash();
+            } catch (e) {
+                console.error('Failed to load texture data:', e);
+            }
+        })();
+
+        let sec = $('preview-overlay').querySelector('.preview-img-section');
+        sec.addEventListener('wheel', e => {
+            if (!$('preview-overlay').classList.contains('visible')) return;
+            e.preventDefault();
+            let delta = -Math.sign(e.deltaY) * 0.1;
+            scale = Math.max(0.5, Math.min(5, scale + delta));
+            if (scale <= 1) { posX = 0; posY = 0; }
+            updateImg();
+        });
+        sec.addEventListener('mousedown', e => {
+            if (scale <= 1 || e.target.closest('.zoom-indicator')) return;
+            e.preventDefault();
+            isDragging = true;
+            startX = e.clientX - posX;
+            startY = e.clientY - posY;
+            sec.style.cursor = 'grabbing';
+        });
+        d.addEventListener('mousemove', e => {
+            if (!isDragging) return;
+            posX = e.clientX - startX;
+            posY = e.clientY - startY;
+            updateImg();
+        });
+        d.addEventListener('mouseup', () => {
+            if (isDragging) {
+                isDragging = false;
+                sec.style.cursor = 'default';
+            }
+        });
+    </script>
+</body>
+
+</html>

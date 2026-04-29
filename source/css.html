@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Kirka Community Hub - CSS</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="src/pages.css">
+    <link rel="icon" type="image/png" href="assets/icon.png">
+    <meta name="description" content="Discover and download the largest catalogue of custom CSS themes for kirka.io — free, paid, and showcase.">
+    <meta name="keywords" content="Kirka.io CSS, Kirka custom themes, Kirka.io stylesheets, Kirka Community Hub">
+    <meta name="author" content="imnotkoolkid">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://kirkacommunityhub.pages.dev/css.html">
+    <meta property="og:title" content="Kirka Community Hub - CSS">
+    <meta property="og:description" content="Discover and download the largest catalogue of custom CSS themes for kirka.io">
+    <meta property="og:image" content="https://kirkacommunityhub.pages.dev/assets/icon.png">
+    <meta property="og:url" content="https://kirkacommunityhub.pages.dev/css.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kirka Community Hub">
+    <meta name="theme-color" content="#1bd96a">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kirka Community Hub - CSS">
+    <meta name="twitter:description" content="Discover and download the largest catalogue of custom CSS themes for kirka.io">
+    <meta name="twitter:image" content="https://kirkacommunityhub.pages.dev/assets/icon.png">
+</head>
+
+<body>
+    <header>
+        <div class="header-container"><a href="index.html" class="logo"><img src="assets/icon.png"
+                    onerror="this.style.display='none'"><span>Kirka Community Hub</span></a>
+            <nav class="nav-menu"><a href="index.html" class="nav-link"><i data-lucide="chevron-left"></i> Back</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="tabs-wrapper">
+            <div class="tabs-container"><button class="tab-item active"
+                    onclick="setActive(this,'tab-Home')">Home</button><button class="tab-item"
+                    onclick="setActive(this,'tab-Featured')">Featured</button><button class="tab-item"
+                    onclick="setActive(this,'tab-All')">All</button><button class="tab-item"
+                    onclick="setActive(this,'tab-Liked')">Liked</button></div>
+        </div>
+        <div class="container">
+            <div class="tab-content active" id="tab-Home">
+                <div id="home-mount"></div>
+                <div class="card-carousel" id="home-carousel">
+                    <div class="card-carousel-inner" id="carousel-inner-all"></div>
+                </div>
+            </div>
+            <div class="tab-content" id="tab-Featured">
+                <div class="tab-placeholder" id="featured-placeholder"><i data-lucide="star"></i>
+                    <h2>Featured</h2>
+                    <p>Hand-picked and highlighted CSS mods from the community.</p>
+                </div>
+                <div class="featured-grid" id="featured-list"></div>
+            </div>
+            <div class="tab-content" id="tab-All">
+                <div id="all-mount"></div>
+                <div class="all-grid" id="all-grid"></div>
+            </div>
+            <div class="tab-content" id="tab-Liked">
+                <div class="tab-placeholder" id="liked-placeholder"><i data-lucide="heart"></i>
+                    <h2>Liked</h2>
+                    <p>CSS mods you've liked will show up here.</p>
+                </div>
+                <div class="all-grid" id="liked-grid" style="display: none;"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Preview Modal -->
+    <div class="preview-overlay" id="preview-overlay" onclick="handleOverlayClick(event)">
+        <div class="preview-modal" id="preview-modal">
+            <div class="preview-img-section loader-container"><img class="preview-main-img" id="preview-img" src=""
+                    alt="" draggable="false">
+                <div class="loader"></div>
+                <div class="preview-img-toggles" id="preview-img-toggles"><button class="img-toggle-btn active"
+                        id="toggle-home" onclick="switchImage('home')"><i data-lucide="home"></i></button><button
+                        class="img-toggle-btn" id="toggle-ingame" onclick="switchImage('ingame')"><i
+                            data-lucide="gamepad-2"></i></button></div>
+                <div class="zoom-indicator" id="zoom-indicator"></div>
+            </div>
+            <div class="preview-body">
+                <div class="preview-header">
+                    <div class="preview-title-block">
+                        <div class="preview-title" id="preview-title"></div>
+                        <div class="preview-owner" id="preview-owner"></div>
+                    </div>
+                    <span class="preview-badge" id="preview-badge"></span>
+                </div>
+                <div class="preview-tags" id="preview-tags"></div>
+                <div class="preview-actions" id="preview-actions"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Source Viewer Modal -->
+    <div class="source-overlay" id="source-overlay" onclick="handleSourceOverlayClick(event)">
+        <div class="source-modal" id="source-modal">
+            <div class="source-modal-header">
+                <div class="source-modal-title" id="source-modal-name">Source</div>
+
+                <div class="source-modal-actions">
+                    <button class="source-share-btn" id="source-share-btn" title="Share Source Code" onclick="shareSourceCode()">
+                        <i data-lucide="share-2"></i>
+                    </button>
+                    <button class="source-copy-btn" id="source-copy-btn" title="Copy CSS" onclick="copySourceCode()">
+                        <span class="copy-icon"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="source-code-wrapper" id="source-code-wrapper">
+                <div class="source-loading" id="source-loading">
+                    <div class="loader" style="width:28px"></div>
+                    <span>Loading source…</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast-container" id="toast-container"></div>
+    <footer>
+        <div class="container footer-content">
+            <div>
+                <a href="#" class="footer-logo"><img src="assets/icon.png" width="30"><span>Kirka Community
+                        Hub</span></a>
+                <p style="color:var(--text-muted);font-size:0.9rem;max-width:300px">Not affiliated with
+                    Kirka.io.<br>Built by the community, for the community.</p>
+            </div>
+            <div class="footer-links-wrapper">
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://github.com/imnotkoolkid/kch" target="_blank">github</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="contribution.html">contribution</a></li>
+                        <li><a href="submit-content.html">Submit Content</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="tos.html">Terms Of Service</a></li>
+                        <li><a href="report.html">Report</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+<script src="src/pages.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+{
+    "skyboxes": [
+        {
+            "id": "skybox_single1",
+            "name": "Skybox 1",
+            "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/skyboxs/sky1.png",
+            "owner": "Unknown",
+            "discord": "",
+            "isPack": false
+        },
+        {
+            "id": "skybox_single2",
+            "name": "Skybox 2",
+            "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/skyboxs/sky2.png",
+            "owner": "Unknown",
+            "discord": "",
+            "isPack": false
+        },
+        {
+            "id": "skybox_pack1",
+            "name": "brightpurple",
+            "owner": "Unknown",
+            "discord": "",
+            "isPack": true,
+            "images": [
+                {
+                    "name": "up",
+                    "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/skyboxs/brightpurple/up.png"
+                },
+                {
+                    "name": "down",
+                    "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/skyboxs/brightpurple/Down.png"
+                },
+                {
+                    "name": "back",
+                    "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/skyboxs/brightpurple/Back.png"
+                },
+                {
+                    "name": "front",
+                    "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/skyboxs/brightpurple/front.png"
+                },
+                {
+                    "name": "right",
+                    "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/skyboxs/brightpurple/right.png"
+                },
+                {
+                    "name": "left",
+                    "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/skyboxs/brightpurple/left.png"
+                }
+            ]
+        },
+        {
+            "id": "skybox_pack2",
+            "name": "paintedblue",
+            "owner": "Unknown",
+            "discord": "",
+            "isPack": true,
+            "images": [
+                {
+                    "name": "up",
+                    "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/skyboxs/paintedblue/up-min.png"
+                },
+                {
+                    "name": "down",
+                    "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/skyboxs/paintedblue/down-min.png"
+                },
+                {
+                    "name": "back",
+                    "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/skyboxs/paintedblue/back-min.png"
+                },
+                {
+                    "name": "front",
+                    "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/skyboxs/paintedblue/front-min.png"
+                },
+                {
+                    "name": "right",
+                    "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/skyboxs/paintedblue/right-min.png"
+                },
+                {
+                    "name": "left",
+                    "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/skyboxs/paintedblue/left-min.png"
+                }
+            ]
+        },
+        {
+            "id": "skybox_pack3",
+            "name": "purpleblack",
+            "owner": "Unknown",
+            "discord": "",
+            "isPack": true,
+            "images": [
+                {
+                    "name": "up",
+                    "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/skyboxs/purpleblack/up.jpg"
+                },
+                {
+                    "name": "down",
+                    "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/skyboxs/purpleblack/down.jpg"
+                },
+                {
+                    "name": "back",
+                    "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/skyboxs/purpleblack/back.jpg"
+                },
+                {
+                    "name": "front",
+                    "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/skyboxs/purpleblack/front.jpg"
+                },
+                {
+                    "name": "right",
+                    "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/skyboxs/purpleblack/right.jpg"
+                },
+                {
+                    "name": "left",
+                    "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/skyboxs/purpleblack/left.jpg"
+                }
+            ]
+        },
+        {
+            "id": "skybox_pack4",
+            "name": "redblack",
+            "owner": "Unknown",
+            "discord": "",
+            "isPack": true,
+            "images": [
+                {
+                    "name": "up",
+                    "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/skyboxs/redblack/up.jpg"
+                },
+                {
+                    "name": "down",
+                    "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/skyboxs/redblack/down.jpg"
+                },
+                {
+                    "name": "back",
+                    "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/skyboxs/redblack/back.jpg"
+                },
+                {
+                    "name": "front",
+                    "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/skyboxs/redblack/front.jpg"
+                },
+                {
+                    "name": "right",
+                    "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/skyboxs/redblack/right.jpg"
+                },
+                {
+                    "name": "left",
+                    "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/skyboxs/redblack/left.jpg"
+                }
+            ]
+        }
+    ]
+}

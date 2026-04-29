@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Kirka Client",
+    "owner": "Kirka.io",
+    "icon": "https://kirka.io/favicon.ico",
+    "description": "Official kirka client",
+    "platforms": ["Windows", "macOS", "Linux"],
+    "source": "closed source",
+    "development": "active",
+    "downloadUrl": "https://client.kirka.io/"
+  },
+  {
+    "name": "Dawn Client",
+    "owner": "zVipexx",
+    "icon": "https://raw.githubusercontent.com/zVipexx/dawn-client-v2/aedf5f04f8e9e66d038735477cda7d966a30c98b/src-tauri/icons/icon.png",
+    "description": "basically juice client",
+    "platforms": ["Windows", "macOS"],
+    "source": "closed source",
+    "development": "inactive",
+    "downloadUrl": "https://github.com/zVipexx/dawn-client/releases"
+  },
+  {
+    "name": "Publikc",
+    "owner": "skywalk1411",
+    "icon": "https://raw.githubusercontent.com/skywalk1411/publikc/refs/heads/main/src/assets/img/icon.png",
+    "description": "basically juice client",
+    "platforms": ["Windows", "macOS", "Linux"],
+    "source": "open source",
+    "development": "active",
+    "downloadUrl": "https://github.com/skywalk1411/publikc/releases"
+  },
+  {
+    "name": "Faint",
+    "owner": "timokoz",
+    "icon": null,
+    "description": "basically juice client",
+    "platforms": ["Windows"],
+    "source": "closed source",
+    "development": "inactive",
+    "downloadUrl": "https://github.com/timokoz/faint/releases"
+  },
+  {
+    "name": "Obsidian Client",
+    "owner": "imnotkoolkid",
+    "icon": "https://raw.githubusercontent.com/imnotkoolkid/OBSIDIAN-CLIENT-preview/refs/heads/main/assets/Obsidian%20Client.ico",
+    "description": "random cool client",
+    "platforms": ["Windows", "macOS"],
+    "source": "open source",
+    "development": "inactive",
+    "downloadUrl": "https://github.com/imnotkoolkid/OBSIDIAN-CLIENT-preview/releases"
+  },
+    {
+    "name": "Dawn Client v2",
+    "owner": "zVipexx",
+    "icon": "https://raw.githubusercontent.com/zVipexx/dawn-client-v2/aedf5f04f8e9e66d038735477cda7d966a30c98b/src-tauri/icons/icon.png",
+    "description": "yh ok ig",
+    "platforms": ["Windows"],
+    "source": "open source",
+    "development": "inactive",
+    "downloadUrl": "https://github.com/zVipexx/dawn-client-v2/releases"
+  },
+  {
+    "name": "Redline Client",
+    "owner": "robertpakalns",
+    "icon": "https://raw.githubusercontent.com/robertpakalns/redline-client/refs/heads/main/assets/icons/icon.ico",
+    "description": "cool client ",
+    "platforms": ["Windows", "macOS", "Linux"],
+    "source": "open source",
+    "development": "inactive",
+    "downloadUrl": "https://github.com/robertpakalns/redline-client/releases"
+  },
+  {
+    "name": "Coke Client",
+    "owner": "42infi",
+    "icon": "https://raw.githubusercontent.com/42infi/juice-client/refs/heads/main/src/assets/img/icon.png",
+    "description": "basically juice client",
+    "platforms": ["Windows", "macOS", "Linux"],
+    "source": "open source",
+    "development": "inactive",
+    "downloadUrl": "https://github.com/42infi/juice-client/releases"
+  }
+]
