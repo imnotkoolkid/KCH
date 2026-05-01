@@ -39,7 +39,7 @@
     "development": "inactive",
     "downloadUrl": "https://github.com/imnotkoolkid/OBSIDIAN-CLIENT-preview/releases"
   },
-    {
+  {
     "name": "Dawn Client v2",
     "owner": "zVipexx",
     "icon": "https://raw.githubusercontent.com/zVipexx/dawn-client-v2/aedf5f04f8e9e66d038735477cda7d966a30c98b/src-tauri/icons/icon.png",
