@@ -63,7 +63,7 @@
     "name": "Redline Client",
     "owner": "robertpakalns",
     "icon": "https://raw.githubusercontent.com/robertpakalns/redline-client/refs/heads/main/assets/icons/icon.ico",
-    "description": "cool client ",
+    "description": "cool client",
     "platforms": ["Windows", "macOS", "Linux"],
     "source": "open source",
     "development": "inactive",
@@ -78,5 +78,15 @@
     "source": "open source",
     "development": "inactive",
     "downloadUrl": "https://github.com/42infi/juice-client/releases"
+  },
+  {
+    "name": "Smudgy Client",
+    "owner": "Akuma",
+    "icon": "https://raw.githubusercontent.com/OBS-Akuma/smudgy-client/refs/heads/main/src/assets/img/icon.png",
+    "description": "cool client",
+    "platforms": ["Windows"],
+    "source": "open source",
+    "development": "active",
+    "downloadUrl": "https://github.com/OBS-Akuma/smudgy-client/releases"
   }
 ]
