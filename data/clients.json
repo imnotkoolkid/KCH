@@ -16,7 +16,7 @@
     "description": "basically juice client",
     "platforms": ["Windows", "macOS"],
     "source": "closed source",
-    "development": "inactive",
+    "development": "active",
     "downloadUrl": "https://github.com/zVipexx/dawn-client/releases"
   },
   {
@@ -28,17 +28,7 @@
     "source": "open source",
     "development": "active",
     "downloadUrl": "https://github.com/skywalk1411/publikc/releases"
-  },
-  {
-    "name": "Faint",
-    "owner": "timokoz",
-    "icon": null,
-    "description": "basically juice client",
-    "platforms": ["Windows"],
-    "source": "closed source",
-    "development": "inactive",
-    "downloadUrl": "https://github.com/timokoz/faint/releases"
-  },
+  }
   {
     "name": "Obsidian Client",
     "owner": "imnotkoolkid",
@@ -66,7 +56,7 @@
     "description": "cool client",
     "platforms": ["Windows", "macOS", "Linux"],
     "source": "open source",
-    "development": "inactive",
+    "development": "active",
     "downloadUrl": "https://github.com/robertpakalns/redline-client/releases"
   },
   {
