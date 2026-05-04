@@ -1,6 +1,3 @@
-
-
-@-moz-document url-prefix("https://kirka.io/") {
 :root {
     --asscentColor: #009905;
     --textColor: #71ff00;
@@ -144,27 +141,27 @@
     box-shadow: none !important;
 }
 /* Left icons */
-        .left-icons {
-        background: #6fffd700 !important;
-        backdrop-filter: blur(0px);
-        left: 100% !important;
-        height: 100px
-        border-right: 5px solid #fff0;
-        border-radius: 5px !important;
-        border-left: 5px solid #fff0;
-        border-color: 5px solid #fff0;
-    }
+.left-icons {
+    background: #6fffd700 !important;
+    backdrop-filter: blur(0px);
+    left: 100% !important;
+    height: 100px;
+    border-right: 5px solid #fff0;
+    border-radius: 5px !important;
+    border-left: 5px solid #fff0;
+    border-color: 5px solid #fff0;
+}
 
-    .left-icons .icon-btn {
-        background: #6fffd700;
-        border: #fff0;
-        width: 100px;
-        height: 10%
-    }
+.left-icons .icon-btn {
+    background: #6fffd700;
+    border: #fff0;
+    width: 100px;
+    height: 10%
+}
 
-    .left-icons .icon-btn svg {
-        display: none;
-    }
+.left-icons .icon-btn svg {
+    display: none;
+}
 #left-icons {
     display: row;
     flex-direction: row;
@@ -176,7 +173,6 @@
 }
 .coin-icon {
     padding-right: 7px !important;
-
 }
 /* Hover to Show*/
 .soc-group,
@@ -265,16 +261,8 @@
 .button[data-v-02c36fca]:after {
     border: none;
 }
-.moneys[data-v-2484b84e] {
-    display: flex;
-    flex-direction: row;
-    margin-left: -50px;
-    margin-top: 23px;
-}
+
 /* Right Interface */
-.right-interface {
-    padding-top: 20px;
-}
 .soc-group:nth-child(1),
 .soc-group:nth-child(2) {
     background: transparent !important;
@@ -293,6 +281,9 @@
     margin-left: -830px;
     margin-top: 770px;
     width: 2px !important;
+}
+.right-interface > .quests {
+    position: absolute
 }
 /* Removed Profile Card */
 .avatar-info,
@@ -661,9 +652,8 @@
 .mWwn,
 .instruction {
     display: none !important;
-    
-    } 
-    .cont-hp {
+}
+.cont-hp {
     background: transparent !important;
 }
 
@@ -690,7 +680,7 @@
     text-shadow: none;
     position: relative;
     bottom: 5.5vh;
-    color: #71ff00 !imporant;
+    color: #71ff00;
     left: -35.25vw
 }
 #app > div.game-interface > div.desktop-game-interface > div.state > div.hp > div.hp-title.text-1:after {
@@ -869,20 +859,14 @@ div.card-cont.user-info,
     background: transparent !important;
     box-shadow: none !important;
 }
-#dailyQuests {
-    position: fixed;
-    top: 130px;
-    border: none;
-    border-radius: 0;
-    z-index: 0 !important;
-    overflow: auto;
-}
+
 /* money emoji here*/
 .moneys {
     position: absolute;
     left: -40%;
     top: 90px;
 }
+
 #left-interface {
     position: absolute;
     left: -1.9%;
@@ -1031,5 +1015,18 @@ div.card-cont.user-info,
     text-align: center;
     display: inline-block;
 }
+.left-interface .button.daily-rewards-btn {
+    position: absolute;
+    top: 125%;
+    left: -45%;
+    background-color: rgba(45, 45, 45, 0)!important;
+    animation: none !important;
+}
 
+#invite-btn:hover {
+    background: #41ff1459
+}
+#join-btn {
+    background: transparent !important;
+    border: none !important;
 }

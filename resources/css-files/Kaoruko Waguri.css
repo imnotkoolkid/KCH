@@ -1,4 +1,3 @@
-
 /* ==UserStyle==
 @name           Kaoruko Waguri
 @namespace      -
@@ -6,9 +5,7 @@
 @description    Kaoruko Waguri / pastel / theme
 @author         Girnox
 ==/UserStyle== */
-
 /* i haven't watched this anime :P */
-
 /* 
 
   this css not responsive u may read terms in hub if it works for u...
@@ -16,8 +13,6 @@
   i don't care :PPPP
 
 */
-
-
 /*
         some background
 
@@ -35,11 +30,6 @@
 
 
 */
-
-
-
-
-
 /* 
 
 Please don’t copy this 🙂 It's free and public anyway — just use it and have fun! 
@@ -50,37 +40,31 @@ Please don’t copy this 🙂 It's free and public anyway — just use it and ha
   -----------------   O T H E R W I S E  FUCK YOU   ------------------
     • for somereason i don't like this game..................
 */
-
-
-
-:root{
-  --bg: url('https://raw.githubusercontent.com/Girnox/Kirka./main/resource/thumb-1920-1398234.png');
-  --php: url('https://raw.githubusercontent.com/Girnox/Kirka./main/resource/waguri-php.jpg');
-  /*color*/
-   --w: #ddc0c287 ;
-   --b: #b7b5b59c;
-   --b-o: #4f4f4f;
-   --b-i: #888888; 
-   --b-l: #ffdfdf;
-   --shadow: 0 0 20px var(--b-l),
-                inset 0 0 20px var(--b-i) !important; 
+:root {
+    --bg: url('https://raw.githubusercontent.com/Girnox/Kirka./main/resource/thumb-1920-1398234.png');
+    --php: url('https://raw.githubusercontent.com/Girnox/Kirka./main/resource/waguri-php.jpg');
+    /*color*/
+    --w: #ddc0c287;
+    --b: #b7b5b59c;
+    --b-o: #4f4f4f;
+    --b-i: #888888;
+    --b-l: #ffdfdf;
+    --shadow: 0 0 20px var(--b-l),
+    inset 0 0 20px var(--b-i) !important;
     --k: #f0bdbd;
     --h: #5fa8b97a;
     --p: #aacbda94;
-    --c: linear-gradient(
-    135deg,
-    rgba(176, 156, 158, 0.7),   
-    rgba(173, 216, 230, 0.5),   
-    rgba(221, 160, 221, 0.4),   
-    rgba(255, 182, 193, 0.4)    
-  );
-
+    --c: linear-gradient( 135deg,
+    rgba(176, 156, 158, 0.7),
+    rgba(173, 216, 230, 0.5),
+    rgba(221, 160, 221, 0.4),
+    rgba(255, 182, 193, 0.4));
 }
 * {
     -webkit-text-stroke: unset !important;
     text-shadow: none !important;
     scrollbar-color: auto;
-	scrollbar-width: auto;
+    scrollbar-width: auto;
 }
 
 /* scroll bar */
@@ -95,12 +79,11 @@ Please don’t copy this 🙂 It's free and public anyway — just use it and ha
     border-radius: 20px !important;
 }
 
-#app>div.interface.text-2>div.background {
-  background: var(--bg) !important;
-  background-size: cover !important;
-      
+#app > div.interface.text-2 > div.background {
+    background: var(--bg) !important;
+    background-size: cover !important;
 }
-.end-modal{
+.end-modal {
     background: var(--bg) !important;
     background-size: cover !important;
 }
@@ -109,8 +92,8 @@ Please don’t copy this 🙂 It's free and public anyway — just use it and ha
     visibility: hidden;
 }
 
- #app>div.interface.text-2>div.background>div.bg-radial,
-#app>div.interface.text-2>div.background>div.pattern-bg,
+#app > div.interface.text-2 > div.background > div.bg-radial,
+#app > div.interface.text-2 > div.background > div.pattern-bg,
 .ad-bottom,
 .logo,
 .ad-left,
@@ -126,19 +109,18 @@ Please don’t copy this 🙂 It's free and public anyway — just use it and ha
 .settings .container .top-bar .home,
 .soc-group:first-child,
 .soc-group:nth-child(2),
-.avatar-info>.username,
+.avatar-info > .username,
 .invite-btn-tip,
 .tooltip,
-.triangle-bottom, 
+.triangle-bottom,
 .triangle,
-.container>.top-bar>.left>.home,
+.container > .top-bar > .left > .home,
 .select-mod svg {
-  display: none !important;
+    display: none !important;
 }
 
 /*profile and lobby */
-
-.avatar-info>.avatar {
+.avatar-info > .avatar {
     background-position: center !important;
     background-size: 150% !important;
     border: unset;
@@ -151,24 +133,23 @@ Please don’t copy this 🙂 It's free and public anyway — just use it and ha
     opacity: 2 !important;
 }
 
- #app>div.interface .team-section{
-    transform: scale(0.7)  !important;
-
+#app > div.interface .team-section {
+    transform: scale(0.7) !important;
 }
 
-#app>div.interface .invite-btn{
+#app > div.interface .invite-btn {
     border: 7px solid var(--b);
     border-radius: 30px;
     box-shadow: var(--shadow),
-                0 0 20px var(--b-o) !important;
-    filter:opacity(0.2);
+    0 0 20px var(--b-o) !important;
+    filter: opacity(0.2);
     background: transparent;
     transform: scale(0.7);
     transition: all .4s ease;
     position: relative;
 }
 
-#app>div.interface .invite-btn:hover{
+#app > div.interface .invite-btn:hover {
     filter: opacity(1);
     transition: all .3s ease
 }
@@ -176,28 +157,28 @@ Please don’t copy this 🙂 It's free and public anyway — just use it and ha
 
 .levels,
 .avatar-head > .nickname,
-.profile-cont > .profile > .you>div > .head-right > .nickname,
-.leaderboard-cont>.list-champions>.list-cont .item>div .nickname, 
-.head-right > .nickname ,
-.player-level{
+.profile-cont > .profile > .you > div > .head-right > .nickname,
+.leaderboard-cont > .list-champions > .list-cont .item > div .nickname,
+.head-right > .nickname,
+.player-level {
     background: var(--c) !important;
-    padding:  0.01rem !important;
+    padding: 0.01rem !important;
     border: 3px solid var(--b) !important;
     border-radius: 15px !important;
     padding-right: 1rem !important;
     padding-left: 1rem !important;
     color: white !important;
-     position: relative;
+    position: relative;
     bottom: .5rem !important;
 }
 
 
 .avatar-head > .clan-tag,
-.profile-cont > .profile > .you>div > .head-right > .clan-tag,
-.leaderboard-cont>.list-champions>.list-cont .item>div .clan-tag,
-.head-right > .clan-tag{
+.profile-cont > .profile > .you > div > .head-right > .clan-tag,
+.leaderboard-cont > .list-champions > .list-cont .item > div .clan-tag,
+.head-right > .clan-tag {
     background: var(--c) !important;
-    padding:  0.01rem !important;
+    padding: 0.01rem !important;
     border: 3px solid var(--b) !important;
     border-radius: 8px !important;
     padding-right: 1rem !important;
@@ -207,11 +188,11 @@ Please don’t copy this 🙂 It's free and public anyway — just use it and ha
 }
 
 
-.team-section .klo{
+.team-section .klo {
     display: none
 }
 
-.left-interface>.moneys {
+.left-interface > .moneys {
     align-items: flex-start;
     background: none;
     flex-direction: column;
@@ -220,35 +201,34 @@ Please don’t copy this 🙂 It's free and public anyway — just use it and ha
     padding: 0.25rem 1rem;
     padding-right: 4rem;
     position: absolute;
-    top: 6px ;
+    top: 6px;
     left: 103%;
     z-index: 10;
 }
 
-.left-interface>.moneys>div {
+.left-interface > .moneys > div {
     background: var(--w);
     padding-left: 0;
-     padding-right: 1rem;
+    padding-right: 1rem;
     border-radius: 10px;
     border: 5px solid var(--b);
     font-size: 1rem;
     box-shadow: inset 0 0 20px white,
-                0 0 2px var(--b-i);
-    
+    0 0 2px var(--b-i);
 }
 
-.left-interface>.moneys>div:nth-child(2){
+.left-interface > .moneys > div:nth-child(2) {
     padding-right: 2.5rem;
     padding-left: 0rem;
     position: relative;
     top: 5px
 }
 
-.left-interface>.moneys>div>svg,
-.quests>.expire>svg,
-.quests>.tip-wrapper,
-.reward>.diamonds>img,
-.reward>.coins>img {
+.left-interface > .moneys > div > svg,
+.quests > .expire > svg,
+.quests > .tip-wrapper,
+.reward > .diamonds > img,
+.reward > .coins > img {
     transform: scale(0.7)
 }
 
@@ -265,7 +245,7 @@ Please don’t copy this 🙂 It's free and public anyway — just use it and ha
     box-shadow: var(--shadow)
 }
 
-.left-interface .user-info{
+.left-interface .user-info {
     position: relative;
     top: 10px;
     left: 15px;
@@ -276,7 +256,7 @@ Please don’t copy this 🙂 It's free and public anyway — just use it and ha
     box-shadow: inset 0 0 10px white
 }
 
-.left-interface .user-info:hover{
+.left-interface .user-info:hover {
     background: var(--h);
 }
 .left-interface .progress-line {
@@ -296,10 +276,10 @@ Please don’t copy this 🙂 It's free and public anyway — just use it and ha
 .level-value {
     background: none !important;
     color: white;
-    font-weight:800;
+    font-weight: 800;
 }
 
-.level-text{
+.level-text {
     color: white;
 }
 
@@ -342,19 +322,17 @@ Please don’t copy this 🙂 It's free and public anyway — just use it and ha
     padding-left: 8rem;
     padding-right: 8rem;
     padding-bottom: .25rem;
-	text-shadow: 1px 1px 1px black !important;
-    
+    text-shadow: 1px 1px 1px black !important;
 }
 
 
 .left-interface:hover {
     position: absolute !important;
     top: 10px !important;
-   
 }
 
 
-.left-interface>.moneys>div:nth-child(1):before {
+.left-interface > .moneys > div:nth-child(1):before {
     background: #e600ff;
     border-radius: 0.1rem;
     content: "";
@@ -364,7 +342,7 @@ Please don’t copy this 🙂 It's free and public anyway — just use it and ha
     width: 12px;
 }
 
-.left-interface>.moneys>div:nth-child(2):before {
+.left-interface > .moneys > div:nth-child(2):before {
     background: #006f9a;
     border-radius: 0.1rem;
     content: "";
@@ -375,32 +353,31 @@ Please don’t copy this 🙂 It's free and public anyway — just use it and ha
     width: 12px;
 }
 
-.left-interface>.moneys>div>svg,
-.quests>.expire>svg,
-.quests>.tip-wrapper,
-.reward>.diamonds>img,
-.reward>.coins>img {
+.left-interface > .moneys > div > svg,
+.quests > .expire > svg,
+.quests > .tip-wrapper,
+.reward > .diamonds > img,
+.reward > .coins > img {
     display: none;
 }
 
 
-.profile>.card-cont.user-info>.progress-lvl>.progress-top>.exp-values{
-  transform: scale(0.7) !important;
+.profile > .card-cont.user-info > .progress-lvl > .progress-top > .exp-values {
+    transform: scale(0.7) !important;
 }
 
 /* left icons */
-
-.left-icons>.icon-btn.text-1>.wrapper{
-    transform: none !important ;
+.left-icons > .icon-btn.text-1 > .wrapper {
+    transform: none !important;
     font-size: 0 !important;
 }
 
-.left-icons{
+.left-icons {
     background: none !important;
 }
 
-.left-icons>.icon-btn{
-   background: var(--w);
+.left-icons > .icon-btn {
+    background: var(--w);
     max-height: 90px !important;
     width: 100px;
     justify-content: center !important;
@@ -412,14 +389,14 @@ Please don’t copy this 🙂 It's free and public anyway — just use it and ha
     border: 6px solid var(--b)
 }
 
-.left-icons>.icon-btn:hover{
-     background: var(--h);
-     width: 150px;
+.left-icons > .icon-btn:hover {
+    background: var(--h);
+    width: 150px;
     box-shadow: 0 0 20px var(--h),
-                inset 0 0 10px white;
+    inset 0 0 10px white;
 }
 
-.left-icons::after{
+.left-icons::after {
     content: 'interface';
     font-size: 1.5rem;
     transform: translateY(-50%) rotate(-90deg) !important;
@@ -435,24 +412,22 @@ Please don’t copy this 🙂 It's free and public anyway — just use it and ha
     z-index: -1;
     opacity: 0.8;
     border: 5px solid var(--b);
-    border-radius: 20px; 
+    border-radius: 20px;
     text-shadow: 0 2px 2px black !important;
-    backdrop-filter: blur(6px); 
+    backdrop-filter: blur(6px);
 }
 
-.left-icons{
+.left-icons {
     position: absolute;
     left: -8.5rem !important;
     transition: left 1s ease !important;
     width: 13rem;
-    
 }
 
-.left-icons:hover{
+.left-icons:hover {
     position: absolute;
     left: 18px !important;
     transition: left 1s ease !important;
-
 }
 
 
@@ -515,13 +490,13 @@ Please don’t copy this 🙂 It's free and public anyway — just use it and ha
     border-bottom-right-radius: 20px;
     border-top: none !important;
     transition: background 0.3s ease, height 0.3s ease;
-    backdrop-filter: blur(6px); 
+    backdrop-filter: blur(6px);
 }
 
 .settings-and-socicons .settings:hover {
     background: var(--h) !important;
     height: 70px;
-    backdrop-filter: blur(6px); 
+    backdrop-filter: blur(6px);
 }
 
 .settings-and-socicons .settings::after {
@@ -538,7 +513,7 @@ Please don’t copy this 🙂 It's free and public anyway — just use it and ha
     opacity: 1;
 }
 
-.right-interface>.quests{
+.right-interface > .quests {
     position: absolute;
     background: var(--w) !important;
     border: 6px solid var(--b) !important;
@@ -546,59 +521,59 @@ Please don’t copy this 🙂 It's free and public anyway — just use it and ha
     border-radius: 20px !important;
 }
 
-.right-interface>.quests .progress-line {
+.right-interface > .quests .progress-line {
     box-shadow: none !important;
     background-color: white !important;
     border-radius: 4px !important;
     height: 12px
 }
 
-.right-interface>.quests .progress-line .progress{
-     box-shadow: none !important;
+.right-interface > .quests .progress-line .progress {
+    box-shadow: none !important;
     background-color: var(--k) !important;
     border-radius: 5px !important;
 }
 
-.right-interface>.quests .expire {
+.right-interface > .quests .expire {
     margin-top: 0.5rem;
     font-size: 1.5rem;
     text-shadow: 1px 1px 1px black !important;
 }
-.right-interface>.quests .tabs-wrapper {
+.right-interface > .quests .tabs-wrapper {
     padding: 0.5rem;
 }
 
-.right-interface>.quests .tabs .tab.daily,
-.right-interface>.quests .tabs .tab.event{
+.right-interface > .quests .tabs .tab.daily,
+.right-interface > .quests .tabs .tab.event {
     background: var(--c) !important;
     border: 4px solid var(--b) !important;
     border-radius: 10px !important;
     text-shadow: 1px 1px 1px black !important;
 }
 
-.right-interface>.quests .tabs .tab.daily:hover,
-.right-interface>.quests .tabs .tab.event:hover{
+.right-interface > .quests .tabs .tab.daily:hover,
+.right-interface > .quests .tabs .tab.event:hover {
     background: var(--h) !important;
 }
 
-.right-interface>.quests .quest{
+.right-interface > .quests .quest {
     background: var(--w);
     border: 5px solid var(--b);
     border-radius: 10px;
     margin-bottom: 5px;
 }
 
-.right-interface>.quests .list .reward.coins,
+.right-interface > .quests .list .reward.coins,
 .reward.diamonds,
 .reward.item,
 .reward.xp {
-    background: var(--k) ;
-    border: 3px solid var(--b) ;
+    background: var(--k);
+    border: 3px solid var(--b);
     transform: scale(0.8);
     margin-left: -10px !important;
 }
 
-.right-interface>.quests .progress{
+.right-interface > .quests .progress {
     transform: scale(0.7);
 }
 .right-interface > .quests {
@@ -606,15 +581,16 @@ Please don’t copy this 🙂 It's free and public anyway — just use it and ha
     top: -33.4rem;
     border-radius: 12px;
     transition: top 2s ease, transform 2s ease, box-shadow 0.3s ease !important;
-    box-shadow: 0 0 10px rgba(173, 216, 230, 0.3); 
-    backdrop-filter: blur(6px); 
+    box-shadow: 0 0 10px rgba(173, 216, 230, 0.3);
+    backdrop-filter: blur(6px);
 }
 
 .right-interface > .quests:hover {
     top: 5px;
-    transform: scale(1.02); /* subtle pop */
-    box-shadow: 0 0 25px rgba(173, 216, 230, 0.6), 
-                inset 0 0 15px rgba(255, 255, 255, 0.2);
+    transform: scale(1.02);
+    /* subtle pop */
+    box-shadow: 0 0 25px rgba(173, 216, 230, 0.6),
+    inset 0 0 15px rgba(255, 255, 255, 0.2);
 }
 
 .right-interface > .quests::after {
@@ -628,8 +604,6 @@ Please don’t copy this 🙂 It's free and public anyway — just use it and ha
 }
 
 /* play */
-
-
 #ready-btn,
 #leave-btn,
 #join-btn,
@@ -647,7 +621,6 @@ Please don’t copy this 🙂 It's free and public anyway — just use it and ha
     font-weight: 600;
     position: relative;
     right: 1rem;
-    
 }
 
 
@@ -718,28 +691,27 @@ Please don’t copy this 🙂 It's free and public anyway — just use it and ha
     transform: scale(0.8) !important;
     left: 1rem;
 }
-.play-content #play-btn{
+.play-content #play-btn {
     left: 2rem;
 }
 
 #leave-btn,
-#join-btn{
+#join-btn {
     left: -0.2rem;
 }
 
 #ready-btn,
-#create-btn{
+#create-btn {
     left: 2.5rem;
 }
 
 .play-content > .select-mod,
-.play-content > .select-region{
+.play-content > .select-region {
     transform: scale(0.8);
     left: 1rem
-    
 }
 
-.play-content > .select-region{
+.play-content > .select-region {
     left: -1.5rem;
 }
 
@@ -782,26 +754,24 @@ Please don’t copy this 🙂 It's free and public anyway — just use it and ha
 }
 
 #playerholderelement {
-	display: flex !important;
-	bottom: -.5rem !important;
-	gap: 10px !important;
-	background: var(--w) !important;
-	height: 30px !important;
-	align-items: center;
-	width: 30.5rem !important;
-	justify-content: center;
+    display: flex !important;
+    bottom: -.5rem !important;
+    gap: 10px !important;
+    background: var(--w) !important;
+    height: 30px !important;
+    align-items: center;
+    width: 30.5rem !important;
+    justify-content: center;
     border: 3px solid var(--b);
-    border-radius: 10px ;
+    border-radius: 10px;
 }
 
 #playerholderelement > .currentlyplaying {
-	display: none !important;
+    display: none !important;
 }
 
 /* conatner's */
-
-
-.background.mobile-fullscreen{
+.background.mobile-fullscreen {
     background: none!important;
 }
 
@@ -818,9 +788,7 @@ Please don’t copy this 🙂 It's free and public anyway — just use it and ha
 }
 
 /* hub */
-
 /*declutter*/
-
 .champion,
 .awards-label,
 .award-img,
@@ -831,32 +799,32 @@ Please don’t copy this 🙂 It's free and public anyway — just use it and ha
 .awards-cont,
 .img-bg[data-v-e6be86ae],
 .image[data-v-e6be86ae],
-.img-cont[data-v-e6be86ae]{
+.img-cont[data-v-e6be86ae] {
     display: none!important;
 }
 
-.info-awards[data-v-92e661e6]{
+.info-awards[data-v-92e661e6] {
     padding: 0.5rem!important;
     font-size: 16pt!important;
 }
 
 .background-leaders,
-.clans{
+.clans {
     background: none!important;
 }
 
-.top-name{
+.top-name {
     color: white!important;
 }
 
-.champions-list{
+.champions-list {
     margin: .5rem .5rem 0 .5rem!important;
     padding: .5rem!important;
     width: 100%!important;
     max-width: unset!important;
 }
 
-.description[data-v-1c9e870c]{
+.description[data-v-1c9e870c] {
     font-family: "Merriweather", serif!important;
     font-weight: 400!important;
     font-style: normal!important;
@@ -864,32 +832,32 @@ Please don’t copy this 🙂 It's free and public anyway — just use it and ha
 
 
 
-#view > div > div > div.content > div > div > div.list-cont > div.list > div{
+#view > div > div > div.content > div > div > div.list-cont > div.list > div {
     background: var(--c) !important;
 }
-#view > div > div > div.content > div > div.leaderboard-cont > div.info-awards{
+#view > div > div > div.content > div > div.leaderboard-cont > div.info-awards {
     background: transparent !important;
 }
 
-.server .button.join{
+.server .button.join {
     background: var(--k) !important;
     transform: none !important;
     font-style: oblique;
     border: 4px solid var(--b)
 }
 
-.server .button.join:hover{
+.server .button.join:hover {
     background: var(--h) !important;
 }
 
-.server .button.join:after{
+.server .button.join:after {
     border: none;
 }
 
 
 .tabs,
 .top-bar,
-#view > div > div > div.content > div > div.content > div.tab-bar{
+#view > div > div > div.content > div > div.content > div.tab-bar {
     background: transparent !important;
     border-radius: 20px !important;
 }
@@ -899,68 +867,67 @@ Please don’t copy this 🙂 It's free and public anyway — just use it and ha
 .button[data-v-c77e9254],
 .input,
 .image[data-v-124f1382],
-.name-page{
+.name-page {
     background: var(--c) !important;
     border-radius: 20px !important;
 }
 
 .servers,
-.preview[data-v-124f1382] ,
-.img-bg[data-v-124f1382]{
+.preview[data-v-124f1382],
+.img-bg[data-v-124f1382] {
     border-radius: 20px !important;
 }
 
-.input{
+.input {
     border: 2px solid var(--b) !important;
     color: white !important;
 }
 
-.input .selected:after{
+.input .selected:after {
     position: relative;
     left: 115px
 }
 
-.mode-checkbox{
+.mode-checkbox {
     background: none !important;
     border-radius: 2px solid var(--b) !important;
 }
 
 .input .items,
-.input .items.openItems{
-  background: var(--c) !important;
+.input .items.openItems {
+    background: var(--c) !important;
     backdrop-filter: blur(10px)
 }
 
-.input .items div:hover:hover{
+.input .items div:hover:hover {
     background: var(--c) !important;
     border: 2px solid var(--b);
 }
-.tab.active{
+.tab.active {
     background: var(--c) !important;
     border: none !important;
     border-bottom: 2px solid var(--k) !important;
     color: cyan !important;
 }
 
-.tab{
+.tab {
     background: none !important;
 }
 
-.tab:hover{
+.tab:hover {
     background: none !important;
     border: none !important;
     border-bottom: 2px solid var(--k) !important;
     color: #ff74ff !important;
 }
 
-.leaderboard-cont>.list-champions {
+.leaderboard-cont > .list-champions {
     background: none !important;
 }
 
 
-.leaderboard-cont>.list-champions>.list-cont>.top-items{
+.leaderboard-cont > .list-champions > .list-cont > .top-items {
     background: none !important;
-    
 }
 
 .delete,
@@ -968,45 +935,44 @@ Please don’t copy this 🙂 It's free and public anyway — just use it and ha
 .level-cont,
 .alert-default,
 .container-card,
-.leaderboard-cont>.list-champions>.list-cont>.bottom-items,
-.leaderboard-cont>.list-champions>.list-cont>.top-items .items .item,
-.leaderboard-cont>.list-champions .list-cont.list-players .top,
-.leaderboard-cont>.list-champions .list-cont.list-players{
+.leaderboard-cont > .list-champions > .list-cont > .bottom-items,
+.leaderboard-cont > .list-champions > .list-cont > .top-items .items .item,
+.leaderboard-cont > .list-champions .list-cont.list-players .top,
+.leaderboard-cont > .list-champions .list-cont.list-players {
     background: var(--c) !important;
     backdrop-filter: blur(5px);
     border-radius: 20px !important;
     border: 4px solid var(--b) !important;
 }
 
-.leaderboard-cont>.list-champions>.list-cont .item {
-     background: var(--h) !important;
+.leaderboard-cont > .list-champions > .list-cont .item {
+    background: var(--h) !important;
     backdrop-filter: blur(5px);
     border-radius: 20px !important;
     border: 4px solid var(--b);
-    
 }
 
-.leaderboard-cont>.list-champions>.list-cont .item:hover,
-.leaderboard-cont>.list-champions>.list-cont>.top-items .items .item:hover{
+.leaderboard-cont > .list-champions > .list-cont .item:hover,
+.leaderboard-cont > .list-champions > .list-cont > .top-items .items .item:hover {
     transform: scale(1.03)
 }
 
 .info-awards,
-.ranked{
+.ranked {
     background: none !important;
 }
 
-.number-player{
+.number-player {
     color: white !important;
 }
 
 .clans {
-	background: transparent !important;
+    background: transparent !important;
 }
 
 .champions-list {
-	background: transparent !important;
-	box-shadow: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
 }
 
 .friend,
@@ -1017,7 +983,7 @@ Please don’t copy this 🙂 It's free and public anyway — just use it and ha
     border: 4px solid var(--b) !important;
 }
 
-.content>.store>.content>.top {
+.content > .store > .content > .top {
     grid-area: top;
     align-self: flex-start;
     padding: 0 !important;
@@ -1027,7 +993,7 @@ Please don’t copy this 🙂 It's free and public anyway — just use it and ha
     margin-left: 4rem !important
 }
 
-.content>.store>.content>.top>.long-card {
+.content > .store > .content > .top > .long-card {
     transform: none;
     width: 15rem !important;
     height: 15rem !important;
@@ -1037,12 +1003,12 @@ Please don’t copy this 🙂 It's free and public anyway — just use it and ha
     border: 1px solid #000;
 }
 
-.content>.store>.content>.top>.long-card:nth-child(2){
+.content > .store > .content > .top > .long-card:nth-child(2) {
     width: 32rem!important;
 }
 
 
-.content>.store>.content>.top>.long-card:nth-child(1){
+.content > .store > .content > .top > .long-card:nth-child(1) {
     position: relative;
     right: 16rem;
 }
@@ -1074,7 +1040,7 @@ Please don’t copy this 🙂 It's free and public anyway — just use it and ha
     filter: hue-rotate(60deg) blur(7px);
 }
 
-.store .top .long-card .bottom{
+.store .top .long-card .bottom {
     height: 40px
 }
 
@@ -1083,22 +1049,22 @@ Please don’t copy this 🙂 It's free and public anyway — just use it and ha
 }
 
 
-.content>.store>.content>#carousel{
+.content > .store > .content > #carousel {
     width: 42rem;
     margin-top: -26rem;
     margin-left: 40rem
 }
 
-.content>.store>.content>#carousel .arrow-left{
+.content > .store > .content > #carousel .arrow-left {
     margin-left: -2rem !important;
 }
 
-.content>.store>.content>#carousel .slider-container.swiper-container-horizontal .slider-touch .slider-wrapper .slide.slider-item {
+.content > .store > .content > #carousel .slider-container.swiper-container-horizontal .slider-touch .slider-wrapper .slide.slider-item {
     width: 41.5rem !important;
 }
 
 
-.content>.store>.content>#carousel .character-card-cont {
+.content > .store > .content > #carousel .character-card-cont {
     min-width: 40.5rem;
 }
 
@@ -1107,36 +1073,36 @@ Please don’t copy this 🙂 It's free and public anyway — just use it and ha
 }
 
 
-.container-card img{
+.container-card img {
     height: 11rem
 }
 
-.button:after{
+.button:after {
     border: none !important;
 }
 
 
 
-.content>.inventory>.left {
+.content > .inventory > .left {
     background: transparent;
     border: 5px solid var(--b) !important;
     border-radius: 20px !important;
     width: 42rem
 }
 
-.content>.inventory>.left>.bottom>.gun{
+.content > .inventory > .left > .bottom > .gun {
     background: var(--c);
-     border: 5px solid var(--b) !important;
+    border: 5px solid var(--b) !important;
     border-radius: 20px !important;
 }
 
-.content>.inventory>.left>.bottom{
+.content > .inventory > .left > .bottom {
     background: transparent;
     margin-left: .3rem;
     margin-bottom: 0.3rem
 }
 
-.content>.inventory>.content>.subjects {
+.content > .inventory > .content > .subjects {
     padding: 1em 0 0 2em;
     border: 0;
     background: transparent;
@@ -1157,18 +1123,18 @@ Please don’t copy this 🙂 It's free and public anyway — just use it and ha
     width: 100%!important;
     z-index: 0!important;
     filter: brightness(90%)!important;
-    border: 6px solid rgba(118, 118, 118, 0.577) ;
+    border: 6px solid rgba(118, 118, 118, 0.577);
     border-radius: 20px;
 }
 
-.inventory .subject>img {
+.inventory .subject > img {
     position: absolute;
     z-index: 5;
     margin: 0;
     transition: all 0.3s ease;
 }
 
-.inventory .subject:hover>img {
+.inventory .subject:hover > img {
     transform: scale(0.9) !important;
     filter: drop-shadow(0 0 10px #00edff);
 }
@@ -1176,45 +1142,43 @@ Please don’t copy this 🙂 It's free and public anyway — just use it and ha
 
 .inventory .item-name,
 .inventory .subj-img,
-.inventory .count{
-z-index: 1!important;
-transition: all 0.3s ease;
+.inventory .count {
+    z-index: 1!important;
+    transition: all 0.3s ease;
 }
 
 
-.inventory .count{
-   background: var(--h) !important;
+.inventory .count {
+    background: var(--h) !important;
     backdrop-filter: blur(1px);
     border-radius: 5px !important;
-    border: 2px solid var(--b) !important; 
+    border: 2px solid var(--b) !important;
     margin: 8px
 }
 
-.inventory .item-name{
+.inventory .item-name {
     padding: 3px;
     background: var(--h) !important;
     backdrop-filter: blur(1px);
     border-radius: 5px !important;
-    border: 2px solid var(--b) !important; 
+    border: 2px solid var(--b) !important;
     margin-top: 5px
 }
-.inventory .input .items{
-z-index: 99!important;
-
+.inventory .input .items {
+    z-index: 99!important;
 }
 
-.inventory .hover-bg[data-v-796a0218]{
-background: none!important;
+.inventory .hover-bg[data-v-796a0218] {
+    background: none!important;
 }
 
-.inventory .subject:hover{
-filter: brightness(120%)!important;
+.inventory .subject:hover {
+    filter: brightness(120%)!important;
 }
 
-.inventory .take-btn{
-filter: brightness(90%)!important;
-z-index: 99!important;
-
+.inventory .take-btn {
+    filter: brightness(90%)!important;
+    z-index: 99!important;
 }
 
 .inventory .subject button {
@@ -1244,61 +1208,60 @@ z-index: 99!important;
     transform: translateY(-50%) !important;
 }
 
-.inventory .subject  .sell-btn{
+.inventory .subject .sell-btn {
     transform: translateY(50%) !important;
 }
 
-.inventory .subj-img{
+.inventory .subj-img {
     transform: scale(0.75) !important;
 }
 
-.hub-container .inventory .subj-img{
+.hub-container .inventory .subj-img {
     transform: none !important;
 }
-.hub-container .inventory .subj-img:hover{
+.hub-container .inventory .subj-img:hover {
     transform: scale(1.3) !important;
     filter: drop-shadow(0 0 10px var(--cyan)) !important;
 }
 
-.inventory .price-info{
-     padding: 3px;
+.inventory .price-info {
+    padding: 3px;
     background: var(--h) !important;
     backdrop-filter: blur(1px);
     border-radius: 5px !important;
-    border: 2px solid var(--b) !important; 
+    border: 2px solid var(--b) !important;
     margin: 8px
 }
 
-.inventory .subjects{
+.inventory .subjects {
     background: transparent !important;
     border: none !important
 }
 
 .add-friends,
-.name{
+.name {
     background: transparent !important;
 }
 
 
-input{
+input {
     background: var(--c) !important;
     border-radius: 20px !important;
     border: 2px solid var(--b) !important;
 }
 
-.input[data-v-6d2f629a]{
+.input[data-v-6d2f629a] {
     background: none !important;
     border: none !important;
 }
 
 
 
-.wrapper[data-v-6eecde3d]{
+.wrapper[data-v-6eecde3d] {
     background: none !important;
-    
 }
 
-.select-mods-cont{
+.select-mods-cont {
     height: 50rem !important;
     width: 60rem !important;
 }
@@ -1306,7 +1269,7 @@ input{
 
 
 .mod .locked-wrap,
-.mod-button{
+.mod-button {
     height: 8rem;
     border: 4px solid var(--b);
     border-radius: 20px !important;
@@ -1315,7 +1278,7 @@ input{
     backdrop-filter: brightness(50%)
 }
 
-.map-button{
+.map-button {
     height: 10rem;
     border: 4px solid var(--b);
     border-radius: 20px !important;
@@ -1326,15 +1289,15 @@ input{
 
 
 .map-button.active,
-.mod-button.active{
+.mod-button.active {
     backdrop-filter: brightness(70%);
     border: 4px solid var(--k) !important
 }
 
 
 .map-tag.event,
-.map-tag.experimental{
-     border: 3px solid var(--b);
+.map-tag.experimental {
+    border: 3px solid var(--b);
     border-radius: 10px !important;
     background: var(--c) !important;
 }
@@ -1349,7 +1312,6 @@ input{
 
 .button.rectangle.item-btn.RARE {
     background: #44b6e3 !important;
-
 }
 
 .button.rectangle.item-btn.EPIC {
@@ -1364,7 +1326,7 @@ input{
 .button.rectangle.item-btn.COMMON,
 .button.rectangle.item-btn.RARE,
 .button.rectangle.item-btn.EPIC,
-.button.rectangle.item-btn.MYTHICAL{
+.button.rectangle.item-btn.MYTHICAL {
     border-radius: 5px !important;
     border: 1px solid var(--b);
 }
@@ -1372,66 +1334,64 @@ input{
 .custom-checkbox > input:checked + span:before {
     background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1jaXJjbGUtc21hbGwtaWNvbiBsdWNpZGUtY2lyY2xlLXNtYWxsIj48Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSI2Ii8+PC9zdmc+") no-repeat center center!important;
     border-color: white !important;
-    
 }
 
-.custom-checkbox>span:before{
+.custom-checkbox > span:before {
     background: none !important;
     border-radius: 20px !important;
     border: 1px solid var(--b) !important;
 }
 
 
-.line-place{
+.line-place {
     border: 4px solid var(--b) !important;
     transform: skewY(-20deg) !important;
     margin-top: .5rem !important;
     border-radius: 10px !important
 }
 
-.head-text{
+.head-text {
     background: transparent !important
 }
 
 
 
-.quests-container>.quests>.subjects>.subject {
+.quests-container > .quests > .subjects > .subject {
     margin-bottom: 0.5rem;
     margin-right: 0.5rem;
     padding: 0.1rem;
     width: calc(50% - 0.5rem);
 }
 
-.quests-container>.quests>.subjects>.subject>div {
+.quests-container > .quests > .subjects > .subject > div {
     background: none;
 }
 
-.quests-container>.quests>.subjects>.subject>.time-left {
+.quests-container > .quests > .subjects > .subject > .time-left {
     height: 0;
     padding: 0;
     transform: translatey(-50px);
 }
 
-.quests-container>.quests>.subjects>.subject>.quest>.right {
+.quests-container > .quests > .subjects > .subject > .quest > .right {
     padding: 0;
 }
 
-.quests-container>.quests>.subjects>.subject>.quest>.right>.rewards {
+.quests-container > .quests > .subjects > .subject > .quest > .right > .rewards {
     background: unset;
     height: fit-content;
     justify-content: flex-start;
     padding: 0;
-
 }
 
-.quests-container>.quests>.subjects>.subject>.quest>.right>.rewards>.list>div {
+.quests-container > .quests > .subjects > .subject > .quest > .right > .rewards > .list > div {
     padding: .25rem;
-     background: var(--c);
-     border-radius: 20px !important;
-     border: 4px solid var(--b)
-} 
+    background: var(--c);
+    border-radius: 20px !important;
+    border: 4px solid var(--b)
+}
 
-.quests-container>.quests>.subjects>.subject>.quest>.left {
+.quests-container > .quests > .subjects > .subject > .quest > .left {
     border-radius: 15px !important;
     margin-right: 0.5rem;
     width: 100%;
@@ -1441,11 +1401,11 @@ input{
     opacity: 0.8
 }
 
-.quests-container>.quests .description{
+.quests-container > .quests .description {
     margin: .5rem !important;
 }
 
-.quests-container>.quests .progress-line{
+.quests-container > .quests .progress-line {
     position: relative;
     top: 1rem !important;
     width: 22rem;
@@ -1453,18 +1413,18 @@ input{
     height: 10px;
     background: #ffffffa6;
 }
-.quests-container>.quests .time-left2{
+.quests-container > .quests .time-left2 {
     position: absolute !important;
     right: 1rem !important
 }
-.quests-container>.quests .progress{
+.quests-container > .quests .progress {
     position: relative;
     top: 1rem;
     right: -1rem;
     transform: scale(0.8)
 }
 
-.reward{
+.reward {
     padding: .25rem !important;
     background: none !important;
     color: white !important;
@@ -1475,16 +1435,16 @@ input{
 
 .settings-holder .tab-header,
 .settings-holder,
-.settings-holder .container{
+.settings-holder .container {
     background: none !important;
     border: none !important;
 }
 
 .info-icon,
-.settings-holder .box{
+.settings-holder .box {
     background: var(--c) !important;
-     border-radius: 20px !important;
-     border: 4px solid var(--b) !important;
+    border-radius: 20px !important;
+    border: 4px solid var(--b) !important;
 }
 
 
@@ -1494,125 +1454,121 @@ input{
 .profile-cont .k-d,
 .profile-cont .card-profile,
 .profile-cont .statistics,
-.profile-cont .card.progress{
-     background: var(--c) !important;
-     border-radius: 20px !important;
-     border: 4px solid var(--b) !important;
+.profile-cont .card.progress {
+    background: var(--c) !important;
+    border-radius: 20px !important;
+    border: 4px solid var(--b) !important;
 }
 
-.profile-cont .avatar{
+.profile-cont .avatar {
     border-radius: 10px !important;
     border: 4px solid var(--b) !important;
 }
 
-.profile-cont .card.progress .progress-line{
+.profile-cont .card.progress .progress-line {
     background: white;
     border-radius: 5px;
-    
 }
-.profile-cont .card.progress .progress{
+.profile-cont .card.progress .progress {
     background: var(--k) !important;
     border-radius: 5px !important;
 }
 
-#bottom-right .weapon-name{
-  visibility: hidden;
-  
+#bottom-right .weapon-name {
+    visibility: hidden;
 }
 
-#bottom-right .info-key-cont{
+#bottom-right .info-key-cont {
     display: none;
 }
 
-#bottom-right .weapon-img{
-   height: 4rem
+#bottom-right .weapon-img {
+    height: 4rem
 }
 
-#bottom-right .weapon-cont:nth-of-type(1)::before{
-   content: '';
-   position: absolute !important;
-    background: linear-gradient(180deg, rgba(178, 178, 178, 0.671) 0%,  rgba(102, 102, 102, 0.405) 70%,  rgba(0, 0, 0, 0) 100%)!important;
+#bottom-right .weapon-cont:nth-of-type(1)::before {
+    content: '';
+    position: absolute !important;
+    background: linear-gradient(180deg, rgba(178, 178, 178, 0.671) 0%, rgba(102, 102, 102, 0.405) 70%, rgba(0, 0, 0, 0) 100%)!important;
     transform: skew(-25deg);
     border-left: 4px solid transparent !important;
     border-top: 4px solid transparent !important;
-    border-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(102, 102, 102, 0.405) 70%,  rgba(0, 0, 0, 0) 100%)  !important;
-    border-image-slice: 1 !important; 
+    border-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(102, 102, 102, 0.405) 70%, rgba(0, 0, 0, 0) 100%) !important;
+    border-image-slice: 1 !important;
     width: 17rem !important;
     height: 5rem !important;
     right: 2rem !important;
     top: 4.5rem !important;
-
 }
 
-#bottom-right .weapon-cont:nth-of-type(2)::before{
-   content: '';
-   position: absolute !important;
-    background: linear-gradient(180deg, rgba(178, 178, 178, 0.671) 0%,  rgba(102, 102, 102, 0.405) 70%,  rgba(0, 0, 0, 0) 100%)!important;;
+#bottom-right .weapon-cont:nth-of-type(2)::before {
+    content: '';
+    position: absolute !important;
+    background: linear-gradient(180deg, rgba(178, 178, 178, 0.671) 0%, rgba(102, 102, 102, 0.405) 70%, rgba(0, 0, 0, 0) 100%)!important;
+    ;
     transform: skew(-25deg);
     border-left: 4px solid transparent !important;
     border-top: 4px solid transparent !important;
-    border-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(102, 102, 102, 0.405) 70%,  rgba(0, 0, 0, 0) 100%)  !important;
-    border-image-slice: 1 !important; 
+    border-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(102, 102, 102, 0.405) 70%, rgba(0, 0, 0, 0) 100%) !important;
+    border-image-slice: 1 !important;
     width: 8rem !important;
     height: 4rem !important;
     right: 0rem !important;
     top: 7.5rem !important;
-
 }
 
-#bottom-right .weapon-cont:nth-of-type(3)::before{
-   content: '';
-   position: absolute !important;
-    background: linear-gradient(180deg, rgba(178, 178, 178, 0.671) 0%,  rgba(102, 102, 102, 0.405) 70%,  rgba(0, 0, 0, 0) 100%)!important;
+#bottom-right .weapon-cont:nth-of-type(3)::before {
+    content: '';
+    position: absolute !important;
+    background: linear-gradient(180deg, rgba(178, 178, 178, 0.671) 0%, rgba(102, 102, 102, 0.405) 70%, rgba(0, 0, 0, 0) 100%)!important;
     transform: skew(-25deg);
     border-left: 4px solid transparent !important;
     border-top: 4px solid transparent !important;
-    border-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(102, 102, 102, 0.405) 70%,  rgba(0, 0, 0, 0) 100%)  !important;
-    border-image-slice: 1 !important; 
+    border-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(102, 102, 102, 0.405) 70%, rgba(0, 0, 0, 0) 100%) !important;
+    border-image-slice: 1 !important;
     width: 8rem !important;
     height: 4rem !important;
     right: 21rem !important;
     top: 22.5rem !important;
-
 }
 
 #bottom-right .weapon-cont {
-  position: relative;
-  top: 6.5rem
+    position: relative;
+    top: 6.5rem
 }
 
-#bottom-right .weapon-cont .weapon-img{
-  position: relative;
+#bottom-right .weapon-cont .weapon-img {
+    position: relative;
 }
 
-#bottom-right .weapon-cont:nth-of-type(1) .weapon-img{
-  position: relative;
-  top: 2rem !important;
+#bottom-right .weapon-cont:nth-of-type(1) .weapon-img {
+    position: relative;
+    top: 2rem !important;
 }
 
-#bottom-right .weapon-cont:nth-of-type(2) .weapon-img{
-  position: relative;
-  top: 5rem !important;
-  left: 1rem !important
+#bottom-right .weapon-cont:nth-of-type(2) .weapon-img {
+    position: relative;
+    top: 5rem !important;
+    left: 1rem !important
 }
 
 
 
-#bottom-right .weapon-cont:nth-of-type(3) .weapon-img{
-  top: 20rem;
-  right: 21rem;
-  height: 3.5rem
+#bottom-right .weapon-cont:nth-of-type(3) .weapon-img {
+    top: 20rem;
+    right: 21rem;
+    height: 3.5rem
 }
 
 
 
 #bottom-right .weapon-cont .bottom {
-  opacity: 0.2 !important;
+    opacity: 0.2 !important;
 }
 
 #bottom-right .weapon-cont .bottom.is-selected {
-  opacity: 1 !important;
-   filter: drop-shadow(0 0 10px cyan);
+    opacity: 1 !important;
+    filter: drop-shadow(0 0 10px cyan);
 }
 
 
@@ -1633,7 +1589,6 @@ input{
     transform: skew(-25deg);
     border: 1px solid black;
     background: #00000063
-    
 }
 
 .hp-cont .hp-title {
@@ -1644,11 +1599,11 @@ input{
     margin-top: .2rem
 }
 
-.hp-cont .cont-hp .hp-progress{
-    background:   linear-gradient(to right, #458ac196, #6acae2a3)!important;
+.hp-cont .cont-hp .hp-progress {
+    background: linear-gradient(to right, #458ac196, #6acae2a3)!important;
 }
 
-#bottom-left .state-cont .cont-endurance .endurance-progress{
+#bottom-left .state-cont .cont-endurance .endurance-progress {
     height: 30px !important;
     background: var(--c) !important;
 }
@@ -1657,10 +1612,9 @@ input{
     left: 100%;
     bottom: 01rem;
     transform: translateX(40%);
-    
 }
 
-#bottom-left .state-cont .cont-endurance{
+#bottom-left .state-cont .cont-endurance {
     position: absolute;
     margin-left: 15.5rem;
     height: 30px !important;
@@ -1670,11 +1624,11 @@ input{
     transform: skew(-25deg);
     border: 1px solid black;
     width: 12rem !important;
-    background: #00000066    
+    background: #00000066
 }
 
 
-#bottom-right .weapons-cont .state-weapon-active.text-1 .ammunition{
+#bottom-right .weapons-cont .state-weapon-active.text-1 .ammunition {
     font-size: 3rem;
     letter-spacing: 1px;
     position: relative;
@@ -1748,25 +1702,25 @@ input{
     display: none !important;
 }
 
-.tab-team-info  .player-left-cont .player-cont{
-    background: #d44848be !important;  
+.tab-team-info .player-left-cont .player-cont {
+    background: #d44848be !important;
     border-radius: 0px !important;
     border-left: 4px solid rgb(255 0 0) !important;
 }
 
-.tab-team-info .player-right-cont .player-cont{
+.tab-team-info .player-right-cont .player-cont {
     background: #38b6b6c0 ! important;
     border-radius: 0px !important;
     border-left: 4px solid rgb(0 255 245) !important;
 }
-.player-value{
+.player-value {
     max-width: 4rem !important;
     width: fit-content !important;
-     padding: 0.5rem;
+    padding: 0.5rem;
 }
 
 .player-cont .nickname.bolder {
-color: #04ff00 !important;
+    color: #04ff00 !important;
 }
 
 
@@ -1776,41 +1730,41 @@ color: #04ff00 !important;
     border-left: 4px solid white !important
 }
 
-.desktop-game-interface > .state-cont > .left > .timer{
-  width: 100px !important;
-  height: 40px !important;
-  background: var(--c) !important;
-  border-radius: 10px;
-  border: 4px solid var(--b);
-  color: #ffffff !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-   margin: 0 !important;
-	padding: .25rem 0 !important;
-	box-shadow: none !important;
+.desktop-game-interface > .state-cont > .left > .timer {
+    width: 100px !important;
+    height: 40px !important;
+    background: var(--c) !important;
+    border-radius: 10px;
+    border: 4px solid var(--b);
+    color: #ffffff !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+    padding: .25rem 0 !important;
+    box-shadow: none !important;
     font-size: 1.5rem !important;
     padding-left: .5rem !important;
     padding-right: .5rem;
 }
 
-.desktop-game-interface > .state-cont > .left .timer.warmup{
+.desktop-game-interface > .state-cont > .left .timer.warmup {
     min-width: 10rem !important;
 }
 .desktop-game-interface > .state-cont {
-	top: 1.5rem;
-	left: unset;
+    top: 1.5rem;
+    left: unset;
 }
 
 
 .desktop-game-interface .state-cont {
-	display: flex;
+    display: flex;
 }
 
-.game-interface  .round.label{
+.game-interface .round.label {
     position: absolute !important;
     top: 5rem !important;
-    left: 5.5rem ;
+    left: 5.5rem;
     background: var(--c);
     width: 10rem;
     border: 4px solid var(--b);
@@ -1819,13 +1773,13 @@ color: #04ff00 !important;
     border-radius: 20px !important;
 }
 
-.game-interface .team-score .round.label .label{
+.game-interface .team-score .round.label .label {
     display: none
 }
 
 .desktop-game-interface .kill-death {
-	position: fixed;
-	left: 1.5rem;
+    position: fixed;
+    left: 1.5rem;
     bottom: 22rem;
 }
 
@@ -1835,79 +1789,72 @@ color: #04ff00 !important;
     background: var(--c);
     padding: .5rem;
     border: 2px solid var(--b);
-    
 }
 
 .game-interface .team-score .label {
-	display: grid;
-	position: initial;
+    display: grid;
+    position: initial;
 }
 
-.game-interface .team-score .label.red{
-	background: none;
-	position: relative;
-	right: 6rem;
+.game-interface .team-score .label.red {
+    background: none;
+    position: relative;
+    right: 6rem;
 }
 
-.game-interface .team-score .label.blue{
-	background: none;
-	position: relative;
-	left: 6rem;
+.game-interface .team-score .label.blue {
+    background: none;
+    position: relative;
+    left: 6rem;
 }
-.game-interface .team-score .label.red{
-	background: linear-gradient(
-  135deg,
-  #d44848be,
-  rgb(217 43 77 / 60%),
-  rgb(164 1 1 / 30%)
-);
-backdrop-filter: blur(10px);
-border: 1px solid rgba(255, 255, 255, 0.3);
-
+.game-interface .team-score .label.red {
+    background: linear-gradient( 135deg,
+    #d44848be,
+    rgb(217 43 77 / 60%),
+    rgb(164 1 1 / 30%));
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.game-interface .team-score .label.blue{
-	background: linear-gradient(
-  135deg,
-  #48b6d4be,
-  rgba(43, 217, 211, 0.6),
-  rgba(1, 44, 164, 0.3)
-);
-backdrop-filter: blur(10px);
-border: 1px solid rgba(255, 255, 255, 0.3);
-
+.game-interface .team-score .label.blue {
+    background: linear-gradient( 135deg,
+    #48b6d4be,
+    rgba(43, 217, 211, 0.6),
+    rgba(1, 44, 164, 0.3));
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 
 .desktop-game-interface .kill-bar-cont {
-	right: unset !important;
-	top: calc(40px +1rem) !important;
-	left: 1.5rem;
-	align-items: flex-start !important;
-	justify-content: flex-start !important;
+    right: unset !important;
+    top: calc(40px +1rem) !important;
+    left: 1.5rem;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
 }
 
 .desktop-game-interface .kill-bar-item {
-	margin: 0 !important;
-	background: var(--c) !important;
-	font-size: .775rem !important;
-	border-radius: 10px !important;
-	border: 3px solid var(--b);
+    margin: 0 !important;
+    background: var(--c) !important;
+    font-size: .775rem !important;
+    border-radius: 10px !important;
+    border: 3px solid var(--b);
 }
 
 .desktop-game-interface .kill-bar-item img {
-	height: 1.5rem;
+    height: 1.5rem;
 }
 
-.desktop-game-interface .kill-bar-item+* {
-	margin-top: 1rem !important;
+.desktop-game-interface .kill-bar-item + * {
+    margin-top: 1rem !important;
 }
 
 .desktop-game-interface .chat > .info {
     display: none;
 }
 
-#overlay{
+#overlay {
     top: 32rem !important;
     border-radius: 10px;
     background: var(--c);
@@ -1917,7 +1864,7 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 
 
 #overlay #triangles,
-#overlay #version{
+#overlay #version {
     display: none !important
 }
 
@@ -1983,15 +1930,13 @@ border: 1px solid rgba(255, 255, 255, 0.3);
     border-color: transparent !important;
 }
 
-.clans>.my-clan {
+.clans > .my-clan {
     flex-direction: column;
     padding: 0 0.5rem 0.5rem 0.5rem;
     justify-content: unset !important;
-    
-
 }
 
-.clans>.my-clan>.card-cont {
+.clans > .my-clan > .card-cont {
     position: relative;
     width: 100%;
     height: min-content;
@@ -2000,17 +1945,16 @@ border: 1px solid rgba(255, 255, 255, 0.3);
     order: 2;
     background: var(--c);
     border: 5px solid var(--b);
-
 }
 
-.clans>.my-clan>.card-cont .info {
+.clans > .my-clan > .card-cont .info {
     margin: 0;
     width: 100%;
 }
 
 
 
-.clans>.my-clan>.list-container {
+.clans > .my-clan > .list-container {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -2023,16 +1967,16 @@ border: 1px solid rgba(255, 255, 255, 0.3);
     order: 3;
     background: var(--c);
     border: 4px solid var(--b);
-    padding-bottom: 5rem !important ;
+    padding-bottom: 5rem !important;
 }
 
-.clans>.my-clan>.list-container~* {
+.clans > .my-clan > .list-container ~ * {
     position: absolute;
     z-index: 10;
     top: 2px;
 }
 
-.clans>.my-clan>.list-container>.list {
+.clans > .my-clan > .list-container > .list {
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
@@ -2040,47 +1984,45 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 
-.clans>.my-clan>.card-cont .champions-stat,
-.clans>.my-clan>.card-cont .all-scores,
-.clans>.my-clan>.card-cont .description,
-.clans>.my-clan>.list-container>.list .item-content{
-     background: var(--c);
+.clans > .my-clan > .card-cont .champions-stat,
+.clans > .my-clan > .card-cont .all-scores,
+.clans > .my-clan > .card-cont .description,
+.clans > .my-clan > .list-container > .list .item-content {
+    background: var(--c);
     border: 4px solid var(--b);
     border-radius: 15px
 }
 
-.esc-interface{
+.esc-interface {
     background: #744a4a24 !important;
     backdrop-filter: blur(3px);
 }
 
-.esc-interface .right-container{
+.esc-interface .right-container {
     background: var(--c) !important;
     border-radius: 20px !important;
     border: 5px solid var(--b) !important;
 }
 
-.esc-interface  .btn-report,
-.esc-interface .right-container .gun{
-     background: var(--c) !important;
+.esc-interface .btn-report,
+.esc-interface .right-container .gun {
+    background: var(--c) !important;
     border-radius: 20px !important;
     border: 5px solid var(--b) !important;
-
 }
 
-.esc-interface .right-container .gun:hover{
+.esc-interface .right-container .gun:hover {
     transform: scale(1.1)
 }
 
-.esc-interface  .player-cont{
+.esc-interface .player-cont {
     padding: 1rem;
     border-radius: 20px;
-    
 }
 
 
-.esc-interface  .player-cont .red,
-.esc-interface  .player-cont .blue{
+.esc-interface .player-cont .red,
+.esc-interface .player-cont .blue {
     width: 100%;
     z-index: -1;
     border-radius: 20px;
@@ -2144,19 +2086,19 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .death-cont {
-background: transparent !important;
-justify-content: flex-end !important;
+    background: transparent !important;
+    justify-content: flex-end !important;
 }
 
 .death-cont .user-card {
-margin-bottom: 10rem;
-transform: scale(0.8);
-padding: 1rem;
-border: 3px solid var(--b) !important;
-border-radius: 20px !important;
-box-shadow: unset;
-max-width: 37.5rem;
-background: var(--c);
+    margin-bottom: 10rem;
+    transform: scale(0.8);
+    padding: 1rem;
+    border: 3px solid var(--b) !important;
+    border-radius: 20px !important;
+    box-shadow: unset;
+    max-width: 37.5rem;
+    background: var(--c);
 }
 
 .searching-game > .top,
@@ -2177,46 +2119,71 @@ background: var(--c);
 .news .stream-list,
 .news .card-list,
 .live-streams,
-.searching-game>.center {
+.searching-game > .center {
     background: var(--c) !important;
     border: 4px solid var(--b) !important;
     border-radius: 20px !important;
-                        
 }
 
 .terms .box {
-  position: relative;
-  padding-top: 19rem; /* add space for the pseudo box */
+    position: relative;
+    padding-top: 19rem;
+    /* add space for the pseudo box */
 }
 
-.select-regions-cont{
+.select-regions-cont {
     margin-bottom: 7rem !important;
     background: var(--c) !important;
-    padding:  0.01rem !important;
+    padding: 0.01rem !important;
     border: 5px solid var(--b) !important;
     border-radius: 20px !important;
 }
-
+.left-interface .button.daily-rewards-btn {
+    animation: none !important;
+    position: absolute !important;
+    width: 4rem;
+    height: 2rem !important;
+    top: 19%;
+    left: 37.8%;
+    padding: 0;
+    background: var(--w) !important;
+    border-radius: 10px;
+    border: 5px solid var(--b);
+    box-shadow: inset 0 0 20px white,
+    0 0 2px var(--b-i);
+}
+#left-interface > .button.daily-rewards-btn .text {
+    display: none;
+}
+#left-interface > .button.daily-rewards-btn::after {
+    content: "daily";
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9a9a9a;
+    font-size: 0.7rem;
+}
 .terms .box::before {
-  content: "#------------N O T E-------------#\A\A\
+    content: "#------------N O T E-------------#\A\A\
 • The maker of this css is GIRNOX aka GG-GOD\A\A\
 • This css is not responsive to other screen sizes other than 1536px x 864px.\A\A\
 • Please do not copy cause it's free anyway.......:P\A\A\
 • IF YOU COPY THE CODE GIVE ME SOME CREADIT\A\A\
 #--------T H A N K  Y O U----------#";
-    
-  position: absolute;
-  top: .5rem;
-  left: .5rem;
-  width: 94%;
-  background: var(--c);
-  color: white;
-  font-family: monospace;
-  font-size: 1rem;
-  padding: 2rem;
-  border-radius: 12px;
-  border: 4px solid var(--b);
-  white-space: pre-wrap;
-  z-index: 1;
-  font-weight: 700 !important;
+
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+    width: 94%;
+    background: var(--c);
+    color: white;
+    font-family: monospace;
+    font-size: 1rem;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 4px solid var(--b);
+    white-space: pre-wrap;
+    z-index: 1;
+    font-weight: 700 !important;
 }

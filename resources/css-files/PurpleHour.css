@@ -1,5 +1,4 @@
 /* made by mohak/snipercat #ZOYXMS - improved version */
-
 :root {
     --asscentColor: #a855f7;
     --background-clr-secondary-4: rgba(168, 85, 247, 0.15);
@@ -15,8 +14,12 @@
 }
 
 @keyframes shine {
-    0% { background-position: -100px; }
-    100% { background-position: 300px; }
+    0% {
+        background-position: -100px;
+    }
+    100% {
+        background-position: 300px;
+    }
 }
 
 #app > div.interface.text-2 > div.background {
@@ -226,8 +229,18 @@
     transform: scale(1.05);
 }
 
-h1, h2, h3, h4, h5, h6,
-p, span, label, .text, .label, .description {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+label,
+.text,
+.label,
+.description {
     color: var(--text-color) !important;
 }
 
@@ -305,7 +318,7 @@ button,
 .button,
 .btn,
 .create-btn,
-.join-btn,
+.join-btn,  
 .server-select,
 .server-btn {
     background: linear-gradient(120deg, #9333ea, #a855f7) !important;
@@ -318,6 +331,10 @@ button,
     transition: all 0.3s ease-in-out !important;
     font-weight: bold !important;
     border-radius: 0.5rem !important;
+}
+
+#invite-btn:hover {
+    background: linear-gradient(120deg, #9333ea, #a855f7)
 }
 
 button:hover,

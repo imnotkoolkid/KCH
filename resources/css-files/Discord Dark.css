@@ -1,14 +1,14 @@
 div.interface.text-2 > img#logo.logo {
     display: none !important;
- }
- div#left-interface.left-interface > div#lobby-news.lobby-news > div.news-card {
-     display: none !important;
- }
+}
+div#left-interface.left-interface > div#lobby-news.lobby-news > div.news-card {
+    display: none !important;
+}
 
 /* SEARCHING GAME */
-.searching-game>* {
+.searching-game > * {
     /* background: linear-gradient(90.02deg,transparent .02%,rgba(34,33,69,.85) 25.53%,#1f1d58 71.86%,transparent 99.98%) !important; */
-    background: linear-gradient(90.02deg,transparent .02%,#00000073 25.53%,#25252559 71.86%,transparent 99.98%) !important;
+    background: linear-gradient(90.02deg, transparent .02%, #00000073 25.53%, #25252559 71.86%, transparent 99.98%) !important;
 }
 
 
@@ -20,51 +20,54 @@ div.interface.text-2 > img#logo.logo {
 }
 
 /* Clan Tag Animation */
-@-webkit-keyframes animate{
-    to {transform:translateY(30%);}
+@-webkit-keyframes animate {
+    to {
+        transform: translateY(30%);
+    }
 }
 
-@keyframes rainbow{
-		100%,0%{
-			color: rgb(116, 116, 116);
-		}
-		8%{
-			color: rgb(31, 31, 31);
-		}
-		16%{
-			color: rgb(70, 70, 70);
-		}
-		25%{
-			color: rgb(180, 180, 180);
-		}
-		33%{
-			color: rgb(37, 37, 37);
-		}
-		41%{
-			color: rgb(77, 77, 77);
-		}
-		50%{
-			color: rgba(0, 0, 0, 0);
-		}
-		58%{
-			color: rgb(100, 99, 99);
-		}
-		66%{
-			color: rgb(70, 70, 70);
-		}
-		75%{
-			color: rgb(150, 150, 150);
-		}
-		83%{
-			color: rgb(77, 77, 77);
-		}
-		91%{
-			color: rgb(20, 20, 20);
-		}
+@keyframes rainbow {
+    100%,
+    0% {
+        color: rgb(116, 116, 116);
+    }
+    8% {
+        color: rgb(31, 31, 31);
+    }
+    16% {
+        color: rgb(70, 70, 70);
+    }
+    25% {
+        color: rgb(180, 180, 180);
+    }
+    33% {
+        color: rgb(37, 37, 37);
+    }
+    41% {
+        color: rgb(77, 77, 77);
+    }
+    50% {
+        color: rgba(0, 0, 0, 0);
+    }
+    58% {
+        color: rgb(100, 99, 99);
+    }
+    66% {
+        color: rgb(70, 70, 70);
+    }
+    75% {
+        color: rgb(150, 150, 150);
+    }
+    83% {
+        color: rgb(77, 77, 77);
+    }
+    91% {
+        color: rgb(20, 20, 20);
+    }
 }
- .clan-tag {
+.clan-tag {
     font-size: 1.rem !important;
-	animation: rainbow 1.5s linear infinite !important;
+    animation: rainbow 1.5s linear infinite !important;
     background-color: transparent !important;
 }
 .heads .clan-tag {
@@ -80,12 +83,15 @@ div.interface.text-2 > img#logo.logo {
     background: #121214 !important;
     box-shadow: 0 0 10px #121214, 0 0 10px #121214 !important;
 }
+.left-icons > .icon-btn {
+    background: #12121400 !important;
+}
 .icon-btn[data-v-323a31a5] {
     background-color: none !important;
 }
 .selected[data-v-02a6df71] {
     content: url(https://i.imgur.com/FHabz3Q.png) !important;
-    transform:scale(1.9) !important
+    transform: scale(1.9) !important
 }
 
 .rar-skin {
@@ -118,7 +124,7 @@ div.interface.text-2 > img#logo.logo {
     box-shadow: 0 0 10px #121214, 0 0 10px #121214 !important;
 }
 .levels[data-v-2b0729dc] {
-	display: none;
+    display: none;
 }
 
 .interface .left-interface:hover {
@@ -152,12 +158,12 @@ div.interface.text-2 > img#logo.logo {
 .desktop-game-interface .info-key-cont,
 .mWwn,
 .instruction,
-.quantity
-/* .list-weapons */ {
+.quantity/* .list-weapons */
+{
     display: none !important;
 }
 .background-leaders {
-    background: radial-gradient(39.55% 50% at 50% 50%,#424242 0,rgba(0, 0, 0, 0) 100%) !important;
+    background: radial-gradient(39.55% 50% at 50% 50%, #424242 0, rgba(0, 0, 0, 0) 100%) !important;
 }
 /*Quests*/
 .quests {
@@ -230,7 +236,7 @@ div.interface.text-2 > img#logo.logo {
 .my-clan .list-container .list .item .item-content,
 .card,
 .info-awards,
-.list>.server,
+.list > .server,
 .message.trade,
 .champions-list,
 .list-container,
@@ -275,12 +281,13 @@ div.chat-cont {
 
 /* remove */
 .spectator .list-controls,
-#cmpPersistentLink, .mWwn,
+#cmpPersistentLink,
+.mWwn,
 .end-modal .bottom,
 .tab-info .head,
 .input-wrapper .info-key-cont,
-button>.triangle,
-button>.borders,
+button > .triangle,
+button > .borders,
 button::before,
 button::after,
 .chat .info,
@@ -313,7 +320,7 @@ button::after,
 .alert-default,
 .kill-bar-cont .kill-bar-item,
 .WwwnM.bg.text-1,
-.spectator>div,
+.spectator > div,
 .searching-game .top,
 .searching-game .bottom,
 .loading-scene .player .level,
@@ -388,7 +395,7 @@ button::after,
     display: none;
 }
 
-.content>.inventory>.left>.bottom>.gun {
+.content > .inventory > .left > .bottom > .gun {
     width: 100%;
     background: var(--dark);
     margin: 0;
@@ -456,17 +463,17 @@ button {
     outline: 0.2rem solid white !important;
 }
 
-.custom-checkbox>span:before {
+.custom-checkbox > span:before {
     border-color: var(--main) !important;
     background: var(--dark) !important;
 }
 
-.custom-checkbox.checkbox-size>[data-v-730c0c40]:before {
+.custom-checkbox.checkbox-size > [data-v-730c0c40]:before {
     background-color: #292828 !important;
     border: none;
 }
 
-.custom-checkbox>input:checked+span[data-v-730c0c40]:before {
+.custom-checkbox > input:checked + span[data-v-730c0c40]:before {
     background-color: var(--main) !important;
     border: none;
 }
@@ -620,19 +627,19 @@ body {
 .hp-title {
     content: url(https://i.imgur.com/Habub0z.png) !important;
     background-size: cover !important;
-    width: 80px !important ; /* Smaller size */
+    width: 80px !important;
+    /* Smaller size */
     height: auto !important;
 }
 
 .hp-progress {
-    background-image: linear-gradient(35deg,#5c5c5c 40%, #000000 60%) !important;
-
+    background-image: linear-gradient(35deg, #5c5c5c 40%, #000000 60%) !important;
 }
 .cont-endurance {
     background: #0000003d !important;
 }
 .endurance-progress {
-    background-image: linear-gradient(35deg,#18b6d2f1 30%, #0a348d 70%) !important;
+    background-image: linear-gradient(35deg, #18b6d2f1 30%, #0a348d 70%) !important;
     filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.801)) !important;
 }
 .cont-hp {
@@ -673,7 +680,6 @@ body {
 
 .button.rectangle.item-btn.RARE {
     background: #44b6e3 !important;
-
 }
 
 .button.rectangle.item-btn.EPIC {

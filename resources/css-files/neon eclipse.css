@@ -945,10 +945,7 @@ div.card-cont.user-info,
     box-shadow: none !important;
 }
 
-}
-/* Quests Thanks word <3 */
 
-}
 div#dailyQuests {
     backdrop-filter: blur(10px) !important;
 }
@@ -1080,16 +1077,15 @@ box-shadow: none !important;
     margin-left: 4px;
     margin-top: 3px;
 }
-/* kill icon */
-.animate-cont {
-    content: url(https://cdn.discordapp.com/attachments/1095428881353285652/1171999813529772042/OIG__6_-removebg.png);
-    height: 100px;
-    text-align: center;
-    display: inline-block;
-}
+
 
 /*  Player Position  */
 #team-section > div.player {
 margin-right: 63rem;
 margin-top: 20rem;
+}
+.left-interface .button.daily-rewards-btn {
+    position: absolute;
+    top: 125%;
+    background-color: rgba(45, 45, 45, 0)!important;
 }

@@ -8,19 +8,17 @@
     --br: 10px;
     --opacity: .7;
     --glow: 0 0 5px var(--white),
-        0 0 10px var(--white),
-        0 0 20px var(--accent),
-        0 0 40px var(--accent);
+    0 0 10px var(--white),
+    0 0 20px var(--accent),
+    0 0 40px var(--accent);
     --progressGlow: 0 0 10px var(--accent),
-        0 0 15px var(--accent),
-        0 0 25px var(--accent),
-        0 0 45px var(--accent);
-    --background: url("https://cdn.discordapp.com/attachments/1088521233622122578/1093907849924595783/2560x1600-4522545-original-characters-animal-ears-cherry-blossom-flowers-mask-ribbon-school-uniform-knee-highs-sky.jpg");
-    --php: url("https://cdn.discordapp.com/avatars/904984129458819102/a_93014109d08d4a8d2f205f6487e9a46d.gif?size=100")
+    0 0 15px var(--accent),
+    0 0 25px var(--accent),
+    0 0 45px var(--accent);
+
+    --plus-icon: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' stroke='black' fill='none' stroke-width='2'><path d='M5 12h14'/><path d='M12 5v14'/></svg>");
 }
-
 /* scroll bar */
-
 ::-webkit-scrollbar {
     width: 4px !important;
     border-radius: var(--br) !important;
@@ -32,7 +30,6 @@
 }
 
 /* display none */
-
 #cmpPersistentLink,
 .exp-values,
 .level-text,
@@ -69,7 +66,6 @@
 }
 
 /* Opacity hover */
-
 .avatar-info:hover,
 .level-value:hover,
 .profile .progress-line:hover,
@@ -77,7 +73,7 @@
 .quests:hover,
 .select-mod:hover,
 .select-region:hover,
-.custom-checkbox>input:not(:disabled):not(:checked)+span:hover:before,
+.custom-checkbox > input:not(:disabled):not(:checked) + span:hover:before,
 #select-regions-cont:hover,
 #playerholderelement:hover,
 .container:hover {
@@ -86,7 +82,6 @@
 }
 
 /* UserInfo */
-
 .avatar-info:hover,
 .user-info:hover {
     background-color: var(--trans);
@@ -108,17 +103,6 @@
     opacity: var(--opacity);
 }
 
-.avatar-info>.avatar {
-    background-position: center !important;
-    background-size: 150% !important;
-    border: unset;
-    border-radius: 0.25rem;
-    height: 40px !important;
-    width: 40px !important;
-    transform: scale(1.9);
-    background-image: var(--php) !important;
-    image-rendering: auto;
-}
 
 .left-interface .progress-line {
     position: absolute;
@@ -156,15 +140,13 @@
 }
 
 /* Card Container */
-
 .card-cont {
     border: none !important;
     background-color: var(--sub);
 }
 
 /* Moneys Thanks To Word <3 */
-
-.left-interface>.moneys {
+.left-interface > .moneys {
     align-items: flex-start;
     background: var(--main);
     border-radius: 0.25rem;
@@ -179,7 +161,7 @@
     opacity: var(--opacity);
 }
 
-.left-interface>.moneys>div {
+.left-interface > .moneys > div {
     background: unset;
     border: 0;
     font-size: 1rem;
@@ -189,7 +171,7 @@
     padding: 0;
 }
 
-.left-interface>.moneys>div:nth-child(1):before {
+.left-interface > .moneys > div:nth-child(1):before {
     background: var(--accent);
     border-radius: 0.1rem;
     content: "";
@@ -199,7 +181,7 @@
     width: 12px;
 }
 
-.left-interface>.moneys>div:nth-child(2):before {
+.left-interface > .moneys > div:nth-child(2):before {
     background: var(--accent);
     border-radius: 0.1rem;
     content: "";
@@ -210,16 +192,15 @@
     width: 12px;
 }
 
-.left-interface>.moneys>div>svg,
-.quests>.expire>svg,
-.quests>.tip-wrapper,
-.reward>.diamonds>img,
-.reward>.coins>img {
+.left-interface > .moneys > div > svg,
+.quests > .expire > svg,
+.quests > .tip-wrapper,
+.reward > .diamonds > img,
+.reward > .coins > img {
     display: none;
 }
 
 /* Left Interface */
-
 .left-icons {
     background: var(--main) !important;
     border: solid 10px var(--accent);
@@ -304,21 +285,12 @@
 }
 
 /* Background */
-
-.pattern-bg {
-    opacity: 1 !important;
-    background-position: right !important;
-    background-size: 100% !important;
-    background-image: var(--background) !important;
-}
-
 .bg-radial {
     background-color: var(--accent) !important;
     opacity: .5;
 }
 
 /* Quests Thanks word <3 */
-
 .quests {
     border-color: var(--trans) !important;
     background-color: var(--main) !important;
@@ -373,93 +345,93 @@
     background-color: var(--sec) !important;
 }
 
-.quests>.expire {
+.quests > .expire {
     margin-top: 0.5rem;
 }
 
-.quests>.tabs-wrapper {
+.quests > .tabs-wrapper {
     padding: 0.5rem;
 }
 
-.tabs-wrapper>.tabs {
+.tabs-wrapper > .tabs {
     background: var(--sec);
 }
 
-.tabs-wrapper>.tabs>.tab {
+.tabs-wrapper > .tabs > .tab {
     border: unset;
     font-size: 1rem;
 }
 
-.tabs-wrapper>.tabs .event {
+.tabs-wrapper > .tabs .event {
     background: var(--trans);
 }
 
-.content>.quests-container {
+.content > .quests-container {
     height: min-content !important;
     padding: 0.5rem;
 }
 
-.quests-container>.quests {
+.quests-container > .quests {
     padding: 0 !important;
 }
 
-.quests-container>.tabs {
+.quests-container > .tabs {
     border-radius: 0.25rem;
     margin-bottom: 0.5rem;
 }
 
-.tabs-wrapper>.tabs>.tab {
+.tabs-wrapper > .tabs > .tab {
     border: unset;
     font-size: 1rem;
     background: var(--trans);
 }
 
-.quests-container>.tabs>.tab:nth-child(1) {
+.quests-container > .tabs > .tab:nth-child(1) {
     margin-right: 0.5rem;
 }
 
-.quests-container>.tabs>.tab:hover {
+.quests-container > .tabs > .tab:hover {
     background: var(--accent);
     border: 0;
 }
 
-.quests-container>.tabs>.active {
+.quests-container > .tabs > .active {
     background: var(--accent);
 }
 
-.quests-container>.quests>.subjects>.subject {
+.quests-container > .quests > .subjects > .subject {
     margin-bottom: 0.5rem;
     margin-right: 0.5rem;
     padding: 0.5rem;
     width: calc(50% - 0.5rem);
 }
 
-.quests-container>.quests>.subjects>.subject>div {
+.quests-container > .quests > .subjects > .subject > div {
     background: unset;
 }
 
-.quests-container>.quests>.subjects>.subject>.time-left {
+.quests-container > .quests > .subjects > .subject > .time-left {
     height: 0;
     padding: 0;
     transform: translatey(-50px);
 }
 
-.quests-container>.quests>.subjects>.subject>.quest>.right {
+.quests-container > .quests > .subjects > .subject > .quest > .right {
     padding: 0;
 }
 
-.quests-container>.quests>.subjects>.subject>.quest>.right>.rewards {
+.quests-container > .quests > .subjects > .subject > .quest > .right > .rewards {
     background: unset;
     height: fit-content;
     justify-content: flex-start;
     padding: 0;
 }
 
-.quests-container>.quests>.subjects>.subject>.quest>.right>.rewards>.list>div {
+.quests-container > .quests > .subjects > .subject > .quest > .right > .rewards > .list > div {
     padding: 0.25rem;
 }
 
-.quests-container>.quests>.subjects>.subject>.quest>.left {
+.quests-container > .quests > .subjects > .subject > .quest > .left {
     border-radius: 0.1rem;
     margin-right: 0.5rem;
     width: 0.5rem;
@@ -470,7 +442,6 @@
 }
 
 /* Settings */
-
 .settings-and-socicons {
     position: absolute;
     top: 10px;
@@ -493,7 +464,6 @@
 }
 
 /* Play btn And Region */
-
 .select-mod:hover,
 .select-region:hover {
     background-color: var(--main) !important;
@@ -534,12 +504,11 @@
     opacity: var(--opacity) !important;
 }
 
-.custom-checkbox>input:checked+span:before {
+.custom-checkbox > input:checked + span:before {
     background-image: none !important;
 }
 
 /* Play Button */
-
 .play-btn {
     margin-right: 0 !important;
     margin-bottom: -8px !important;
@@ -584,7 +553,6 @@
 }
 
 /* Gamemodes */
-
 .select-mods-cont {
     right: 97% !important;
     bottom: 10px !important;
@@ -606,12 +574,12 @@
     padding: 5px 10px 5px 0;
 }
 
-.custom-checkbox>input:checked+span:before {
+.custom-checkbox > input:checked + span:before {
     background-color: var(--accent) !important;
     border-color: var(--trans) !important;
 }
 
-.custom-checkbox>span:before {
+.custom-checkbox > span:before {
     background-color: var(--sec) !important;
     border-color: var(--trans) !important;
 }
@@ -626,12 +594,11 @@
     opacity: var(--opacity);
 }
 
-.custom-checkbox>span[data-v-47e1b746] {
+.custom-checkbox > span[data-v-47e1b746] {
     text-shadow: var(--glow);
 }
 
 /* Currently playing */
-
 #playerholderelement {
     bottom: unset !important;
     background-color: var(--main) !important;
@@ -645,7 +612,6 @@
 }
 
 /* Profile */
-
 .background {
     background-color: var(--trans) !important;
 }
@@ -694,7 +660,7 @@
     left: 345px;
 }
 
-.card-profile>.avatar {
+.card-profile > .avatar {
     border-color: var(--sec) !important;
     margin-top: 10px !important;
 }
@@ -752,9 +718,8 @@
 }
 
 /* Clan tag And nickname Thanks word <3 */
-
-.head>.cont-name,
-.heads>.head-right {
+.head > .cont-name,
+.heads > .head-right {
     align-items: center;
     border-radius: 0.25rem;
     display: flex;
@@ -764,7 +729,7 @@
     margin-bottom: -100px;
 }
 
-.heads>.head-right>.nickname {
+.heads > .head-right > .nickname {
     margin-bottom: -0.75rem;
     margin-top: unset;
     text-shadow: var(--progressGlow);
@@ -779,10 +744,9 @@
     color: var(--white) !important;
     font-size: 2rem !important;
     margin-right: 0.25rem;
-    --clanGlow:
-        0 0 5px var(--white),
-        0 0 10px var(--accent),
-        0 0 20px var(--accent);
+    --clanGlow: 0 0 5px var(--white),
+    0 0 10px var(--accent),
+    0 0 20px var(--accent);
     text-shadow: var(--clanGlow);
 }
 
@@ -798,14 +762,14 @@
     margin: 0 5px;
 }
 
-.heads>.levels {
+.heads > .levels {
     align-items: center;
     background: var(--background-clr-primary);
     display: none;
     height: 100%;
 }
 
-.player>.heads {
+.player > .heads {
     height: 60px;
 }
 
@@ -814,7 +778,6 @@
 }
 
 /* levels */
-
 .level-card {
     transform: none !important;
     align-items: center;
@@ -847,7 +810,7 @@
     text-shadow: var(--glow) !important;
 }
 
-.level>.progress {
+.level > .progress {
     background: var(--white);
     box-shadow: var(--progressGlow);
 }
@@ -879,7 +842,6 @@
 }
 
 /* Settings tab */
-
 .header {
     color: var(--accent) !important;
     font-weight: 800 !important;
@@ -915,7 +877,7 @@
 }
 
 .keybindings-wrap .input,
-.wWmMn>.input {
+.wWmMn > .input {
     text-shadow: none !important;
     font-weight: 900 !important;
 }
@@ -941,7 +903,6 @@
 }
 
 /* Create match */
-
 .container-card {
     background: var(--main) !important;
     box-shadow: none !important;
@@ -976,7 +937,6 @@ button.button.create-btn.rectangle {
 }
 
 /* Hub */
-
 .info-awards {
     background: var(--sec) !important;
     box-shadow: none !important;
@@ -994,7 +954,7 @@ button.button.create-btn.rectangle {
     text-shadow: var(--glow);
 }
 
-.leaders>.head-leaders>.head>.cont-name {
+.leaders > .head-leaders > .head > .cont-name {
     margin-bottom: 10px !important;
 }
 
@@ -1028,7 +988,7 @@ button.button.create-btn.rectangle {
     color: var(--accent) !important;
 }
 
-.top-items>.items>.item>.left>.number-player {
+.top-items > .items > .item > .left > .number-player {
     color: var(--white) !important;
     text-shadow: var(--glow);
 }
@@ -1066,7 +1026,6 @@ button.button.create-btn.rectangle {
 }
 
 /* clans */
-
 .clans .nav {
     padding: 10px;
     background-color: var(--sec) !important;
@@ -1075,7 +1034,8 @@ button.button.create-btn.rectangle {
     font-weight: 900;
 }
 
-.active, .nav:hover {
+.active,
+.nav:hover {
     color: currentColor !important;
 }
 
@@ -1118,4 +1078,41 @@ button.button.create-btn.rectangle {
 
 .clans {
     background: var(--main) !important;
+}
+
+.left-interface .button.daily-rewards-btn {
+    position: absolute;
+    top: 100%;
+    left: -55%
+}
+#invite-btn {
+    background-color: #000!important;
+    border-radius: 5px!important;
+    font-size: 1.9em!important;
+    height: 39px;
+    width: 39px;
+    overflow: hidden;
+}
+#invite-btn:hover {
+    transform: scale(116%)
+}
+#invite-btn span {
+    display: none;
+    box-shadow: none !important;
+}
+
+#invite-btn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 80%;
+    width: 80%;
+    background-image: var(--plus-icon);
+    filter: invert(1);
+    opacity: 0.5;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    transition: transform 0.4s ease;
 }
