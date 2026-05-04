@@ -272,3 +272,14 @@ p, span, label, .text, .label, .description {
 ::-webkit-scrollbar-track {
     background: #0a0a0a;
 }
+    .left-interface .button.daily-rewards-btn {
+        background-color: var(--asscentColor) !important;
+        animation:none
+    }
+.select-mod,
+.select-region,
+.play-content-up .button {
+        background-color: var(--asscentColor) !important;
+    border:none !important;
+
+}

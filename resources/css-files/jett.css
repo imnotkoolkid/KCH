@@ -188,6 +188,8 @@
     }
     .left-interface .button.daily-rewards-btn {
         background-color: rgba(45, 45, 45, 0)!important;
+        top:3rem;
+        animation:none
     }
     /* Money */
     .moneys {
@@ -1043,5 +1045,5 @@
     }
 
     #invite-btn:hover {
-        background: var( --asscentColor)
+        background: #00ffe780
     }
