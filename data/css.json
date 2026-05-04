@@ -84,18 +84,6 @@
       "downloadUrl": ""
     },
     {
-      "title": "Reincarnated nameless",
-      "description": "Revived nameless client css for 5mil",
-      "homeImage": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/css-imgs/Reincarnated%20nameless.webp",
-      "ingameImage": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/css-imgs/Reincarnated%20nameless_ingame.webp",
-      "tags": ["Elegant", "Clean", "Pro"],
-      "availability": "paid",
-      "owner": "Grinox,Ouro",
-      "discord": "https://discord.com/users/1269597878532309054",
-      "label": "featured",
-      "downloadUrl": ""
-    },
-    {
       "title": "Pixel Twilight",
       "description": "Neon pastel-themed CSS blending dreamy mountains, cosmic skies, and a clean, modern HUD for a smooth and vibrant gameplay experience — and yes, it's expensive. 🌌✨",
       "homeImage": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/css-imgs/Pixel%20Twilight.webp",
@@ -104,7 +92,7 @@
       "availability": "showcase",
       "owner": "Grinox",
       "discord": "https://discord.com/users/1269597878532309054",
-      "label": "featured",
+      "label": "",
       "downloadUrl": ""
     },
        {
@@ -125,11 +113,11 @@
       "homeImage": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/css-imgs/black%20water.webp",
       "ingameImage": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/css-imgs/black%20water_ingame.webp",
       "tags": ["Dark", "Ocean", "Minimal"],
-      "availability": "paid",
+      "availability": "free",
       "owner": "Mitsu",
       "discord": "https://discord.com/users/1295867897268404296",
       "label": "",
-      "downloadUrl": ""
+      "downloadUrl": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/css-files/Black%20Water.css"
     },
     {
       "title": "sagefps",
@@ -154,18 +142,6 @@
       "discord": "https://discord.com/users/666443021369475073",
       "label": "featured",
       "downloadUrl": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/css-files/Discord%20Dark.css"
-    },
-    {
-      "title": "ShootingStars",
-      "description": "A dark minimal stars theme with a lot of animated things.",
-      "homeImage": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/css-imgs/shootingstars.webp",
-      "ingameImage": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/css-imgs/shootingstars_ingame.webp",
-      "tags": ["Dark", "Stars", "Minimal"],
-      "availability": "paid",
-      "owner": "Mitsu",
-      "discord": "https://discord.com/users/1295867897268404296",
-      "label": "",
-      "downloadUrl": ""
     },
     {
       "title": "Monochrome",
@@ -346,17 +322,5 @@
       "discord": "https://discord.com/users/1269597878532309054",
       "label": "",
       "downloadUrl": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/css-files/Goku.css"
-    },
-    {
-      "title": "DemonAkuma",
-      "description": "A glitchcore aesthetic with deadly precision DeamonAkuma",
-      "homeImage": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/css-imgs/DemonAkuma.webp",
-      "ingameImage": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/css-imgs/DemonAkuma_ingame.webp",
-      "tags": ["Dark", "Clean"],
-      "availability": "paid",
-      "owner": "Akuma",
-      "discord": "https://discord.com/users/1169111190824308768",
-      "label": "",
-      "downloadUrl": ""
     }
   ]
