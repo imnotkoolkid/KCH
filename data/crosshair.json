@@ -409,5 +409,16 @@
         "id": "crosshair36",
         "discord": "",
         "label": ""
+    },
+    {
+        "owner": "Unknown",
+        "tags": [
+            "Purple",
+            "Crosshair"
+        ],
+        "Crosshair": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/crosshairs/purple-dot.png",
+        "id": "crosshair37",
+        "discord": "",
+        "label": ""
     }
 ]
