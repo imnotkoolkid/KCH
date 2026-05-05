@@ -1,4 +1,17 @@
 [
+
+      {
+      "title": "obsidian",
+      "description": "a clean/minimalist but beautiful theme",
+      "homeImage": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/css-imgs/obsidian_ui.webp",
+      "ingameImage": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/css-imgs/obsidian_ui_ingame.webp",
+      "tags": ["Minimal", "Clean", "Elegant"],
+      "availability": "free",
+      "owner": "imnotkoolkid",
+      "discord": "https://discord.com/users/884448772694876191",
+      "label": "featured",
+      "downloadUrl": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/css-files/obsidian_ui.css"
+    },
     {
       "title": "Fallen",
       "description": "Sleek dark theme with a dark knight.",
@@ -34,6 +47,18 @@
       "discord": "https://discord.com/users/666443021369475073",
       "label": "",
       "downloadUrl": ""
+    },
+     {
+      "title": "shades of night",
+      "description": "a simpler approach to Kirka's ui",
+      "homeImage": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/css-imgs/shades%20of%20night.webp",
+      "ingameImage": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/css-imgs/shades%20of%20night_ingame.webp",
+      "tags": ["Dark", "Minimal", "Unique"],
+      "availability": "free",
+      "owner": "enwa",
+      "discord": "https://discord.com/users/1108518364923576470",
+      "label": "featured",
+      "downloadUrl": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/css-files/Shades%20of%20the%20Night.css"
     },
     {
       "title": "Tanjiro",
@@ -274,6 +299,18 @@
       "discord": "https://discord.com/users/1306198758421168178",
       "label": "",
       "downloadUrl": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/css-files/at%20the%20beach.css"
+    },
+    {
+      "title": "SolarFlare",
+      "description": "high-contrast futuristic interface, glowing neon accents",
+      "homeImage": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/css-imgs/SolarFlare.webp",
+      "ingameImage": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/css-imgs/SolarFlare_ingame.webp",
+      "tags": ["Orange", "Neon", "Synthwave"],
+      "availability": "free",
+      "owner": "SniperCAT",
+      "discord": "https://discord.com/users/833924945302126594",
+      "label": "",
+      "downloadUrl": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/css-files/SolarFlare.css"
     },
     {
       "title": "Cat Gamer",
