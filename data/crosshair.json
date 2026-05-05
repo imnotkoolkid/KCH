@@ -2,13 +2,24 @@
     {
         "owner": "Unknown",
         "tags": [
+            "white",
+            "Crosshair"
+        ],
+        "Crosshair": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/crosshairs/white-dot.png",
+        "id": "crosshair0",
+        "discord": "",
+        "label": "featured"
+    },
+    {
+        "owner": "Unknown",
+        "tags": [
             "Pink",
             "Crosshair"
         ],
         "Crosshair": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/crosshairs/image%20(4).png",
         "id": "crosshair1",
         "discord": "",
-        "label": "featured"
+        "label": ""
     },
     {
         "owner": "Unknown",
