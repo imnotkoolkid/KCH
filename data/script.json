@@ -5,7 +5,7 @@
 "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/coustomskinlink.js",
 "owner": "unknown",
 "discord": "",
-"description": "Allows users to apply custom skin links in the game.",
+"description": "",
 "previewImage": ""
 },
 {
@@ -13,7 +13,7 @@
 "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/WasdShown.js",
 "owner": "unknown",
 "discord": "",
-"description": "Displays WASD key indicators on the screen.",
+"description": "",
 "previewImage": ""
 },
 {
@@ -21,7 +21,7 @@
 "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/clock.js",
 "owner": "unknown",
 "discord": "",
-"description": "Adds an in-game clock display.",
+"description": "",
 "previewImage": ""
 },
 {
@@ -29,7 +29,7 @@
 "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/Rp4yUId.js",
 "owner": "unknown",
 "discord": "",
-"description": "Unique identifier script for players.",
+"description": "",
 "previewImage": ""
 },
 {
@@ -37,7 +37,7 @@
 "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/Questinfo.js",
 "owner": "unknown",
 "discord": "",
-"description": "Shows detailed quest information.",
+"description": "",
 "previewImage": ""
 },
 {
@@ -45,7 +45,7 @@
 "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/Playercount.js",
 "owner": "unknown",
 "discord": "",
-"description": "Displays the current player count.",
+"description": "",
 "previewImage": ""
 },
 {
@@ -53,7 +53,7 @@
 "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/Open%20All%20Chests.js",
 "owner": "unknown",
 "discord": "",
-"description": "Automatically opens all chests in the game.",
+"description": "",
 "previewImage": ""
 },
 {
@@ -61,7 +61,7 @@
 "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/Open%20All%20Cards.js",
 "owner": "unknown",
 "discord": "",
-"description": "Opens all cards in one click.",
+"description": "",
 "previewImage": ""
 },
 {
@@ -69,7 +69,7 @@
 "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/MoreTabstats.js",
 "owner": "unknown",
 "discord": "",
-"description": "Enhances tab with additional statistics.",
+"description": "",
 "previewImage": ""
 },
 {
@@ -77,7 +77,7 @@
 "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/Fabinglbs.js",
 "owner": "unknown",
 "discord": "",
-"description": "Custom script for specific game enhancements.",
+"description": "",
 "previewImage": ""
 },
 {
@@ -85,7 +85,7 @@
 "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/Clan_checker.js",
 "owner": "unknown",
 "discord": "",
-"description": "Checks clan membership status.",
+"description": "",
 "previewImage": ""
 },
 {
@@ -93,7 +93,7 @@
 "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/AlwaysShowTab.js",
 "owner": "unknown",
 "discord": "",
-"description": "Keeps the tab always visible.",
+"description": "",
 "previewImage": ""
 },
 {
@@ -101,7 +101,7 @@
 "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/7dayactivity.js",
 "owner": "unknown",
 "discord": "",
-"description": "Tracks player activity over 7 days.",
+"description": "",
 "previewImage": ""
 }
 ]
