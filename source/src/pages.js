@@ -204,7 +204,7 @@
             let ac = $('preview-actions'),
                 hasSrc = !!i.downloadUrl,
                 primary = i.availability === 'free' && i.downloadUrl
-                    ? `<button class="preview-btn primary" onclick="handleDownload('${i.downloadUrl}','${i.title}')"><i data-lucide="download"></i> Download CSS</button>`
+                    ? `<button class="preview-btn primary" onclick="handleDownload('${i.downloadUrl}','${i.title.replace(/'/g, "\\'")}')"><i data-lucide="download"></i> Download CSS</button>`
                     : i.availability === 'paid'
                         ? `<button class="preview-btn primary" ${i.discord ? `onclick="window.open('${i.discord}','_blank')"` : ''}><i data-lucide="shopping-cart"></i> Buy</button>`
                         : '';

@@ -269,7 +269,7 @@
     <footer>
         <div class="container footer-content">
             <div>
-                <a href="#" class="footer-logo">
+                <a href="index.html" class="footer-logo">
                     <img src="assets/icon.png" width="30" onerror="this.style.display='none'">
                     <span>Kirka Community Hub</span>
                 </a>
@@ -280,7 +280,7 @@
             <div class="footer-links-wrapper">
                 <div class="footer-links">
                     <h4>Resources</h4>
-                    <ul><li><a href="https://github.com/imnotkoolkid/kch" target="_blank">github</a></li></ul>
+                    <ul><li><a href="https://github.com/imnotkoolkid/kch" target="_blank" rel="noopener noreferrer">github</a></li></ul>
                 </div>
                 <div class="footer-links">
                     <h4>Community</h4>
@@ -1137,7 +1137,7 @@ document.addEventListener('DOMContentLoaded', () => {
         txX=e.clientX-sX; txY=e.clientY-sY; applyZoom();
     });
     document.addEventListener('mouseup', () => { dragging=false; imgSec.style.cursor=''; });
-('touchstart', e => {
+    imgSec.addEventListener('touchstart', e => {
         if (zoom <= 1 || e.touches.length!==1) return;
         dragging=true; sX=e.touches[0].clientX-txX; sY=e.touches[0].clientY-txY;
     });
@@ -1219,7 +1219,8 @@ function closeSourceViewer() {
     document.body.style.overflow = '';
     curSourceItem = null;
     curSourceCode = '';
-    history.pushState(null, '', '#scripts');
+    const curHashParts = window.location.hash.split('#').filter(Boolean);
+    history.pushState(null, '', curHashParts.length ? '#' + curHashParts[0] : '#scripts');
 }
 
 function handleSourceOverlayClick(e) {
