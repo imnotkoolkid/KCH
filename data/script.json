@@ -17,11 +17,11 @@
 "previewImage": ""
 },
 {
-"name": "Clock",
-"url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/clock.js",
-"owner": "unknown",
+"name": "esc menu timer bypass",
+"url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/esc-menu-bypass.js",
+"owner": "imnotkoolkid",
 "discord": "",
-"description": "add real-time clock display",
+"description": "bypass 3 sec timer for esc menu",
 "previewImage": ""
 },
 {
@@ -30,6 +30,38 @@
 "owner": "unknown",
 "discord": "",
 "description": "Shows the current number of players acorss all servers",
+"previewImage": ""
+},
+{
+"name": "gun scale modifier",
+"url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/gun-scale-modifier.js",
+"owner": "imnotkoolkid",
+"discord": "",
+"description": "modify gun scale with T/Y",
+"previewImage": ""
+},
+{
+"name": "wireframe toggle",
+"url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/gun-wireframe-toggle.js",
+"owner": "imnotkoolkid",
+"discord": "",
+"description": "toggle wireframe with G",
+"previewImage": ""
+},
+{
+"name": "Gun scale modifier + wireframe toggle + rgb toggle",
+"url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/gun-scale-modifier-wireframe-toggle.js",
+"owner": "imnotkoolkid",
+"discord": "",
+"description": "modify gun scale with T/Y , toggle wireframe with G and rgb mode with H",
+"previewImage": ""
+},
+{
+"name": "Clock",
+"url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/clock.js",
+"owner": "unknown",
+"discord": "",
+"description": "add real-time clock display",
 "previewImage": ""
 },
 {
