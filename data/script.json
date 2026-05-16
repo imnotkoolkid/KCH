@@ -68,8 +68,8 @@
 "name": "Open All Chests",
 "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/Open%20All%20Chests.js",
 "owner": "unknown",
-"discord": "automatically opens all available chests at once",
-"description": "",
+"discord": "",
+"description": "automatically opens all available chests at once",
 "previewImage": ""
 },
 {
