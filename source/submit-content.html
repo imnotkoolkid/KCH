@@ -100,7 +100,6 @@
         }
         .submit-contact-btn.primary:hover { background: #14b858; color: #0e1217; }
 
-        /* ── ToS notice ── */
         .tos-notice {
             max-width: 900px;
             margin: 0 auto 44px;
@@ -119,7 +118,6 @@
         .tos-notice-inner p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.7; }
         .tos-notice-inner a { color: #fbbf24; text-decoration: underline; font-weight: 600; }
 
-        /* ── Accordion / Dropdowns ── */
         .submit-body {
             max-width: 900px;
             margin: 0 auto;
@@ -214,7 +212,7 @@
             to   { opacity: 1; transform: translateY(0); }
         }
 
-        /* ── Req card ── */
+
         .req-card {
             background: rgba(255,255,255,0.02);
             border: 1px solid var(--border);
@@ -271,7 +269,7 @@
             font-family: 'Courier New', monospace;
         }
 
-        /* ── Note ── */
+
         .req-note {
             background: rgba(27, 217, 106, 0.06);
             border: 1px solid rgba(27, 217, 106, 0.18);
@@ -288,7 +286,6 @@
         .req-note svg { width: 15px; height: 15px; color: #1bd96a; flex-shrink: 0; margin-top: 2px; }
         .req-note strong { color: #1bd96a; }
 
-        /* ── Sound table ── */
         .sound-table-wrapper {
             background: rgba(255,255,255,0.02);
             border: 1px solid var(--border);
@@ -321,7 +318,7 @@
         }
         .sound-table tbody td:first-child { color: var(--text); font-weight: 600; }
 
-        /* ── CTA ── */
+
         .submit-cta {
             background: rgba(27, 217, 106, 0.04);
             border: 1px solid rgba(27, 217, 106, 0.15);
@@ -394,7 +391,7 @@
         <div class="submit-body">
             <div class="accordion-list">
 
-                <!-- CSS -->
+
                 <div class="accordion-item" id="acc-css">
                     <button class="accordion-trigger" onclick="toggleAccordion('acc-css')">
                         <div class="accordion-icon"><i data-lucide="palette"></i></div>
@@ -429,7 +426,7 @@
                     </div>
                 </div>
 
-                <!-- CROSSHAIRS -->
+
                 <div class="accordion-item" id="acc-crosshair">
                     <button class="accordion-trigger" onclick="toggleAccordion('acc-crosshair')">
                         <div class="accordion-icon"><i data-lucide="crosshair"></i></div>
@@ -457,7 +454,6 @@
                     </div>
                 </div>
 
-                <!-- TEXTURES -->
                 <div class="accordion-item" id="acc-textures">
                     <button class="accordion-trigger" onclick="toggleAccordion('acc-textures')">
                         <div class="accordion-icon"><i data-lucide="layers"></i></div>
@@ -485,7 +481,6 @@
                     </div>
                 </div>
 
-                <!-- SCRIPTS -->
                 <div class="accordion-item" id="acc-scripts">
                     <button class="accordion-trigger" onclick="toggleAccordion('acc-scripts')">
                         <div class="accordion-icon"><i data-lucide="code-2"></i></div>
@@ -514,7 +509,6 @@
                     </div>
                 </div>
 
-                <!-- SKYBOXES -->
                 <div class="accordion-item" id="acc-skyboxes">
                     <button class="accordion-trigger" onclick="toggleAccordion('acc-skyboxes')">
                         <div class="accordion-icon"><i data-lucide="cloud"></i></div>
@@ -545,7 +539,6 @@
                     </div>
                 </div>
 
-                <!-- KILL ICONS -->
                 <div class="accordion-item" id="acc-killicons">
                     <button class="accordion-trigger" onclick="toggleAccordion('acc-killicons')">
                         <div class="accordion-icon"><i data-lucide="skull"></i></div>
@@ -572,7 +565,6 @@
                     </div>
                 </div>
 
-                <!-- SOUNDS -->
                 <div class="accordion-item" id="acc-sounds">
                     <button class="accordion-trigger" onclick="toggleAccordion('acc-sounds')">
                         <div class="accordion-icon"><i data-lucide="volume-2"></i></div>
@@ -620,7 +612,6 @@
                     </div>
                 </div>
 
-                <!-- CLIENTS -->
                 <div class="accordion-item" id="acc-clients">
                     <button class="accordion-trigger" onclick="toggleAccordion('acc-clients')">
                         <div class="accordion-icon"><i data-lucide="monitor"></i></div>
@@ -697,9 +688,7 @@
         function toggleAccordion(id) {
             const item = document.getElementById(id);
             const isOpen = item.classList.contains('open');
-            // Close all
             document.querySelectorAll('.accordion-item').forEach(el => el.classList.remove('open'));
-            // Open clicked if it was closed
             if (!isOpen) item.classList.add('open');
         }
     </script>

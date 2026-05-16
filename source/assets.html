@@ -7,11 +7,14 @@
     <title>Kirka Community Hub - Assets</title>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="src/pages.css">
     <link rel="icon" type="image/png" href="assets/icon.png">
-    <meta name="description" content="Discover and download custom assets for kirka.io — scripts, skyboxes, kill icons, and sound packs.">
-    <meta name="keywords" content="Kirka assets, Kirka scripts, Kirka skyboxes, Kirka kill icons, Kirka sounds, Kirka Community Hub">
+    <meta name="description"
+        content="Discover and download custom assets for kirka.io — scripts, skyboxes, kill icons, and sound packs.">
+    <meta name="keywords"
+        content="Kirka assets, Kirka scripts, Kirka skyboxes, Kirka kill icons, Kirka sounds, Kirka Community Hub">
 
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://kirkacommunityhub.pages.dev/assets.html">
@@ -24,10 +27,10 @@
     <meta name="theme-color" content="#1bd96a">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Kirka Community Hub - Assets">
-    <meta name="twitter:description" content="Discover and download Scripts, Skyboxes, Kill Icons & Sounds for kirka.io">
+    <meta name="twitter:description"
+        content="Discover and download Scripts, Skyboxes, Kill Icons & Sounds for kirka.io">
     <meta name="twitter:image" content="https://kirkacommunityhub.pages.dev/assets/icon.png">
     <style>
-
         .asset-bar {
             background: var(--card-bg);
             border: 1px solid var(--border);
@@ -41,29 +44,83 @@
             margin-bottom: 6px;
             gap: 12px;
         }
-        .asset-bar:hover        { border-color: rgba(27,217,106,0.35); background: #1a2030; }
-        .asset-bar.bar-open     { border-color: rgba(27,217,106,0.5); border-bottom-left-radius: 0; border-bottom-right-radius: 0; margin-bottom: 0; }
 
-        .asset-bar-info   { display: flex; align-items: center; gap: 12px; min-width: 0; flex: 1; }
+        .asset-bar:hover {
+            border-color: rgba(27, 217, 106, 0.35);
+            background: #1a2030;
+        }
+
+        .asset-bar.bar-open {
+            border-color: rgba(27, 217, 106, 0.5);
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            margin-bottom: 0;
+        }
+
+        .asset-bar-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            min-width: 0;
+            flex: 1;
+        }
 
         .asset-bar-icon {
-            width: 36px; height: 36px; border-radius: 8px;
-            background: rgba(27,217,106,0.1); border: 1px solid rgba(27,217,106,0.2);
-            display: flex; align-items: center; justify-content: center;
-            flex-shrink: 0; color: var(--green);
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            background: rgba(27, 217, 106, 0.1);
+            border: 1px solid rgba(27, 217, 106, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: var(--green);
         }
-        .asset-bar-icon svg { width: 18px; height: 18px; }
 
-        .asset-bar-text { min-width: 0; }
-        .asset-bar-name  { font-weight: 700; font-size: .95rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--text); }
-        .asset-bar-owner { font-size: .8rem; color: var(--text-muted); margin-top: 2px; }
-        .asset-bar-owner a { color: var(--green); text-decoration: none; }
-        .asset-bar-owner a:hover { text-decoration: underline; }
+        .asset-bar-icon svg {
+            width: 18px;
+            height: 18px;
+        }
 
-        .asset-bar-actions { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+        .asset-bar-text {
+            min-width: 0;
+        }
 
-        /* chevron rotate when open */
-        .chevron-btn.open svg { transform: rotate(180deg); }
+        .asset-bar-name {
+            font-weight: 700;
+            font-size: .95rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: var(--text);
+        }
+
+        .asset-bar-owner {
+            font-size: .8rem;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        .asset-bar-owner a {
+            color: var(--green);
+            text-decoration: none;
+        }
+
+        .asset-bar-owner a:hover {
+            text-decoration: underline;
+        }
+
+        .asset-bar-actions {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex-shrink: 0;
+        }
+
+        .chevron-btn.open svg {
+            transform: rotate(180deg);
+        }
 
         .asset-dropdown {
             background: #111827;
@@ -76,42 +133,106 @@
             transition: max-height .35s ease, opacity .3s ease;
             margin-bottom: 6px;
         }
-        .asset-dropdown.open { 
-            max-height: 450px; 
-            opacity: 1; 
-            overflow-y: auto; 
+
+        .asset-dropdown.open {
+            max-height: 450px;
+            opacity: 1;
+            overflow-y: auto;
             scrollbar-width: thin;
             scrollbar-color: var(--green) transparent;
         }
-        .asset-dropdown::-webkit-scrollbar { width: 5px; }
-        .asset-dropdown::-webkit-scrollbar-thumb { background: var(--green); border-radius: 10px; }
 
-        .dropdown-inner { padding: 18px 20px; display: flex; gap: 20px; }
-        .dropdown-desc  { flex: 1; font-size: .88rem; color: var(--text-muted); line-height: 1.65; }
+        .asset-dropdown::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .asset-dropdown::-webkit-scrollbar-thumb {
+            background: var(--green);
+            border-radius: 10px;
+        }
+
+        .dropdown-inner {
+            padding: 18px 20px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .dropdown-desc {
+            flex: 1;
+            font-size: .88rem;
+            color: var(--text-muted);
+            line-height: 1.65;
+        }
 
         .dropdown-preview-img {
-            width: 160px; flex-shrink: 0; border-radius: 8px;
-            object-fit: cover; border: 1px solid var(--border);
-            cursor: pointer; transition: opacity .2s, border-color .2s;
+            width: 160px;
+            flex-shrink: 0;
+            border-radius: 8px;
+            object-fit: cover;
+            border: 1px solid var(--border);
+            cursor: pointer;
+            transition: opacity .2s, border-color .2s;
             align-self: flex-start;
         }
-        .dropdown-preview-img:hover { opacity: .85; border-color: rgba(27,217,106,0.4); }
+
+        .dropdown-preview-img:hover {
+            opacity: .85;
+            border-color: rgba(27, 217, 106, 0.4);
+        }
 
         /* Sound tracks */
-        .sound-tracks { display: flex; flex-direction: column; gap: 6px; width: 100%; }
+        .sound-tracks {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            width: 100%;
+        }
+
         .track-row {
-            display: flex; align-items: center; gap: 10px;
-            padding: 9px 12px; border-radius: 8px;
-            background: var(--card-bg); border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 9px 12px;
+            border-radius: 8px;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
         }
-        .track-name  { font-size: .85rem; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--text); }
+
+        .track-name {
+            font-size: .85rem;
+            flex: 1;
+            min-width: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            color: var(--text);
+        }
+
         .track-progress {
-            width: 120px; height: 4px; border-radius: 2px;
-            background: var(--border); cursor: pointer;
-            position: relative; flex-shrink: 0;
+            width: 120px;
+            height: 4px;
+            border-radius: 2px;
+            background: var(--border);
+            cursor: pointer;
+            position: relative;
+            flex-shrink: 0;
         }
-        .track-progress-fill { height: 100%; background: var(--green); border-radius: 2px; width: 0%; pointer-events: none; }
-        .track-time { font-size: .75rem; color: var(--text-muted); white-space: nowrap; min-width: 36px; text-align: right; }
+
+        .track-progress-fill {
+            height: 100%;
+            background: var(--green);
+            border-radius: 2px;
+            width: 0%;
+            pointer-events: none;
+        }
+
+        .track-time {
+            font-size: .75rem;
+            color: var(--text-muted);
+            white-space: nowrap;
+            min-width: 36px;
+            text-align: right;
+        }
 
         .card.asset-card .card-img {
             object-fit: contain;
@@ -120,39 +241,87 @@
         }
 
         .card-img-loader {
-            position: absolute; inset: 0;
-            display: flex; align-items: center; justify-content: center;
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             z-index: 2;
         }
+
         .section-header {
-            display: flex; align-items: center; gap: 12px;
-            margin-bottom: 14px; padding-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 14px;
+            padding-bottom: 14px;
             border-bottom: 1px solid var(--border);
         }
-        .section-header svg { width: 20px; height: 20px; color: var(--green); }
-        .section-header h2  { font-size: 1.1rem; font-weight: 800; color: var(--text); }
+
+        .section-header svg {
+            width: 20px;
+            height: 20px;
+            color: var(--green);
+        }
+
+        .section-header h2 {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--text);
+        }
 
         .empty-state {
-            text-align: center; padding: 60px 20px;
+            text-align: center;
+            padding: 60px 20px;
             color: var(--text-muted);
-            display: flex; flex-direction: column; align-items: center; gap: 14px; width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+            width: 100%;
         }
-        .empty-state svg { width: 48px; height: 48px; color: var(--green); opacity: .4; }
-        .empty-state h3  { font-size: 1.3rem; font-weight: 700; color: var(--text); }
-        .empty-state p   { font-size: .95rem; max-width: 380px; line-height: 1.6; }
+
+        .empty-state svg {
+            width: 48px;
+            height: 48px;
+            color: var(--green);
+            opacity: .4;
+        }
+
+        .empty-state h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .empty-state p {
+            font-size: .95rem;
+            max-width: 380px;
+            line-height: 1.6;
+        }
 
         @media (max-width: 768px) {
-            .dropdown-inner { flex-direction: column; }
-            .dropdown-preview-img { width: 100%; }
-            .asset-bar { flex-wrap: wrap; }
-            .track-progress { width: 70px; }
+            .dropdown-inner {
+                flex-direction: column;
+            }
+
+            .dropdown-preview-img {
+                width: 100%;
+            }
+
+            .asset-bar {
+                flex-wrap: wrap;
+            }
+
+            .track-progress {
+                width: 70px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <!-- ── Header — exact copy of css.html ── -->
     <header>
         <div class="header-container">
             <a href="index.html" class="logo">
@@ -166,40 +335,39 @@
     </header>
 
     <main>
-        <!-- ── Tabs ── -->
+
         <div class="tabs-wrapper">
             <div class="tabs-container">
                 <button class="tab-item active" onclick="switchTab('scripts',   this)">Scripts</button>
-                <button class="tab-item"         onclick="switchTab('skyboxes',  this)">Skyboxes</button>
-                <button class="tab-item"         onclick="switchTab('killicons', this)">Kill Icons</button>
-                <button class="tab-item"         onclick="switchTab('sounds',    this)">Sounds</button>
-                <button class="tab-item"         onclick="switchTab('liked',     this)">Liked</button>
+                <button class="tab-item" onclick="switchTab('skyboxes',  this)">Skyboxes</button>
+                <button class="tab-item" onclick="switchTab('killicons', this)">Kill Icons</button>
+                <button class="tab-item" onclick="switchTab('sounds',    this)">Sounds</button>
+                <button class="tab-item" onclick="switchTab('liked',     this)">Liked</button>
             </div>
         </div>
 
         <div class="container">
 
-            <!-- ── Scripts ── -->
+
             <div class="tab-content active" id="tab-scripts">
                 <div id="scripts-list"></div>
             </div>
 
-            <!-- ── Skyboxes ── -->
             <div class="tab-content" id="tab-skyboxes">
                 <div class="all-grid" id="skyboxes-grid"></div>
             </div>
 
-            <!-- ── Kill Icons ── -->
+
             <div class="tab-content" id="tab-killicons">
                 <div class="all-grid" id="killicons-grid"></div>
             </div>
 
-            <!-- ── Sounds ── -->
+
             <div class="tab-content" id="tab-sounds">
                 <div id="sounds-list"></div>
             </div>
 
-            <!-- ── Liked ── -->
+
             <div class="tab-content" id="tab-liked">
                 <div id="liked-content"></div>
             </div>
@@ -207,23 +375,20 @@
         </div>
     </main>
 
-    <!-- ── Preview Modal — exact structure + classes from css.html / pages.css ── -->
+
     <div class="preview-overlay" id="preview-overlay" onclick="handleOverlayClick(event)">
         <div class="preview-modal" id="preview-modal">
 
-            <!-- image section -->
+
             <div class="preview-img-section loader-container">
                 <img class="preview-main-img" id="preview-img" src="" alt="" draggable="false">
                 <div class="loader" id="preview-loader"></div>
 
-                <!-- home / ingame style toggles re-used as multi-image nav for packs -->
                 <div class="preview-img-toggles" id="preview-img-toggles"></div>
 
-                <!-- zoom level indicator -->
                 <div class="zoom-indicator" id="zoom-indicator"></div>
             </div>
 
-            <!-- body -->
             <div class="preview-body">
                 <div class="preview-header">
                     <div class="preview-title-block">
@@ -239,13 +404,14 @@
         </div>
     </div>
 
-    <!-- ── Source Viewer Modal ── -->
+
     <div class="source-overlay" id="source-overlay" onclick="handleSourceOverlayClick(event)">
         <div class="source-modal" id="source-modal">
             <div class="source-modal-header">
                 <div class="source-modal-title" id="source-modal-name">Source</div>
                 <div class="source-modal-actions">
-                    <button class="source-share-btn" id="source-share-btn" title="Share Source Code" onclick="shareSourceCode()">
+                    <button class="source-share-btn" id="source-share-btn" title="Share Source Code"
+                        onclick="shareSourceCode()">
                         <i data-lucide="share-2"></i>
                     </button>
                     <button class="source-copy-btn" id="source-copy-btn" title="Copy Code" onclick="copySourceCode()">
@@ -262,10 +428,10 @@
         </div>
     </div>
 
-    <!-- ── Toast ── -->
+
     <div class="toast-container" id="toast-container"></div>
 
-    <!-- ── Footer — exact copy of css.html ── -->
+
     <footer>
         <div class="container footer-content">
             <div>
@@ -280,7 +446,10 @@
             <div class="footer-links-wrapper">
                 <div class="footer-links">
                     <h4>Resources</h4>
-                    <ul><li><a href="https://github.com/imnotkoolkid/kch" target="_blank" rel="noopener noreferrer">github</a></li></ul>
+                    <ul>
+                        <li><a href="https://github.com/imnotkoolkid/kch" target="_blank"
+                                rel="noopener noreferrer">github</a></li>
+                    </ul>
                 </div>
                 <div class="footer-links">
                     <h4>Community</h4>
@@ -300,976 +469,279 @@
         </div>
     </footer>
 
-<script>
-// ─── Config ───────────────────────────────────────────────────────────────────
-const DATA_URLS = {
-    scripts:   'https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/data/script.json',
-    sounds:    'https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/data/sounds.json',
-    killIcons: 'https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/data/kill_icons.json',
-    skyboxes:  'https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/data/skyboxes.json',
-};
-const cache      = {};
-const LIKED_KEY  = 'kch_liked_assets';
+    <script>
+        const DATA_URLS = { scripts: 'https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/data/script.json', sounds: 'https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/data/sounds.json', killIcons: 'https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/data/kill_icons.json', skyboxes: 'https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/data/skyboxes.json' };
+        const cache = {}, LIKED_KEY = 'kch_liked_assets';
+        const getLiked = () => { try { return JSON.parse(localStorage.getItem(LIKED_KEY) || '[]'); } catch { return []; } };
+        const saveLiked = a => localStorage.setItem(LIKED_KEY, JSON.stringify([...new Set(a)]));
+        const isLiked = id => getLiked().includes(id);
+        function toggleLiked(id) { let a = getLiked(); const was = a.includes(id); saveLiked(was ? a.filter(x => x !== id) : [...a, id]); return !was; }
+        function showToast(msg) {
+            const el = document.createElement('div'); el.className = 'toast';
+            el.innerHTML = `<i data-lucide="check-circle"></i><span>${msg}</span>`;
+            document.getElementById('toast-container').appendChild(el);
+            lucide.createIcons({ nodes: [el] }); setTimeout(() => el.remove(), 2200);
+        }
+        async function fetchData(type) {
+            if (cache[type]) return cache[type];
+            try { const r = await fetch(DATA_URLS[type]); if (!r.ok) throw 0; const j = await r.json(); return (cache[type] = j[type] || j); } catch { return null; }
+        }
+        async function dlFile(url, name) {
+            if (!url) return;
+            try {
+                const resp = await fetch(url, { mode: 'cors' }); if (!resp.ok) throw 0;
+                const a = Object.assign(document.createElement('a'), { href: URL.createObjectURL(await resp.blob()), download: name, style: 'display:none' });
+                document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 150);
+            } catch { window.open(url, '_blank', 'noopener,noreferrer'); showToast('Right-click the image → Save as'); }
+        }
+        async function dlZip(files, name, isAudio = false) {
+            if (!files?.length) return; showToast('Preparing zip...');
+            try {
+                const zip = new JSZip(), folder = zip.folder(name);
+                await Promise.all(files.map(async f => {
+                    const url = typeof f === 'string' ? f : f.url, ext = url.split('.').pop().split(/[#?]/)[0] || (isAudio ? 'mp3' : 'webp');
+                    folder.file(f.name ? f.name + '.' + (isAudio ? 'mp3' : 'webp') : `file_${Math.random().toString(36).slice(2)}.${ext}`, await (await fetch(url)).blob());
+                }));
+                const a = Object.assign(document.createElement('a'), { href: URL.createObjectURL(await zip.generateAsync({ type: 'blob' })), download: name + '.zip', style: 'display:none' });
+                document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 150);
+                showToast('Zip downloaded!');
+            } catch { showToast('Zip failed'); }
+        }
 
-const getLiked   = () => { try { return JSON.parse(localStorage.getItem(LIKED_KEY) || '[]'); } catch { return []; } };
-const saveLiked  = a  => localStorage.setItem(LIKED_KEY, JSON.stringify([...new Set(a)]));
-const isLiked    = id => getLiked().includes(id);
-function toggleLiked(id) {
-    let a = getLiked();
-    const was = a.includes(id);
-    saveLiked(was ? a.filter(x => x !== id) : [...a, id]);
-    return !was;
-}
+        const tabLoaded = {};
+        const loaderHTML = () => `<div class="empty-state"><div class="loader"></div></div>`, emptyHTML = () => `<div class="empty-state"><p>Nothing found.</p></div>`, gridLoaderHTML = () => `<div class="empty-state" style="grid-column:1/-1"><div class="loader"></div></div>`, gridEmptyHTML = () => `<div class="empty-state" style="grid-column:1/-1"><p>Nothing found.</p></div>`;
+        const loadList = async (type, id, renderer, isGrid) => {
+            const el = document.getElementById(id); el.innerHTML = isGrid ? gridLoaderHTML() : loaderHTML();
+            const data = await fetchData(type); el.innerHTML = '';
+            if (!data?.length) return (el.innerHTML = isGrid ? gridEmptyHTML() : emptyHTML());
+            data.forEach(i => renderer(el, i));
+        };
 
-function showToast(msg) {
-    const el = document.createElement('div');
-    el.className = 'toast';
-    el.innerHTML = `<i data-lucide="check-circle"></i><span>${msg}</span>`;
-    document.getElementById('toast-container').appendChild(el);
-    lucide.createIcons({ nodes: [el] });
-    setTimeout(() => el.remove(), 2200);
-}
+        const loaders = {
+            scripts: () => loadList('scripts', 'scripts-list', (el, i) => renderBar(el, i, 'script')),
+            sounds: () => loadList('sounds', 'sounds-list', renderSoundBar),
+            killicons: () => loadList('killIcons', 'killicons-grid', (el, i) => renderCard(el, i, 'killIcon'), true),
+            skyboxes: () => loadList('skyboxes', 'skyboxes-grid', (el, i) => renderCard(el, { ...i, _thumb: i.isPack ? (i.images?.find(x => x.name === 'front')?.url || i.images?.[0]?.url) : i.url }, 'skybox', i), true),
+            liked: () => loadLiked()
+        };
 
-async function fetchData(type) {
-    if (cache[type]) return cache[type];
-    try {
-        const r = await fetch(DATA_URLS[type]);
-        if (!r.ok) throw 0;
-        const j = await r.json();
-        cache[type] = j[type] || j;
-        return cache[type];
-    } catch { return null; }
-}
-
-async function dlFile(url, name) {
-    if (!url) return;
-    try {
-        const resp = await fetch(url, { mode: 'cors' });
-        if (!resp.ok) throw 0;
-        const b = await resp.blob();
-        const a = Object.assign(document.createElement('a'), {
-            href: URL.createObjectURL(b),
-            download: name,
-            style: 'display:none'
-        });
-        document.body.appendChild(a);
-        a.click();
-        setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 150);
-    } catch {
-        // CORS blocked — open in new tab so user can manually save
-        window.open(url, '_blank', 'noopener,noreferrer');
-        showToast('Right-click the image → Save as');
-    }
-}
-async function dlZip(files, name, isAudio = false) {
-    if (!files?.length) return;
-    showToast('Preparing zip...');
-    try {
-        const zip = new JSZip();
-        const folder = zip.folder(name);
-        const promises = files.map(async (f) => {
-            const url = typeof f === 'string' ? f : f.url;
-            const r = await fetch(url);
-            const b = await r.blob();
-            let fileName = '';
-            if (typeof f === 'object' && f.name) {
-                fileName = f.name + (isAudio ? '.mp3' : '.webp');
-            } else {
-                const ext = url.split('.').pop().split(/[#?]/)[0] || (isAudio ? 'mp3' : 'webp');
-                fileName = `file_${Math.random().toString(36).slice(2)}.${ext}`;
-            }
-            folder.file(fileName, b);
-        });
-        await Promise.all(promises);
-        const blob = await zip.generateAsync({ type: 'blob' });
-        const a = Object.assign(document.createElement('a'), { 
-            href: URL.createObjectURL(blob), 
-            download: name + '.zip',
-            style: 'display:none'
-        });
-        document.body.appendChild(a);
-        a.click();
-        setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 150);
-        showToast('Zip downloaded!');
-    } catch { showToast('Zip failed'); }
-}
-
-// ─── Tabs ─────────────────────────────────────────────────────────────────────
-const tabLoaded = {};
-const loaders   = { scripts: loadScripts, skyboxes: loadSkyboxes, killicons: loadKillIcons, sounds: loadSounds, liked: loadLiked };
-
-async function switchTab(id, btn, updateHash = true) {
-    document.querySelectorAll('.tab-item').forEach(b => b.classList.remove('active'));
-    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-    
-    if (!btn) {
-        btn = Array.from(document.querySelectorAll('.tab-item')).find(b => 
-            b.getAttribute('onclick').includes(`'${id}'`)
-        );
-    }
-    
-    if (btn) btn.classList.add('active');
-    document.getElementById('tab-' + id).classList.add('active');
-    
-    if (!tabLoaded[id]) { 
-        tabLoaded[id] = true; 
-        if (loaders[id]) await loaders[id](); 
-    }
-    
-    if (updateHash) {
-        const hashMap = { scripts: '#scripts', skyboxes: '#skyboxes', killicons: '#kill-icons', sounds: '#sounds', liked: '#liked' };
-        if (hashMap[id]) {
-            const curHashParts = window.location.hash.split('#').filter(Boolean);
-            if (!curHashParts.length || '#' + curHashParts[0] !== hashMap[id]) {
-                history.pushState(null, '', hashMap[id]);
+        async function switchTab(id, btn, updateHash = true) {
+            document.querySelectorAll('.tab-item, .tab-content').forEach(e => e.classList.remove('active'));
+            (btn || document.querySelector(`.tab-item[onclick*="'${id}'"]`))?.classList.add('active');
+            document.getElementById('tab-' + id).classList.add('active');
+            if (!tabLoaded[id]) { tabLoaded[id] = true; await loaders[id]?.(); }
+            if (updateHash) {
+                const h = { scripts: '#scripts', skyboxes: '#skyboxes', killicons: '#kill-icons', sounds: '#sounds', liked: '#liked' }[id];
+                if (h && window.location.hash.split('#')[1] !== h.substring(1)) history.pushState(null, '', h);
             }
         }
-    }
-}
 
-// ─── Hash Handling ────────────────────────────────────────────────────────────
-async function handleHash() {
-    const hash = window.location.hash;
-    if (!hash) return;
-    
-    const parts = hash.split('#').filter(Boolean);
-    if (!parts.length) return;
-    
-    const tabHash = '#' + parts[0];
-    const itemSlug = parts[1];
-    
-    const hashToId = {
-        '#scripts':    'scripts',
-        '#skyboxes':   'skyboxes',
-        '#kill-icons': 'killicons',
-        '#sounds':     'sounds',
-        '#liked':      'liked'
-    };
-    
-    const id = hashToId[tabHash];
-    if (id) {
-        await switchTab(id, null, false);
-        
-        if (itemSlug) {
-            const itemName = decodeURIComponent(itemSlug).replace(/-/g, ' ').toLowerCase();
-            if (id === 'skyboxes' || id === 'killicons') {
-                const gridId = id === 'skyboxes' ? 'skyboxes-grid' : 'killicons-grid';
-                const card = Array.from(document.querySelectorAll(`#${gridId} .card`)).find(c => c.dataset.name.toLowerCase() === itemName);
-                if (card) {
-                    const img = card.querySelector('.card-img');
-                    if (img) img.click();
-                    else card.click();
-                }
-            } else if (id === 'scripts' || id === 'sounds') {
-                // Check for vs: prefix (view source deep-link)
-                if (id === 'scripts' && itemSlug.startsWith('vs:')) {
-                    const vsSlug = itemSlug.slice(3);
-                    const vsName = decodeURIComponent(vsSlug).replace(/-/g, ' ').toLowerCase();
-                    const data = await fetchData('scripts');
-                    const scriptItem = (data || []).find(i => i.name.toLowerCase() === vsName);
-                    if (scriptItem) {
-                        await openSourceViewer(scriptItem.url, scriptItem.name);
+        async function handleHash() {
+            const parts = window.location.hash.split('#').filter(Boolean);
+            if (!parts.length) return;
+            const id = { scripts: 'scripts', skyboxes: 'skyboxes', 'kill-icons': 'killicons', sounds: 'sounds', liked: 'liked' }[parts[0]];
+            if (id) {
+                await switchTab(id, null, false);
+                if (parts[1]) {
+                    const name = decodeURIComponent(parts[1]).replace(/-/g, ' ').toLowerCase();
+                    const clickEl = (sel, isCard) => {
+                        const el = Array.from(document.querySelectorAll(sel)).find(e => e.dataset.name.toLowerCase() === name);
+                        if (el) isCard ? (el.querySelector('.card-img') || el).click() : (!el.classList.contains('bar-open') && el.click(), setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'center' }), 100));
+                    };
+                    if (id === 'scripts' && parts[1].startsWith('vs:')) {
+                        const scr = (await fetchData('scripts') || []).find(i => i.name.toLowerCase() === decodeURIComponent(parts[1].slice(3)).replace(/-/g, ' ').toLowerCase());
+                        if (scr) await openSourceViewer(scr.url, scr.name);
+                    } else if (['skyboxes', 'killicons'].includes(id)) clickEl(`#${id}-grid .card`, true);
+                    else if (['scripts', 'sounds'].includes(id)) clickEl(`#${id}-list .asset-bar`, false);
+                    else if (id === 'liked') {
+                        const card = Array.from(document.querySelectorAll(`#liked-content .card`)).find(c => c.dataset.name.toLowerCase() === name);
+                        if (card) (card.querySelector('.card-img') || card).click(); else clickEl(`#liked-content .asset-bar`, false);
                     }
                 } else {
-                    const itemName = decodeURIComponent(itemSlug).replace(/-/g, ' ').toLowerCase();
-                    const listId = id === 'scripts' ? 'scripts-list' : 'sounds-list';
-                    const bar = Array.from(document.querySelectorAll(`#${listId} .asset-bar`)).find(b => b.dataset.name.toLowerCase() === itemName);
-                    if (bar) {
-                        if (!bar.classList.contains('bar-open')) bar.click();
-                        setTimeout(() => bar.scrollIntoView({ behavior: 'smooth', block: 'center' }), 100);
-                    }
+                    closeModal(); closeOtherBars();
+                    if (document.getElementById('source-overlay')?.classList.contains('visible')) closeSourceViewer();
                 }
-            } else if (id === 'liked') {
-                const card = Array.from(document.querySelectorAll(`#liked-content .card`)).find(c => c.dataset.name.toLowerCase() === itemName);
-                if (card) {
-                    card.click();
-                } else {
-                    const bar = Array.from(document.querySelectorAll(`#liked-content .asset-bar`)).find(b => b.dataset.name.toLowerCase() === itemName);
-                    if (bar) {
-                        if (!bar.classList.contains('bar-open')) bar.click();
-                        setTimeout(() => bar.scrollIntoView({ behavior: 'smooth', block: 'center' }), 100);
-                    }
+            } else if (parts[0]) window.location.href = '404.html';
+        }
+
+        window.addEventListener('hashchange', handleHash);
+        window.addEventListener('DOMContentLoaded', () => window.location.hash ? handleHash() : (tabLoaded.scripts = true, loaders.scripts()));
+
+        function filterBars(listId, q) {
+            const lq = q.toLowerCase();
+            for (let n = document.getElementById(listId).firstChild; n; n = n.nextSibling) {
+                if (n.classList?.contains('asset-bar')) {
+                    const show = (n.dataset.name || '').toLowerCase().includes(lq);
+                    n.style.display = show ? '' : 'none';
+                    if (n.nextSibling?.classList?.contains('asset-dropdown')) n.nextSibling.style.display = show ? '' : 'none';
                 }
             }
-        } else {
-            closeModal();
-            closeOtherBars(null);
-            if (typeof closeSourceViewer === 'function' && document.getElementById('source-overlay')?.classList.contains('visible')) {
-                closeSourceViewer();
+        }
+        function filterCards(gridId, q) { const lq = q.toLowerCase(); document.querySelectorAll(`#${gridId} > .card`).forEach(c => c.style.display = (c.dataset.name || '').toLowerCase().includes(lq) ? '' : 'none'); }
+        function closeOtherBars(b) { document.querySelectorAll('.asset-bar.bar-open').forEach(x => { if (x !== b) { x.classList.remove('bar-open'); x.nextElementSibling?.classList.remove('open'); x.querySelector('.chevron-btn')?.classList.remove('open'); } }); }
+
+        const esc = s => String(s || '').replace(/[&<>"']/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m]));
+        const formatOwner = (i, card) => i.discord && i.discord !== '#' ? `<a href="${i.discord}" target="_blank"${card ? ' style="color:var(--green)"' : ''}>${esc(i.owner)}</a>` : esc(i.owner);
+        const btnAction = (p, a, fn) => p.querySelector(`[data-action="${a}"]`)?.addEventListener('click', e => { e.stopPropagation(); fn(e); });
+        const shareAction = (tab, name) => navigator.clipboard.writeText(`${location.origin}${location.pathname}#${tab}#${encodeURIComponent(name.trim().replace(/\s+/g, '-').toLowerCase())}`).then(() => showToast('Link copied!')).catch(() => showToast('Copy failed'));
+        const toggleDropdown = (bar, dd, tab, name) => {
+            closeOtherBars(bar); const open = !dd.classList.contains('open');
+            bar.classList.toggle('bar-open', open); dd.classList.toggle('open', open); bar.querySelector('.chevron-btn').classList.toggle('open', open);
+            const h = '#' + (window.location.hash.split('#')[1] || tab);
+            history.pushState(null, '', open ? `${h}#${encodeURIComponent(name.trim().replace(/\s+/g, '-').toLowerCase())}` : h);
+        };
+
+        function renderBar(container, item, type) {
+            const likeId = type + ':' + item.name, liked = isLiked(likeId), bar = document.createElement('div'), dd = document.createElement('div');
+            bar.className = 'asset-bar'; bar.dataset.name = item.name;
+            bar.innerHTML = `<div class="asset-bar-info"><div class="asset-bar-icon"><i data-lucide="file-code-2"></i></div><div class="asset-bar-text"><div class="asset-bar-name">${esc(item.name)}</div><div class="asset-bar-owner">by ${formatOwner(item)}</div></div></div><div class="asset-bar-actions"><button class="btn-icon" data-action="dl" title="Download"><i data-lucide="download"></i></button><button class="btn-icon" data-action="copy-script" title="Copy Script"><i data-lucide="clipboard"></i></button><button class="btn-icon" data-action="view-source" title="View Source"><i data-lucide="code-2"></i></button><button class="btn-icon" data-action="share" title="Share"><i data-lucide="share-2"></i></button><button class="btn-icon ${liked ? 'liked' : ''}" data-action="like" title="Like"><i data-lucide="heart"></i></button><button class="btn-icon chevron-btn" data-action="toggle" title="Details"><i data-lucide="chevron-down"></i></button></div>`;
+            dd.className = 'asset-dropdown'; dd.innerHTML = `<div class="dropdown-inner"><div class="dropdown-desc">${esc(item.description || 'No description.')}</div>${item.previewImage ? `<img class="dropdown-preview-img" src="${item.previewImage}">` : ''}</div>`;
+
+            const doToggle = () => toggleDropdown(bar, dd, 'scripts', item.name);
+            bar.addEventListener('click', doToggle); btnAction(bar, 'toggle', doToggle);
+            btnAction(bar, 'dl', () => { dlFile(item.url, item.name + '.js'); showToast('Downloading ' + item.name); });
+            btnAction(bar, 'like', e => { const now = toggleLiked(likeId); e.currentTarget.classList.toggle('liked', now); showToast(now ? 'Added to Liked' : 'Removed from Liked'); });
+            btnAction(bar, 'view-source', () => openSourceViewer(item.url, item.name));
+            btnAction(bar, 'copy-script', async () => { try { await navigator.clipboard.writeText(await (await fetch(item.url)).text()); showToast('Script copied!'); } catch { showToast('Copy failed'); } });
+            btnAction(bar, 'share', () => shareAction('scripts', item.name));
+            dd.querySelector('.dropdown-preview-img')?.addEventListener('click', e => { e.stopPropagation(); openPreview({ name: item.name, owner: item.owner, discord: item.discord, images: [item.previewImage], type: 'script-preview', downloadUrl: null, likeId }); });
+            container.append(bar, dd); lucide.createIcons({ nodes: [bar] });
+        }
+
+        function renderSoundBar(container, item) {
+            const likeId = 'sound:' + item.name, liked = isLiked(likeId), tracks = item.audioFiles || [], bar = document.createElement('div'), dd = document.createElement('div');
+            bar.className = 'asset-bar'; bar.dataset.name = item.name;
+            bar.innerHTML = `<div class="asset-bar-info"><div class="asset-bar-icon"><i data-lucide="music"></i></div><div class="asset-bar-text"><div class="asset-bar-name">${esc(item.name)}</div><div class="asset-bar-owner">by ${formatOwner(item)}</div></div></div><div class="asset-bar-actions"><button class="btn-icon" data-action="dlpack" title="Download Pack"><i data-lucide="download"></i></button><button class="btn-icon" data-action="share" title="Share"><i data-lucide="share-2"></i></button><button class="btn-icon ${liked ? 'liked' : ''}" data-action="like" title="Like"><i data-lucide="heart"></i></button><button class="btn-icon chevron-btn" data-action="toggle" title="Tracks"><i data-lucide="chevron-down"></i></button></div>`;
+            dd.className = 'asset-dropdown'; dd.innerHTML = `<div class="dropdown-inner"><div class="sound-tracks">${tracks.map((f, i) => `<div class="track-row" data-ti="${i}"><button class="btn-icon play-btn"><i data-lucide="play"></i></button><span class="track-name">${esc(f.name)}</span><div class="track-progress"><div class="track-progress-fill"></div></div><span class="track-time">0:00</span><button class="btn-icon track-dl" data-url="${f.url}" data-fn="${esc(f.name)}.mp3"><i data-lucide="download"></i></button></div>`).join('')}</div></div>`;
+
+            const audios = tracks.map(f => new Audio(f.url)), doToggle = () => toggleDropdown(bar, dd, 'sounds', item.name);
+            bar.addEventListener('click', doToggle); btnAction(bar, 'toggle', doToggle);
+            btnAction(bar, 'dlpack', () => dlZip(tracks, item.name, true));
+            btnAction(bar, 'like', e => { const now = toggleLiked(likeId); e.currentTarget.classList.toggle('liked', now); showToast(now ? 'Added to Liked' : 'Removed from Liked'); });
+            btnAction(bar, 'share', () => shareAction('sounds', item.name));
+            container.append(bar, dd); lucide.createIcons({ nodes: [bar, dd] });
+
+            dd.querySelectorAll('.track-row').forEach((row, i) => {
+                const audio = audios[i], pb = row.querySelector('.play-btn'), fill = row.querySelector('.track-progress-fill'), timeEl = row.querySelector('.track-time'), prog = row.querySelector('.track-progress');
+                audio.addEventListener('timeupdate', () => { fill.style.width = audio.duration ? (audio.currentTime / audio.duration * 100) + '%' : '0%'; timeEl.textContent = `${Math.floor(audio.currentTime / 60)}:${Math.floor(audio.currentTime % 60).toString().padStart(2, '0')}`; });
+                audio.addEventListener('ended', () => { fill.style.width = '0%'; timeEl.textContent = '0:00'; setIcon(pb, 'play'); });
+                pb.addEventListener('click', e => { e.stopPropagation(); if (audio.paused) { audios.forEach((a, j) => { a.pause(); a.currentTime = 0; setIcon(dd.querySelectorAll('.play-btn')[j], 'play'); }); audio.play(); setIcon(pb, 'pause'); } else { audio.pause(); setIcon(pb, 'play'); } });
+                prog.addEventListener('click', e => { e.stopPropagation(); if (audio.duration) { const r = prog.getBoundingClientRect(); audio.currentTime = ((e.clientX - r.left) / r.width) * audio.duration; } });
+                row.querySelector('.track-dl').addEventListener('click', e => { e.stopPropagation(); dlFile(e.currentTarget.dataset.url, e.currentTarget.dataset.fn); showToast('Downloading ' + tracks[i].name); });
+            });
+        }
+        function setIcon(btn, name) { btn.innerHTML = `<i data-lucide="${name}"></i>`; lucide.createIcons({ nodes: [btn] }); }
+
+        function renderCard(container, item, type, rawItem) {
+            const itemId = item.id || item.name, likeId = type + ':' + itemId, liked = isLiked(likeId), thumb = item._thumb || item.url || '', card = document.createElement('div');
+            card.className = 'card asset-card'; card.dataset.name = item.name;
+            card.innerHTML = `<div class="card-img-wrapper"><img class="card-img" src="${thumb}"><div class="card-img-loader"><div class="loader"></div></div></div><div class="card-body"><div class="card-title">${esc(item.name)}</div><div class="card-owner">by ${formatOwner(item, true)}</div><div class="card-actions"><button class="btn-icon" data-action="dl" title="Download"><i data-lucide="download"></i></button><button class="btn-icon" data-action="share" title="Share"><i data-lucide="share-2"></i></button><button class="btn-icon ${liked ? 'liked' : ''}" data-action="like" title="Like"><i data-lucide="heart"></i></button></div></div>`;
+            const img = card.querySelector('.card-img'), ldr = card.querySelector('.card-img-loader'); img.onload = img.onerror = () => ldr.style.display = 'none';
+
+            card.addEventListener('click', e => {
+                if (e.target.closest('.btn-icon') || e.target.closest('a')) return;
+                const isPack = rawItem?.isPack && rawItem.images?.length;
+                openPreview({ name: item.name, owner: item.owner, discord: item.discord, images: isPack ? rawItem.images.map(x => x.url) : [item.url], labels: isPack ? rawItem.images.map(x => x.name) : null, type, downloadUrl: item.url, likeId });
+            });
+            btnAction(card, 'dl', () => { if (rawItem?.isPack && rawItem.images?.length) dlZip(rawItem.images, item.name); else { dlFile(thumb, itemId + '.webp'); showToast('Downloading ' + item.name); } });
+            btnAction(card, 'share', () => shareAction(type === 'skybox' ? 'skyboxes' : 'kill-icons', item.name));
+            btnAction(card, 'like', e => { const now = toggleLiked(likeId); e.currentTarget.classList.toggle('liked', now); showToast(now ? 'Added to Liked' : 'Removed from Liked'); });
+            container.appendChild(card); lucide.createIcons({ nodes: [card] });
+        }
+
+        async function loadLiked() {
+            const wrap = document.getElementById('liked-content'); wrap.innerHTML = loaderHTML();
+            const liked = getLiked(); if (!liked.length) return (wrap.innerHTML = `<div class="empty-state"><i data-lucide="heart"></i><h3>Nothing liked yet</h3><p>Like scripts, skyboxes, kill icons and sounds to find them here.</p></div>`, lucide.createIcons({ nodes: [wrap] }));
+            const [scripts, sounds, killIcons, skyboxes] = await Promise.all(['scripts', 'sounds', 'killIcons', 'skyboxes'].map(fetchData));
+            const ls = (scripts || []).filter(i => liked.includes('script:' + i.name)), lso = (sounds || []).filter(i => liked.includes('sound:' + i.name)), lk = (killIcons || []).filter(i => liked.includes('killIcon:' + (i.id || i.name))), lsb = (skyboxes || []).filter(i => liked.includes('skybox:' + (i.id || i.name)));
+            if (!ls.length && !lso.length && !lk.length && !lsb.length) return (wrap.innerHTML = `<div class="empty-state"><i data-lucide="heart"></i><h3>Nothing liked yet</h3><p>Like scripts, skyboxes, kill icons and sounds to find them here.</p></div>`, lucide.createIcons({ nodes: [wrap] }));
+            wrap.innerHTML = '';
+            const addSec = (label, items, renderFn, isGrid) => {
+                if (!items.length) return;
+                const h = document.createElement('div'); h.className = 'section-header'; h.style.marginBottom = '14px'; h.innerHTML = `<h2>${label}</h2>`; wrap.appendChild(h);
+                const c = document.createElement('div'); if (isGrid) c.className = 'all-grid'; c.style.marginBottom = '28px'; wrap.appendChild(c); items.forEach(i => renderFn(c, i));
+            };
+            addSec('Scripts', ls, (c, i) => renderBar(c, i, 'script')); addSec('Sounds', lso, renderSoundBar); addSec('Kill Icons', lk, (c, i) => renderCard(c, i, 'killIcon'), true); addSec('Skyboxes', lsb, (c, i) => renderCard(c, { ...i, _thumb: i.isPack ? (i.images?.find(x => x.name === 'front')?.url || i.images?.[0]?.url) : i.url }, 'skybox', i), true);
+        }
+
+        let _pv = { images: [], labels: null, idx: 0, likeId: '', downloadUrl: '', type: '' }, zoom = 1, txX = 0, txY = 0, dragging = false, sX, sY;
+        const applyZoom = () => { document.getElementById('preview-img').style.transform = `translate(calc(-50% + ${txX}px), calc(-50% + ${txY}px)) scale(${zoom})`; const zi = document.getElementById('zoom-indicator'); zi.style.display = zoom === 1 ? 'none' : ''; zi.textContent = Math.round(zoom * 100) + '%'; };
+        const resetZoom = () => { zoom = 1; txX = 0; txY = 0; applyZoom(); };
+
+        function openPreview({ name, owner, discord, images, labels, type, downloadUrl, likeId }) {
+            _pv = { images, labels, idx: 0, likeId, downloadUrl, type };
+            history.pushState(null, '', `#${window.location.hash.split('#')[1] || 'scripts'}#${encodeURIComponent(name.trim().replace(/\s+/g, '-').toLowerCase())}`);
+            document.getElementById('preview-title').textContent = name;
+            document.getElementById('preview-owner').innerHTML = owner ? (discord && discord !== '#' ? `by <a href="${discord}" target="_blank">${esc(owner)}</a>` : 'by ' + esc(owner)) : '';
+            const badge = document.getElementById('preview-badge'); badge.textContent = { killIcon: 'Kill Icon', skybox: 'Skybox', script: 'Script' }[type] || ''; badge.className = 'preview-badge badge-free';
+
+            const actionsEl = document.getElementById('preview-actions'); actionsEl.innerHTML = '';
+            if (type !== 'script-preview') {
+                const mkBtn = (icon, label, primary) => { const b = document.createElement('button'); b.className = 'preview-btn' + (primary ? ' primary' : ''); b.innerHTML = `<i data-lucide="${icon}"></i><span>${label}</span>`; return b; };
+                const isPack = images.length > 1, dl = mkBtn('download', isPack ? 'Download Pack' : 'Download', true);
+                dl.onclick = e => { e.preventDefault(); e.stopPropagation(); isPack ? dlZip(images.map((u, i) => ({ url: u, name: labels?.[i] || `view_${i + 1}` })), name) : (dlFile(images[0] || downloadUrl, name + (type === 'script' ? '.js' : '.webp')), showToast('Downloading ' + name)); return false; };
+                const cp = mkBtn('link', 'Copy URL'); cp.onclick = () => navigator.clipboard.writeText(images[_pv.idx] || downloadUrl).then(() => showToast(labels?.[_pv.idx] ? `URL copied for ${labels[_pv.idx]}` : 'URL copied!')).catch(() => showToast('Copy failed'));
+                const sh = mkBtn('share-2', 'Share'); sh.onclick = () => navigator.clipboard.writeText(location.href).then(() => showToast('Link copied!')).catch(() => showToast('Copy failed'));
+                actionsEl.append(dl, cp, sh); lucide.createIcons({ nodes: [actionsEl] });
             }
-        }
-    } else if (hash && hash.length > 1) {
-        window.location.href = '404.html';
-    }
-}
 
-window.addEventListener('hashchange', handleHash);
-window.addEventListener('DOMContentLoaded', () => {
-    if (window.location.hash) {
-        handleHash();
-    } else {
-        tabLoaded['scripts'] = true;
-        loadScripts();
-    }
-});
-
-// ─── Filter ───────────────────────────────────────────────────────────────────
-function filterBars(listId, q) {
-    const lq = q.toLowerCase();
-    let n = document.getElementById(listId).firstChild;
-    while (n) {
-        if (n.classList?.contains('asset-bar')) {
-            const show = (n.dataset.name || '').toLowerCase().includes(lq);
-            n.style.display = show ? '' : 'none';
-            const dd = n.nextSibling;
-            if (dd?.classList?.contains('asset-dropdown')) dd.style.display = show ? '' : 'none';
-        }
-        n = n.nextSibling;
-    }
-}
-
-function filterCards(gridId, q) {
-    const lq = q.toLowerCase();
-    document.querySelectorAll(`#${gridId} > .card`).forEach(c => {
-        c.style.display = (c.dataset.name || '').toLowerCase().includes(lq) ? '' : 'none';
-    });
-}
-
-function closeOtherBars(thisBar) {
-    document.querySelectorAll('.asset-bar.bar-open').forEach(b => {
-        if (b === thisBar) return;
-        b.classList.remove('bar-open');
-        const dd = b.nextElementSibling;
-        if (dd?.classList.contains('asset-dropdown')) dd.classList.remove('open');
-        b.querySelector('.chevron-btn')?.classList.remove('open');
-    });
-}
-
-async function loadScripts() {
-    const list = document.getElementById('scripts-list');
-    list.innerHTML = loaderHTML();
-    const data = await fetchData('scripts');
-    list.innerHTML = '';
-    if (!data?.length) { list.innerHTML = emptyHTML(); return; }
-    data.forEach(item => renderBar(list, item, 'script'));
-}
-
-// ─── Sounds ───────────────────────────────────────────────────────────────────
-async function loadSounds() {
-    const list = document.getElementById('sounds-list');
-    list.innerHTML = loaderHTML();
-    const data = await fetchData('sounds');
-    list.innerHTML = '';
-    if (!data?.length) { list.innerHTML = emptyHTML(); return; }
-    data.forEach(item => renderSoundBar(list, item));
-}
-
-// ─── Kill Icons ───────────────────────────────────────────────────────────────
-async function loadKillIcons() {
-    const grid = document.getElementById('killicons-grid');
-    grid.innerHTML = gridLoaderHTML();
-    const data = await fetchData('killIcons');
-    grid.innerHTML = '';
-    if (!data?.length) { grid.innerHTML = gridEmptyHTML(); return; }
-    data.forEach(item => renderCard(grid, item, 'killIcon'));
-}
-
-// ─── Skyboxes ─────────────────────────────────────────────────────────────────
-async function loadSkyboxes() {
-    const grid = document.getElementById('skyboxes-grid');
-    grid.innerHTML = gridLoaderHTML();
-    const data = await fetchData('skyboxes');
-    grid.innerHTML = '';
-    if (!data?.length) { grid.innerHTML = gridEmptyHTML(); return; }
-    data.forEach(item => {
-        const thumb = item.isPack
-            ? (item.images?.find(x => x.name === 'front')?.url || item.images?.[0]?.url)
-            : item.url;
-        renderCard(grid, { ...item, _thumb: thumb }, 'skybox', item);
-    });
-}
-
-// ─── Render script bar ────────────────────────────────────────────────────────
-function renderBar(container, item, type) {
-    const likeId = type + ':' + item.name;
-    const liked  = isLiked(likeId);
-
-    const bar = document.createElement('div');
-    bar.className    = 'asset-bar';
-    bar.dataset.name = item.name;
-    bar.innerHTML = `
-        <div class="asset-bar-info">
-            <div class="asset-bar-icon"><i data-lucide="file-code-2"></i></div>
-            <div class="asset-bar-text">
-                <div class="asset-bar-name">${esc(item.name)}</div>
-                <div class="asset-bar-owner">by ${item.discord && item.discord !== '#' ? `<a href="${item.discord}" target="_blank">${esc(item.owner)}</a>` : esc(item.owner)}</div>
-            </div>
-        </div>
-        <div class="asset-bar-actions">
-            <button class="btn-icon" data-action="dl"   title="Download"><i data-lucide="download"></i></button>
-            <button class="btn-icon" data-action="copy-script" title="Copy Script"><i data-lucide="clipboard"></i></button>
-            <button class="btn-icon" data-action="view-source" title="View Source"><i data-lucide="code-2"></i></button>
-            <button class="btn-icon" data-action="share" title="Share"><i data-lucide="share-2"></i></button>
-            <button class="btn-icon ${liked?'liked':''}" data-action="like" title="Like"><i data-lucide="heart"></i></button>
-            <button class="btn-icon chevron-btn" data-action="toggle" title="Details"><i data-lucide="chevron-down"></i></button>
-        </div>`;
-
-    const dd = document.createElement('div');
-    dd.className = 'asset-dropdown';
-    dd.innerHTML = `<div class="dropdown-inner">
-        <div class="dropdown-desc">${esc(item.description || 'No description.')}</div>
-        ${item.previewImage ? `<img class="dropdown-preview-img" src="${item.previewImage}" alt="">` : ''}
-    </div>`;
-
-    // toggle
-    const doToggle = () => {
-        closeOtherBars(bar);
-        const open = !dd.classList.contains('open');
-        bar.classList.toggle('bar-open', open);
-        dd.classList.toggle('open', open);
-        bar.querySelector('.chevron-btn').classList.toggle('open', open);
-        
-        const curTabHash = '#' + (window.location.hash.split('#').filter(Boolean)[0] || 'scripts');
-        if (open) {
-            const slug = encodeURIComponent(item.name.trim().replace(/\s+/g, '-').toLowerCase());
-            history.pushState(null, '', `${curTabHash}#${slug}`);
-        } else {
-            history.pushState(null, '', curTabHash);
-        }
-    };
-    bar.addEventListener('click', doToggle);
-    bar.querySelector('[data-action="toggle"]').addEventListener('click', e => { e.stopPropagation(); doToggle(); });
-
-    // download
-    bar.querySelector('[data-action="dl"]').addEventListener('click', e => {
-        e.stopPropagation();
-        dlFile(item.url, item.name + '.js');
-        showToast('Downloading ' + item.name);
-    });
-
-    // like
-    bar.querySelector('[data-action="like"]').addEventListener('click', e => {
-        e.stopPropagation();
-        const now = toggleLiked(likeId);
-        e.currentTarget.classList.toggle('liked', now);
-        showToast(now ? 'Added to Liked' : 'Removed from Liked');
-    });
-
-    // view source
-    bar.querySelector('[data-action="view-source"]').addEventListener('click', e => {
-        e.stopPropagation();
-        openSourceViewer(item.url, item.name);
-    });
-
-    // copy script
-    bar.querySelector('[data-action="copy-script"]').addEventListener('click', async e => {
-        e.stopPropagation();
-        try {
-            const res = await fetch(item.url);
-            const text = await res.text();
-            await navigator.clipboard.writeText(text);
-            showToast('Script copied!');
-        } catch {
-            showToast('Copy failed');
-        }
-    });
-
-    // share
-    bar.querySelector('[data-action="share"]').addEventListener('click', e => {
-        e.stopPropagation();
-        const slug = encodeURIComponent(item.name.trim().replace(/\s+/g, '-').toLowerCase());
-        const url = location.origin + location.pathname + '#scripts#' + slug;
-        navigator.clipboard.writeText(url).then(() => showToast('Link copied!')).catch(() => showToast('Copy failed'));
-    });
-
-    dd.querySelector('.dropdown-preview-img')?.addEventListener('click', e => {
-        e.stopPropagation();
-        openPreview({
-            name: item.name, owner: item.owner, discord: item.discord,
-            images: [item.previewImage], type: 'script-preview',
-            downloadUrl: null, likeId
-        });
-    });
-
-    container.appendChild(bar);
-    container.appendChild(dd);
-    lucide.createIcons({ nodes: [bar] });
-}
-
-// ─── Render sound bar ─────────────────────────────────────────────────────────
-function renderSoundBar(container, item) {
-    const likeId = 'sound:' + item.name;
-    const liked  = isLiked(likeId);
-    const tracks = item.audioFiles || [];
-
-    const bar = document.createElement('div');
-    bar.className    = 'asset-bar';
-    bar.dataset.name = item.name;
-    bar.innerHTML = `
-        <div class="asset-bar-info">
-            <div class="asset-bar-icon"><i data-lucide="music"></i></div>
-            <div class="asset-bar-text">
-                <div class="asset-bar-name">${esc(item.name)}</div>
-                <div class="asset-bar-owner">by ${item.discord && item.discord !== '#' ? `<a href="${item.discord}" target="_blank">${esc(item.owner)}</a>` : esc(item.owner)}</div>
-            </div>
-        </div>
-        <div class="asset-bar-actions">
-            <button class="btn-icon" data-action="dlpack" title="Download Pack"><i data-lucide="download"></i></button>
-            <button class="btn-icon" data-action="share" title="Share"><i data-lucide="share-2"></i></button>
-            <button class="btn-icon ${liked?'liked':''}" data-action="like" title="Like"><i data-lucide="heart"></i></button>
-            <button class="btn-icon chevron-btn" data-action="toggle" title="Tracks"><i data-lucide="chevron-down"></i></button>
-        </div>`;
-
-    let tracksHTML = '<div class="dropdown-inner"><div class="sound-tracks">';
-    tracks.forEach((f, i) => {
-        tracksHTML += `<div class="track-row" data-ti="${i}">
-            <button class="btn-icon play-btn"><i data-lucide="play"></i></button>
-            <span class="track-name">${esc(f.name)}</span>
-            <div class="track-progress"><div class="track-progress-fill"></div></div>
-            <span class="track-time">0:00</span>
-            <button class="btn-icon track-dl" data-url="${f.url}" data-fn="${esc(f.name)}.mp3"><i data-lucide="download"></i></button>
-        </div>`;
-    });
-    tracksHTML += '</div></div>';
-
-    const dd = document.createElement('div');
-    dd.className = 'asset-dropdown';
-    dd.innerHTML  = tracksHTML;
-
-    const audios = tracks.map(f => new Audio(f.url));
-
-    const doToggle = () => {
-        closeOtherBars(bar);
-        const open = !dd.classList.contains('open');
-        bar.classList.toggle('bar-open', open);
-        dd.classList.toggle('open', open);
-        bar.querySelector('.chevron-btn').classList.toggle('open', open);
-        
-        const curTabHash = '#' + (window.location.hash.split('#').filter(Boolean)[0] || 'sounds');
-        if (open) {
-            const slug = encodeURIComponent(item.name.trim().replace(/\s+/g, '-').toLowerCase());
-            history.pushState(null, '', `${curTabHash}#${slug}`);
-        } else {
-            history.pushState(null, '', curTabHash);
-        }
-    };
-    bar.addEventListener('click', doToggle);
-    bar.querySelector('[data-action="toggle"]').addEventListener('click', e => { e.stopPropagation(); doToggle(); });
-
-    bar.querySelector('[data-action="dlpack"]').addEventListener('click', e => {
-        e.stopPropagation();
-        dlZip(tracks, item.name, true);
-    });
-
-    bar.querySelector('[data-action="like"]').addEventListener('click', e => {
-        e.stopPropagation();
-        const now = toggleLiked(likeId);
-        e.currentTarget.classList.toggle('liked', now);
-        showToast(now ? 'Added to Liked' : 'Removed from Liked');
-    });
-
-    // share
-    bar.querySelector('[data-action="share"]').addEventListener('click', e => {
-        e.stopPropagation();
-        const slug = encodeURIComponent(item.name.trim().replace(/\s+/g, '-').toLowerCase());
-        const url = location.origin + location.pathname + '#sounds#' + slug;
-        navigator.clipboard.writeText(url).then(() => showToast('Link copied!')).catch(() => showToast('Copy failed'));
-    });
-
-    container.appendChild(bar);
-    container.appendChild(dd);
-    lucide.createIcons({ nodes: [bar, dd] });
-
-    // wire track players
-    dd.querySelectorAll('.track-row').forEach((row, i) => {
-        const audio   = audios[i];
-        const playBtn = row.querySelector('.play-btn');
-        const fill    = row.querySelector('.track-progress-fill');
-        const timeEl  = row.querySelector('.track-time');
-        const prog    = row.querySelector('.track-progress');
-        const dlBtn   = row.querySelector('.track-dl');
-
-        audio.addEventListener('timeupdate', () => {
-            fill.style.width = audio.duration ? (audio.currentTime / audio.duration * 100) + '%' : '0%';
-            timeEl.textContent = fmtTime(audio.currentTime);
-        });
-        audio.addEventListener('ended', () => { fill.style.width='0%'; timeEl.textContent='0:00'; setIcon(playBtn,'play'); });
-
-        playBtn.addEventListener('click', e => {
-            e.stopPropagation();
-            if (audio.paused) {
-                audios.forEach((a,j) => { a.pause(); a.currentTime=0; setIcon(dd.querySelectorAll('.play-btn')[j],'play'); });
-                audio.play();
-                setIcon(playBtn, 'pause');
-            } else {
-                audio.pause();
-                setIcon(playBtn, 'play');
+            const wrap = document.getElementById('preview-img-toggles'); wrap.innerHTML = ''; wrap.style.display = images.length <= 1 ? 'none' : 'flex';
+            if (images.length > 1) {
+                images.forEach((url, i) => {
+                    const btn = document.createElement('button'); btn.className = 'img-toggle-btn' + (i === 0 ? ' active' : ''); btn.textContent = labels?.[i] || ('View ' + (i + 1));
+                    btn.onclick = () => { _pv.idx = i; wrap.querySelectorAll('.img-toggle-btn').forEach((b, j) => b.classList.toggle('active', j === i)); resetZoom(); loadImg(url); };
+                    wrap.appendChild(btn);
+                });
             }
-        });
-
-        prog.addEventListener('click', e => {
-            e.stopPropagation();
-            if (audio.duration) { const r=prog.getBoundingClientRect(); audio.currentTime=((e.clientX-r.left)/r.width)*audio.duration; }
-        });
-
-        dlBtn.addEventListener('click', e => {
-            e.stopPropagation();
-            dlFile(dlBtn.dataset.url, dlBtn.dataset.fn);
-            showToast('Downloading ' + tracks[i].name);
-        });
-    });
-}
-
-function setIcon(btn, name) {
-    btn.innerHTML = '';
-    const i = document.createElement('i');
-    i.setAttribute('data-lucide', name);
-    btn.appendChild(i);
-    lucide.createIcons({ nodes: [btn] });
-}
-
-function fmtTime(s) {
-    const m=Math.floor(s/60), sec=Math.floor(s%60);
-    return m+':'+(sec<10?'0':'')+sec;
-}
-
-function renderCard(container, item, type, rawItem) {
-    const itemId = item.id || item.name;
-    const likeId = type + ':' + itemId;
-    const liked  = isLiked(likeId);
-    const thumb  = item._thumb || item.url || '';
-
-    const card = document.createElement('div');
-    card.className    = 'card asset-card';
-    card.dataset.name = item.name;
-    card.innerHTML = `
-        <div class="card-img-wrapper">
-            <img class="card-img" src="${thumb}" alt="${esc(item.name)}">
-            <div class="card-img-loader"><div class="loader"></div></div>
-        </div>
-        <div class="card-body">
-            <div class="card-title">${esc(item.name)}</div>
-            <div class="card-owner">by ${item.discord && item.discord !== '#' ? `<a href="${item.discord}" target="_blank" style="color:var(--green)">${esc(item.owner)}</a>` : esc(item.owner)}</div>
-            <div class="card-actions">
-                <button class="btn-icon" data-action="dl"   title="Download"><i data-lucide="download"></i></button>
-                <button class="btn-icon" data-action="share" title="Share"><i data-lucide="share-2"></i></button>
-                <button class="btn-icon ${liked?'liked':''}" data-action="like" title="Like"><i data-lucide="heart"></i></button>
-            </div>
-        </div>`;
-
-    const img    = card.querySelector('.card-img');
-    const ldrEl  = card.querySelector('.card-img-loader');
-    img.onload   = () => ldrEl.style.display = 'none';
-    img.onerror  = () => ldrEl.style.display = 'none';
-
-    card.addEventListener('click', e => {
-        if (e.target.closest('.btn-icon') || e.target.closest('a')) return;
-        let images, labels;
-        if (rawItem?.isPack && rawItem.images?.length) {
-            images = rawItem.images.map(x => x.url);
-            labels = rawItem.images.map(x => x.name);
-        } else {
-            images = [item.url]; labels = null;
+            resetZoom(); loadImg(images[0]); document.getElementById('preview-overlay').classList.add('visible');
         }
-        openPreview({ name: item.name, owner: item.owner, discord: item.discord, images, labels, type, downloadUrl: item.url, likeId });
-    });
 
-    card.querySelector('[data-action="dl"]').addEventListener('click', e => {
-        e.stopPropagation();
-        if (rawItem?.isPack && rawItem.images?.length) {
-            dlZip(rawItem.images, item.name);
-        } else {
-            dlFile(thumb, itemId + '.webp');
-            showToast('Downloading ' + item.name);
+        function loadImg(url) {
+            const img = document.getElementById('preview-img'), loader = document.getElementById('preview-loader');
+            loader.style.display = ''; img.style.opacity = '0'; img.src = url;
+            img.onload = () => { img.style.opacity = '1'; loader.style.display = 'none'; }; img.onerror = () => loader.style.display = 'none';
         }
-    });
-    card.querySelector('[data-action="share"]').addEventListener('click', e => {
-        e.stopPropagation();
-        const tabHash = type === 'skybox' ? '#skyboxes' : '#kill-icons';
-        const slug = encodeURIComponent(item.name.trim().replace(/\s+/g, '-').toLowerCase());
-        const url = location.origin + location.pathname + tabHash + '#' + slug;
-        navigator.clipboard.writeText(url).then(() => showToast('Link copied!')).catch(() => showToast('Copy failed'));
-    });
-    card.querySelector('[data-action="like"]').addEventListener('click', e => {
-        e.stopPropagation();
-        const now = toggleLiked(likeId);
-        e.currentTarget.classList.toggle('liked', now);
-        showToast(now ? 'Added to Liked' : 'Removed from Liked');
-    });
 
-    container.appendChild(card);
-    lucide.createIcons({ nodes: [card] });
-}
-
-// ─── Liked tab ────────────────────────────────────────────────────────────────
-async function loadLiked() {
-    const wrap = document.getElementById('liked-content');
-    wrap.innerHTML = loaderHTML();
-    const liked = getLiked();
-    if (!liked.length) { wrap.innerHTML = ''; renderEmpty(wrap); return; }
-
-    const [scripts, sounds, killIcons, skyboxes] = await Promise.all([
-        fetchData('scripts'), fetchData('sounds'), fetchData('killIcons'), fetchData('skyboxes')
-    ]);
-    const ls  = (scripts   ||[]).filter(i => liked.includes('script:'   + i.name));
-    const lso = (sounds    ||[]).filter(i => liked.includes('sound:'    + i.name));
-    const lk  = (killIcons ||[]).filter(i => liked.includes('killIcon:' + (i.id||i.name)));
-    const lsb = (skyboxes  ||[]).filter(i => liked.includes('skybox:'   + (i.id||i.name)));
-
-    if (!ls.length && !lso.length && !lk.length && !lsb.length) { wrap.innerHTML = ''; renderEmpty(wrap); return; }
-
-    wrap.innerHTML = '';
-
-    if (ls.length) {
-        wrap.appendChild(miniHeader('Scripts', 'file-code-2'));
-        const d = document.createElement('div'); d.style.marginBottom = '28px';
-        wrap.appendChild(d); ls.forEach(i => renderBar(d, i, 'script'));
-    }
-    if (lso.length) {
-        wrap.appendChild(miniHeader('Sounds', 'music'));
-        const d = document.createElement('div'); d.style.marginBottom = '28px';
-        wrap.appendChild(d); lso.forEach(i => renderSoundBar(d, i));
-    }
-    if (lk.length) {
-        wrap.appendChild(miniHeader('Kill Icons', 'crosshair'));
-        const g = document.createElement('div');
-        g.className = 'all-grid'; g.style.marginBottom = '28px';
-        wrap.appendChild(g); lk.forEach(i => renderCard(g, i, 'killIcon'));
-    }
-    if (lsb.length) {
-        wrap.appendChild(miniHeader('Skyboxes', 'image'));
-        const g = document.createElement('div');
-        g.className = 'all-grid'; g.style.marginBottom = '28px';
-        wrap.appendChild(g);
-        lsb.forEach(i => {
-            const thumb = i.isPack ? (i.images?.find(x=>x.name==='front')?.url||i.images?.[0]?.url) : i.url;
-            renderCard(g, {...i, _thumb: thumb}, 'skybox', i);
-        });
-    }
-}
-
-function miniHeader(label, icon) {
-    const el = document.createElement('div');
-    el.className = 'section-header'; el.style.marginBottom = '14px';
-    el.innerHTML = `<h2>${label}</h2>`;
-    return el;
-}
-
-function renderEmpty(parent) {
-    const el = document.createElement('div');
-    el.className = 'empty-state';
-    el.innerHTML = `<i data-lucide="heart"></i><h3>Nothing liked yet</h3><p>Like scripts, skyboxes, kill icons and sounds to find them here.</p>`;
-    parent.appendChild(el);
-    lucide.createIcons({ nodes: [el] });
-}
-
-// ─── Preview Modal ────────────────────────────────────────────────────────────
-let _pv = { images: [], labels: null, idx: 0, likeId: '', downloadUrl: '', type: '' };
-
-
-let zoom = 1, txX = 0, txY = 0, dragging = false, sX, sY;
-const MAX_Z = 4, MIN_Z = 0.5;
-
-function openPreview({ name, owner, discord, images, labels, type, downloadUrl, likeId }) {
-    _pv = { images, labels, idx: 0, likeId, downloadUrl, type };
-
-    const curTabHash = '#' + (window.location.hash.split('#').filter(Boolean)[0] || 'scripts');
-    const slug = encodeURIComponent(name.trim().replace(/\s+/g, '-').toLowerCase());
-    history.pushState(null, '', `${curTabHash}#${slug}`);
-
-
-    document.getElementById('preview-title').textContent = name;
-    const ownerEl = document.getElementById('preview-owner');
-    ownerEl.innerHTML = (owner && discord && discord !== '#')
-        ? `by <a href="${discord}" target="_blank">${esc(owner)}</a>`
-        : owner ? 'by ' + esc(owner) : '';
-
-    // badge
-    const badge = document.getElementById('preview-badge');
-    const badgeMap = { killIcon:['Kill Icon','badge-free'], skybox:['Skybox','badge-free'], script:['Script','badge-free'] };
-    const [bt, bc] = badgeMap[type] || ['',''];
-    badge.textContent = bt; badge.className = 'preview-badge ' + bc;
-
-    document.getElementById('preview-tags').innerHTML = '';
-
-    // actions
-    buildActions(name, likeId, downloadUrl, type);
-
-    buildToggles(images, labels);
-
-    // image
-    resetZoom();
-    loadImg(images[0]);
-
-    document.getElementById('preview-overlay').classList.add('visible');
-}
-
-function buildActions(name, likeId, downloadUrl, type) {
-    const el = document.getElementById('preview-actions');
-    el.innerHTML = '';
-
-    if (type === 'script-preview') { return; }
-
-    // Download
-    const isPack = _pv.images.length > 1;
-    const dl = mkPBtn('download', isPack ? 'Download Pack' : 'Download', true);
-dl.addEventListener('click', e => {
-    e.preventDefault(); e.stopPropagation();
-    if (isPack) {
-        dlZip(_pv.images.map((u,i)=>({url:u, name:_pv.labels?.[u]||_pv.labels?.[i]||`view_${i+1}`})), name);
-    } else {
-        const url = _pv.images[0] || downloadUrl;
-        dlFile(url, name + (type === 'script' ? '.js' : '.webp'));
-        showToast('Downloading ' + name);
-    }
-    return false;
-});
-    el.appendChild(dl);
-
-    // Copy URL
-    const cp = mkPBtn('link', 'Copy URL');
-    cp.addEventListener('click', () => {
-        const url = _pv.images[_pv.idx] || downloadUrl;
-        const lbl = _pv.labels ? _pv.labels[_pv.idx] : null;
-        navigator.clipboard.writeText(url).then(() => {
-            showToast(lbl ? `URL copied for ${lbl}` : 'URL copied!');
-        }).catch(() => showToast('Copy failed'));
-    });
-    el.appendChild(cp);
-
-    // Share 
-    const sh = mkPBtn('share-2', 'Share');
-    sh.addEventListener('click', () => {
-        navigator.clipboard.writeText(location.href).then(() => showToast('Link copied!')).catch(() => showToast('Copy failed'));
-    });
-    el.appendChild(sh);
-
-    lucide.createIcons({ nodes: [el] });
-}
-
-
-function mkPBtn(icon, label, primary = false) {
-    const b = document.createElement('button');
-    b.className = 'preview-btn' + (primary ? ' primary' : '');
-    b.innerHTML = `<i data-lucide="${icon}"></i><span>${label}</span>`;
-    return b;
-}
-
-function buildToggles(images, labels) {
-    const wrap = document.getElementById('preview-img-toggles');
-    wrap.innerHTML = '';
-    if (images.length <= 1) { wrap.style.display = 'none'; return; }
-    wrap.style.display = 'flex';
-    images.forEach((url, i) => {
-        const btn = document.createElement('button');
-        btn.className = 'img-toggle-btn' + (i === 0 ? ' active' : '');
-        const lbl = labels?.[i] || ('View ' + (i + 1));
-        btn.innerHTML = `${esc(lbl)}`;
-        btn.addEventListener('click', () => {
-            _pv.idx = i;
-            wrap.querySelectorAll('.img-toggle-btn').forEach((b,j) => b.classList.toggle('active', j===i));
-            resetZoom();
-            loadImg(url);
-        });
-        wrap.appendChild(btn);
-    });
-}
-
-function loadImg(url) {
-    const img    = document.getElementById('preview-img');
-    const loader = document.getElementById('preview-loader');
-    loader.style.display = '';
-    img.style.opacity    = '0';
-    img.src = '';
-    img.src = url;
-    img.onload  = () => { img.style.opacity = '1'; loader.style.display = 'none'; };
-    img.onerror = () => loader.style.display = 'none';
-}
-
-// zoom helpers
-function applyZoom() {
-    const img = document.getElementById('preview-img');
-    img.style.transform = `translate(calc(-50% + ${txX}px), calc(-50% + ${txY}px)) scale(${zoom})`;
-    const zi  = document.getElementById('zoom-indicator');
-    const pct = Math.round(zoom * 100);
-    zi.style.display = (pct === 100) ? 'none' : '';
-    zi.textContent = pct + '%';
-}
-
-function resetZoom() { zoom=1; txX=0; txY=0; applyZoom(); }
-
-function closeModal() {
-    document.getElementById('preview-overlay').classList.remove('visible');
-    resetZoom();
-    if (_pv.type !== 'script-preview') {
-        const curHashParts = window.location.hash.split('#').filter(Boolean);
-        if (curHashParts.length) {
-            history.pushState(null, '', '#' + curHashParts[0]);
+        function closeModal() {
+            document.getElementById('preview-overlay').classList.remove('visible'); resetZoom();
+            if (_pv.type !== 'script-preview' && window.location.hash.split('#')[1]) history.pushState(null, '', '#' + window.location.hash.split('#')[1]);
         }
-    }
-}
+        function handleOverlayClick(e) { if (e.target === document.getElementById('preview-overlay')) closeModal(); }
 
-function handleOverlayClick(e) {
-    if (e.target === document.getElementById('preview-overlay')) closeModal();
-}
-
-// ─── Init ─────────────────────────────────────────────────────────────────────
-document.addEventListener('DOMContentLoaded', () => {
-    lucide.createIcons();
-
-    const imgSec = document.querySelector('.preview-img-section');
-    imgSec.addEventListener('wheel', e => {
-        if (!document.getElementById('preview-overlay').classList.contains('visible')) return;
-        e.preventDefault();
-        zoom = Math.max(MIN_Z, Math.min(MAX_Z, zoom + (e.deltaY < 0 ? 0.1 : -0.1)));
-        if (zoom <= 1) { txX=0; txY=0; }
-        applyZoom();
-    }, { passive: false });
-
-    // drag to pan
-    imgSec.addEventListener('mousedown', e => {
-        if (zoom <= 1) return;
-        dragging=true; sX=e.clientX-txX; sY=e.clientY-txY;
-        imgSec.style.cursor='grabbing';
-    });
-    document.addEventListener('mousemove', e => {
-        if (!dragging) return;
-        txX=e.clientX-sX; txY=e.clientY-sY; applyZoom();
-    });
-    document.addEventListener('mouseup', () => { dragging=false; imgSec.style.cursor=''; });
-    imgSec.addEventListener('touchstart', e => {
-        if (zoom <= 1 || e.touches.length!==1) return;
-        dragging=true; sX=e.touches[0].clientX-txX; sY=e.touches[0].clientY-txY;
-    });
-    document.addEventListener('touchmove', e => {
-        if (!dragging) return;
-        txX=e.touches[0].clientX-sX; txY=e.touches[0].clientY-sY; applyZoom();
-    });
-    document.addEventListener('touchend', () => { dragging=false; });
-
-});
-
-document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') {
-        if (document.getElementById('source-overlay')?.classList.contains('visible')) {
-            closeSourceViewer();
-        } else {
-            closeModal();
-        }
-    }
-});
-
-// ─── Source Viewer Modal ──────────────────────────────────────────────────────
-let curSourceItem = null;
-let curSourceCode = '';
-
-const highlightJS = code => {
-    return code
-        .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-        .replace(/(["'`])(?:(?=(\\?))\2[\s\S])*?\1/g, '§§PROP§§$&§§END§§')
-        .replace(/(\/\/.*|\/\*[\s\S]*?\*\/)/g, '§§COMM§§$&§§END§§')
-        .replace(/\b(function|const|let|var|return|if|else|for|while|await|async|class|new|true|false|null|undefined)\b/g, '§§KW§§$1§§END§§')
-        .replace(/§§PROP§§/g, '<span class="css-property">')
-        .replace(/§§COMM§§/g, '<span class="css-comment">')
-        .replace(/§§KW§§/g, '<span class="css-atrule">')
-        .replace(/§§END§§/g, '</span>');
-};
-
-const renderSourceCode = (code, filename) => {
-    const lines = code.split('\n');
-    const nums = lines.map((_, i) => `<div>${i + 1}</div>`).join('');
-    const highlighted = highlightJS(code);
-    const highlightedLines = highlighted.split('\n').map(l => `<div>${l || '&nbsp;'}</div>`).join('');
-    document.getElementById('source-code-wrapper').innerHTML = `
-        <div class="source-line-numbers">
-            <div class="line-nums">${nums}</div>
-            <div class="line-code">${highlightedLines}</div>
-        </div>`;
-};
-
-async function openSourceViewer(url, title) {
-    if (!url) return;
-    const filename = url.split('/').pop() || (title.replace(/[^a-zA-Z0-9]/g, '_') + '.js');
-    curSourceItem = { url, title, filename };
-    curSourceCode = '';
-
-    // Push deep-link hash
-    const slug = encodeURIComponent(title.trim().replace(/\s+/g, '-').toLowerCase());
-    history.pushState(null, '', `#scripts#vs:${slug}`);
-
-    document.getElementById('source-modal-name').textContent = title;
-    document.getElementById('source-code-wrapper').innerHTML = `<div class="source-loading"><div class="loader" style="width:28px"></div><span>Loading source…</span></div>`;
-
-    document.getElementById('source-overlay').classList.add('visible');
-    document.body.style.overflow = 'hidden';
-    lucide.createIcons();
-
-    try {
-        const res = await fetch(url);
-        if (!res.ok) throw new Error('Failed');
-        curSourceCode = await res.text();
-        renderSourceCode(curSourceCode, filename);
-    } catch {
-        document.getElementById('source-code-wrapper').innerHTML = `<div class="source-loading" style="color:#e27383"><span>Failed to load source code.</span></div>`;
-    }
-}
-
-function closeSourceViewer() {
-    document.getElementById('source-overlay').classList.remove('visible');
-    document.body.style.overflow = '';
-    curSourceItem = null;
-    curSourceCode = '';
-    const curHashParts = window.location.hash.split('#').filter(Boolean);
-    history.pushState(null, '', curHashParts.length ? '#' + curHashParts[0] : '#scripts');
-}
-
-function handleSourceOverlayClick(e) {
-    if (e.target === document.getElementById('source-overlay')) closeSourceViewer();
-}
-
-async function copySourceCode() {
-    if (!curSourceCode) return;
-    try {
-        await navigator.clipboard.writeText(curSourceCode);
-        const btn = document.getElementById('source-copy-btn');
-        btn.classList.add('copied');
-        btn.innerHTML = '<i data-lucide="check"></i>';
-        lucide.createIcons();
-        showToast('Code copied!');
-        setTimeout(() => {
-            btn.classList.remove('copied');
-            btn.innerHTML = '<span class="copy-icon"></span>';
-        }, 2000);
-    } catch {
-        showToast('Failed to copy.');
-    }
-}
-
-async function shareSourceCode() {
-    try {
-        await navigator.clipboard.writeText(location.href);
-        const btn = document.getElementById('source-share-btn');
-        btn.innerHTML = '<i data-lucide="check"></i>';
-        lucide.createIcons();
-        showToast('Link copied!');
-        setTimeout(() => {
-            btn.innerHTML = '<i data-lucide="share-2"></i>';
+        document.addEventListener('DOMContentLoaded', () => {
             lucide.createIcons();
-        }, 2000);
-    } catch {
-        showToast('Failed to copy link.');
-    }
-}
+            const imgSec = document.querySelector('.preview-img-section');
+            imgSec.addEventListener('wheel', e => { if (!document.getElementById('preview-overlay').classList.contains('visible')) return; e.preventDefault(); zoom = Math.max(0.5, Math.min(4, zoom + (e.deltaY < 0 ? 0.1 : -0.1))); if (zoom <= 1) txX = txY = 0; applyZoom(); }, { passive: false });
+            const dragStart = (x, y) => { if (zoom <= 1) return; dragging = true; sX = x - txX; sY = y - txY; imgSec.style.cursor = 'grabbing'; };
+            const dragMove = (x, y) => { if (!dragging) return; txX = x - sX; txY = y - sY; applyZoom(); };
+            imgSec.addEventListener('mousedown', e => dragStart(e.clientX, e.clientY)); document.addEventListener('mousemove', e => dragMove(e.clientX, e.clientY)); document.addEventListener('mouseup', () => { dragging = false; imgSec.style.cursor = ''; });
+            imgSec.addEventListener('touchstart', e => { if (e.touches.length === 1) dragStart(e.touches[0].clientX, e.touches[0].clientY); }); document.addEventListener('touchmove', e => { if (e.touches.length === 1) dragMove(e.touches[0].clientX, e.touches[0].clientY); }); document.addEventListener('touchend', () => dragging = false);
+        });
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') document.getElementById('source-overlay')?.classList.contains('visible') ? closeSourceViewer() : closeModal(); });
 
-// ─── HTML helpers ─────────────────────────────────────────────────────────────
-const loaderHTML     = () => `<div class="empty-state"><div class="loader"></div></div>`;
-const emptyHTML      = () => `<div class="empty-state"><p>Nothing found.</p></div>`;
-const gridLoaderHTML = () => `<div class="empty-state" style="grid-column:1/-1"><div class="loader"></div></div>`;
-const gridEmptyHTML  = () => `<div class="empty-state" style="grid-column:1/-1"><p>Nothing found.</p></div>`;
+        let curSourceCode = '';
+        const highlightJS = code => code.replace(/[&<>"']/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m])).replace(/(["'`])(?:(?=(\\?))\2[\s\S])*?\1/g, '§P§$&§E§').replace(/(\/\/.*|\/\*[\s\S]*?\*\/)/g, '§C§$&§E§').replace(/\b(function|const|let|var|return|if|else|for|while|await|async|class|new|true|false|null|undefined)\b/g, '§K§$1§E§').replace(/§P§/g, '<span class="css-property">').replace(/§C§/g, '<span class="css-comment">').replace(/§K§/g, '<span class="css-atrule">').replace(/§E§/g, '</span>');
 
-function esc(s) {
-    return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-}
-</script>
+        async function openSourceViewer(url, title) {
+            if (!url) return; curSourceCode = '';
+            history.pushState(null, '', `#scripts#vs:${encodeURIComponent(title.trim().replace(/\s+/g, '-').toLowerCase())}`);
+            document.getElementById('source-modal-name').textContent = title;
+            const wrap = document.getElementById('source-code-wrapper'); wrap.innerHTML = `<div class="source-loading"><div class="loader" style="width:28px"></div><span>Loading source…</span></div>`;
+            document.getElementById('source-overlay').classList.add('visible'); document.body.style.overflow = 'hidden'; lucide.createIcons();
+            try {
+                const res = await fetch(url); if (!res.ok) throw 0; curSourceCode = await res.text();
+                wrap.innerHTML = `<div class="source-line-numbers"><div class="line-nums">${curSourceCode.split('\n').map((_, i) => `<div>${i + 1}</div>`).join('')}</div><div class="line-code">${highlightJS(curSourceCode).split('\n').map(l => `<div>${l || '&nbsp;'}</div>`).join('')}</div></div>`;
+            } catch { wrap.innerHTML = `<div class="source-loading" style="color:#e27383"><span>Failed to load source code.</span></div>`; }
+        }
+        function closeSourceViewer() { document.getElementById('source-overlay').classList.remove('visible'); document.body.style.overflow = ''; curSourceCode = ''; const h = window.location.hash.split('#').filter(Boolean); history.pushState(null, '', h.length ? '#' + h[0] : '#scripts'); }
+        function handleSourceOverlayClick(e) { if (e.target === document.getElementById('source-overlay')) closeSourceViewer(); }
+
+        const btnActionWrap = async (id, html, successMsg, failMsg, fn) => {
+            try { await fn(); const btn = document.getElementById(id); btn.classList.add('copied'); btn.innerHTML = html; lucide.createIcons(); showToast(successMsg); setTimeout(() => { btn.classList.remove('copied'); btn.innerHTML = id === 'source-copy-btn' ? '<span class="copy-icon"></span>' : '<i data-lucide="share-2"></i>'; lucide.createIcons(); }, 2000); } catch { showToast(failMsg); }
+        };
+        const copySourceCode = () => curSourceCode && btnActionWrap('source-copy-btn', '<i data-lucide="check"></i>', 'Code copied!', 'Failed to copy.', () => navigator.clipboard.writeText(curSourceCode));
+        const shareSourceCode = () => btnActionWrap('source-share-btn', '<i data-lucide="check"></i>', 'Link copied!', 'Failed to copy link.', () => navigator.clipboard.writeText(location.href));
+    </script>
 </body>
+
 </html>
