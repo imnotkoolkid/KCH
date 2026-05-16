@@ -5,7 +5,7 @@
 "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/coustomskinlink.js",
 "owner": "unknown",
 "discord": "",
-"description": "",
+"description": "customize player body and head colors or use a custom skin via a skin URL.",
 "previewImage": ""
 },
 {
@@ -13,7 +13,7 @@
 "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/WasdShown.js",
 "owner": "unknown",
 "discord": "",
-"description": "",
+"description": "displays a live WASD key overlay to show movement inputs.",
 "previewImage": ""
 },
 {
@@ -21,7 +21,7 @@
 "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/clock.js",
 "owner": "unknown",
 "discord": "",
-"description": "",
+"description": "add real-time clock display",
 "previewImage": ""
 },
 {
@@ -29,14 +29,14 @@
 "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/Playercount.js",
 "owner": "unknown",
 "discord": "",
-"description": "",
+"description": "Shows the current number of players acorss all servers",
 "previewImage": ""
 },
 {
 "name": "Open All Chests",
 "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/Open%20All%20Chests.js",
 "owner": "unknown",
-"discord": "",
+"discord": "automatically opens all available chests at once",
 "description": "",
 "previewImage": ""
 },
@@ -45,7 +45,7 @@
 "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/Open%20All%20Cards.js",
 "owner": "unknown",
 "discord": "",
-"description": "",
+"description": "automatically opens all available cards at once",
 "previewImage": ""
 },
 {
@@ -53,7 +53,7 @@
 "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/Fabinglbs.js",
 "owner": "unknown",
 "discord": "",
-"description": "",
+"description": "loads custom glb models for smaller guns",
 "previewImage": ""
 }
 ]
