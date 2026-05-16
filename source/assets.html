@@ -1166,9 +1166,13 @@ let curSourceCode = '';
 const highlightJS = code => {
     return code
         .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-        .replace(/(["'`])(?:(?=(\\?))\2[\s\S])*?\1/g, '<span class="css-property">$&</span>')
-        .replace(/(\/\/.*|\/\*[\s\S]*?\*\/)/g, '<span class="css-comment">$&</span>')
-        .replace(/\b(function|const|let|var|return|if|else|for|while|await|async|class|new|true|false|null|undefined)\b/g, '<span class="css-atrule">$1</span>');
+        .replace(/(["'`])(?:(?=(\\?))\2[\s\S])*?\1/g, '§§PROP§§$&§§END§§')
+        .replace(/(\/\/.*|\/\*[\s\S]*?\*\/)/g, '§§COMM§§$&§§END§§')
+        .replace(/\b(function|const|let|var|return|if|else|for|while|await|async|class|new|true|false|null|undefined)\b/g, '§§KW§§$1§§END§§')
+        .replace(/§§PROP§§/g, '<span class="css-property">')
+        .replace(/§§COMM§§/g, '<span class="css-comment">')
+        .replace(/§§KW§§/g, '<span class="css-atrule">')
+        .replace(/§§END§§/g, '</span>');
 };
 
 const renderSourceCode = (code, filename) => {
