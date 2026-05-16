@@ -25,18 +25,6 @@
       "downloadUrl": ""
     },
     {
-      "title": "cyberpunk",
-      "description": "Very extensive cyberpunk style css with unique elements",
-      "homeImage": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/css-imgs/cyberpunk.webp",
-      "ingameImage": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/css-imgs/cyberpunk_ingame.webp",
-      "tags": ["Cyberpunk", "Gamer", "Pro"],
-      "availability": "free",
-      "owner": "imnotkoolkid",
-      "discord": "https://discord.com/users/884448772694876191",
-      "label": "featured",
-      "downloadUrl": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/css-files/cyberpunk.css"
-    },
-    {
       "title": "DEXTER",
       "description": "UI theme inspired by the concert stage. With purple lighting",
       "homeImage": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/css-imgs/dexter.webp",
