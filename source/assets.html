@@ -685,7 +685,11 @@
                 const isPack = images.length > 1, dl = mkBtn('download', isPack ? 'Download Pack' : 'Download', true);
                 dl.onclick = e => { e.preventDefault(); e.stopPropagation(); isPack ? dlZip(images.map((u, i) => ({ url: u, name: labels?.[i] || `view_${i + 1}` })), name) : (dlFile(images[0] || downloadUrl, name + (type === 'script' ? '.js' : '.webp')), showToast('Downloading ' + name)); return false; };
                 const cp = mkBtn('link', 'Copy URL'); cp.onclick = () => navigator.clipboard.writeText(images[_pv.idx] || downloadUrl).then(() => showToast(labels?.[_pv.idx] ? `URL copied for ${labels[_pv.idx]}` : 'URL copied!')).catch(() => showToast('Copy failed'));
-                const sh = mkBtn('share-2', 'Share'); sh.onclick = () => navigator.clipboard.writeText(location.href).then(() => showToast('Link copied!')).catch(() => showToast('Copy failed'));
+                const sh = mkBtn('share-2', 'Share'); sh.onclick = () => {
+                    const cleanTab = type === 'killIcon' ? 'killicons' : type === 'skybox' ? 'skyboxes' : type;
+                    const slug = encodeURIComponent(name.trim().replace(/\s+/g, '-').toLowerCase());
+                    navigator.clipboard.writeText(`${location.origin}/${cleanTab}/${slug}`).then(() => showToast('Link copied!')).catch(() => showToast('Copy failed'));
+                };
                 actionsEl.append(dl, cp, sh); lucide.createIcons({ nodes: [actionsEl] });
             }
 
@@ -744,7 +748,11 @@
             try { await fn(); const btn = document.getElementById(id); btn.classList.add('copied'); btn.innerHTML = html; lucide.createIcons(); showToast(successMsg); setTimeout(() => { btn.classList.remove('copied'); btn.innerHTML = id === 'source-copy-btn' ? '<span class="copy-icon"></span>' : '<i data-lucide="share-2"></i>'; lucide.createIcons(); }, 2000); } catch { showToast(failMsg); }
         };
         const copySourceCode = () => curSourceCode && btnActionWrap('source-copy-btn', '<i data-lucide="check"></i>', 'Code copied!', 'Failed to copy.', () => navigator.clipboard.writeText(curSourceCode));
-        const shareSourceCode = () => btnActionWrap('source-share-btn', '<i data-lucide="check"></i>', 'Link copied!', 'Failed to copy link.', () => navigator.clipboard.writeText(location.href));
+        const shareSourceCode = () => btnActionWrap('source-share-btn', '<i data-lucide="check"></i>', 'Link copied!', 'Failed to copy link.', () => {
+            const name = document.getElementById('source-modal-name').textContent;
+            const slug = encodeURIComponent(name.trim().replace(/\s+/g, '-').toLowerCase());
+            return navigator.clipboard.writeText(`${location.origin}/scripts/${slug}`);
+        });
     </script>
 </body>
 
