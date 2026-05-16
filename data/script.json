@@ -25,22 +25,6 @@
 "previewImage": ""
 },
 {
-"name": "Rp4yUId",
-"url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/Rp4yUId.js",
-"owner": "unknown",
-"discord": "",
-"description": "",
-"previewImage": ""
-},
-{
-"name": "Quest Info",
-"url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/Questinfo.js",
-"owner": "unknown",
-"discord": "",
-"description": "",
-"previewImage": ""
-},
-{
 "name": "Player Count",
 "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/Playercount.js",
 "owner": "unknown",
@@ -75,30 +59,6 @@
 {
 "name": "Fabinglbs",
 "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/Fabinglbs.js",
-"owner": "unknown",
-"discord": "",
-"description": "",
-"previewImage": ""
-},
-{
-"name": "Clan Checker",
-"url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/Clan_checker.js",
-"owner": "unknown",
-"discord": "",
-"description": "",
-"previewImage": ""
-},
-{
-"name": "Always Show Tab",
-"url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/AlwaysShowTab.js",
-"owner": "unknown",
-"discord": "",
-"description": "",
-"previewImage": ""
-},
-{
-"name": "7 Day Activity",
-"url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/7dayactivity.js",
 "owner": "unknown",
 "discord": "",
 "description": "",
