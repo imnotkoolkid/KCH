@@ -56,7 +56,7 @@
     "description": "cool client",
     "platforms": ["Windows", "macOS", "Linux"],
     "source": "open source",
-    "development": "active",
+    "development": "inactive",
     "downloadUrl": "https://github.com/robertpakalns/redline-client/releases"
   },
   {
