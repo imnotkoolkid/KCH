@@ -239,6 +239,29 @@
         </div>
     </div>
 
+    <!-- ── Source Viewer Modal ── -->
+    <div class="source-overlay" id="source-overlay" onclick="handleSourceOverlayClick(event)">
+        <div class="source-modal" id="source-modal">
+            <div class="source-modal-header">
+                <div class="source-modal-title" id="source-modal-name">Source</div>
+                <div class="source-modal-actions">
+                    <button class="source-share-btn" id="source-share-btn" title="Share Source Code" onclick="shareSourceCode()">
+                        <i data-lucide="share-2"></i>
+                    </button>
+                    <button class="source-copy-btn" id="source-copy-btn" title="Copy Code" onclick="copySourceCode()">
+                        <span class="copy-icon"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="source-code-wrapper" id="source-code-wrapper">
+                <div class="source-loading" id="source-loading">
+                    <div class="loader" style="width:28px"></div>
+                    <span>Loading source…</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- ── Toast ── -->
     <div class="toast-container" id="toast-container"></div>
 
@@ -375,11 +398,10 @@ async function dlZip(files, name, isAudio = false) {
 const tabLoaded = {};
 const loaders   = { scripts: loadScripts, skyboxes: loadSkyboxes, killicons: loadKillIcons, sounds: loadSounds, liked: loadLiked };
 
-function switchTab(id, btn) {
+async function switchTab(id, btn, updateHash = true) {
     document.querySelectorAll('.tab-item').forEach(b => b.classList.remove('active'));
     document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
     
-    // Find button if not provided (for hash handling)
     if (!btn) {
         btn = Array.from(document.querySelectorAll('.tab-item')).find(b => 
             b.getAttribute('onclick').includes(`'${id}'`)
@@ -388,19 +410,33 @@ function switchTab(id, btn) {
     
     if (btn) btn.classList.add('active');
     document.getElementById('tab-' + id).classList.add('active');
-    if (!tabLoaded[id]) { tabLoaded[id] = true; loaders[id]?.(); }
     
-    // Update hash
-    const hashMap = { scripts: '#scripts', skyboxes: '#skyboxes', killicons: '#kill-icons', sounds: '#sounds', liked: '#liked' };
-    if (hashMap[id] && window.location.hash !== hashMap[id]) {
-        history.pushState(null, '', hashMap[id]);
+    if (!tabLoaded[id]) { 
+        tabLoaded[id] = true; 
+        if (loaders[id]) await loaders[id](); 
+    }
+    
+    if (updateHash) {
+        const hashMap = { scripts: '#scripts', skyboxes: '#skyboxes', killicons: '#kill-icons', sounds: '#sounds', liked: '#liked' };
+        if (hashMap[id]) {
+            const curHashParts = window.location.hash.split('#').filter(Boolean);
+            if (!curHashParts.length || '#' + curHashParts[0] !== hashMap[id]) {
+                history.pushState(null, '', hashMap[id]);
+            }
+        }
     }
 }
 
 // ─── Hash Handling ────────────────────────────────────────────────────────────
-function handleHash() {
+async function handleHash() {
     const hash = window.location.hash;
     if (!hash) return;
+    
+    const parts = hash.split('#').filter(Boolean);
+    if (!parts.length) return;
+    
+    const tabHash = '#' + parts[0];
+    const itemSlug = parts[1];
     
     const hashToId = {
         '#scripts':    'scripts',
@@ -410,9 +446,58 @@ function handleHash() {
         '#liked':      'liked'
     };
     
-    const id = hashToId[hash];
+    const id = hashToId[tabHash];
     if (id) {
-        switchTab(id);
+        await switchTab(id, null, false);
+        
+        if (itemSlug) {
+            const itemName = decodeURIComponent(itemSlug).replace(/-/g, ' ').toLowerCase();
+            if (id === 'skyboxes' || id === 'killicons') {
+                const gridId = id === 'skyboxes' ? 'skyboxes-grid' : 'killicons-grid';
+                const card = Array.from(document.querySelectorAll(`#${gridId} .card`)).find(c => c.dataset.name.toLowerCase() === itemName);
+                if (card) {
+                    const img = card.querySelector('.card-img');
+                    if (img) img.click();
+                    else card.click();
+                }
+            } else if (id === 'scripts' || id === 'sounds') {
+                // Check for vs: prefix (view source deep-link)
+                if (id === 'scripts' && itemSlug.startsWith('vs:')) {
+                    const vsSlug = itemSlug.slice(3);
+                    const vsName = decodeURIComponent(vsSlug).replace(/-/g, ' ').toLowerCase();
+                    const data = await fetchData('scripts');
+                    const scriptItem = (data || []).find(i => i.name.toLowerCase() === vsName);
+                    if (scriptItem) {
+                        await openSourceViewer(scriptItem.url, scriptItem.name);
+                    }
+                } else {
+                    const itemName = decodeURIComponent(itemSlug).replace(/-/g, ' ').toLowerCase();
+                    const listId = id === 'scripts' ? 'scripts-list' : 'sounds-list';
+                    const bar = Array.from(document.querySelectorAll(`#${listId} .asset-bar`)).find(b => b.dataset.name.toLowerCase() === itemName);
+                    if (bar) {
+                        if (!bar.classList.contains('bar-open')) bar.click();
+                        setTimeout(() => bar.scrollIntoView({ behavior: 'smooth', block: 'center' }), 100);
+                    }
+                }
+            } else if (id === 'liked') {
+                const card = Array.from(document.querySelectorAll(`#liked-content .card`)).find(c => c.dataset.name.toLowerCase() === itemName);
+                if (card) {
+                    card.click();
+                } else {
+                    const bar = Array.from(document.querySelectorAll(`#liked-content .asset-bar`)).find(b => b.dataset.name.toLowerCase() === itemName);
+                    if (bar) {
+                        if (!bar.classList.contains('bar-open')) bar.click();
+                        setTimeout(() => bar.scrollIntoView({ behavior: 'smooth', block: 'center' }), 100);
+                    }
+                }
+            }
+        } else {
+            closeModal();
+            closeOtherBars(null);
+            if (typeof closeSourceViewer === 'function' && document.getElementById('source-overlay')?.classList.contains('visible')) {
+                closeSourceViewer();
+            }
+        }
     } else if (hash && hash.length > 1) {
         window.location.href = '404.html';
     }
@@ -420,11 +505,9 @@ function handleHash() {
 
 window.addEventListener('hashchange', handleHash);
 window.addEventListener('DOMContentLoaded', () => {
-    // Check hash on load
     if (window.location.hash) {
         handleHash();
     } else {
-        // Default to scripts if no hash
         tabLoaded['scripts'] = true;
         loadScripts();
     }
@@ -519,13 +602,15 @@ function renderBar(container, item, type) {
             <div class="asset-bar-icon"><i data-lucide="file-code-2"></i></div>
             <div class="asset-bar-text">
                 <div class="asset-bar-name">${esc(item.name)}</div>
-                <div class="asset-bar-owner">by <a href="${item.discord||'#'}" target="_blank">${esc(item.owner)}</a></div>
+                <div class="asset-bar-owner">by ${item.discord && item.discord !== '#' ? `<a href="${item.discord}" target="_blank">${esc(item.owner)}</a>` : esc(item.owner)}</div>
             </div>
         </div>
         <div class="asset-bar-actions">
             <button class="btn-icon" data-action="dl"   title="Download"><i data-lucide="download"></i></button>
+            <button class="btn-icon" data-action="copy-script" title="Copy Script"><i data-lucide="clipboard"></i></button>
+            <button class="btn-icon" data-action="view-source" title="View Source"><i data-lucide="code-2"></i></button>
+            <button class="btn-icon" data-action="share" title="Share"><i data-lucide="share-2"></i></button>
             <button class="btn-icon ${liked?'liked':''}" data-action="like" title="Like"><i data-lucide="heart"></i></button>
-            <button class="btn-icon" data-action="copy" title="Copy URL"><i data-lucide="link"></i></button>
             <button class="btn-icon chevron-btn" data-action="toggle" title="Details"><i data-lucide="chevron-down"></i></button>
         </div>`;
 
@@ -543,6 +628,14 @@ function renderBar(container, item, type) {
         bar.classList.toggle('bar-open', open);
         dd.classList.toggle('open', open);
         bar.querySelector('.chevron-btn').classList.toggle('open', open);
+        
+        const curTabHash = '#' + (window.location.hash.split('#').filter(Boolean)[0] || 'scripts');
+        if (open) {
+            const slug = encodeURIComponent(item.name.trim().replace(/\s+/g, '-').toLowerCase());
+            history.pushState(null, '', `${curTabHash}#${slug}`);
+        } else {
+            history.pushState(null, '', curTabHash);
+        }
     };
     bar.addEventListener('click', doToggle);
     bar.querySelector('[data-action="toggle"]').addEventListener('click', e => { e.stopPropagation(); doToggle(); });
@@ -562,10 +655,31 @@ function renderBar(container, item, type) {
         showToast(now ? 'Added to Liked' : 'Removed from Liked');
     });
 
-    // copy
-    bar.querySelector('[data-action="copy"]').addEventListener('click', e => {
+    // view source
+    bar.querySelector('[data-action="view-source"]').addEventListener('click', e => {
         e.stopPropagation();
-        navigator.clipboard.writeText(item.url).then(() => showToast('URL copied!')).catch(() => showToast('Copy failed'));
+        openSourceViewer(item.url, item.name);
+    });
+
+    // copy script
+    bar.querySelector('[data-action="copy-script"]').addEventListener('click', async e => {
+        e.stopPropagation();
+        try {
+            const res = await fetch(item.url);
+            const text = await res.text();
+            await navigator.clipboard.writeText(text);
+            showToast('Script copied!');
+        } catch {
+            showToast('Copy failed');
+        }
+    });
+
+    // share
+    bar.querySelector('[data-action="share"]').addEventListener('click', e => {
+        e.stopPropagation();
+        const slug = encodeURIComponent(item.name.trim().replace(/\s+/g, '-').toLowerCase());
+        const url = location.origin + location.pathname + '#scripts#' + slug;
+        navigator.clipboard.writeText(url).then(() => showToast('Link copied!')).catch(() => showToast('Copy failed'));
     });
 
     dd.querySelector('.dropdown-preview-img')?.addEventListener('click', e => {
@@ -596,11 +710,12 @@ function renderSoundBar(container, item) {
             <div class="asset-bar-icon"><i data-lucide="music"></i></div>
             <div class="asset-bar-text">
                 <div class="asset-bar-name">${esc(item.name)}</div>
-                <div class="asset-bar-owner">by <a href="${item.discord||'#'}" target="_blank">${esc(item.owner)}</a></div>
+                <div class="asset-bar-owner">by ${item.discord && item.discord !== '#' ? `<a href="${item.discord}" target="_blank">${esc(item.owner)}</a>` : esc(item.owner)}</div>
             </div>
         </div>
         <div class="asset-bar-actions">
             <button class="btn-icon" data-action="dlpack" title="Download Pack"><i data-lucide="download"></i></button>
+            <button class="btn-icon" data-action="share" title="Share"><i data-lucide="share-2"></i></button>
             <button class="btn-icon ${liked?'liked':''}" data-action="like" title="Like"><i data-lucide="heart"></i></button>
             <button class="btn-icon chevron-btn" data-action="toggle" title="Tracks"><i data-lucide="chevron-down"></i></button>
         </div>`;
@@ -629,6 +744,14 @@ function renderSoundBar(container, item) {
         bar.classList.toggle('bar-open', open);
         dd.classList.toggle('open', open);
         bar.querySelector('.chevron-btn').classList.toggle('open', open);
+        
+        const curTabHash = '#' + (window.location.hash.split('#').filter(Boolean)[0] || 'sounds');
+        if (open) {
+            const slug = encodeURIComponent(item.name.trim().replace(/\s+/g, '-').toLowerCase());
+            history.pushState(null, '', `${curTabHash}#${slug}`);
+        } else {
+            history.pushState(null, '', curTabHash);
+        }
     };
     bar.addEventListener('click', doToggle);
     bar.querySelector('[data-action="toggle"]').addEventListener('click', e => { e.stopPropagation(); doToggle(); });
@@ -643,6 +766,14 @@ function renderSoundBar(container, item) {
         const now = toggleLiked(likeId);
         e.currentTarget.classList.toggle('liked', now);
         showToast(now ? 'Added to Liked' : 'Removed from Liked');
+    });
+
+    // share
+    bar.querySelector('[data-action="share"]').addEventListener('click', e => {
+        e.stopPropagation();
+        const slug = encodeURIComponent(item.name.trim().replace(/\s+/g, '-').toLowerCase());
+        const url = location.origin + location.pathname + '#sounds#' + slug;
+        navigator.clipboard.writeText(url).then(() => showToast('Link copied!')).catch(() => showToast('Copy failed'));
     });
 
     container.appendChild(bar);
@@ -718,10 +849,10 @@ function renderCard(container, item, type, rawItem) {
         </div>
         <div class="card-body">
             <div class="card-title">${esc(item.name)}</div>
-            <div class="card-owner">by <a href="${item.discord||'#'}" target="_blank" style="color:var(--green)">${esc(item.owner)}</a></div>
+            <div class="card-owner">by ${item.discord && item.discord !== '#' ? `<a href="${item.discord}" target="_blank" style="color:var(--green)">${esc(item.owner)}</a>` : esc(item.owner)}</div>
             <div class="card-actions">
                 <button class="btn-icon" data-action="dl"   title="Download"><i data-lucide="download"></i></button>
-                <button class="btn-icon" data-action="copy" title="Copy URL"><i data-lucide="link"></i></button>
+                <button class="btn-icon" data-action="share" title="Share"><i data-lucide="share-2"></i></button>
                 <button class="btn-icon ${liked?'liked':''}" data-action="like" title="Like"><i data-lucide="heart"></i></button>
             </div>
         </div>`;
@@ -752,14 +883,12 @@ function renderCard(container, item, type, rawItem) {
             showToast('Downloading ' + item.name);
         }
     });
-    card.querySelector('[data-action="copy"]').addEventListener('click', e => {
+    card.querySelector('[data-action="share"]').addEventListener('click', e => {
         e.stopPropagation();
-        if (rawItem?.isPack && rawItem.images?.length) {
-            const text = rawItem.images.map(x => `${x.name}: ${x.url}`).join('\n');
-            navigator.clipboard.writeText(text).then(() => showToast('All URLs copied!')).catch(() => showToast('Copy failed'));
-        } else {
-            navigator.clipboard.writeText(item.url || thumb).then(() => showToast('URL copied!')).catch(() => showToast('Copy failed'));
-        }
+        const tabHash = type === 'skybox' ? '#skyboxes' : '#kill-icons';
+        const slug = encodeURIComponent(item.name.trim().replace(/\s+/g, '-').toLowerCase());
+        const url = location.origin + location.pathname + tabHash + '#' + slug;
+        navigator.clipboard.writeText(url).then(() => showToast('Link copied!')).catch(() => showToast('Copy failed'));
     });
     card.querySelector('[data-action="like"]').addEventListener('click', e => {
         e.stopPropagation();
@@ -837,14 +966,18 @@ function renderEmpty(parent) {
 // ─── Preview Modal ────────────────────────────────────────────────────────────
 let _pv = { images: [], labels: null, idx: 0, likeId: '', downloadUrl: '', type: '' };
 
-// zoom / pan
+
 let zoom = 1, txX = 0, txY = 0, dragging = false, sX, sY;
 const MAX_Z = 4, MIN_Z = 0.5;
 
 function openPreview({ name, owner, discord, images, labels, type, downloadUrl, likeId }) {
     _pv = { images, labels, idx: 0, likeId, downloadUrl, type };
 
-    // title + owner
+    const curTabHash = '#' + (window.location.hash.split('#').filter(Boolean)[0] || 'scripts');
+    const slug = encodeURIComponent(name.trim().replace(/\s+/g, '-').toLowerCase());
+    history.pushState(null, '', `${curTabHash}#${slug}`);
+
+
     document.getElementById('preview-title').textContent = name;
     const ownerEl = document.getElementById('preview-owner');
     ownerEl.innerHTML = (owner && discord && discord !== '#')
@@ -904,6 +1037,13 @@ dl.addEventListener('click', e => {
     });
     el.appendChild(cp);
 
+    // Share 
+    const sh = mkPBtn('share-2', 'Share');
+    sh.addEventListener('click', () => {
+        navigator.clipboard.writeText(location.href).then(() => showToast('Link copied!')).catch(() => showToast('Copy failed'));
+    });
+    el.appendChild(sh);
+
     lucide.createIcons({ nodes: [el] });
 }
 
@@ -961,6 +1101,12 @@ function resetZoom() { zoom=1; txX=0; txY=0; applyZoom(); }
 function closeModal() {
     document.getElementById('preview-overlay').classList.remove('visible');
     resetZoom();
+    if (_pv.type !== 'script-preview') {
+        const curHashParts = window.location.hash.split('#').filter(Boolean);
+        if (curHashParts.length) {
+            history.pushState(null, '', '#' + curHashParts[0]);
+        }
+    }
 }
 
 function handleOverlayClick(e) {
@@ -1001,11 +1147,114 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     document.addEventListener('touchend', () => { dragging=false; });
 
-    tabLoaded['scripts'] = true;
-    loadScripts();
 });
 
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+        if (document.getElementById('source-overlay')?.classList.contains('visible')) {
+            closeSourceViewer();
+        } else {
+            closeModal();
+        }
+    }
+});
+
+// ─── Source Viewer Modal ──────────────────────────────────────────────────────
+let curSourceItem = null;
+let curSourceCode = '';
+
+const highlightJS = code => {
+    return code
+        .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+        .replace(/(["'`])(?:(?=(\\?))\2[\s\S])*?\1/g, '<span class="css-property">$&</span>')
+        .replace(/(\/\/.*|\/\*[\s\S]*?\*\/)/g, '<span class="css-comment">$&</span>')
+        .replace(/\b(function|const|let|var|return|if|else|for|while|await|async|class|new|true|false|null|undefined)\b/g, '<span class="css-atrule">$1</span>');
+};
+
+const renderSourceCode = (code, filename) => {
+    const lines = code.split('\n');
+    const nums = lines.map((_, i) => `<div>${i + 1}</div>`).join('');
+    const highlighted = highlightJS(code);
+    const highlightedLines = highlighted.split('\n').map(l => `<div>${l || '&nbsp;'}</div>`).join('');
+    document.getElementById('source-code-wrapper').innerHTML = `
+        <div class="source-line-numbers">
+            <div class="line-nums">${nums}</div>
+            <div class="line-code">${highlightedLines}</div>
+        </div>`;
+};
+
+async function openSourceViewer(url, title) {
+    if (!url) return;
+    const filename = url.split('/').pop() || (title.replace(/[^a-zA-Z0-9]/g, '_') + '.js');
+    curSourceItem = { url, title, filename };
+    curSourceCode = '';
+
+    // Push deep-link hash
+    const slug = encodeURIComponent(title.trim().replace(/\s+/g, '-').toLowerCase());
+    history.pushState(null, '', `#scripts#vs:${slug}`);
+
+    document.getElementById('source-modal-name').textContent = title;
+    document.getElementById('source-code-wrapper').innerHTML = `<div class="source-loading"><div class="loader" style="width:28px"></div><span>Loading source…</span></div>`;
+
+    document.getElementById('source-overlay').classList.add('visible');
+    document.body.style.overflow = 'hidden';
+    lucide.createIcons();
+
+    try {
+        const res = await fetch(url);
+        if (!res.ok) throw new Error('Failed');
+        curSourceCode = await res.text();
+        renderSourceCode(curSourceCode, filename);
+    } catch {
+        document.getElementById('source-code-wrapper').innerHTML = `<div class="source-loading" style="color:#e27383"><span>Failed to load source code.</span></div>`;
+    }
+}
+
+function closeSourceViewer() {
+    document.getElementById('source-overlay').classList.remove('visible');
+    document.body.style.overflow = '';
+    curSourceItem = null;
+    curSourceCode = '';
+    history.pushState(null, '', '#scripts');
+}
+
+function handleSourceOverlayClick(e) {
+    if (e.target === document.getElementById('source-overlay')) closeSourceViewer();
+}
+
+async function copySourceCode() {
+    if (!curSourceCode) return;
+    try {
+        await navigator.clipboard.writeText(curSourceCode);
+        const btn = document.getElementById('source-copy-btn');
+        btn.classList.add('copied');
+        btn.innerHTML = '<i data-lucide="check"></i>';
+        lucide.createIcons();
+        showToast('Code copied!');
+        setTimeout(() => {
+            btn.classList.remove('copied');
+            btn.innerHTML = '<span class="copy-icon"></span>';
+        }, 2000);
+    } catch {
+        showToast('Failed to copy.');
+    }
+}
+
+async function shareSourceCode() {
+    try {
+        await navigator.clipboard.writeText(location.href);
+        const btn = document.getElementById('source-share-btn');
+        btn.innerHTML = '<i data-lucide="check"></i>';
+        lucide.createIcons();
+        showToast('Link copied!');
+        setTimeout(() => {
+            btn.innerHTML = '<i data-lucide="share-2"></i>';
+            lucide.createIcons();
+        }, 2000);
+    } catch {
+        showToast('Failed to copy link.');
+    }
+}
 
 // ─── HTML helpers ─────────────────────────────────────────────────────────────
 const loaderHTML     = () => `<div class="empty-state"><div class="loader"></div></div>`;
