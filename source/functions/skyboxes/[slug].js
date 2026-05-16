@@ -34,8 +34,6 @@ function buildOgHtml({ title, owner, description, image, slug }) {
   <meta property="og:title" content="${ogTitle}">
   <meta property="og:description" content="${ogDesc}">
   <meta property="og:image" content="${ogImage}">
-  <meta property="og:image:width" content="1280">
-  <meta property="og:image:height" content="720">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${ogTitle}">
   <meta name="twitter:description" content="${ogDesc}">
