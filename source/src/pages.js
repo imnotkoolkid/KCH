@@ -158,7 +158,10 @@
 
         const shareSourceCode = async () => {
             try {
-                await navigator.clipboard.writeText(location.href);
+                const type = location.pathname.split('/').pop().replace('.html', '') || 'css';
+                const slug = curSourceItem ? titleToSlug(curSourceItem.title) : '';
+                const shareUrl = slug ? `${location.origin}/${type}/${slug}` : location.href;
+                await navigator.clipboard.writeText(shareUrl);
                 const btn = $('source-share-btn');
                 btn.innerHTML = '<i data-lucide="check"></i>';
                 lucide.createIcons();
@@ -266,7 +269,15 @@
         };
 
         const shareCurrentPage = () => {
-            navigator.clipboard.writeText(location.href).then(() => showToast('Link copied to clipboard!')).catch(() => showToast('Failed to copy link.', 'alert-circle'));
+            const type = location.pathname.split('/').pop().replace('.html', '') || 'css';
+            const slug = cur ? titleToSlug(cur.title) : '';
+            const shareUrl = slug
+                ? `${location.origin}/${type}/${slug}`
+                : location.href;
+
+            navigator.clipboard.writeText(shareUrl)
+                .then(() => showToast('Link copied to clipboard!'))
+                .catch(() => showToast('Failed to copy link.', 'alert-circle'));
         };
 
 

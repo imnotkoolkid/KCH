@@ -1,1 +1,4 @@
+# Let the CSS slug function handle these
+/css/:slug  /css/:slug  200
+
 /* /404.html 404
