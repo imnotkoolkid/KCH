@@ -583,7 +583,11 @@
         const esc = s => String(s || '').replace(/[&<>"']/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m]));
         const formatOwner = (i, card) => i.discord && i.discord !== '#' ? `<a href="${i.discord}" target="_blank"${card ? ' style="color:var(--green)"' : ''}>${esc(i.owner)}</a>` : esc(i.owner);
         const btnAction = (p, a, fn) => p.querySelector(`[data-action="${a}"]`)?.addEventListener('click', e => { e.stopPropagation(); fn(e); });
-        const shareAction = (tab, name) => navigator.clipboard.writeText(`${location.origin}${location.pathname}#${tab}#${encodeURIComponent(name.trim().replace(/\s+/g, '-').toLowerCase())}`).then(() => showToast('Link copied!')).catch(() => showToast('Copy failed'));
+        const shareAction = (tab, name) => {
+            const cleanTab = tab === 'kill-icons' ? 'killicons' : tab;
+            const slug = encodeURIComponent(name.trim().replace(/\s+/g, '-').toLowerCase());
+            navigator.clipboard.writeText(`${location.origin}/${cleanTab}/${slug}`).then(() => showToast('Link copied!')).catch(() => showToast('Copy failed'));
+        };
         const toggleDropdown = (bar, dd, tab, name) => {
             closeOtherBars(bar); const open = !dd.classList.contains('open');
             bar.classList.toggle('bar-open', open); dd.classList.toggle('open', open); bar.querySelector('.chevron-btn').classList.toggle('open', open);

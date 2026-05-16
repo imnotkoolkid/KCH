@@ -1,4 +1,8 @@
 /css/:slug  /css/:slug  200
 /crosshairs/:slug  /crosshairs/:slug  200
 /textures/:slug  /textures/:slug  200
+/killicons/:slug  /killicons/:slug  200
+/skyboxes/:slug  /skyboxes/:slug  200
+/scripts/:slug  /scripts/:slug  200
+/sounds/:slug  /sounds/:slug  200
 /* /404.html 404
