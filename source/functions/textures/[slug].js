@@ -1,14 +1,10 @@
-
-const CSS_JSON_URL =
-  'https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/data/css.json';
-
+const JSON_URL = 'https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/data/texture.json';
 const SITE_URL = 'https://kirkacommunityhub.pages.dev';
 const FALLBACK_IMG = `${SITE_URL}/assets/icon.png`;
-const FALLBACK_TITLE = 'Kirka Community Hub - CSS';
-const FALLBACK_DESC = 'Discover and download custom CSS themes for kirka.io';
+const FALLBACK_TITLE = 'Kirka Community Hub - Textures';
+const FALLBACK_DESC = 'Discover and download a large catalogue of custom textures for kirka.io';
 
-const slugToTitle = (s) =>
-  decodeURIComponent(s).replace(/-/g, ' ').toLowerCase();
+const slugToId = (s) => decodeURIComponent(s).toLowerCase();
 
 const escapeHtml = (str) =>
   String(str)
@@ -32,8 +28,8 @@ function buildOgHtml({ title, owner, description, image, slug }) {
   const ogTitle = escapeHtml(`${title} - ${owner}`);
   const ogDesc = escapeHtml(description || FALLBACK_DESC);
   const ogImage = escapeHtml(image || FALLBACK_IMG);
-  const ogUrl = escapeHtml(`${SITE_URL}/css/${slug}`);
-  const canonical = escapeHtml(`${SITE_URL}/css.html#${encodeURIComponent(slug)}`);
+  const ogUrl = escapeHtml(`${SITE_URL}/textures/${slug}`);
+  const canonical = escapeHtml(`${SITE_URL}/textures.html#${encodeURIComponent(slug)}`);
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -54,13 +50,10 @@ function buildOgHtml({ title, owner, description, image, slug }) {
   <meta name="twitter:title" content="${ogTitle}">
   <meta name="twitter:description" content="${ogDesc}">
   <meta name="twitter:image" content="${ogImage}">
-
   <meta name="theme-color" content="#1bd96a">
-
   <link rel="canonical" href="${canonical}">
-
   <script>
-    window.location.replace(${JSON.stringify(`${SITE_URL}/css.html#${slug}`)});
+    window.location.replace(${JSON.stringify(`${SITE_URL}/textures.html#${slug}`)});
   </script>
 </head>
 <body>
@@ -75,13 +68,13 @@ export async function onRequestGet(context) {
 
   if (!isBotRequest(request)) {
     return Response.redirect(
-      `${SITE_URL}/css.html#${encodeURIComponent(slug)}`,
+      `${SITE_URL}/textures.html#${encodeURIComponent(slug)}`,
       302
     );
   }
 
   try {
-    const res = await fetch(CSS_JSON_URL, {
+    const res = await fetch(JSON_URL, {
       headers: { 'User-Agent': 'KCH-OG-Worker/1.0' },
       cf: { cacheTtl: 300, cacheEverything: true },
     });
@@ -89,20 +82,20 @@ export async function onRequestGet(context) {
     if (!res.ok) throw new Error(`JSON fetch failed: ${res.status}`);
 
     const items = await res.json();
-    const targetTitle = slugToTitle(slug);
+    const targetId = slugToId(slug);
     const item = items.find(
-      (i) => i.title.trim().toLowerCase() === targetTitle
+      (i) => (i.id || '').trim().toLowerCase() === targetId
     );
 
     if (!item) {
-      return Response.redirect(`${SITE_URL}/css.html`, 302);
+      return Response.redirect(`${SITE_URL}/textures.html`, 302);
     }
 
     const html = buildOgHtml({
-      title: item.title,
+      title: item.id,
       owner: item.owner || 'Unknown',
-      description: item.description || '',
-      image: item.homeImage || '',
+      description: '',
+      image: item.textureImage || '',
       slug,
     });
 
@@ -115,6 +108,6 @@ export async function onRequestGet(context) {
     });
   } catch (err) {
     console.error('OG worker error:', err);
-    return Response.redirect(`${SITE_URL}/css.html`, 302);
+    return Response.redirect(`${SITE_URL}/textures.html`, 302);
   }
 }

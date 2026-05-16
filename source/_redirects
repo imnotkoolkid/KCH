@@ -1,4 +1,4 @@
-# Let the CSS slug function handle these
 /css/:slug  /css/:slug  200
-
+/crosshairs/:slug  /crosshairs/:slug  200
+/textures/:slug  /textures/:slug  200
 /* /404.html 404
