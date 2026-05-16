@@ -71,22 +71,16 @@
         const titleToSlug = t => encodeURIComponent(t.trim().replace(/\s+/g, '-').toLowerCase());
         const slugToTitle = s => decodeURIComponent(s).replace(/-/g, ' ').toLowerCase();
 
-        /* ── Source Viewer ── */
         let curSourceItem = null;
 
         const highlightCSS = code => {
-            // Simple CSS syntax highlighter
+
             return code
                 .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-                // comments
                 .replace(/(\/\*[\s\S]*?\*\/)/g, '<span class="css-comment">$1</span>')
-                // at-rules
                 .replace(/(@[\w-]+)/g, '<span class="css-atrule">$1</span>')
-                // hex colors
                 .replace(/(#[0-9a-fA-F]{3,8}(?=[;\s,)]|$))/g, '<span class="css-color">$1</span>')
-                // property: value pairs
                 .replace(/([\w-]+)\s*:/g, '<span class="css-property">$1</span>:')
-                // numbers with units
                 .replace(/(\b\d+\.?\d*(?:px|em|rem|vh|vw|%|s|ms|deg|fr|ch|ex|vmin|vmax)?\b)/g, '<span class="css-number">$1</span>');
         };
 
@@ -111,7 +105,7 @@
             $('source-modal-name').textContent = title;
             $('source-code-wrapper').innerHTML = `<div class="source-loading"><div class="loader" style="width:28px;aspect-ratio:1.154"></div><span>Loading source…</span></div>`;
 
-            // Update URL
+
             history.pushState({ sourceOpen: true, sourceTitle: title }, '', `#vs:${titleToSlug(title)}`);
 
             $('source-overlay').classList.add('visible');
@@ -133,7 +127,6 @@
             d.body.style.overflow = '';
             curSourceItem = null;
             curSourceCode = '';
-            // Restore URL to preview hash or clean
             if (cur) {
                 history.pushState({ previewOpen: true }, '', `#${titleToSlug(cur.title)}`);
             } else {
@@ -276,18 +269,16 @@
             navigator.clipboard.writeText(location.href).then(() => showToast('Link copied to clipboard!')).catch(() => showToast('Failed to copy link.', 'alert-circle'));
         };
 
-        /* ── URL hash handling ── */
+
         const handleHash = () => {
             let h = location.hash;
             if (!h || h.length < 2) return;
 
-            // Source viewer hash: #vs:css-name
             if (h.startsWith('#vs:')) {
                 const slug = h.substring(4);
                 const title = slugToTitle(slug);
                 const item = allItems.find(i => i.title.trim().toLowerCase() === title);
                 if (item && item.downloadUrl) {
-                    // Open preview first (silently), then source
                     cur = item;
                     openSourceViewer(item.downloadUrl, item.title);
                 } else {
@@ -296,7 +287,6 @@
                 return;
             }
 
-            // Normal preview hash
             let i = allItems.find(i => i.title.trim().toLowerCase() === slugToTitle(h.substring(1)));
             if (i) {
                 openPreview(i);
@@ -324,7 +314,6 @@
             }
         });
 
-        /* ── Search UI ── */
         const buildSearchUI = (p, m) => {
             $(m).innerHTML = `<div class="search-area"><div class="search-row"><div class="search-input-wrapper"><span class="search-icon"><i data-lucide="search"></i></span><input type="text" class="search-input" id="${p}-input" placeholder="Search CSS"><div class="search-suggestions" id="${p}-sug"></div></div><div class="avail-dropdown" id="${p}-dd"><button class="avail-dropdown-btn" id="${p}-dd-btn"><span id="${p}-dd-label">All</span><i data-lucide="chevron-down"></i></button><div class="avail-dropdown-menu" id="${p}-dd-menu">${['all', 'free', 'paid', 'showcase'].map((v, i) => `<div class="avail-option${i ? '' : ' selected'}" data-value="${v}">${v[0].toUpperCase() + v.slice(1)}</div>`).join('')}</div></div></div><div class="tags-scroll-row"><button class="tags-scroll-btn" id="${p}-tl"><i data-lucide="chevron-left"></i></button><div class="tags-container" id="${p}-tags"></div><button class="tags-scroll-btn" id="${p}-tr"><i data-lucide="chevron-right"></i></button></div></div>`;
             lucide.createIcons();
