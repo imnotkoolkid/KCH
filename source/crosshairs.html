@@ -258,7 +258,10 @@
     };
 
     const shareCurrentPage = () => {
-        navigator.clipboard.writeText(location.href)
+        const type = location.pathname.split('/').pop().replace('.html', '') || 'crosshairs';
+        const slug = cur ? idToSlug(cur.id) : '';
+        const shareUrl = slug ? `${location.origin}/${type}/${slug}` : location.href;
+        navigator.clipboard.writeText(shareUrl)
             .then(() => showToast('Link copied to clipboard!'))
             .catch(() => showToast('Failed to copy link.', 'alert-circle'));
     };

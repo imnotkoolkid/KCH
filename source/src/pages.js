@@ -158,10 +158,7 @@
 
         const shareSourceCode = async () => {
             try {
-                const type = location.pathname.split('/').pop().replace('.html', '') || 'css';
-                const slug = curSourceItem ? titleToSlug(curSourceItem.title) : '';
-                const shareUrl = slug ? `${location.origin}/${type}/${slug}` : location.href;
-                await navigator.clipboard.writeText(shareUrl);
+                await navigator.clipboard.writeText(location.href);
                 const btn = $('source-share-btn');
                 btn.innerHTML = '<i data-lucide="check"></i>';
                 lucide.createIcons();

@@ -264,7 +264,12 @@
         };
 
         const shareCurrentPage = () => {
-            navigator.clipboard.writeText(location.href).then(() => showToast('Link copied to clipboard!')).catch(() => showToast('Failed to copy link.', 'alert-circle'));
+            const type = location.pathname.split('/').pop().replace('.html', '') || 'textures';
+            const slug = cur ? idToSlug(cur.id) : '';
+            const shareUrl = slug ? `${location.origin}/${type}/${slug}` : location.href;
+            navigator.clipboard.writeText(shareUrl)
+                .then(() => showToast('Link copied to clipboard!'))
+                .catch(() => showToast('Failed to copy link.', 'alert-circle'));
         };
 
         const isLiked = i => liked.has(i.id);
