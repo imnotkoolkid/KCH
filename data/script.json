@@ -41,11 +41,11 @@
 "previewImage": ""
 },
 {
-"name": "wireframe toggle",
+"name": "gun wireframe toggle",
 "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/gun-wireframe-toggle.js",
 "owner": "imnotkoolkid",
 "discord": "",
-"description": "toggle wireframe with G",
+"description": "toggle wireframe for guns with G",
 "previewImage": ""
 },
 {
