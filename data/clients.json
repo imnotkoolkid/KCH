@@ -20,6 +20,16 @@
     "downloadUrl": "https://github.com/zVipexx/dawn-client/releases"
   },
   {
+    "name": "Nameless Client(r)",
+    "owner": "imnotkoolkid",
+    "icon": "https://raw.githubusercontent.com/imnotkoolkid/nameless-client-r/refs/heads/main/src/assets/img/icon.png",
+    "description": "cool client",
+    "platforms": ["Windows", "macOS","Linux"],
+    "source": "open source",
+    "development": "active",
+    "downloadUrl": "https://github.com/imnotkoolkid/nameless-client-r/releases"
+  },
+  {
     "name": "Publikc",
     "owner": "skywalk1411",
     "icon": "https://raw.githubusercontent.com/skywalk1411/publikc/refs/heads/main/src/assets/img/icon.png",
@@ -30,6 +40,36 @@
     "downloadUrl": "https://github.com/skywalk1411/publikc/releases"
   },
   {
+    "name": "Redline Client",
+    "owner": "robertpakalns",
+    "icon": "https://raw.githubusercontent.com/robertpakalns/redline-client/refs/heads/main/assets/icons/icon.ico",
+    "description": "cool client",
+    "platforms": ["Windows", "macOS", "Linux"],
+    "source": "open source",
+    "development": "inactive",
+    "downloadUrl": "https://github.com/robertpakalns/redline-client/releases"
+  },
+  {
+    "name": "Smudgy Client",
+    "owner": "Akuma",
+    "icon": "https://raw.githubusercontent.com/OBS-Akuma/smudgy-client/refs/heads/main/src/assets/img/icon.png",
+    "description": "cool client",
+    "platforms": ["Windows"],
+    "source": "open source",
+    "development": "active",
+    "downloadUrl": "https://github.com/OBS-Akuma/smudgy-client/releases"
+  },
+  {
+    "name": "Coke Client",
+    "owner": "42infi",
+    "icon": "https://raw.githubusercontent.com/42infi/juice-client/refs/heads/main/src/assets/img/icon.png",
+    "description": "basically juice client",
+    "platforms": ["Windows", "macOS", "Linux"],
+    "source": "open source",
+    "development": "inactive",
+    "downloadUrl": "https://github.com/42infi/juice-client/releases"
+  },
+    {
     "name": "Obsidian Client",
     "owner": "imnotkoolkid",
     "icon": "https://raw.githubusercontent.com/imnotkoolkid/OBSIDIAN-CLIENT-preview/refs/heads/main/assets/Obsidian%20Client.ico",
@@ -48,35 +88,5 @@
     "source": "open source",
     "development": "inactive",
     "downloadUrl": "https://github.com/zVipexx/dawn-client-v2/releases"
-  },
-  {
-    "name": "Redline Client",
-    "owner": "robertpakalns",
-    "icon": "https://raw.githubusercontent.com/robertpakalns/redline-client/refs/heads/main/assets/icons/icon.ico",
-    "description": "cool client",
-    "platforms": ["Windows", "macOS", "Linux"],
-    "source": "open source",
-    "development": "inactive",
-    "downloadUrl": "https://github.com/robertpakalns/redline-client/releases"
-  },
-  {
-    "name": "Coke Client",
-    "owner": "42infi",
-    "icon": "https://raw.githubusercontent.com/42infi/juice-client/refs/heads/main/src/assets/img/icon.png",
-    "description": "basically juice client",
-    "platforms": ["Windows", "macOS", "Linux"],
-    "source": "open source",
-    "development": "inactive",
-    "downloadUrl": "https://github.com/42infi/juice-client/releases"
-  },
-  {
-    "name": "Smudgy Client",
-    "owner": "Akuma",
-    "icon": "https://raw.githubusercontent.com/OBS-Akuma/smudgy-client/refs/heads/main/src/assets/img/icon.png",
-    "description": "cool client",
-    "platforms": ["Windows"],
-    "source": "open source",
-    "development": "active",
-    "downloadUrl": "https://github.com/OBS-Akuma/smudgy-client/releases"
   }
 ]
