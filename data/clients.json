@@ -15,7 +15,7 @@
     "icon": "https://raw.githubusercontent.com/zVipexx/dawn-client-v2/aedf5f04f8e9e66d038735477cda7d966a30c98b/src-tauri/icons/icon.png",
     "description": "basically juice client",
     "platforms": ["Windows", "macOS"],
-    "source": "closed source",
+    "source": "open source",
     "development": "active",
     "downloadUrl": "https://github.com/zVipexx/dawn-client/releases"
   },
