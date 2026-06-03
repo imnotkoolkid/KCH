@@ -20,16 +20,6 @@
     "downloadUrl": "https://github.com/zVipexx/dawn-client/releases"
   },
   {
-    "name": "Nameless Client(r)",
-    "owner": "imnotkoolkid",
-    "icon": "https://raw.githubusercontent.com/imnotkoolkid/nameless-client-r/refs/heads/main/src/assets/img/icon.png",
-    "description": "cool client",
-    "platforms": ["Windows", "macOS","Linux"],
-    "source": "open source",
-    "development": "active",
-    "downloadUrl": "https://github.com/imnotkoolkid/nameless-client-r/releases"
-  },
-  {
     "name": "Publikc",
     "owner": "skywalk1411",
     "icon": "https://raw.githubusercontent.com/skywalk1411/publikc/refs/heads/main/src/assets/img/icon.png",
