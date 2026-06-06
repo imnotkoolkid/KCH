@@ -23,7 +23,7 @@
     "name": "Celeste Client",
     "owner": "imnotkoolkid",
     "icon": "https://raw.githubusercontent.com/imnotkoolkid/celeste-client/refs/heads/main/src/assets/img/icon.png",
-    "description": "random cool client",
+    "description": "a performance first minimal client",
     "platforms": ["Windows", "macOS", "Linux"],
     "source": "open source",
     "development": "active",
