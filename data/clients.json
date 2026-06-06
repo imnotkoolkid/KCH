@@ -20,14 +20,14 @@
     "downloadUrl": "https://github.com/zVipexx/dawn-client/releases"
   },
   {
-    "name": "Publikc",
-    "owner": "skywalk1411",
-    "icon": "https://raw.githubusercontent.com/skywalk1411/publikc/refs/heads/main/src/assets/img/icon.png",
-    "description": "basically juice client",
+    "name": "Celeste Client",
+    "owner": "imnotkoolkid",
+    "icon": "https://raw.githubusercontent.com/imnotkoolkid/celeste-client/refs/heads/main/src/assets/img/icon.png",
+    "description": "random cool client",
     "platforms": ["Windows", "macOS", "Linux"],
     "source": "open source",
     "development": "active",
-    "downloadUrl": "https://github.com/skywalk1411/publikc/releases"
+    "downloadUrl": "https://github.com/imnotkoolkid/celeste-client/releases"
   },
   {
     "name": "Redline Client",
@@ -38,6 +38,16 @@
     "source": "open source",
     "development": "inactive",
     "downloadUrl": "https://github.com/robertpakalns/redline-client/releases"
+  },
+  {
+    "name": "Publikc",
+    "owner": "skywalk1411",
+    "icon": "https://raw.githubusercontent.com/skywalk1411/publikc/refs/heads/main/src/assets/img/icon.png",
+    "description": "basically juice client",
+    "platforms": ["Windows", "macOS", "Linux"],
+    "source": "open source",
+    "development": "active",
+    "downloadUrl": "https://github.com/skywalk1411/publikc/releases"
   },
   {
     "name": "Smudgy Client",
