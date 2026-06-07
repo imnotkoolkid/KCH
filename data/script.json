@@ -17,14 +17,6 @@
 "previewImage": ""
 },
 {
-"name": "esc menu timer bypass",
-"url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/esc-menu-bypass.js",
-"owner": "imnotkoolkid",
-"discord": "",
-"description": "bypass 3 sec timer for esc menu",
-"previewImage": ""
-},
-{
 "name": "Player Count",
 "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/Playercount.js",
 "owner": "unknown",
