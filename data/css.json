@@ -85,6 +85,18 @@
       "downloadUrl": ""
     },
     {
+      "title": "CS2",
+      "description": "a cs2 based high profile css which has also really good perfomance",
+      "homeImage": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/css-imgs/cs2%20v0.1.webp",
+      "ingameImage": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/css-imgs/cs2%20v0.1_ingame.webp",
+      "tags": ["Gamer", "CS2", "Rusty"],
+      "availability": "free",
+      "owner": "ONE PRO",
+      "discord": "https://discord.com/users/1049005256740180088",
+      "label": "",
+      "downloadUrl": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/css-files/cs2%20v0.1.css"
+    },
+    {
       "title": "Ethereal Bloom",
       "description": "A peaceful and dreamy anime theme wrapped in petals.",
       "homeImage": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/css-imgs/Ethereal_Bloom.webp",
