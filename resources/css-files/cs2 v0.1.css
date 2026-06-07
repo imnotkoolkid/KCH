@@ -1,0 +1,1797 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap");
+
+/* ================================ FULL MAIN CSS (MERGED + BACKGROUND ADDED) ================================ */
+
+/* ================================ GLOBAL FONT APPLY ================================ */
+* {
+  font-family: "Rajdhani", sans-serif !important;
+}
+
+/* ================================ GLOBAL VARIABLES (SHARED THEME) ================================ */
+:root {
+  --play-pattern: url("https://i.postimg.cc/Sx5G2ffc/pattern.png");
+  --dark-green: #041a0a;
+  --glow-green: #00ff55;
+  --glow-green-soft: rgba(0, 255, 85, 0.5);
+
+  /* ORANGE GLOW THEME (LEFT TOP MENU) */
+  --glow-orange: #ff9a2f;
+  --glow-orange-soft: rgba(255, 154, 47, 0.45);
+  --glow-orange-strong: rgba(255, 154, 47, 0.75);
+
+  /* XP BAR ORANGE PATTERN */
+  --orange-pattern: url("https://i.postimg.cc/Sx5G2ffc/pattern.png");
+
+  /* BACKGROUND IMAGE */
+  --main-bg: url("https://cs-scene.de/wp-content/uploads/2021/03/de_cache-remake-03.jpg");
+}
+
+/* Replace the current background with your custom image */
+.background {
+    position: fixed;
+    inset: 0;
+    background: url("https://cs-scene.de/wp-content/uploads/2021/03/de_train-01.jpg") center center / cover no-repeat !important;
+    z-index: -2;
+}
+
+/* Optional dark overlay for better UI visibility */
+.background::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: -1;
+}
+
+/* Hide the original effects if needed */
+.pattern-bg,
+.bg-radial {
+    display: none !important;
+}
+/* =========================================================
+   WORKING MERGED TOPBAR (USES .left-icons AS TOPBAR)
+========================================================= */
+.left-icons {
+  display: flex !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 86px !important;
+
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: center !important;
+
+  padding: 0 !important;
+  margin: 0 !important;
+
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.90),
+    rgba(0, 0, 0, 0.35)
+  ) !important;
+
+  backdrop-filter: blur(12px) saturate(1.25) contrast(1.05) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(1.25) contrast(1.05) !important;
+
+  border-bottom: 1px solid rgba(255,255,255,0.10) !important;
+  z-index: 999 !important;
+  overflow: hidden !important;
+}
+
+/* moving pattern */
+.left-icons::before {
+  content: "";
+  position: absolute;
+  inset: -40px;
+  background-image: var(--play-pattern);
+  background-repeat: repeat;
+  background-size: 520px;
+  background-position: center;
+  opacity: 0.22;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  will-change: transform;
+  transform: translate3d(0,0,0);
+  animation: cs2TopbarMove 20s linear infinite;
+}
+
+/* animation */
+@keyframes cs2TopbarMove {
+  0% { transform: translate3d(0px, 0px, 0px); }
+  100% { transform: translate3d(-140px, 0px, 0px); }
+}
+
+/* bottom glow */
+.left-icons::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(120,170,255,0.10),
+    rgba(255,255,255,0.40),
+    rgba(120,170,255,0.10),
+    transparent
+  );
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+/* =========================================================
+   BUTTONS INSIDE TOPBAR
+========================================================= */
+.icon-btn {
+  flex: 0 0 auto !important;
+  height: 86px !important;
+  padding: 0px 26px !important;
+  margin: 0px !important;
+  background: transparent !important;
+  border: none !important;
+
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+
+  cursor: pointer !important;
+  position: relative !important;
+
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1.2px !important;
+
+  color: rgba(255,255,255,0.60) !important;
+  transition: 0.15s;
+}
+
+/* hide icons */
+.icon-btn svg,
+.icon-btn img,
+.icon-btn i {
+  display: none !important;
+}
+
+/* hover */
+.icon-btn:hover {
+  color: rgba(255,255,255,0.98) !important;
+  text-shadow: 0px 0px 10px rgba(140,190,255,0.22) !important;
+}
+
+/* active underline */
+.icon-btn.active::after {
+  content: "";
+  position: absolute;
+  left: 22px;
+  right: 22px;
+  bottom: 0;
+  height: 3px;
+  border-radius: 2px;
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0px 0px 10px rgba(140,190,255,0.35);
+}
+
+/* =========================================================
+   FIX CONTENT OFFSET
+========================================================= */
+.left-interface { top: 106px !important; }
+.right-interface { top: 106px !important; }
+.center-player { top: 202px !important; }
+
+/* =========================================================
+   LEFT TOP MENU (ORANGE GLOW BORDER STYLE)
+========================================================= */
+.left-interface .card-cont,
+.left-interface .card-cont.user-info,
+.left-interface .card-cont.avatar-info,
+.left-interface .card-cont.money,
+.left-interface .card-cont.money.diamonds {
+  background: rgba(0, 0, 0, 0.65) !important;
+  border: 2px solid var(--glow-orange) !important;
+  border-radius: 0px !important;
+
+  box-shadow:
+    0px 0px 8px var(--glow-orange-soft),
+    0px 0px 18px rgba(255, 154, 47, 0.35),
+    inset 0px 0px 10px rgba(255, 154, 47, 0.10) !important;
+
+  backdrop-filter: blur(10px) saturate(1.1) !important;
+  -webkit-backdrop-filter: blur(10px) saturate(1.1) !important;
+}
+
+/* brighten text */
+.left-interface .card-cont *,
+.left-interface .card-cont.user-info *,
+.left-interface .card-cont.avatar-info *,
+.left-interface .card-cont.money *,
+.left-interface .card-cont.money.diamonds * {
+  color: rgba(255, 255, 255, 0.96) !important;
+  text-shadow: 0px 0px 7px rgba(0, 0, 0, 0.85) !important;
+}
+
+/* =========================================================
+   XP TEXT ORANGE (LEVEL + XP NUMBERS)
+========================================================= */
+.left-interface .card-cont.user-info .progress-text,
+.left-interface .card-cont.user-info .lvl,
+.left-interface .card-cont.user-info span,
+.left-interface .card-cont.user-info div {
+  color: var(--glow-orange) !important;
+  text-shadow: 0px 0px 8px rgba(255, 154, 47, 0.85) !important;
+  font-weight: 900 !important;
+}
+
+/* =========================================================
+   XP BAR ORANGE PATTERN OVERLAY
+========================================================= */
+.left-interface .card-cont.user-info .progress {
+  position: relative !important;
+  overflow: hidden !important;
+  height: 20px !important;
+  min-height: 20px !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+  border: 2px solid rgba(255, 154, 47, 0.85) !important;
+  border-radius: 25px !important;
+}
+
+.left-interface .card-cont.user-info .progress::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+
+  background-image: var(--orange-pattern) !important;
+  background-repeat: repeat !important;
+  background-size: 25px 25px !important;
+  background-position: center !important;
+
+  opacity: 0.85 !important;
+  filter: sepia(1) saturate(12) hue-rotate(-12deg) brightness(1.1) contrast(2.2) !important;
+  mix-blend-mode: multiply !important;
+
+  pointer-events: none !important;
+  z-index: 999 !important;
+}
+
+/* =========================================================
+   FIX PRIVATE / JOIN POSITION (NO MORE OFFSET)
+========================================================= */
+.play-content-up {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 6px !important;
+  transform: translateX(6px) !important;
+}
+
+.play-content-up button {
+  margin: 0 !important;
+  top: 0 !important;
+  bottom: auto !important;
+  left: auto !important;
+  right: auto !important;
+  transform: none !important;
+  position: relative !important;
+}
+
+/* =========================================================
+   PRIVATE + JOIN (ORANGE THEME)
+========================================================= */
+#create-btn,
+#join-btn {
+  background: rgba(0, 0, 0, 0.65) !important;
+  background-image: none !important;
+  border: 2px solid var(--glow-orange) !important;
+  border-radius: 0px !important;
+
+  box-shadow:
+    0px 0px 8px var(--glow-orange-soft),
+    0px 0px 18px rgba(255, 154, 47, 0.35),
+    inset 0px 0px 10px rgba(255, 154, 47, 0.10) !important;
+
+  backdrop-filter: blur(10px) saturate(1.1) !important;
+  -webkit-backdrop-filter: blur(10px) saturate(1.1) !important;
+
+  color: rgba(255, 255, 255, 0.96) !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  filter: none !important;
+  outline: none !important;
+
+  transition: 0.15s ease-in-out !important;
+}
+
+#create-btn *,
+#join-btn * {
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+  border: none !important;
+  color: inherit !important;
+}
+
+#create-btn::before,
+#create-btn::after,
+#join-btn::before,
+#join-btn::after {
+  content: none !important;
+  display: none !important;
+}
+
+#create-btn:hover,
+#join-btn:hover {
+  background: rgba(0, 0, 0, 0.80) !important;
+  border-color: rgba(255, 200, 120, 1) !important;
+  box-shadow:
+    0px 0px 12px rgba(255, 154, 47, 0.65),
+    0px 0px 26px rgba(255, 154, 47, 0.35),
+    inset 0px 0px 12px rgba(255, 154, 47, 0.15) !important;
+}
+
+#create-btn:active,
+#join-btn:active {
+  transform: scale(0.98) !important;
+}
+
+/* =========================================================
+   QUICKPLAY SETTINGS (ORANGE GLASS BUTTON)
+========================================================= */
+.play-content .select-mod {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 10px !important;
+
+  background: rgba(0, 0, 0, 0.65) !important;
+  background-image: none !important;
+  border: 2px solid var(--glow-orange) !important;
+  border-radius: 0px !important;
+  padding: 14px 18px !important;
+
+  box-shadow:
+    0px 0px 8px var(--glow-orange-soft),
+    0px 0px 18px rgba(255, 154, 47, 0.35),
+    inset 0px 0px 10px rgba(255, 154, 47, 0.10) !important;
+
+  backdrop-filter: blur(10px) saturate(1.1) !important;
+  -webkit-backdrop-filter: blur(10px) saturate(1.1) !important;
+
+  color: rgba(255, 255, 255, 0.96) !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+
+  cursor: pointer !important;
+  transition: 0.15s ease-in-out !important;
+}
+
+.play-content .select-mod:hover {
+  background: rgba(0, 0, 0, 0.80) !important;
+  border-color: rgba(255, 200, 120, 1) !important;
+}
+
+/* =========================================================
+   REGION SELECTOR (NA / EU) ORANGE GLASS STYLE
+========================================================= */
+.play-content .select-region {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 10px !important;
+
+  background: rgba(0, 0, 0,  0.65) !important;
+  background-image: none !important;
+  border: 2px solid var(--glow-orange) !important;
+  border-radius: 0px !important;
+  padding: 10px 16px !important;
+
+  box-shadow:
+    0px 0px 8px var(--glow-orange-soft),
+    0px 0px 18px rgba(255, 154, 47, 0.35),
+    inset 0px 0px 10px rgba(255, 154, 47, 0.10) !important;
+
+  backdrop-filter: blur(10px) saturate(1.1) !important;
+  -webkit-backdrop-filter: blur(10px) saturate(1.1) !important;
+
+  color: rgba(255, 255, 255, 0.96) !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+
+  cursor: pointer !important;
+  transition: 0.15s ease-in-out !important;
+}
+
+/* =========================================================
+   QUESTS PANEL (MATCH ORANGE GLASS THEME)
+========================================================= */
+.right-interface .quests,
+.right-interface .quest,
+.right-interface .quest-container,
+.right-interface .quest-list,
+.right-interface .quests-cont,
+.right-interface .quests .card-cont,
+.right-interface .quests .quest,
+.right-interface .quests .quests-list,
+.right-interface .quests .quests-cont,
+.right-interface .quests .quests-content,
+.right-interface .quests .quests-body,
+.right-interface .quests .quests-main,
+.right-interface .quests .quests-inner,
+.right-interface .quests .quests-box,
+.right-interface .quests .quests-panel,
+.right-interface .quests .quests-wrapper {
+  background: rgba(0, 0, 0, 0.65) !important;
+  border: 2px solid var(--glow-orange) !important;
+  border-radius: 0px !important;
+
+  box-shadow:
+    0px 0px 8px var(--glow-orange-soft),
+    0px 0px 18px rgba(255, 154, 47, 0.35),
+    inset 0px 0px 10px rgba(255, 154, 47, 0.10) !important;
+
+  backdrop-filter: blur(10px) saturate(1.1) !important;
+  -webkit-backdrop-filter: blur(10px) saturate(1.1) !important;
+}
+
+/* quest text */
+.right-interface .quests *,
+.right-interface .quest * {
+  color: rgba(255,255,255,0.96) !important;
+  text-shadow: 0px 0px 7px rgba(0,0,0,0.85) !important;
+}
+
+/* =========================================================
+   QUEST COUNTER FIX (0/45 etc)
+========================================================= */
+.right-interface .quests .progress2 {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+
+  color: rgba(255, 170, 70, 0.95) !important;
+  font-weight: 900 !important;
+  font-size: 13px !important;
+
+  text-shadow: 0px 0px 6px rgba(255, 154, 47, 0.55) !important;
+}
+
+.right-interface .quests .progress2 * {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: inherit !important;
+}
+
+/* =========================================================
+   SETTINGS ICON (GEAR BUTTON)
+========================================================= */
+.right-interface .card-cont.settings {
+  background: rgba(0, 0, 0, 0.65) !important;
+  border: 2px solid var(--glow-orange) !important;
+  border-radius: 0px !important;
+
+  box-shadow:
+    0px 0px 8px var(--glow-orange-soft),
+    0px 0px 18px rgba(255, 154, 47, 0.35),
+    inset 0px 0px 10px rgba(255, 154, 47, 0.10) !important;
+
+  backdrop-filter: blur(10px) saturate(1.1) !important;
+  -webkit-backdrop-filter: blur(10px) saturate(1.1) !important;
+
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+
+  cursor: pointer !important;
+  transition: 0.15s ease-in-out !important;
+}
+
+.right-interface .card-cont.settings svg {
+  width: 34px !important;
+  height: 34px !important;
+  fill: rgba(255, 255, 255, 0.95) !important;
+  filter: drop-shadow(0px 0px 6px rgba(0,0,0,0.9)) !important;
+}
+
+.right-interface .card-cont.settings:hover {
+  background: rgba(0, 0, 0, 0.80) !important;
+  border-color: rgba(255, 200, 120, 1) !important;
+}
+
+.right-interface .card-cont.settings:active {
+  transform: scale(0.97) !important;
+}
+
+/* =========================================================
+   PARTY INVITE BUTTON (ADD PARTY BOX STYLE)
+========================================================= */
+#invite-btn.invite-btn {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+
+  width: 150px !important;
+  height: 220px !important;
+
+  background: rgba(0, 0, 0, 0.55) !important;
+  border: 2px solid var(--glow-orange) !important;
+  border-radius: 0px !important;
+
+  box-shadow:
+    0px 0px 8px var(--glow-orange-soft),
+    0px 0px 18px rgba(255, 154, 47, 0.25),
+    inset 0px 0px 10px rgba(255, 154, 47, 0.10) !important;
+
+  backdrop-filter: blur(10px) saturate(1.1) !important;
+  -webkit-backdrop-filter: blur(10px) saturate(1.1) !important;
+
+  color: rgba(255, 255, 255, 0.95) !important;
+  font-weight: 900 !important;
+
+  cursor: pointer !important;
+  transition: 0.15s ease-in-out !important;
+}
+
+/* PLUS ICON */
+#invite-btn.invite-btn {
+  font-size: 48px !important;
+  line-height: 1 !important;
+  text-shadow: 0px 0px 10px rgba(0,0,0,0.85) !important;
+}
+
+/* TEXT "ADD PARTY" */
+#invite-btn.invite-btn .invite-btn-tip {
+  margin-top: 10px !important;
+  font-size: 14px !important;
+  font-weight: 900 !important;
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
+  color: rgba(255, 255, 255, 0.96) !important;
+  text-shadow: 0px 0px 7px rgba(0,0,0,0.85) !important;
+}
+
+/* HOVER */
+#invite-btn.invite-btn:hover {
+  background: rgba(0, 0, 0, 0.75) !important;
+  border-color: rgba(255, 200, 120, 1) !important;
+
+  box-shadow:
+    0px 0px 12px rgba(255, 154, 47, 0.65),
+    0px 0px 26px rgba(255, 154, 47, 0.35),
+    inset 0px 0px 14px rgba(255, 154, 47, 0.15) !important;
+
+  transform: scale(1.03) !important;
+}
+
+/* ACTIVE */
+#invite-btn.invite-btn:active {
+  transform: scale(0.97) !important;
+}
+
+/* =========================================================
+   PLAY BUTTON (DARK GREEN + MOVING PATTERN + GREEN BORDER)
+========================================================= */
+button#play-btn {
+  position: relative !important;
+  overflow: hidden !important;
+  border: 2px solid #00ff55 !important;
+  border-radius: 0px !important;
+
+  box-shadow:
+    0 0 10px rgba(0,255,85,0.65),
+    0 0 22px rgba(0,255,85,0.40),
+    0 0 40px rgba(0,255,85,0.20),
+    inset 0 0 14px rgba(0,255,85,0.18) !important;
+}
+
+button#play-btn .triangle {
+  display: none !important;
+}
+
+button#play-btn::after {
+  background-color: #041a0a !important;
+  background-image: url("https://i.postimg.cc/Sx5G2ffc/pattern.png") !important;
+  background-repeat: repeat !important;
+  background-size: 240px 240px !important;
+  background-blend-mode: screen !important;
+
+  filter: brightness(1.25) contrast(1.2) saturate(1.6) !important;
+
+  border: 2px solid #00ff55 !important;
+
+  animation-name: playBGMove !important;
+  animation-duration: 10s !important;
+  animation-timing-function: linear !important;
+  animation-iteration-count: infinite !important;
+
+  z-index: 0 !important;
+  will-change: transform !important;
+}
+
+button#play-btn .text {
+  position: relative !important;
+  z-index: 9999 !important;
+
+  color: #d6ffe3 !important;
+  font-size: 44px !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 2px !important;
+
+  text-shadow: 0 0 6px rgba(0,255,85,0.65) !important;
+}
+
+button#play-btn:hover {
+  transform: scale(1.04) !important;
+
+  box-shadow:
+    0 0 12px rgba(0,255,85,0.85),
+    0 0 30px rgba(0,255,85,0.55),
+    0 0 55px rgba(0,255,85,0.25),
+    inset 0 0 16px rgba(0,255,85,0.25) !important;
+
+  border-color: #44ff77 !important;
+}
+
+button#play-btn:active {
+  transform: scale(0.98) !important;
+  box-shadow: 0 0 6px rgba(0,255,85,0.60), inset 0 0 18px rgba(0,255,85,0.35) !important;
+}
+
+@keyframes playBGMove {
+  0% { background-position: 0px 0px; }
+  100% { background-position: -240px 120px; }
+}
+
+/* ==========================================
+   INVENTORY ONLY FIX (100% SAFE)
+========================================== */
+
+/* MAIN INVENTORY WINDOW */
+[data-v-17a70c70].inventory,
+[data-v-17a70c70] #inventory,
+[data-v-17a70c70] .inv,
+[data-v-17a70c70] .inventory-panel,
+[data-v-17a70c70] .inventory-container {
+  width: 92vw !important;
+  height: 88vh !important;
+  max-width: 1600px !important;
+  max-height: 900px !important;
+
+  background: rgba(0, 0, 0, 0.75) !important;
+  border: 2px solid rgba(255, 154, 47, 0.85) !important;
+
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+
+  box-shadow:
+    0px 0px 18px rgba(255, 154, 47, 0.35),
+    inset 0px 0px 25px rgba(0, 0, 0, 0.85) !important;
+
+  overflow: hidden !important;
+
+  background-image: url("https://cs-scene.de/wp-content/uploads/2021/03/de_nuke-01.jpg") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* REMOVE PREVIEW PANEL COMPLETELY */
+[data-v-17a70c70] .player,
+[data-v-17a70c70] .player-cont,
+[data-v-17a70c70] .player-preview,
+[data-v-17a70c70] .preview,
+[data-v-17a70c70] .preview-area,
+[data-v-17a70c70] .preview-container,
+[data-v-17a70c70] .inv-preview,
+[data-v-17a70c70] .inventory-preview,
+[data-v-17a70c70] .character-preview,
+[data-v-17a70c70] .profile-preview,
+[data-v-17a70c70] .equip-preview,
+[data-v-17a70c70] .equipped,
+[data-v-17a70c70] .equipped-items {
+  display: none !important;
+  width: 0px !important;
+  height: 0px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* also remove bottom equipped cards */
+[data-v-17a70c70] .bottom-inventory,
+[data-v-17a70c70] .equipped-bar,
+[data-v-17a70c70] .equipped-slot,
+[data-v-17a70c70] .equipped-container {
+  display: none !important;
+}
+
+/* FORCE INVENTORY CONTENT TO FULL WIDTH */
+[data-v-17a70c70] .content,
+[data-v-17a70c70] .main,
+[data-v-17a70c70] .wrapper,
+[data-v-17a70c70] .inv-content,
+[data-v-17a70c70] .inventory-content {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* TAB BAR FIX (TOP) */
+[data-v-17a70c70] .tab-bar {
+  display: flex !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  width: 100% !important;
+  gap: 6px !important;
+
+  background: rgba(0, 0, 0, 0.55) !important;
+  border-bottom: 2px solid rgba(255, 154, 47, 0.65) !important;
+  padding: 10px 12px !important;
+}
+
+[data-v-17a70c70] .tab-bar .tab {
+  padding: 10px 18px !important;
+  background: rgba(20, 20, 20, 0.75) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  cursor: pointer !important;
+  transition: 0.15s ease-in-out !important;
+}
+
+[data-v-17a70c70] .tab-bar .tab .title {
+  font-size: 14px !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+[data-v-17a70c70] .tab-bar .tab.active {
+  border: 2px solid rgba(255, 154, 47, 0.95) !important;
+  background: rgba(0, 0, 0, 0.75) !important;
+  box-shadow: 0px 0px 10px rgba(255, 154, 47, 0.35) !important;
+}
+
+[data-v-17a70c70] .tab-bar .tab.active .title {
+  color: rgba(255, 154, 47, 0.95) !important;
+}
+
+/* SEARCH + FILTER BAR FIX */
+[data-v-17a70c70] input.input {
+  width: 320px !important;
+  background: rgba(0, 0, 0, 0.70) !important;
+  border: 2px solid rgba(255, 154, 47, 0.70) !important;
+  padding: 10px 12px !important;
+  color: rgba(255, 255, 255, 0.95) !important;
+  font-weight: 800 !important;
+  outline: none !important;
+  margin: 12px 0px !important;
+}
+
+[data-v-17a70c70] input.input::placeholder {
+  color: rgba(255, 255, 255, 0.55) !important;
+}
+
+/* INVENTORY GRID FULL WIDTH + MORE SLOTS */
+[data-v-17a70c70] .subjects {
+  width: 100% !important;
+  height: 100% !important;
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)) !important;
+  gap: 12px !important;
+  padding: 14px !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  background: rgba(0, 0, 0, 0.35) !important;
+  border-top: 2px solid rgba(255, 154, 47, 0.45) !important;
+}
+
+/* FIX SLOT OVERLAP BUG */
+[data-v-17a70c70] .subjects {
+  position: relative !important;
+  padding-bottom: 150px !important;
+}
+
+[data-v-17a70c70] .subject {
+  position: relative !important;
+  z-index: 5 !important;
+}
+
+/* scrollbar */
+[data-v-17a70c70] .subjects::-webkit-scrollbar {
+  width: 8px !important;
+}
+
+[data-v-17a70c70] .subjects::-webkit-scrollbar-thumb {
+  background: rgba(255, 154, 47, 0.55) !important;
+}
+
+[data-v-17a70c70] .subjects::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 154, 47, 0.90) !important;
+}
+
+/* ITEM CARDS STYLE (NO PURPLE LINE) */
+[data-v-17a70c70] .subject,
+[data-v-17a70c70] .subjects .subject,
+[data-v-17a70c70] .subjects > div {
+  height: 170px !important;
+  width: 230px !important;
+  min-width: 230px !important;
+  max-width: 230px !important;
+
+  background: linear-gradient(180deg, #cfcfcf 0%, #8f8f8f 100%) !important;
+  border: 1px solid rgba(0,0,0,0.45) !important;
+  border-radius: 4px !important;
+
+  box-shadow: 0px 3px 10px rgba(0,0,0,0.55) !important;
+
+  overflow: hidden !important;
+  position: relative !important;
+
+  padding: 12px !important;
+
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+
+  transition: 0.15s ease-in-out !important;
+}
+
+/* IMAGE CENTER */
+[data-v-17a70c70] .subject img,
+[data-v-17a70c70] .subjects img {
+  width: 90% !important;
+  height: 90% !important;
+  object-fit: contain !important;
+  position: relative !important;
+  inset: unset !important;
+  opacity: 1 !important;
+
+  filter: drop-shadow(0px 2px 6px rgba(0,0,0,0.55)) !important;
+}
+
+/* REMOVE OLD ORANGE TEXT SHADOW */
+[data-v-17a70c70] .subject .name,
+[data-v-17a70c70] .subject .title,
+[data-v-17a70c70] .subject span,
+[data-v-17a70c70] .subject div {
+  text-shadow: none !important;
+}
+
+/* REMOVE PURPLE BOTTOM LINE COMPLETELY */
+[data-v-17a70c70] .subject::after,
+[data-v-17a70c70] .subjects .subject::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* HOVER */
+[data-v-17a70c70] .subject:hover,
+[data-v-17a70c70] .subjects .subject:hover {
+  transform: scale(1.02) !important;
+  box-shadow: 0px 5px 16px rgba(0,0,0,0.70) !important;
+}
+
+/* BUTTON GROUP FIX */
+[data-v-17a70c70] .hover-btns-group {
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+
+  background: rgba(0, 0, 0, 0.70) !important;
+  border-top: 2px solid rgba(255, 154, 47, 0.65) !important;
+
+  padding: 10px !important;
+  z-index: 50 !important;
+}
+
+[data-v-17a70c70] .hover-btns-group .item-name {
+  margin-top: 8px !important;
+  font-size: 15px !important;
+  font-weight: 900 !important;
+  color: rgba(255, 154, 47, 0.95) !important;
+  text-transform: uppercase !important;
+}
+
+/* ENSURE GRID MOVES TO FULL WIDTH AFTER PREVIEW REMOVED */
+[data-v-17a70c70] .right,
+[data-v-17a70c70] .right-panel,
+[data-v-17a70c70] .items,
+[data-v-17a70c70] .items-panel,
+[data-v-17a70c70] .inventory-right {
+  width: 100% !important;
+  flex: 1 !important;
+}
+
+[data-v-17a70c70].inventory {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* ==========================================================================================================
+   ======================= CS2 CLEAN HUB (TODAY PAGE FULL FIX) MERGED INTO MAIN CSS =======================
+========================================================================================================== */
+
+/* MAIN HUB WINDOW */
+.background.mobile-fullscreen .container {
+  background: radial-gradient(circle at top, rgba(255,154,47,0.06), rgba(0,0,0,0.88)) !important;
+  border: 1px solid rgba(255,154,47,0.35) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 0 25px rgba(0,0,0,0.85) !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* TOP BAR */
+.container .top-bar {
+  background: rgba(0,0,0,0.85) !important;
+  border-bottom: 1px solid rgba(255,154,47,0.25) !important;
+}
+
+/* HUB TABS BAR */
+.hub-container .tabs {
+  background: rgba(0,0,0,0.65) !important;
+  border-bottom: 1px solid rgba(255,154,47,0.18) !important;
+}
+
+/* TAB STYLE */
+.hub-container .tabs .tab {
+  color: rgba(255,255,255,0.8) !important;
+  padding: 7px 14px !important;
+  margin: 2px 4px !important;
+  border-radius: 8px !important;
+  transition: 0.15s ease-in-out !important;
+}
+
+/* ACTIVE TAB */
+.hub-container .tabs .tab.active {
+  background: rgba(255,154,47,0.10) !important;
+  border: 1px solid rgba(255,154,47,0.45) !important;
+  color: rgba(255,154,47,0.95) !important;
+}
+
+/* MIRAGE BACKGROUND ONLY FOR HUB */
+.hub-container {
+  background: url("https://cs-scene.de/wp-content/uploads/2023/12/de_mirage-02.jpg") center center / cover no-repeat fixed !important;
+  border-radius: 14px !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* DARK OVERLAY ONLY FOR HUB */
+.hub-container::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: rgba(0,0,0,0.75) !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+  border-radius: 14px !important;
+}
+
+/* MAKE HUB CONTENT ABOVE OVERLAY */
+.hub-container > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* REMOVE TOP LEFT "TODAY TROPHY BOX" */
+.leaderboard-cont .label-top {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* REMOVE DOUBLE BACKGROUND IN LEADERS AREA */
+.leaderboard-cont .leaders {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* AWARDS BOX */
+.leaderboard-cont .info-awards {
+  background: rgba(0,0,0,0.65) !important;
+  border: 1px solid rgba(255,154,47,0.20) !important;
+  border-radius: 14px !important;
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.75) !important;
+}
+
+/* AWARDS TEXT */
+.leaderboard-cont .info-awards .awards-label {
+  color: rgba(255,255,255,0.9) !important;
+}
+
+/* AWARDS ORANGE WORD */
+.leaderboard-cont .info-awards .awards-span {
+  color: rgba(255,154,47,0.95) !important;
+}
+
+/* RESET TEXT */
+.leaderboard-cont .info-awards .reset {
+  color: rgba(255,255,255,0.6) !important;
+}
+
+/* RIGHT LEADERBOARD PANEL CONTAINER */
+.list-champions .list-cont.list-players {
+  background: rgba(0,0,0,0.72) !important;
+  border: 1px solid rgba(255,154,47,0.35) !important;
+  border-radius: 14px !important;
+  box-shadow: inset 0 0 30px rgba(0,0,0,0.85) !important;
+  padding: 10px !important;
+}
+
+/* HEADER OF RIGHT PANEL */
+.list-champions .top-items .top {
+  background: rgba(255,154,47,0.08) !important;
+  border: 1px solid rgba(255,154,47,0.25) !important;
+  border-radius: 12px !important;
+  padding: 10px 12px !important;
+}
+
+/* TODAY HEADER TEXT */
+.list-champions .top-items .top-label {
+  color: rgba(255,154,47,0.95) !important;
+  font-weight: 900 !important;
+  letter-spacing: 1px !important;
+}
+
+/* SCORES + REWARD LABEL */
+.list-champions .top-items .top-name {
+  color: rgba(120,255,160,0.95) !important;
+  font-weight: 700 !important;
+}
+
+/* LIST ROWS */
+.list-champions .item {
+  background: rgba(255,255,255,0.04) !important;
+  border: 1px solid rgba(255,255,255,0.05) !important;
+  border-radius: 12px !important;
+  margin: 6px 0 !important;
+  padding: 6px 10px !important;
+  transition: 0.15s ease-in-out !important;
+}
+
+/* ROW HOVER */
+.list-champions .item:hover {
+  border: 1px solid rgba(255,154,47,0.25) !important;
+  background: rgba(255,154,47,0.06) !important;
+}
+
+/* NAMES */
+.list-champions .item .nickname,
+.list-champions .item .name {
+  color: rgba(255,255,255,0.9) !important;
+}
+
+/* SCORES */
+.list-champions .item .right span {
+  color: rgba(255,255,255,0.75) !important;
+  font-weight: 700 !important;
+}
+
+/* FIX SPACING BETWEEN SCORE AND BUTTON */
+.list-champions .item .right {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 14px !important;
+}
+
+/* SHOW BUTTON FIX */
+.hub-container .list-champions .list-players .button.btn.rectangle {
+  background: #000 !important;
+  background-image: none !important;
+  border: 2px solid rgba(255,154,47,0.95) !important;
+  border-radius: 8px !important;
+  width: 78px !important;
+  height: 26px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  margin-left: 12px !important;
+  box-shadow: none !important;
+  outline: none !important;
+  font-weight: 900 !important;
+  letter-spacing: 2px !important;
+  font-size: 12px !important;
+  color: white !important;
+}
+
+/* REMOVE TRIANGLE */
+.hub-container .list-champions .list-players .button.btn.rectangle .triangle {
+  display: none !important;
+}
+
+/* REMOVE BUGGY BLUE INNER BORDERS */
+.hub-container .list-champions .list-players .button.btn.rectangle .WwNwmM,
+.hub-container .list-champions .list-players .button.btn.rectangle .border-top,
+.hub-container .list-champions .list-players .button.btn.rectangle .border-bottom,
+.hub-container .list-champions .list-players .button.btn.rectangle .border {
+  display: none !important;
+}
+
+/* BUTTON TEXT */
+.hub-container .list-champions .list-players .button.btn.rectangle .text {
+  color: #fff !important;
+  background: transparent !important;
+  text-shadow: none !important;
+  font-size: 12px !important;
+}
+
+/* HOVER EFFECT */
+.hub-container .list-champions .list-players .button.btn.rectangle:hover {
+  border-color: rgba(255,190,70,1) !important;
+  box-shadow: 0 0 10px rgba(255,154,47,0.35) !important;
+  background: rgba(0,0,0,0.95) !important;
+}
+
+/* SCROLLBAR CLEAN */
+.list-champions ::-webkit-scrollbar {
+  width: 6px !important;
+}
+
+.list-champions ::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.4) !important;
+}
+
+.list-champions ::-webkit-scrollbar-thumb {
+  background: rgba(255,154,47,0.55) !important;
+  border-radius: 10px !important;
+}
+
+/* ================= FULL PROFILE BACKGROUND ONLY ================= */
+.background.mobile-fullscreen .container:has(.profile) {
+  background: url("https://cs-scene.de/wp-content/uploads/2023/12/de_dust2-01.jpg")
+    center center / cover no-repeat !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* dark overlay so UI stays readable */
+.background.mobile-fullscreen .container:has(.profile)::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.65) !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+}
+
+/* keep profile UI above overlay */
+.background.mobile-fullscreen .container:has(.profile) > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* ======================= SERVERS HUB ONLY BACKGROUND FIX ======================= */
+.background.mobile-fullscreen .container:has(.servers-cont),
+.background.mobile-fullscreen .container:has(.servers) {
+  background: url("https://cs-scene.de/wp-content/uploads/2023/08/cs2-beta-update-anubis.jpg")
+    center center / cover no-repeat fixed !important;
+
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* overlay (FIXED: DOES NOT BLOCK MENU CLICKS) */
+.background.mobile-fullscreen .container:has(.servers-cont)::before,
+.background.mobile-fullscreen .container:has(.servers)::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: rgba(0,0,0,0.70) !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+}
+
+/* keep server hub UI above overlay */
+.background.mobile-fullscreen .container:has(.servers-cont) > *,
+.background.mobile-fullscreen .container:has(.servers) > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* ===========================
+   FULL HUD + CHAT CSS
+   CS2 TRUE ORANGE UNIFIED SYSTEM
+   =========================== */
+
+
+/* =========================
+   GHOST BAR (CORE ENERGY LINE)
+========================= */
+
+body::after {
+  content: "";
+
+  position: fixed !important;
+  left: 50% !important;
+  bottom: 34px !important;
+  transform: translateX(-50%) !important;
+
+  width: 640px !important;
+  height: 2px !important;
+
+  z-index: 999997 !important;
+  pointer-events: none !important;
+
+  opacity: 0.75 !important;
+  border-radius: 999px !important;
+
+  background: linear-gradient(
+    90deg,
+    rgba(255,140,30,0),
+    rgba(255,140,30,0.95),
+    rgba(255,210,120,1),
+    rgba(255,140,30,0.95),
+    rgba(255,140,30,0)
+  ) !important;
+
+  box-shadow:
+    0 0 6px rgba(255,140,30,0.95),
+    0 0 18px rgba(255,140,30,0.55) !important;
+}
+
+
+/* =========================
+   CENTER SHIELD ICON
+========================= */
+
+body::before {
+  content: "★\A⚔";
+
+  white-space: pre !important;
+
+  position: fixed !important;
+  left: 50% !important;
+  bottom: 10px !important;
+
+  transform: translateX(-50%) !important;
+
+  width: 54px !important;
+  height: 54px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-direction: column !important;
+
+  z-index: 999999 !important;
+  pointer-events: none !important;
+
+  border-radius: 50% !important;
+
+  font-size: 24px !important;
+  font-weight: 900 !important;
+
+  color: rgba(255,235,185,0.95) !important;
+
+  text-shadow:
+    0 0 6px rgba(255,220,140,0.9),
+    0 0 14px rgba(255,160,40,0.6),
+    0 0 22px rgba(255,120,20,0.35) !important;
+
+  background: rgba(255, 170, 70, 0.08) !important;
+
+  border: 2px solid rgba(255, 220, 140, 0.45) !important;
+
+  backdrop-filter: blur(8px) !important;
+
+  box-shadow:
+    0 0 10px rgba(255,170,60,0.35),
+    0 0 22px rgba(255,120,20,0.25),
+    inset 0 0 6px rgba(255,255,255,0.08) !important;
+}
+
+
+/* =========================
+   REMOVE DEFAULT HP BAR
+========================= */
+
+#bottom-left .hp-cont .cont-hp,
+#bottom-left .hp-cont .hp-progress {
+  display: none !important;
+}
+
+
+/* =========================
+   HP COUNTER (ORANGE CORE)
+========================= */
+
+#bottom-left .hp-title {
+  position: fixed !important;
+  left: 485px !important;
+  bottom: 18px !important;
+
+  width: 78px !important;
+
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+
+  z-index: 9999999 !important;
+  pointer-events: none !important;
+
+  background: rgba(255, 140, 30, 0.22) !important;
+  border: 1px solid rgba(255, 200, 120, 0.55) !important;
+
+  color: rgba(255,235,185,0.95) !important;
+
+  box-shadow:
+    0 0 10px rgba(255,140,30,0.35),
+    0 0 18px rgba(255,210,120,0.25) !important;
+}
+
+
+/* =========================
+   DASH / ENDURANCE BAR (SOUL FIXED)
+========================= */
+
+#bottom-left .cont-endurance {
+  position: fixed !important;
+  left: 485px !important;
+  bottom: 6px !important;
+
+  width: 78px !important;
+  height: 6px !important;
+
+  border-radius: 3px !important;
+
+  background: rgba(0, 0, 0, 0.35) !important;
+
+  z-index: 9999999 !important;
+  pointer-events: none !important;
+
+  overflow: hidden !important;
+}
+
+#bottom-left .cont-endurance .endurance-progress {
+  height: 100% !important;
+
+  border-radius: 3px !important;
+
+  background: linear-gradient(
+    90deg,
+    rgba(255,140,30,0.55),
+    rgba(255,210,120,0.95),
+    rgba(255,140,30,0.55)
+  ) !important;
+
+  box-shadow:
+    0 0 6px rgba(255,140,30,0.35),
+    0 0 10px rgba(255,210,120,0.25) !important;
+
+  transform-origin: left center !important;
+}
+
+
+/* =========================
+   AMMO DISPLAY
+========================= */
+
+#bottom-right .weapons-cont {
+  z-index: 9999999 !important;
+  overflow: visible !important;
+}
+
+#bottom-right .weapons-cont .state-weapon-active .ammunition {
+  position: relative !important;
+
+  transform: translateX(-420px) translateY(30px) !important;
+
+  width: 78px !important;
+  text-align: center !important;
+
+  display: flex !important;
+  justify-content: center !important;
+
+  font-size: 46px !important;
+  font-weight: 900 !important;
+
+  pointer-events: none !important;
+
+  color: rgba(255,210,120,0.95) !important;
+
+  text-shadow:
+    0 0 8px rgba(255,140,30,0.9),
+    0 0 18px rgba(255,210,120,0.6) !important;
+}
+
+
+/* =========================
+   WEAPON LIST (TRUE ORANGE FIXED)
+========================= */
+
+#bottom-right .weapon-cont {
+  margin: 40px 0 !important;
+  opacity: 0.45 !important;
+}
+
+/* NON SELECTED (PURE ORANGE - NO YELLOW SHIFT) */
+#bottom-right .weapon-img {
+  height: 38px !important;
+
+  filter:
+    brightness(0)
+    saturate(100%)
+    invert(52%)
+    sepia(95%)
+    saturate(1800%)
+    hue-rotate(-10deg)
+    brightness(115%)
+    contrast(110%) !important;
+}
+
+/* SELECTED WEAPON (ENERGY CORE MATCHES GHOST BAR) */
+#bottom-right .weapon-cont .bottom.is-selected {
+  opacity: 1 !important;
+
+  border: 2px solid rgba(255, 170, 70, 0.95) !important;
+
+  background: rgba(255, 140, 30, 0.16) !important;
+
+  box-shadow:
+    0 0 8px rgba(255,140,30,0.9),
+    0 0 18px rgba(255,170,70,0.65),
+    0 0 35px rgba(255,120,20,0.35) !important;
+}
+
+#bottom-right .weapon-name {
+  display: none !important;
+}
+
+#bottom-right [class*="key"] {
+  display: none !important;
+}
+
+
+/* =========================
+   CHAT SYSTEM
+========================= */
+
+#chat {
+  background: transparent !important;
+  border: none !important;
+}
+
+#chat .chat-content {
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.75),
+    rgba(0,0,0,0)
+  ) !important;
+}
+
+#chat .message {
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  color: rgba(255,255,255,0.95) !important;
+}
+
+
+/* =========================
+   INPUT + ENTER BUTTON
+========================= */
+
+#chat input[placeholder*="MESSAGE"] {
+  background: rgba(0,0,0,0.65) !important;
+
+  border: 2px solid rgba(255, 170, 70, 0.85) !important;
+
+  color: white !important;
+  font-weight: 900 !important;
+}
+
+#chat input[placeholder*="MESSAGE"] + * {
+  background: rgba(255, 140, 30, 0.9) !important;
+
+  border: 2px solid rgba(255, 210, 120, 0.9) !important;
+
+  box-shadow: 0 0 10px rgba(255,140,30,0.6) !important;
+}
+
+
+/* =========================
+   REMOVE TOP HUD
+========================= */
+
+#hud-top,
+#top-hud,
+#top-left,
+#top-center {
+  display: none !important;
+}
+/* ===========================
+   CHAT BACKGROUND FADE
+   =========================== */
+#chat {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  filter: none !important;
+}
+
+#chat::before,
+#chat::after {
+  display: none !important;
+  content: none !important;
+}
+
+#chat .chat-content,
+#chat .messages,
+#chat .chat-messages {
+  backdrop-filter: none !important;
+  filter: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0.00)
+  ) !important;
+}
+
+/* ===========================
+   CHAT TEXT
+   =========================== */
+#chat .message,
+#chat .chat-message {
+  font-family: "Rajdhani", sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  color: rgba(255, 255, 255, 0.95) !important;
+  text-shadow: 0 0 4px rgba(0,0,0,0.85) !important;
+  line-height: 1.25 !important;
+  padding: 2px 6px !important;
+  margin: 1px 0 !important;
+}
+
+/* ===========================
+   MESSAGE INPUT BOX (CHAT ONLY)
+   =========================== */
+#chat input[placeholder*="MESSAGE"] {
+  background: rgba(0, 0, 0, 0.65) !important;
+  border: 2px solid rgba(25, 90, 200, 0.85) !important;
+  border-radius: 6px !important;
+  color: rgba(255, 255, 255, 0.95) !important;
+  font-size: 18px !important;
+  font-weight: 900 !important;
+  font-family: "Rajdhani", sans-serif !important;
+  padding: 10px 14px !important;
+  box-shadow: 0 0 10px rgba(25, 90, 200, 0.35) !important;
+}
+
+#chat input[placeholder*="MESSAGE"]::placeholder {
+  color: rgba(255, 255, 255, 0.55) !important;
+  font-weight: 900 !important;
+}
+
+/* ===========================
+   ENTER BUTTON (ONLY NEXT TO MESSAGE INPUT)
+   =========================== */
+#chat input[placeholder*="MESSAGE"] + * {
+  background-image:
+    linear-gradient(rgba(0, 255, 90, 0.35), rgba(0, 255, 90, 0.35)),
+    url("https://i.postimg.cc/Sx5G2ffc/pattern.png") !important;
+
+  background-color: rgba(0, 70, 20, 0.95) !important;
+  background-repeat: repeat !important;
+  background-position: center !important;
+  background-size: cover, 420px 420px !important;
+
+  border: 2px solid rgba(80, 255, 120, 0.95) !important;
+  border-radius: 6px !important;
+
+  box-shadow: 0 0 12px rgba(80, 255, 120, 0.95),
+              0 0 30px rgba(80, 255, 120, 0.70) !important;
+
+  color: rgba(255, 255, 255, 0.95) !important;
+  font-size: 16px !important;
+  font-weight: 900 !important;
+  font-family: "Rajdhani", sans-serif !important;
+
+  padding: 10px 18px !important;
+
+  animation: patternPulse 1.8s ease-in-out infinite !important;
+}
+
+#chat input[placeholder*="MESSAGE"] + *:hover {
+  box-shadow: 0 0 16px rgba(80, 255, 120, 1),
+              0 0 40px rgba(80, 255, 120, 0.85) !important;
+}
+
+@keyframes patternPulse {
+  0% { filter: brightness(0.9) contrast(1.1); }
+  50% { filter: brightness(1.25) contrast(1.25); }
+  100% { filter: brightness(0.9) contrast(1.1); }
+}
+
+/* ===========================
+   REMOVE TOP KEYBINDS BAR (SAFE)
+   =========================== */
+#hud-top,
+#top-hud,
+#top-left,
+#top-center {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}/* =========================================================
+   ALL PLAYER NICKNAMES -> ORANGE THEME
+========================================================= */
+
+.nickname,
+.name,
+.nick,
+.player-name,
+.user-name,
+.username,
+.profile-name,
+.clan-name,
+.leader-name,
+.list-champions .nickname,
+.list-champions .name,
+.right-interface .nickname,
+.left-interface .nickname,
+.center-player .nickname,
+.center-player .player-name,
+.center-player .name {
+  color: rgba(255, 154, 47, 0.98) !important;
+
+  text-shadow:
+    0px 0px 6px rgba(255, 154, 47, 0.65),
+    0px 0px 12px rgba(255, 154, 47, 0.35),
+    0px 0px 2px rgba(0,0,0,0.95) !important;
+
+  font-weight: 900 !important;
+}/* =========================================================
+   DAILY / EVENT QUEST TABS -> ORANGE CS2 THEME
+========================================================= */
+
+/* BOTH TABS */
+.tab.daily,
+.tab.event,
+.quests .tab,
+.right-interface .tab {
+  background: rgba(0, 0, 0, 0.72) !important;
+
+  border: 2px solid rgba(255, 154, 47, 0.75) !important;
+  border-radius: 0px !important;
+
+  color: rgba(255, 154, 47, 0.96) !important;
+
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+
+  box-shadow:
+    0px 0px 8px rgba(255, 154, 47, 0.35),
+    inset 0px 0px 8px rgba(255, 154, 47, 0.10) !important;
+
+  transition: 0.15s ease-in-out !important;
+}
+
+/* HOVER */
+.tab.daily:hover,
+.tab.event:hover,
+.quests .tab:hover {
+  background: rgba(20, 10, 0, 0.85) !important;
+
+  border-color: rgba(255, 190, 90, 1) !important;
+
+  color: rgba(255, 190, 90, 1) !important;
+
+  box-shadow:
+    0px 0px 12px rgba(255, 154, 47, 0.65),
+    inset 0px 0px 12px rgba(255, 154, 47, 0.15) !important;
+}
+
+/* SELECTED TAB */
+.tab.daily.selected,
+.tab.event.selected,
+.quests .tab.selected,
+.quests .tab.active {
+  background: rgba(255, 154, 47, 0.14) !important;
+
+  border: 2px solid rgba(255, 154, 47, 1) !important;
+
+  color: rgba(255, 190, 90, 1) !important;
+
+  text-shadow:
+    0px 0px 8px rgba(255, 154, 47, 0.75),
+    0px 0px 16px rgba(255, 154, 47, 0.35) !important;
+
+  box-shadow:
+    0px 0px 14px rgba(255, 154, 47, 0.55),
+    inset 0px 0px 14px rgba(255, 154, 47, 0.18) !important;
+}
+/* =========================================================
+   EVENT QUEST PROGRESS BARS -> ORANGE CS2 THEME
+========================================================= */
+
+/* BAR BACKGROUND */
+.progress-line,
+.progress-line.progress-line,
+.quest .progress-line,
+.quests .progress-line {
+  background: rgba(35, 45, 90, 0.95) !important;
+
+  border: 1px solid rgba(255, 154, 47, 0.35) !important;
+  border-radius: 999px !important;
+
+  overflow: hidden !important;
+
+  box-shadow:
+    inset 0px 0px 8px rgba(0,0,0,0.75),
+    0px 0px 6px rgba(255, 154, 47, 0.12) !important;
+}
+
+/* FILL LINE */
+.progress-line .progress,
+.quest .progress-line .progress,
+.quests .progress-line .progress {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 145, 20, 1) 0%,
+    rgba(255, 170, 50, 1) 50%,
+    rgba(255, 200, 90, 1) 100%
+  ) !important;
+
+  border-radius: 999px !important;
+
+  box-shadow:
+    0px 0px 10px rgba(255, 154, 47, 0.65),
+    0px 0px 18px rgba(255, 154, 47, 0.35),
+    inset 0px 0px 4px rgba(255,255,255,0.25) !important;
+
+  transition: width 0.25s ease-out !important;
+}
+
+/* OPTIONAL ANIMATED SHIMMER */
+.progress-line .progress::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255,255,255,0.18) 50%,
+    transparent 100%
+  ) !important;
+
+  animation: orangeQuestShimmer 2.5s linear infinite !important;
+}
+
+.progress-line .progress {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+@keyframes orangeQuestShimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
