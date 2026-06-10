@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kirka Community Hub – Maps</title>
+    <link rel="icon" type="image/png" href="assets/icon.png">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta name="description" content="Browse and download all Kirka.io custom maps. Find your favourite map JSON files from the Kirka Community Hub.">
+    <meta name="keywords" content="Kirka.io maps, Kirka custom maps, Kirka map download, Kirka Community Hub">
+    <meta name="author" content="imnotkoolkid">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://kirkacommunityhub.pages.dev/maps.html">
+    <meta property="og:title" content="Kirka Community Hub – Maps">
+    <meta property="og:description" content="Browse and download all Kirka.io custom maps from the Kirka Community Hub.">
+    <meta property="og:image" content="https://kirkacommunityhub.pages.dev/assets/icon.png">
+    <meta property="og:url" content="https://kirkacommunityhub.pages.dev/maps.html">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#1bd96a">
+    <style>
+        :root {
+            --green: #1bd96a;
+            --green-hover: #14b858;
+            --bg: #0e1217;
+            --card-bg: #161b22;
+            --border: #30363d;
+            --text: #fff;
+            --text-muted: #a4b1cd;
+            --header-bg: rgba(14, 18, 23, 0.82);
+            --font: 'Inter', sans-serif;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--font);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            user-select: none;
+        }
+
+        a { text-decoration: none; color: inherit; }
+
+        header {
+            position: fixed;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 99%;
+            z-index: 1000;
+            background: var(--header-bg);
+            backdrop-filter: blur(12px);
+            height: 62px;
+            border-radius: 5px;
+            border: 1px solid rgba(48,54,61,0.5);
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 24px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text);
+            font-weight: 800;
+            font-size: 1.1rem;
+        }
+
+        .logo img { width: 32px; height: 32px; }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--text-muted);
+            font-size: .9rem;
+            font-weight: 600;
+            transition: color .2s;
+        }
+
+        .nav-link:hover { color: var(--text); }
+        .nav-link svg { width: 16px; height: 16px; }
+
+        main {
+            flex: 1;
+            padding-top: 100px;
+            padding-bottom: 80px;
+        }
+
+        .page-header {
+            text-align: center;
+            padding: 20px 24px 0;
+            margin-bottom: 36px;
+        }
+
+        .page-header h1 {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 800;
+            background: linear-gradient(135deg, #fff 0%, var(--green) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .page-header p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            max-width: 480px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .search-wrap {
+            max-width: 600px;
+            margin: 0 auto 48px;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .search-icon-pos {
+            position: absolute;
+            left: 36px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            pointer-events: none;
+        }
+
+        .search-icon-pos svg { width: 17px; height: 17px; stroke-width: 2.5; }
+
+        #search {
+            width: 100%;
+            padding: 14px 20px 14px 48px;
+            border-radius: 50px;
+            border: 1px solid var(--border);
+            background: var(--card-bg);
+            color: var(--text);
+            font-size: 1rem;
+            font-family: var(--font);
+            outline: none;
+            transition: border-color .2s, box-shadow .2s;
+        }
+
+        #search:focus {
+            border-color: rgba(27, 217, 106, 0.5);
+            box-shadow: 0 0 0 3px rgba(27, 217, 106, 0.08);
+        }
+
+        #search::placeholder { color: var(--text-muted); }
+
+        #map-count {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: .85rem;
+            margin-bottom: 28px;
+            font-weight: 500;
+        }
+
+        #map-count span { color: var(--green); font-weight: 700; }
+
+        .maps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 18px;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .map-card {
+            border-radius: 14px;
+            overflow: hidden;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            transition: transform .22s cubic-bezier(.34,1.56,.64,1), border-color .2s, box-shadow .2s;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .map-card:hover {
+            transform: translateY(-5px) scale(1.015);
+            border-color: rgba(27, 217, 106, 0.55);
+            box-shadow: 0 12px 40px rgba(27, 217, 106, 0.08);
+        }
+
+        .map-card-img-wrap {
+            width: 100%;
+            aspect-ratio: 16/9;
+            overflow: hidden;
+            background: #111519;
+            position: relative;
+        }
+
+        .map-card-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform .4s ease;
+        }
+
+        .map-card:hover .map-card-img { transform: scale(1.06); }
+
+        .map-card-img-wrap::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, #1a1f29 25%, #222838 50%, #1a1f29 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+            z-index: 0;
+            opacity: 1;
+            transition: opacity .3s;
+        }
+
+        .map-card-img-wrap.loaded::before { opacity: 0; }
+
+        @keyframes shimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        .map-card-body {
+            padding: 13px 15px 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .map-card-name {
+            font-size: .92rem;
+            font-weight: 700;
+            color: var(--text);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            flex: 1;
+        }
+
+        .map-dl-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 7px 14px;
+            border-radius: 8px;
+            border: 1px solid rgba(27, 217, 106, 0.3);
+            background: rgba(27, 217, 106, 0.1);
+            color: var(--green);
+            font-size: .78rem;
+            font-weight: 700;
+            font-family: var(--font);
+            cursor: pointer;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: background .2s, border-color .2s, transform .15s;
+            flex-shrink: 0;
+        }
+
+        .map-dl-btn:hover {
+            background: rgba(27, 217, 106, 0.2);
+            border-color: rgba(27, 217, 106, 0.6);
+            transform: translateY(-1px);
+        }
+
+        .map-dl-btn svg { width: 13px; height: 13px; stroke-width: 2.5; }
+
+        #no-results {
+            display: none;
+            text-align: center;
+            padding: 80px 20px;
+            color: var(--text-muted);
+        }
+
+        #no-results svg { width: 48px; height: 48px; opacity: .4; margin-bottom: 16px; }
+        #no-results h3 { font-size: 1.2rem; color: var(--text); margin-bottom: 8px; }
+
+        .page-loader {
+            display: flex;
+            justify-content: center;
+            padding: 80px 0;
+        }
+
+        .loader {
+            width: 48px;
+            aspect-ratio: 1.154;
+            background: conic-gradient(from 120deg at 50% 64%, #0000, var(--green) 1deg 120deg, #0000 121deg);
+            animation: l27-0 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
+            position: relative;
+        }
+
+        .loader:before, .loader:after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: inherit;
+            transform-origin: 50% 66%;
+            animation: l27-1 1.5s infinite;
+        }
+
+        .loader:after { --s: -1; }
+
+        @keyframes l27-0 {
+            0%, 30% { transform: rotate(0); }
+            70% { transform: rotate(120deg); }
+            70.01%, 100% { transform: rotate(360deg); }
+        }
+
+        @keyframes l27-1 {
+            0% { transform: rotate(calc(var(--s,1)*120deg)) translate(0); }
+            30%, 70% { transform: rotate(calc(var(--s,1)*120deg)) translate(calc(var(--s,1)*-5px),10px); }
+            100% { transform: rotate(calc(var(--s,1)*120deg)) translate(0); }
+        }
+
+        footer {
+            background: #050608;
+            padding: 60px 0;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 2rem;
+        }
+
+        .footer-logo { display: flex; align-items: center; gap: 7px; font-weight: 700; margin-bottom: 20px; }
+        .footer-logo img { width: 30px; }
+        .footer-links h4 { margin-bottom: 16px; color: var(--text); }
+        .footer-links ul { list-style: none; }
+        .footer-links li { margin-bottom: 10px; }
+        .footer-links a { color: var(--text-muted); font-size: 0.9rem; }
+        .footer-links a:hover { color: var(--green); text-decoration: underline; }
+        .footer-links-wrapper { display: flex; gap: 40px; }
+
+        @media (max-width: 768px) {
+            .footer-content { flex-direction: column; }
+            .footer-links-wrapper { flex-direction: column; gap: 20px; }
+            .maps-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; }
+        }
+
+        @keyframes cardIn {
+            from { opacity: 0; transform: translateY(16px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .map-card { animation: cardIn .35s ease both; }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="assets/icon.png" onerror="this.style.display='none'">
+                <span>Kirka Community Hub</span>
+            </a>
+            <nav>
+                <a href="index.html" class="nav-link"><i data-lucide="chevron-left"></i> Back</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="search-wrap">
+            <div class="search-icon-pos"><i data-lucide="search"></i></div>
+            <input id="search" type="text" placeholder="Search maps…" autocomplete="off" spellcheck="false">
+        </div>
+
+        <div id="map-count"></div>
+
+        <div id="loader-wrap" class="page-loader"><div class="loader"></div></div>
+
+        <div class="maps-grid" id="maps-grid"></div>
+
+        <div id="no-results">
+            <i data-lucide="map-off"></i>
+            <h3>No maps found</h3>
+            <p>Try a different search term.</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <a href="index.html" class="footer-logo">
+                    <img src="assets/icon.png">
+                    <span>Kirka Community Hub</span>
+                </a>
+                <p style="color:var(--text-muted);font-size:.9rem;max-width:300px">
+                    Not affiliated with Kirka.io.<br>Built by the community, for the community.
+                </p>
+            </div>
+            <div class="footer-links-wrapper">
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://github.com/imnotkoolkid/kch" target="_blank" rel="noopener noreferrer">github</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="contribution.html">contribution</a></li>
+                        <li><a href="submit-content.html">Submit Content</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="tos.html">Terms Of Service</a></li>
+                        <li><a href="report.html">Report</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const JSON_URL = 'https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/data/maps.json';
+
+        let allMaps = [];
+
+        function renderCards(maps) {
+            const grid = document.getElementById('maps-grid');
+            const noResults = document.getElementById('no-results');
+            const countEl = document.getElementById('map-count');
+
+            grid.innerHTML = '';
+
+            if (maps.length === 0) {
+                noResults.style.display = 'block';
+                countEl.innerHTML = '';
+                return;
+            }
+
+            noResults.style.display = 'none';
+            countEl.innerHTML = `Showing <span>${maps.length}</span> map${maps.length !== 1 ? 's' : ''}`;
+
+            maps.forEach((map, i) => {
+                const card = document.createElement('div');
+                card.className = 'map-card';
+                card.style.animationDelay = `${Math.min(i * 0.03, 0.5)}s`;
+
+                const imgWrap = document.createElement('div');
+                imgWrap.className = 'map-card-img-wrap';
+
+                const img = document.createElement('img');
+                img.className = 'map-card-img';
+                img.alt = map.name;
+                img.loading = 'lazy';
+                img.src = map.img;
+                img.style.position = 'relative';
+                img.style.zIndex = '1';
+                img.onload = () => imgWrap.classList.add('loaded');
+                img.onerror = () => { imgWrap.classList.add('loaded'); img.style.opacity = '.4'; };
+
+                imgWrap.appendChild(img);
+
+                const body = document.createElement('div');
+                body.className = 'map-card-body';
+
+                const nameEl = document.createElement('div');
+                nameEl.className = 'map-card-name';
+                nameEl.textContent = map.name;
+                nameEl.title = map.name;
+
+                const dlBtn = document.createElement('a');
+                dlBtn.className = 'map-dl-btn';
+                dlBtn.href = map.downloadUrl;
+                dlBtn.target = '_blank';
+                dlBtn.rel = 'noopener noreferrer';
+                dlBtn.download = '';
+                dlBtn.innerHTML = '<i data-lucide="download"></i> Get';
+                dlBtn.onclick = e => e.stopPropagation();
+
+                body.appendChild(nameEl);
+                body.appendChild(dlBtn);
+                card.appendChild(imgWrap);
+                card.appendChild(body);
+                grid.appendChild(card);
+            });
+
+            lucide.createIcons();
+        }
+
+        function filterMaps(query) {
+            const q = query.trim().toLowerCase();
+            if (!q) return allMaps;
+            return allMaps.filter(m => m.name.toLowerCase().includes(q));
+        }
+
+        async function init() {
+            try {
+                const res = await fetch(JSON_URL);
+                allMaps = await res.json();
+            } catch (e) {
+                document.getElementById('loader-wrap').innerHTML =
+                    '<p style="color:var(--text-muted);text-align:center;padding:40px">Failed to load maps. Please try again.</p>';
+                return;
+            }
+
+            document.getElementById('loader-wrap').style.display = 'none';
+            renderCards(allMaps);
+
+            const search = document.getElementById('search');
+            search.addEventListener('input', () => renderCards(filterMaps(search.value)));
+        }
+
+        init();
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

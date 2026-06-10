@@ -1,0 +1,747 @@
+﻿[
+    {
+        "name":  "Acid",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/acid.json"
+    },
+    {
+        "name":  "Amphitheater",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/amphitheater.json"
+    },
+    {
+        "name":  "Ancient",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/ancient.json"
+    },
+    {
+        "name":  "Antfarm",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/antfarm.json"
+    },
+    {
+        "name":  "Apartment",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/apartment.json"
+    },
+    {
+        "name":  "Arid",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/arid.json"
+    },
+    {
+        "name":  "Arsenal",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/arsenal.json"
+    },
+    {
+        "name":  "Backrooms",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/backrooms.json"
+    },
+    {
+        "name":  "Ballistic",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/ballistic.json"
+    },
+    {
+        "name":  "Bed",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/bed.json"
+    },
+    {
+        "name":  "Blossom",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/blossom.json"
+    },
+    {
+        "name":  "Bulwark",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/bulwark.json"
+    },
+    {
+        "name":  "Bunker",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/bunker.json"
+    },
+    {
+        "name":  "Castle",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/castle.json"
+    },
+    {
+        "name":  "Castle Winter",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/castle-winter.json"
+    },
+    {
+        "name":  "Catacomb",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/catacomb.json"
+    },
+    {
+        "name":  "Cathedral",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/cathedral.json"
+    },
+    {
+        "name":  "Cathedral Winter",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/cathedral-winter.json"
+    },
+    {
+        "name":  "Cave",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/cave.json"
+    },
+    {
+        "name":  "Ceres",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/ceres.json"
+    },
+    {
+        "name":  "Clash",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/clash.json"
+    },
+    {
+        "name":  "Cleft",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/cleft.json"
+    },
+    {
+        "name":  "Co2",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/co2.json"
+    },
+    {
+        "name":  "Collision",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/collision.json"
+    },
+    {
+        "name":  "Colyseum",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/colyseum.json"
+    },
+    {
+        "name":  "Deathrow",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/deathrow.json"
+    },
+    {
+        "name":  "Defi",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/defi.json"
+    },
+    {
+        "name":  "Der",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/der.json"
+    },
+    {
+        "name":  "Derelict",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/derelict.json"
+    },
+    {
+        "name":  "Desty",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/desty.json"
+    },
+    {
+        "name":  "Dethroned",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/dethroned.json"
+    },
+    {
+        "name":  "Diablo",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/diablo.json"
+    },
+    {
+        "name":  "Digsite",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/digsite.json"
+    },
+    {
+        "name":  "Dreams",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/dreams.json"
+    },
+    {
+        "name":  "Dune",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/dune.json"
+    },
+    {
+        "name":  "Dunes",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/dunes.json"
+    },
+    {
+        "name":  "Dust",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/dust.json"
+    },
+    {
+        "name":  "Eruption",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/eruption.json"
+    },
+    {
+        "name":  "Favela",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/favela.json"
+    },
+    {
+        "name":  "Festivus",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/festivus.json"
+    },
+    {
+        "name":  "Flooded",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/flooded.json"
+    },
+    {
+        "name":  "Flora",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/flora.json"
+    },
+    {
+        "name":  "Fortress",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/fortress.json"
+    },
+    {
+        "name":  "Foundry",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/foundry.json"
+    },
+    {
+        "name":  "Frontier",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/frontier.json"
+    },
+    {
+        "name":  "Funeral",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/funeral.json"
+    },
+    {
+        "name":  "Gauntlet",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/gauntlet.json"
+    },
+    {
+        "name":  "Grot",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/grot.json"
+    },
+    {
+        "name":  "Gulag",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/gulag.json"
+    },
+    {
+        "name":  "Gym",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/gym.json"
+    },
+    {
+        "name":  "Haji",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/haji.json"
+    },
+    {
+        "name":  "Hallway",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/hallway.json"
+    },
+    {
+        "name":  "Hell",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/hell.json"
+    },
+    {
+        "name":  "Highrises",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/highrises.json"
+    },
+    {
+        "name":  "Inferno",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/inferno.json"
+    },
+    {
+        "name":  "Island",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/island.json"
+    },
+    {
+        "name":  "Islands",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/islands.json"
+    },
+    {
+        "name":  "Juxt",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/juxt.json"
+    },
+    {
+        "name":  "Labs",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/labs.json"
+    },
+    {
+        "name":  "Lava",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/lava.json"
+    },
+    {
+        "name":  "Lilnorth",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/lilnorth.json"
+    },
+    {
+        "name":  "Lost",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/lost.json"
+    },
+    {
+        "name":  "Losttemple",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/losttemple.json"
+    },
+    {
+        "name":  "Lotus",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/lotus.json"
+    },
+    {
+        "name":  "Mefitis",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/mefitis.json"
+    },
+    {
+        "name":  "Metro",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/metro.json"
+    },
+    {
+        "name":  "Michelin",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/michelin.json"
+    },
+    {
+        "name":  "Minimart",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/minimart.json"
+    },
+    {
+        "name":  "Mirage",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/mirage.json"
+    },
+    {
+        "name":  "Mothership",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/mothership.json"
+    },
+    {
+        "name":  "Mtboofi",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/mtboofi.json"
+    },
+    {
+        "name":  "Mtwerwer",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/mtwerwer.json"
+    },
+    {
+        "name":  "Nebu",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/nebu.json"
+    },
+    {
+        "name":  "North",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/north.json"
+    },
+    {
+        "name":  "Nuke",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/nuke.json"
+    },
+    {
+        "name":  "Nuketown",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/nuketown.json"
+    },
+    {
+        "name":  "Nuketown1847",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/nuketown1847.json"
+    },
+    {
+        "name":  "Nuke Winter",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/nuke-winter.json"
+    },
+    {
+        "name":  "Obstruction",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/obstruction.json"
+    },
+    {
+        "name":  "Oilrig",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/oilrig.json"
+    },
+    {
+        "name":  "Oilrig Tdm",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/oilrig_tdm.json"
+    },
+    {
+        "name":  "Palace",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/palace.json"
+    },
+    {
+        "name":  "Pitfall",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/pitfall.json"
+    },
+    {
+        "name":  "Plunder",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/plunder.json"
+    },
+    {
+        "name":  "Pool",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/pool.json"
+    },
+    {
+        "name":  "Poussiere",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/poussiere.json"
+    },
+    {
+        "name":  "Prison",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/prison.json"
+    },
+    {
+        "name":  "Race",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/race.json"
+    },
+    {
+        "name":  "Racetrack",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/racetrack.json"
+    },
+    {
+        "name":  "Redemption",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/redemption.json"
+    },
+    {
+        "name":  "Rialto",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/rialto.json"
+    },
+    {
+        "name":  "Rift",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/rift.json"
+    },
+    {
+        "name":  "Rig",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/rig.json"
+    },
+    {
+        "name":  "Royale",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/royale.json"
+    },
+    {
+        "name":  "Ruins",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/ruins.json"
+    },
+    {
+        "name":  "Rust",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/rust.json"
+    },
+    {
+        "name":  "Rust Summer",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/rust-summer.json"
+    },
+    {
+        "name":  "Saintnorth Tdm",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/saintnorth_tdm.json"
+    },
+    {
+        "name":  "Sanctuary",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/sanctuary.json"
+    },
+    {
+        "name":  "Sandstorm",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/sandstorm.json"
+    },
+    {
+        "name":  "Sandstorm Winter",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/sandstorm-winter.json"
+    },
+    {
+        "name":  "Sandtown",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/sandtown.json"
+    },
+    {
+        "name":  "Schism",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/schism.json"
+    },
+    {
+        "name":  "Sealed",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/sealed.json"
+    },
+    {
+        "name":  "Shipment",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/shipment.json"
+    },
+    {
+        "name":  "Shipment Summer",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/shipment-summer.json"
+    },
+    {
+        "name":  "Shipment Winter Old",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/shipment-winter-old.json"
+    },
+    {
+        "name":  "Shore",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/shore.json"
+    },
+    {
+        "name":  "Shore Summer",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/shore-summer.json"
+    },
+    {
+        "name":  "Sidehalls",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/sidehalls.json"
+    },
+    {
+        "name":  "Siege",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/siege.json"
+    },
+    {
+        "name":  "Ski",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/ski.json"
+    },
+    {
+        "name":  "Skyfel",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/skyfel.json"
+    },
+    {
+        "name":  "Skyhigh",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/skyhigh.json"
+    },
+    {
+        "name":  "Skytown",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/skytown.json"
+    },
+    {
+        "name":  "Slate",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/slate.json"
+    },
+    {
+        "name":  "Snowfort",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/snowfort.json"
+    },
+    {
+        "name":  "Stadium",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/stadium.json"
+    },
+    {
+        "name":  "Station",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/station.json"
+    },
+    {
+        "name":  "Station Winter",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/station-winter.json"
+    },
+    {
+        "name":  "Storage",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/storage.json"
+    },
+    {
+        "name":  "Sundial",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/sundial.json"
+    },
+    {
+        "name":  "Sunken",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/sunken.json"
+    },
+    {
+        "name":  "Tectonic",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/tectonic.json"
+    },
+    {
+        "name":  "Temple",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/temple.json"
+    },
+    {
+        "name":  "Terminal",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/terminal.json"
+    },
+    {
+        "name":  "Terra",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/terra.json"
+    },
+    {
+        "name":  "Time",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/time.json"
+    },
+    {
+        "name":  "Toilet",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/toilet.json"
+    },
+    {
+        "name":  "Tomesha",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/tomesha.json"
+    },
+    {
+        "name":  "Tower",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/tower.json"
+    },
+    {
+        "name":  "Towers",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/towers.json"
+    },
+    {
+        "name":  "Town",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/town.json"
+    },
+    {
+        "name":  "Train",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/train.json"
+    },
+    {
+        "name":  "Tropical",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/tropical.json"
+    },
+    {
+        "name":  "Tsunami",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/tsunami.json"
+    },
+    {
+        "name":  "Tunnel",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/tunnel.json"
+    },
+    {
+        "name":  "Underwater",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/underwater.json"
+    },
+    {
+        "name":  "Verdant",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/verdant.json"
+    },
+    {
+        "name":  "Vertigo",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/vertigo.json"
+    },
+    {
+        "name":  "Village",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/village.json"
+    },
+    {
+        "name":  "Warehouse",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/warehouse.json"
+    },
+    {
+        "name":  "Western",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/western.json"
+    },
+    {
+        "name":  "Windmill",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/windmill.json"
+    },
+    {
+        "name":  "Workshop",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/workshop.json"
+    },
+    {
+        "name":  "Xyz",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/xyz.json"
+    },
+    {
+        "name":  "Xyz2",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/xyz2.json"
+    },
+    {
+        "name":  "Yggdrasil",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/yggdrasil.json"
+    },
+    {
+        "name":  "Zenith",
+        "img":  "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl":  "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/zenith.json"
+    }
+]
