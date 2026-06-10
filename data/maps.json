@@ -25,6 +25,11 @@
         "downloadUrl": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/apartment.json"
     },
     {
+        "name": "Arena",
+        "img": "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/arena.json"
+    },
+    {
         "name": "Arid",
         "img": "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
         "downloadUrl": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/arid.json"
@@ -123,6 +128,11 @@
         "name": "Colyseum",
         "img": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/map-imgs/Colyseum.webp",
         "downloadUrl": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/colyseum.json"
+    },
+    {
+        "name": "Cove",
+        "img": "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/cove.json"
     },
     {
         "name": "Deathrow",
@@ -260,6 +270,11 @@
         "downloadUrl": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/hallway.json"
     },
     {
+        "name": "Hearth",
+        "img": "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/hearth.json"
+    },
+    {
         "name": "Hell",
         "img": "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
         "downloadUrl": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/hell.json"
@@ -303,6 +318,11 @@
         "name": "Lilnorth",
         "img": "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
         "downloadUrl": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/lilnorth.json"
+    },
+    {
+        "name": "Lodge",
+        "img": "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/lodge.json"
     },
     {
         "name": "Lost",
@@ -375,6 +395,11 @@
         "downloadUrl": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/nuke.json"
     },
     {
+        "name": "Nuke Winter",
+        "img": "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
+        "downloadUrl": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/nuke-winter.json"
+    },
+    {
         "name": "Nuketown",
         "img": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/map-imgs/Nuketown.webp",
         "downloadUrl": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/nuketown.json"
@@ -383,11 +408,6 @@
         "name": "Nuketown1847",
         "img": "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
         "downloadUrl": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/nuketown1847.json"
-    },
-    {
-        "name": "Nuke Winter",
-        "img": "https://i.pinimg.com/736x/a1/cd/44/a1cd44f6617beebb9794877ef59082a1.jpg",
-        "downloadUrl": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/nuke-winter.json"
     },
     {
         "name": "Obstruction",
