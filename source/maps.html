@@ -164,16 +164,6 @@
 
         #search::placeholder { color: var(--text-muted); }
 
-        #map-count {
-            text-align: center;
-            color: var(--text-muted);
-            font-size: .85rem;
-            margin-bottom: 28px;
-            font-weight: 500;
-        }
-
-        #map-count span { color: var(--green); font-weight: 700; }
-
         .maps-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -189,7 +179,6 @@
             background: var(--card-bg);
             border: 1px solid var(--border);
             transition: transform .22s cubic-bezier(.34,1.56,.64,1), border-color .2s, box-shadow .2s;
-            cursor: pointer;
             display: flex;
             flex-direction: column;
             position: relative;
@@ -241,8 +230,7 @@
         .map-card-body {
             padding: 13px 15px 15px;
             display: flex;
-            align-items: center;
-            justify-content: space-between;
+            flex-direction: column;
             gap: 10px;
         }
 
@@ -253,35 +241,171 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            flex: 1;
+            width: 100%;
         }
 
-        .map-dl-btn {
+        .map-card-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .btn-icon {
             display: inline-flex;
             align-items: center;
-            gap: 6px;
-            padding: 7px 14px;
+            justify-content: center;
+            width: 34px;
+            height: 34px;
             border-radius: 8px;
-            border: 1px solid rgba(27, 217, 106, 0.3);
-            background: rgba(27, 217, 106, 0.1);
-            color: var(--green);
-            font-size: .78rem;
+            cursor: pointer;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-muted);
+            transition: all .2s;
+        }
+
+        .btn-icon:hover { 
+            background: rgba(255, 255, 255, 0.07); 
+            color: var(--text); 
+        }
+
+        .btn-icon svg { width: 16px; height: 16px; stroke-width: 2.5; }
+
+        .toast-container {
+            position: fixed;
+            bottom: 28px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            pointer-events: none;
+        }
+
+        .toast {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            padding: 10px 20px;
+            font-size: .87rem;
+            font-weight: 600;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            animation: toastIn .25s ease, toastOut .3s ease 1.8s forwards;
+        }
+
+        .toast svg { width: 15px; height: 15px; color: var(--green); }
+
+        @keyframes toastIn {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes toastOut {
+            from { opacity: 1; }
+            to { opacity: 0; transform: translateY(8px); }
+        }
+
+        .preview-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            background: rgba(8, 10, 16, 0.85);
+            backdrop-filter: blur(16px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .25s ease;
+        }
+
+        .preview-overlay.visible { opacity: 1; pointer-events: all; }
+
+        .preview-modal {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            width: 100%;
+            max-width: 860px;
+            max-height: 90vh;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: var(--border) transparent;
+            transform: translateY(20px) scale(0.97);
+            transition: transform .25s ease;
+            position: relative;
+        }
+
+        .preview-overlay.visible .preview-modal { transform: translateY(0) scale(1); }
+        .preview-modal::-webkit-scrollbar { width: 6px; }
+        .preview-modal::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+        .preview-img-section {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #000;
+            border-radius: 20px 20px 0 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .preview-main-img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            user-select: none;
+        }
+
+        .preview-body { padding: 22px 26px 26px; }
+
+        .preview-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 22px;
+        }
+
+        .preview-title-block { display: flex; align-items: baseline; gap: 12px; }
+        .preview-title { font-size: 1.5rem; font-weight: 800; color: var(--text); margin-bottom: 0; }
+
+        .preview-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+
+        .preview-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-muted);
+            font-size: .88rem;
             font-weight: 700;
             font-family: var(--font);
             cursor: pointer;
+            transition: all .2s;
             text-decoration: none;
-            white-space: nowrap;
-            transition: background .2s, border-color .2s, transform .15s;
-            flex-shrink: 0;
         }
 
-        .map-dl-btn:hover {
-            background: rgba(27, 217, 106, 0.2);
-            border-color: rgba(27, 217, 106, 0.6);
-            transform: translateY(-1px);
-        }
-
-        .map-dl-btn svg { width: 13px; height: 13px; stroke-width: 2.5; }
+        .preview-btn svg { width: 15px; height: 15px; stroke-width: 2.5; }
+        .preview-btn:hover { background: rgba(255, 255, 255, 0.07); color: var(--text); border-color: rgba(255, 255, 255, 0.15); }
+        .preview-btn.primary { background: rgba(27, 217, 106, 0.12); color: var(--green); border-color: rgba(27, 217, 106, 0.3); }
+        .preview-btn.primary:hover { background: rgba(27, 217, 106, 0.22); border-color: rgba(27, 217, 106, 0.5); }
 
         #no-results {
             display: none;
@@ -389,7 +513,7 @@
             <input id="search" type="text" placeholder="Search maps…" autocomplete="off" spellcheck="false">
         </div>
 
-        <div id="map-count"></div>
+
 
         <div id="loader-wrap" class="page-loader"><div class="loader"></div></div>
 
@@ -438,31 +562,174 @@
         </div>
     </footer>
 
+    <div class="toast-container" id="toast-container"></div>
+
+    <div class="preview-overlay" id="preview-overlay" onclick="handleOverlayClick(event)">
+        <div class="preview-modal" id="preview-modal" onclick="event.stopPropagation()">
+            <div class="preview-img-section loader-container">
+                <img class="preview-main-img" id="preview-img" src="" alt="" draggable="false">
+                <div class="loader"></div>
+            </div>
+            <div class="preview-body">
+                <div class="preview-header">
+                    <div class="preview-title-block">
+                        <div class="preview-title" id="preview-title"></div>
+                    </div>
+                </div>
+                <div class="preview-actions" id="preview-actions"></div>
+            </div>
+        </div>
+    </div>
+
     <script>
         const JSON_URL = 'https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/data/maps.json';
 
         let allMaps = [];
+        let cur = null;
+
+        const titleToSlug = t => encodeURIComponent(t.trim().replace(/\s+/g, '-').toLowerCase());
+        const slugToTitle = s => decodeURIComponent(s).replace(/-/g, ' ').toLowerCase();
+
+        const showToast = (msg, icon = 'check') => {
+            let t = document.createElement('div');
+            t.className = 'toast';
+            t.innerHTML = `<i data-lucide="${icon}"></i><span>${msg}</span>`;
+            document.getElementById('toast-container').appendChild(t);
+            lucide.createIcons();
+            setTimeout(() => t.remove(), 2200);
+        };
+
+        const handleDownload = (url, title) => {
+            if (!url) return;
+            fetch(url).then(r => r.ok ? r.text() : Promise.reject()).then(c => {
+                let a = document.createElement('a'),
+                    f = url.split('/').pop();
+                if (!f || !f.endsWith('.json')) f = title.toLowerCase().replace(/[^a-z0-9]+/g, '_') + '.json';
+                a.href = URL.createObjectURL(new Blob([c], { type: 'application/json' }));
+                a.download = f;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(a.href);
+            }).catch(() => showToast('Download failed.', 'alert-circle'));
+        };
+
+        const copyJSONFile = async url => {
+            if (!url) return;
+            try {
+                const res = await fetch(url);
+                if (!res.ok) throw new Error('Failed to fetch');
+                const text = await res.text();
+                await navigator.clipboard.writeText(text);
+                showToast('Map JSON copied to clipboard!');
+            } catch {
+                showToast('Failed to copy JSON.', 'alert-circle');
+            }
+        };
+
+        const shareCurrentPage = () => {
+            const slug = cur ? titleToSlug(cur.name) : '';
+            const shareUrl = slug
+                ? `${location.origin}/maps/${slug}`
+                : location.href;
+
+            navigator.clipboard.writeText(shareUrl)
+                .then(() => showToast('Link copied to clipboard!'))
+                .catch(() => showToast('Failed to copy link.', 'alert-circle'));
+        };
+
+        const openPreview = map => {
+            cur = map;
+            let img = document.getElementById('preview-img'),
+                loader = document.querySelector('.preview-img-section .loader');
+            
+            loader.style.display = 'block';
+            img.onload = () => loader.style.display = 'none';
+            img.onerror = () => {
+                loader.style.display = 'none';
+                img.src = '';
+                img.style.background = '#000';
+            };
+            img.src = map.img || '';
+            
+            document.getElementById('preview-title').textContent = map.name;
+            
+            let ac = document.getElementById('preview-actions');
+            ac.innerHTML = `
+                <button class="preview-btn primary" onclick="handleDownload('${map.downloadUrl}','${map.name.replace(/'/g, "\\'")}')">
+                    <i data-lucide="download"></i> Download Map
+                </button>
+                <button class="preview-btn" onclick="shareCurrentPage()">
+                    <i data-lucide="share-2"></i> Share
+                </button>
+            `;
+            
+            document.getElementById('preview-overlay').classList.add('visible');
+            document.body.style.overflow = 'hidden';
+            lucide.createIcons();
+            history.pushState({ previewOpen: true }, '', `#${titleToSlug(map.name)}`);
+        };
+
+        const closePreview = () => {
+            document.getElementById('preview-overlay').classList.remove('visible');
+            document.body.style.overflow = '';
+            cur = null;
+            history.pushState({ previewOpen: false }, '', location.pathname + location.search);
+        };
+
+        const handleOverlayClick = e => {
+            if (e.target === document.getElementById('preview-overlay')) closePreview();
+        };
+
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') {
+                if (document.getElementById('preview-overlay').classList.contains('visible')) closePreview();
+            }
+        });
+
+        const handleHash = () => {
+            let h = location.hash;
+            if (!h || h.length < 2) return;
+
+            let i = allMaps.find(m => m.name.toLowerCase() === slugToTitle(h.substring(1)));
+            if (i) {
+                openPreview(i);
+            } else {
+                history.pushState(null, '', location.pathname + location.search);
+            }
+        };
+
+        window.addEventListener('popstate', () => {
+            let h = location.hash;
+            if (h && h.length > 1) {
+                handleHash();
+            } else {
+                if (document.getElementById('preview-overlay').classList.contains('visible')) {
+                    document.getElementById('preview-overlay').classList.remove('visible');
+                    document.body.style.overflow = '';
+                    cur = null;
+                }
+            }
+        });
 
         function renderCards(maps) {
             const grid = document.getElementById('maps-grid');
             const noResults = document.getElementById('no-results');
-            const countEl = document.getElementById('map-count');
 
             grid.innerHTML = '';
 
             if (maps.length === 0) {
                 noResults.style.display = 'block';
-                countEl.innerHTML = '';
                 return;
             }
 
             noResults.style.display = 'none';
-            countEl.innerHTML = `Showing <span>${maps.length}</span> map${maps.length !== 1 ? 's' : ''}`;
 
             maps.forEach((map, i) => {
                 const card = document.createElement('div');
                 card.className = 'map-card';
                 card.style.animationDelay = `${Math.min(i * 0.03, 0.5)}s`;
+                card.onclick = () => openPreview(map);
 
                 const imgWrap = document.createElement('div');
                 imgWrap.className = 'map-card-img-wrap';
@@ -487,17 +754,32 @@
                 nameEl.textContent = map.name;
                 nameEl.title = map.name;
 
-                const dlBtn = document.createElement('a');
-                dlBtn.className = 'map-dl-btn';
-                dlBtn.href = map.downloadUrl;
-                dlBtn.target = '_blank';
-                dlBtn.rel = 'noopener noreferrer';
-                dlBtn.download = '';
-                dlBtn.innerHTML = '<i data-lucide="download"></i> Get';
-                dlBtn.onclick = e => e.stopPropagation();
+                const actions = document.createElement('div');
+                actions.className = 'map-card-actions';
+
+                const dlBtn = document.createElement('div');
+                dlBtn.className = 'btn-icon';
+                dlBtn.title = 'Download Map';
+                dlBtn.innerHTML = '<i data-lucide="download"></i>';
+                dlBtn.onclick = e => {
+                    e.stopPropagation();
+                    handleDownload(map.downloadUrl, map.name);
+                };
+
+                const copyBtn = document.createElement('div');
+                copyBtn.className = 'btn-icon';
+                copyBtn.title = 'Copy Map JSON';
+                copyBtn.innerHTML = '<i data-lucide="clipboard"></i>';
+                copyBtn.onclick = e => {
+                    e.stopPropagation();
+                    copyJSONFile(map.downloadUrl);
+                };
+
+                actions.appendChild(dlBtn);
+                actions.appendChild(copyBtn);
 
                 body.appendChild(nameEl);
-                body.appendChild(dlBtn);
+                body.appendChild(actions);
                 card.appendChild(imgWrap);
                 card.appendChild(body);
                 grid.appendChild(card);
@@ -524,6 +806,7 @@
 
             document.getElementById('loader-wrap').style.display = 'none';
             renderCards(allMaps);
+            handleHash();
 
             const search = document.getElementById('search');
             search.addEventListener('input', () => renderCards(filterMaps(search.value)));
