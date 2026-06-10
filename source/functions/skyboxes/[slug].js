@@ -1,7 +1,6 @@
 const JSON_URL = 'https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/data/skyboxes.json';
 const SITE_URL = 'https://kirkacommunityhub.pages.dev';
 const FALLBACK_IMG = `${SITE_URL}/assets/icon.png`;
-const FALLBACK_TITLE = 'Kirka Community Hub - Skyboxes';
 const FALLBACK_DESC = 'Discover and download custom skyboxes for kirka.io';
 
 const slugToName = (s) => decodeURIComponent(s).replace(/-/g, ' ').toLowerCase();

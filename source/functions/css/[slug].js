@@ -4,7 +4,6 @@ const CSS_JSON_URL =
 
 const SITE_URL = 'https://kirkacommunityhub.pages.dev';
 const FALLBACK_IMG = `${SITE_URL}/assets/icon.png`;
-const FALLBACK_TITLE = 'Kirka Community Hub - CSS';
 const FALLBACK_DESC = 'Discover and download custom CSS themes for kirka.io';
 
 const slugToTitle = (s) =>

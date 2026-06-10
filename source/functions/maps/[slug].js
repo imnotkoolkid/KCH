@@ -3,7 +3,6 @@ const MAPS_JSON_URL =
 
 const SITE_URL = 'https://kirkacommunityhub.pages.dev';
 const FALLBACK_IMG = `${SITE_URL}/assets/icon.png`;
-const FALLBACK_DESC = 'Discover and download custom maps for kirka.io';
 
 const slugToTitle = (s) =>
   decodeURIComponent(s).replace(/-/g, ' ').toLowerCase();
@@ -28,7 +27,6 @@ function isBotRequest(request) {
 
 function buildOgHtml({ name, image, slug }) {
   const ogTitle = escapeHtml(`${name}`);
-  const ogDesc = escapeHtml(FALLBACK_DESC);
   const ogImage = escapeHtml(image || FALLBACK_IMG);
   const ogUrl = escapeHtml(`${SITE_URL}/maps/${slug}`);
   const canonical = escapeHtml(`${SITE_URL}/maps.html#${encodeURIComponent(slug)}`);
@@ -39,16 +37,13 @@ function buildOgHtml({ name, image, slug }) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>${ogTitle}</title>
-  <meta name="description" content="${ogDesc}">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Kirka Community Hub">
   <meta property="og:url" content="${ogUrl}">
   <meta property="og:title" content="${ogTitle}">
-  <meta property="og:description" content="${ogDesc}">
   <meta property="og:image" content="${ogImage}">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${ogTitle}">
-  <meta name="twitter:description" content="${ogDesc}">
   <meta name="twitter:image" content="${ogImage}">
 
   <meta name="theme-color" content="#1bd96a">
