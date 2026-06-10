@@ -5,4 +5,5 @@
 /skyboxes/:slug  /skyboxes/:slug  200
 /scripts/:slug  /scripts/:slug  200
 /sounds/:slug  /sounds/:slug  200
+/maps/:slug  /maps/:slug  200
 /* /404.html 404
