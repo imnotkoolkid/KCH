@@ -64,7 +64,7 @@
     "owner": "daymian",
     "icon": "",
     "description": "Tauri client for Kirka.io",
-    "platforms": ["Windows", "macOS", "Linux"],
+    "platforms": ["Windows", "Linux"],
     "source": "closed source",
     "development": "active",
     "downloadUrl": "https://github.com/d4ym1an/aero-client-releases/releases"
