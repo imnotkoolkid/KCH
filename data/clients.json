@@ -60,6 +60,16 @@
     "downloadUrl": "https://github.com/OBS-Akuma/smudgy-client/releases"
   },
   {
+    "name": "Aero Client",
+    "owner": "daymian",
+    "icon": "",
+    "description": "Tauri client for Kirka.io",
+    "platforms": ["Windows", "macOS", "Linux"],
+    "source": "closed source",
+    "development": "active",
+    "downloadUrl": "https://github.com/d4ym1an/aero-client-releases/releases"
+  },
+  {
     "name": "Coke Client",
     "owner": "42infi",
     "icon": "https://raw.githubusercontent.com/42infi/juice-client/refs/heads/main/src/assets/img/icon.png",
