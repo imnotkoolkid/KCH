@@ -2,13 +2,16 @@
 > Hub for Kirka.io customizations and community resources.
 
 ## Core Resources
-- Assets: /pages/assets.html (Scripts, Skyboxes, Kill Icons, and Sounds)
-- CSS Themes: /pages/css.html  (Free and Paidf themes for the Kirka)
-- Crosshairs: /pages/crosshairs.html (Competitive crosshair overlays)
-- Textures: /pages/textures.html (Custom map and weapon textures)
-- Clients: /pages/clients.html (3rd party game clients for kirka)
+- Assets: /assets.html (Scripts, Skyboxes, Kill Icons, and Sounds)
+- CSS Themes: /css.html (Free and paid themes for Kirka)
+- Crosshairs: /crosshairs.html (crosshair overlays)
+- Maps: /maps.html (custom & cummunit maps)
+- Textures: /textures.html (Custom map textures)
+- Clients: /clients.html  (game clients for kirka)
 
 ## Community & Tools
-- Tools: / (Includes Clan Manager and Data URI Converter)
-- Social: Discord community for scrims and developer chat.
-- Submission: /other-pages/submit-content.html (Community contribution portal)
+- Tools: / (Includes links to all kirka util webpages)
+- Social: /social.html (Discord community for scrims)
+- Submission: /submit-content.html (Community contribution portal)
+- Contribution: /contribution.html (Guide to contributing to KCH)
+- Legal: /tos.html (Terms of Service) and /report.html (Report issues)
