@@ -97,6 +97,72 @@
           "url": "https://rawcdn.githack.com/imnotkoolkid/KCH/bcf452d8a640911d87cad088efcfb8d695fe0d9c/resources/sounds/media%20pack-1/__use__.fd944232.mp3"
         }
       ]
+    },
+    {
+      "name": "Sound Pack 2",
+      "owner": "grubbify",
+      "audioFiles": [
+        {
+          "name": "Hit",
+          "url": "https://rawcdn.githack.com/imnotkoolkid/KCH/66ddf81332da2b5d97927c86d7e7b7d2c21eec41/resources/sounds/media%20pack-2/__hit__.200043fa.mp3"
+        },
+        {
+          "name": "Kill 1",
+          "url": "https://rawcdn.githack.com/imnotkoolkid/KCH/66ddf81332da2b5d97927c86d7e7b7d2c21eec41/resources/sounds/media%20pack-2/__kill1__.623ec38b.mp3"
+        },
+        {
+          "name": "Kill 2",
+          "url": "https://rawcdn.githack.com/imnotkoolkid/KCH/66ddf81332da2b5d97927c86d7e7b7d2c21eec41/resources/sounds/media%20pack-2/__kill2__.8ffe9342.mp3"
+        },
+        {
+          "name": "Kill 3",
+          "url": "https://rawcdn.githack.com/imnotkoolkid/KCH/66ddf81332da2b5d97927c86d7e7b7d2c21eec41/resources/sounds/media%20pack-2/__kill3__.ba83d756.mp3"
+        },
+        {
+          "name": "Kill 4",
+          "url": "https://rawcdn.githack.com/imnotkoolkid/KCH/66ddf81332da2b5d97927c86d7e7b7d2c21eec41/resources/sounds/media%20pack-2/__kill4__.08568f50.mp3"
+        },
+        {
+          "name": "Kill 5",
+          "url": "https://rawcdn.githack.com/imnotkoolkid/KCH/66ddf81332da2b5d97927c86d7e7b7d2c21eec41/resources/sounds/media%20pack-2/__kill5__.cf529154.mp3"
+        },
+        {
+          "name": "Use 1",
+          "url": "https://rawcdn.githack.com/imnotkoolkid/KCH/66ddf81332da2b5d97927c86d7e7b7d2c21eec41/resources/sounds/media%20pack-2/__use__.5421e46b.mp3"
+        },
+        {
+          "name": "Use 2 (Alt)",
+          "url": "https://rawcdn.githack.com/imnotkoolkid/KCH/66ddf81332da2b5d97927c86d7e7b7d2c21eec41/resources/sounds/media%20pack-2/__use__.5ab6f364%20(2).mp3"
+        },
+        {
+          "name": "Use 2",
+          "url": "https://rawcdn.githack.com/imnotkoolkid/KCH/66ddf81332da2b5d97927c86d7e7b7d2c21eec41/resources/sounds/media%20pack-2/__use__.5ab6f364.mp3"
+        },
+        {
+          "name": "Use 3",
+          "url": "https://rawcdn.githack.com/imnotkoolkid/KCH/66ddf81332da2b5d97927c86d7e7b7d2c21eec41/resources/sounds/media%20pack-2/__use__.6f884eb5.mp3"
+        },
+        {
+          "name": "Use 4",
+          "url": "https://rawcdn.githack.com/imnotkoolkid/KCH/66ddf81332da2b5d97927c86d7e7b7d2c21eec41/resources/sounds/media%20pack-2/__use__.8dd49954.mp3"
+        },
+        {
+          "name": "Use 5",
+          "url": "https://rawcdn.githack.com/imnotkoolkid/KCH/66ddf81332da2b5d97927c86d7e7b7d2c21eec41/resources/sounds/media%20pack-2/__use__.a6197a4d.mp3"
+        },
+        {
+          "name": "Whoosh",
+          "url": "https://rawcdn.githack.com/imnotkoolkid/KCH/66ddf81332da2b5d97927c86d7e7b7d2c21eec41/resources/sounds/media%20pack-2/__whoosh__.634f7dda.mp3"
+        },
+        {
+          "name": "Wound 1",
+          "url": "https://rawcdn.githack.com/imnotkoolkid/KCH/66ddf81332da2b5d97927c86d7e7b7d2c21eec41/resources/sounds/media%20pack-2/__wound1__.531f0649.mp3"
+        },
+        {
+          "name": "Wound 2",
+          "url": "https://rawcdn.githack.com/imnotkoolkid/KCH/66ddf81332da2b5d97927c86d7e7b7d2c21eec41/resources/sounds/media%20pack-2/__wound2__.6d084558.mp3"
+        }
+      ]
     }
   ]
 }
