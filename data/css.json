@@ -371,5 +371,17 @@
       "discord": "https://discord.com/users/1269597878532309054",
       "label": "",
       "downloadUrl": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/css-files/Goku.css"
+    },
+    {
+      "title": "rune clan css",
+      "description": "a fully new clan css based on futuristic features",
+      "homeImage": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/css-imgs/rune-clan.png",
+      "ingameImage": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/css-imgs/rune-clan_ingame.png",
+      "tags": ["Futuristic", "Clan", "Red"],
+      "availability": "free",
+      "owner": "ONE PRO",
+      "discord": "https://discord.com/users/1049005256740180088",
+      "label": "",
+      "downloadUrl": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/css-files/rune%20clan.css"
     }
   ]
