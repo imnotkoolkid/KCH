@@ -1,84 +1,92 @@
 {
-"scripts": [
-{
-"name": "Custom Skin Link",
-"url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/coustomskinlink.js",
-"owner": "unknown",
-"discord": "",
-"description": "customize player body and head colors or use a custom skin via a skin URL.",
-"previewImage": ""
-},
-{
-"name": "WASD Shown",
-"url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/WasdShown.js",
-"owner": "unknown",
-"discord": "",
-"description": "displays a live WASD key overlay to show movement inputs.",
-"previewImage": ""
-},
-{
-"name": "Player Count",
-"url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/Playercount.js",
-"owner": "unknown",
-"discord": "",
-"description": "Shows the current number of players acorss all servers",
-"previewImage": ""
-},
-{
-"name": "gun scale modifier",
-"url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/gun-scale-modifier.js",
-"owner": "imnotkoolkid",
-"discord": "",
-"description": "modify gun scale with T/Y",
-"previewImage": ""
-},
-{
-"name": "gun wireframe toggle",
-"url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/gun-wireframe-toggle.js",
-"owner": "imnotkoolkid",
-"discord": "",
-"description": "toggle wireframe for guns with G",
-"previewImage": ""
-},
-{
-"name": "Gun scale modifier + wireframe toggle + rgb toggle",
-"url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/gun-scale-modifier-wireframe-toggle.js",
-"owner": "imnotkoolkid",
-"discord": "",
-"description": "modify gun scale with T/Y , toggle wireframe with G and rgb mode with H",
-"previewImage": ""
-},
-{
-"name": "Clock",
-"url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/clock.js",
-"owner": "unknown",
-"discord": "",
-"description": "add real-time clock display",
-"previewImage": ""
-},
-{
-"name": "Open All Chests",
-"url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/Open%20All%20Chests.js",
-"owner": "unknown",
-"discord": "",
-"description": "automatically opens all available chests at once",
-"previewImage": ""
-},
-{
-"name": "Open All Cards",
-"url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/Open%20All%20Cards.js",
-"owner": "unknown",
-"discord": "",
-"description": "automatically opens all available cards at once",
-"previewImage": ""
-},
-{
-"name": "Fabinglbs",
-"url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/Fabinglbs.js",
-"owner": "unknown",
-"discord": "",
-"description": "loads custom glb models for smaller guns",
-"previewImage": ""
-}
-]
+  "scripts": [
+    {
+      "name": "Custom Skin Link",
+      "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/coustomskinlink.js",
+      "owner": "unknown",
+      "discord": "",
+      "description": "customize player body and head colors or use a custom skin via a skin URL. (client only)",
+      "previewImage": ""
+    },
+    {
+      "name": "WASD Shown",
+      "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/WasdShown.js",
+      "owner": "unknown",
+      "discord": "",
+      "description": "displays a live WASD key overlay to show movement inputs.",
+      "previewImage": ""
+    },
+    {
+      "name": "Compass",
+      "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/compass.js",
+      "owner": "imnotkoolkid",
+      "discord": "",
+      "description": "adds a on screen compass",
+      "previewImage": ""
+    },
+    {
+      "name": "Player Count",
+      "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/Playercount.js",
+      "owner": "unknown",
+      "discord": "",
+      "description": "Shows the current number of players acorss all servers",
+      "previewImage": ""
+    },
+    {
+      "name": "Gun scale modifier + wireframe toggle + rgb toggle",
+      "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/gun-scale-modifier-wireframe-toggle.js",
+      "owner": "imnotkoolkid",
+      "discord": "",
+      "description": "modify gun scale with T/Y , toggle wireframe with G and rgb mode with H",
+      "previewImage": ""
+    },
+    {
+      "name": "esc menu bypass",
+      "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/esc-menu-bypass.js",
+      "owner": "imnotkoolkid",
+      "discord": "",
+      "description": "removes 3sec timer in esc menu",
+      "previewImage": ""
+    },
+    {
+      "name": "Clock",
+      "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/clock.js",
+      "owner": "unknown",
+      "discord": "",
+      "description": "add real-time clock display",
+      "previewImage": ""
+    },
+    {
+      "name": "Open All Chests",
+      "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/Open%20All%20Chests.js",
+      "owner": "unknown",
+      "discord": "",
+      "description": "automatically opens all available chests at once",
+      "previewImage": ""
+    },
+    {
+      "name": "Open All Cards",
+      "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/Open%20All%20Cards.js",
+      "owner": "unknown",
+      "discord": "",
+      "description": "automatically opens all available cards at once",
+      "previewImage": ""
+    },
+    {
+      "name": "Fabinglbs",
+      "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/Fabinglbs.js",
+      "owner": "unknown",
+      "discord": "",
+      "description": "loads custom glb models for smaller guns",
+      "previewImage": ""
+    },
+    {
+      "name": "Custom Player Color",
+      "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/Custom%20Player%20Color.js",
+      "owner": "unknown",
+      "discord": "",
+      "description": "customize player body and head colors (browsers + clients)",
+      "previewImage": ""
+    }
+  ]
 }
