@@ -54,7 +54,7 @@
     "owner": "Akuma",
     "icon": "https://raw.githubusercontent.com/OBS-Akuma/smudgy-client/refs/heads/main/src/assets/img/icon.png",
     "description": "Electron client for Kirka.io",
-    "platforms": ["Windows"],
+    "platforms": ["Windows", "Linux"],
     "source": "open source",
     "development": "active",
     "downloadUrl": "https://github.com/OBS-Akuma/smudgy-client/releases"
