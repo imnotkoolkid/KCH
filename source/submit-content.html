@@ -27,9 +27,31 @@
     <meta name="twitter:image" content="https://kirkacommunityhub.pages.dev/assets/icon.png">
     <style>
         .submit-hero {
-            padding: 110px 24px 48px;
+            padding: 140px 24px 48px;
+            background:
+                radial-gradient(circle at 50% 0%, rgba(27, 217, 106, .08) 0%, transparent 70%),
+                linear-gradient(rgba(255, 255, 255, .04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, .04) 1px, transparent 1px);
+            background-size: 100% 100%, 50px 50px, 50px 50px;
+            position: relative;
+        }
+
+        .submit-hero::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+            background: linear-gradient(transparent, var(--bg));
+            pointer-events: none;
+        }
+
+        .submit-hero-container {
             max-width: 900px;
             margin: 0 auto;
+            position: relative;
+            z-index: 1;
         }
 
         .submit-eyebrow {
@@ -375,16 +397,17 @@
 
     <main>
         <div class="submit-hero">
-            <div class="submit-eyebrow">Submit Content</div>
-            <h1>Share your work with<br><span>the community.</span></h1>
-            <p class="lead">
-                Want your CSS themes, crosshairs, textures, clients, scripts, skyboxes, kill icons or sounds hosted on Kirka Community Hub?
-                Contact <strong style="color:var(--text)">imnotkoolkid</strong> on Discord with your submission, check the requirements for your content type below before reaching out.
-            </p>
-            <div class="submit-contact-strip">
-                <a href="tos.html" class="submit-contact-btn">
-                    <i data-lucide="file-text"></i> Read the ToS
-                </a>
+            <div class="submit-hero-container">
+                <h1>Share your work with<br><span>the community.</span></h1>
+                <p class="lead">
+                    Want your CSS themes, crosshairs, textures, clients, scripts, skyboxes, kill icons or sounds hosted on Kirka Community Hub?
+                    Contact <strong style="color:var(--text)">imnotkoolkid</strong> on Discord with your submission, check the requirements for your content type below before reaching out.
+                </p>
+                <div class="submit-contact-strip">
+                    <a href="tos.html" class="submit-contact-btn">
+                        <i data-lucide="file-text"></i> Read the ToS
+                    </a>
+                </div>
             </div>
         </div>
 
@@ -397,7 +420,7 @@
                         <div class="accordion-icon"><i data-lucide="palette"></i></div>
                         <div class="accordion-title">
                             <strong>CSS Themes</strong>
-                            <span>Custom stylesheets for Kirka.io — free, paid, or showcase.</span>
+                            <span>Custom stylesheets for Kirka.io - free, paid, or showcase.</span>
                         </div>
                         <i data-lucide="chevron-down" class="accordion-chevron"></i>
                     </button>
@@ -409,14 +432,14 @@
                         <div class="req-card">
                             <div class="req-card-header"><i data-lucide="list-checks"></i> Submission Requirements</div>
                             <ul class="req-list">
-                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>CSS Code</strong> — A <code>.css</code> file or direct GitHub raw link. No locally loaded assets.</span></li>
-                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Tags</strong> — Three relevant tags (e.g. <code>minimal</code>, <code>dark</code>, <code>cyberpunk</code>).</span></li>
-                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Availability Tag</strong> — One of: <code>free</code>, <code>paid</code>, or <code>showcase</code>.</span></li>
-                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Unique Name</strong> — A distinct, original name for your theme.</span></li>
-                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Short Description</strong> — A concise summary of your CSS theme. <em style="color:#6b7a95">(optional)</em></span></li>
-                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Preview Screenshots</strong> — One home screen image and one in-game image.</span></li>
-                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Discord Contact</strong> — Format: <code>https://discord.com/users/your_user_id</code></span></li>
-                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Username</strong> — A unique username to identify your submission.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>CSS Code</strong> - A <code>.css</code> file or direct GitHub raw link. No locally loaded assets.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Tags</strong> - Three relevant tags (e.g. <code>minimal</code>, <code>dark</code>, <code>cyberpunk</code>).</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Availability Tag</strong> - One of: <code>free</code>, <code>paid</code>, or <code>showcase</code>.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Unique Name</strong> - A distinct, original name for your theme.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Short Description</strong> - A concise summary of your CSS theme. <em style="color:#6b7a95">(optional)</em></span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Preview Screenshots</strong> - One home screen image and one in-game image.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Discord Contact</strong> - Format: <code>https://discord.com/users/your_user_id</code></span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Username</strong> - A unique username to identify your submission.</span></li>
                             </ul>
                         </div>
                         <div class="submit-cta">
@@ -440,11 +463,11 @@
                         <div class="req-card">
                             <div class="req-card-header"><i data-lucide="list-checks"></i> Submission Requirements</div>
                             <ul class="req-list">
-                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Crosshair Image</strong> — A <code>.png</code> or <code>.webp</code> file, or a direct GitHub raw link.</span></li>
-                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Tags</strong> — Relevant tags (e.g. <code>pink</code>, <code>dot</code>, <code>minimal</code>).</span></li>
-                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Unique Name</strong> — A distinct name for your crosshair. <em style="color:#6b7a95">(optional)</em></span></li>
-                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Username</strong> — A unique username to identify your submission.</span></li>
-                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Discord Contact</strong> — Format: <code>https://discord.com/users/your_user_id</code></span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Crosshair Image</strong> - A <code>.png</code> or <code>.webp</code> file, or a direct GitHub raw link.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Tags</strong> - Relevant tags (e.g. <code>pink</code>, <code>dot</code>, <code>minimal</code>).</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Unique Name</strong> - A distinct name for your crosshair. <em style="color:#6b7a95">(optional)</em></span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Username</strong> - A unique username to identify your submission.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Discord Contact</strong> - Format: <code>https://discord.com/users/your_user_id</code></span></li>
                             </ul>
                         </div>
                         <div class="submit-cta">
@@ -467,11 +490,11 @@
                         <div class="req-card">
                             <div class="req-card-header"><i data-lucide="list-checks"></i> Submission Requirements</div>
                             <ul class="req-list">
-                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Texture Image</strong> — A <code>.png</code> or <code>.webp</code> file, or a direct GitHub raw link.</span></li>
-                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Tags</strong> — Three relevant tags (e.g. <code>purple</code>, <code>dark</code>, <code>textured</code>).</span></li>
-                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Unique Name</strong> — A distinct name for your texture. <em style="color:#6b7a95">(optional)</em></span></li>
-                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Username</strong> — A unique username to identify your submission.</span></li>
-                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Discord Contact</strong> — Format: <code>https://discord.com/users/your_user_id</code></span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Texture Image</strong> - A <code>.png</code> or <code>.webp</code> file, or a direct GitHub raw link.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Tags</strong> - Three relevant tags (e.g. <code>purple</code>, <code>dark</code>, <code>textured</code>).</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Unique Name</strong> - A distinct name for your texture. <em style="color:#6b7a95">(optional)</em></span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Username</strong> - A unique username to identify your submission.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Discord Contact</strong> - Format: <code>https://discord.com/users/your_user_id</code></span></li>
                             </ul>
                         </div>
                         <div class="submit-cta">
@@ -494,12 +517,12 @@
                         <div class="req-card">
                             <div class="req-card-header"><i data-lucide="list-checks"></i> Submission Requirements</div>
                             <ul class="req-list">
-                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Script Code</strong> — A <code>.js</code> file or direct GitHub raw link. No locally loaded assets.</span></li>
-                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Unique Name</strong> — A distinct, original name for your script.</span></li>
-                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Short Description</strong> — What your script does and how it works.</span></li>
-                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Preview Screenshots</strong> — Images of your script in action. <em style="color:#6b7a95">(optional)</em></span></li>
-                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Discord Contact</strong> — Format: <code>https://discord.com/users/your_user_id</code></span></li>
-                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Username</strong> — A unique username to identify your submission.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Script Code</strong> - A <code>.js</code> file or direct GitHub raw link. No locally loaded assets.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Unique Name</strong> - A distinct, original name for your script.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Short Description</strong> - What your script does and how it works.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Preview Screenshots</strong> - Images of your script in action. <em style="color:#6b7a95">(optional)</em></span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Discord Contact</strong> - Format: <code>https://discord.com/users/your_user_id</code></span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Username</strong> - A unique username to identify your submission.</span></li>
                             </ul>
                         </div>
                         <div class="submit-cta">
@@ -526,10 +549,10 @@
                         <div class="req-card">
                             <div class="req-card-header"><i data-lucide="list-checks"></i> Submission Requirements</div>
                             <ul class="req-list">
-                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Skybox Image(s)</strong> — <code>.png</code> or <code>.webp</code> files or direct GitHub raw links. If multiple images, label each face: <code>up</code> / <code>down</code> / <code>front</code> / <code>back</code> / <code>left</code> / <code>right</code>.</span></li>
-                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Unique Name</strong> — A distinct, original name for your skybox.</span></li>
-                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Discord Contact</strong> — Format: <code>https://discord.com/users/your_user_id</code></span></li>
-                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Username</strong> — A unique username to identify your submission.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Skybox Image(s)</strong> - <code>.png</code> or <code>.webp</code> files or direct GitHub raw links. If multiple images, label each face: <code>up</code> / <code>down</code> / <code>front</code> / <code>back</code> / <code>left</code> / <code>right</code>.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Unique Name</strong> - A distinct, original name for your skybox.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Discord Contact</strong> - Format: <code>https://discord.com/users/your_user_id</code></span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Username</strong> - A unique username to identify your submission.</span></li>
                             </ul>
                         </div>
                         <div class="submit-cta">
@@ -552,10 +575,10 @@
                         <div class="req-card">
                             <div class="req-card-header"><i data-lucide="list-checks"></i> Submission Requirements</div>
                             <ul class="req-list">
-                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Kill Icon Image</strong> — A <code>.png</code> or <code>.webp</code> file, or a direct GitHub raw link.</span></li>
-                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Unique Name</strong> — A distinct, original name for your kill icon.</span></li>
-                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Discord Contact</strong> — Format: <code>https://discord.com/users/your_user_id</code></span></li>
-                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Username</strong> — A unique username to identify your submission.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Kill Icon Image</strong> - A <code>.png</code> or <code>.webp</code> file, or a direct GitHub raw link.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Unique Name</strong> - A distinct, original name for your kill icon.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Discord Contact</strong> - Format: <code>https://discord.com/users/your_user_id</code></span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Username</strong> - A unique username to identify your submission.</span></li>
                             </ul>
                         </div>
                         <div class="submit-cta">
@@ -577,15 +600,15 @@
                     <div class="accordion-body">
                         <div class="req-note">
                             <i data-lucide="info"></i>
-                            <span>Label each file by its role using the names below. For alternate versions of a file, append <strong><code>(alt)</code></strong> after the name — e.g. <code>Kill 1 (alt)</code>.</span>
+                            <span>Label each file by its role using the names below. For alternate versions of a file, append <strong><code>(alt)</code></strong> after the name - e.g. <code>Kill 1 (alt)</code>.</span>
                         </div>
                         <div class="req-card">
                             <div class="req-card-header"><i data-lucide="list-checks"></i> Submission Requirements</div>
                             <ul class="req-list">
-                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Sound Files</strong> — <code>.mp3</code> or <code>.weba</code> files or direct GitHub raw links. Label every file by its role (see reference table below).</span></li>
-                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Unique Name</strong> — A distinct, original name for your sound pack.</span></li>
-                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Discord Contact</strong> — Format: <code>https://discord.com/users/your_user_id</code></span></li>
-                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Username</strong> — A unique username to identify your submission.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Sound Files</strong> - <code>.mp3</code> or <code>.weba</code> files or direct GitHub raw links. Label every file by its role (see reference table below).</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Unique Name</strong> - A distinct, original name for your sound pack.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Discord Contact</strong> - Format: <code>https://discord.com/users/your_user_id</code></span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Username</strong> - A unique username to identify your submission.</span></li>
                             </ul>
                         </div>
                         <div class="sound-table-wrapper">
@@ -625,14 +648,14 @@
                         <div class="req-card">
                             <div class="req-card-header"><i data-lucide="list-checks"></i> Submission Requirements</div>
                             <ul class="req-list">
-                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Unique Name</strong> — A distinct, original name for your client.</span></li>
-                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Username</strong> — A unique username to identify your submission.</span></li>
-                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Client Icon</strong> — An icon image for the client (<code>.png</code> or <code>.webp</code>).</span></li>
-                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Short Description</strong> — A brief overview of what the client offers and its key features.</span></li>
-                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Supported Platforms</strong> — List supported platforms (e.g. <code>Windows</code>, <code>macOS</code>, <code>Linux</code>, <code>Browser</code>).</span></li>
-                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Source</strong> — Specify <code>open source</code> or <code>closed source</code>. If open source, include the repository link.</span></li>
-                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Download Page URL</strong> — The link where users can download or access the client.</span></li>
-                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Discord Contact</strong> — Format: <code>https://discord.com/users/your_user_id</code></span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Unique Name</strong> - A distinct, original name for your client.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Username</strong> - A unique username to identify your submission.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Client Icon</strong> - An icon image for the client (<code>.png</code> or <code>.webp</code>).</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Short Description</strong> - A brief overview of what the client offers and its key features.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Supported Platforms</strong> - List supported platforms (e.g. <code>Windows</code>, <code>macOS</code>, <code>Linux</code>, <code>Browser</code>).</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Source</strong> - Specify <code>open source</code> or <code>closed source</code>. If open source, include the repository link.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Download Page URL</strong> - The link where users can download or access the client.</span></li>
+                                <li><div class="req-bullet"><i data-lucide="check"></i></div><span><strong>Discord Contact</strong> - Format: <code>https://discord.com/users/your_user_id</code></span></li>
                             </ul>
                         </div>
                         <div class="submit-cta">

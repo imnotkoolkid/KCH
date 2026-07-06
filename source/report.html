@@ -35,7 +35,6 @@
                 linear-gradient(rgba(255, 255, 255, .04) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(255, 255, 255, .04) 1px, transparent 1px);
             background-size: 100% 100%, 50px 50px, 50px 50px;
-            border-bottom: 1px solid var(--mod-card-border);
             position: relative;
         }
 
@@ -125,7 +124,6 @@
             gap: 14px;
             margin-bottom: 18px;
             padding-bottom: 14px;
-            border-bottom: 1px solid var(--mod-card-border);
         }
 
         .report-section-number {
@@ -163,10 +161,7 @@
             line-height: 1.7;
             padding: 6px 0 6px 24px;
             position: relative;
-            border-bottom: 1px solid rgba(48, 54, 61, .4);
         }
-
-        .report-list li:last-child { border-bottom: none; }
 
         .report-list li::before {
             content: "";
@@ -201,6 +196,8 @@
             background: rgba(255, 180, 0, .04);
             border: 1px solid rgba(255, 180, 0, .15);
             border-left: 3px solid #ffb400;
+            display: flex;
+            align-items: center;
         }
     </style>
 </head>

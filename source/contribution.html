@@ -10,7 +10,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="src/pages.css">
     <link rel="icon" type="image/png" href="assets/icon.png">
-    <meta name="description" content="Learn how to contribute to Kirka Community Hub — an open source, community-driven project for Kirka.io.">
+    <meta name="description" content="Learn how to contribute to Kirka Community Hub - an open source, community-driven project for Kirka.io.">
     <meta name="keywords" content="Kirka contribution, Kirka open source, Kirka Community Hub, contribute kirka.io">
     <meta name="author" content="imnotkoolkid">
     <meta name="robots" content="index, follow">
@@ -24,13 +24,35 @@
     <meta name="theme-color" content="#1bd96a">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Kirka Community Hub - Contribution">
-    <meta name="twitter:description" content="Learn how to contribute to the Kirka Community Hub — an open source, community-driven project.">
+    <meta name="twitter:description" content="Learn how to contribute to the Kirka Community Hub - an open source, community-driven project.">
     <meta name="twitter:image" content="https://kirkacommunityhub.pages.dev/assets/icon.png">
     <style>
         .contrib-hero {
-            padding: 110px 24px 60px;
+            padding: 140px 24px 60px;
+            background:
+                radial-gradient(circle at 50% 0%, rgba(27, 217, 106, .08) 0%, transparent 70%),
+                linear-gradient(rgba(255, 255, 255, .04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, .04) 1px, transparent 1px);
+            background-size: 100% 100%, 50px 50px, 50px 50px;
+            position: relative;
+        }
+
+        .contrib-hero::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+            background: linear-gradient(transparent, var(--bg));
+            pointer-events: none;
+        }
+
+        .contrib-hero-container {
             max-width: 860px;
             margin: 0 auto;
+            position: relative;
+            z-index: 1;
         }
 
         .contrib-eyebrow {
@@ -377,19 +399,18 @@
     <main>
 
         <div class="contrib-hero">
-            <div class="contrib-eyebrow">
-                Open Source 
+            <div class="contrib-hero-container">
+                <h1>Built by the community,<br><span>for the community.</span></h1>
+                <p class="lead">
+                    Kirka Community Hub is a solo, open source project by  <a href="https://discord.com/users/841926384838115358" target="_blank" rel="noopener noreferrer"> <strong
+                        style="color:var(--text)">imnotkoolkid</strong></a>
+                    a hub for everything Kirka.io . Every contribution, big or small, keeps this place alive and growing.
+                </p>
             </div>
-            <h1>Built by the community,<br><span>for the community.</span></h1>
-            <p class="lead">
-                Kirka Community Hub is a solo, open source project by  <a href="https://discord.com/users/841926384838115358" target="_blank" rel="noopener noreferrer"> <strong
-                    style="color:var(--text)">imnotkoolkid</strong></a>
-                a hub for everything Kirka.io . Every contribution, big or small, keeps this place alive and growing.
-            </p>
-      
         </div>
 
-        <div class="contrib-divider"></div>
+
+
 
         <div class="contrib-sections">
 

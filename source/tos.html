@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kirka Community Hub - Terms of Service</title>
     <link rel="icon" type="image/png" href="assets/icon.png">
-    <meta name="description" content="Read the Terms of Service for Kirka Community Hub — a community platform for Kirka.io resources.">
+    <meta name="description" content="Read the Terms of Service for Kirka Community Hub - a community platform for Kirka.io resources.">
     <meta name="keywords" content="Kirka Community Hub terms, Kirka ToS, kirka.io terms of service">
     <meta name="author" content="imnotkoolkid">
     <meta name="robots" content="index, follow">
@@ -36,7 +36,6 @@
                 linear-gradient(rgba(255, 255, 255, .04) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(255, 255, 255, .04) 1px, transparent 1px);
             background-size: 100% 100%, 50px 50px, 50px 50px;
-            border-bottom: 1px solid var(--mod-card-border);
             position: relative;
         }
 
@@ -79,6 +78,8 @@
             color: var(--mod-green);
             margin-bottom: 16px;
             font-weight: 700;
+            display: flex;
+            align-items: center;
         }
 
         .tos-toc ol {
@@ -188,7 +189,6 @@
             gap: 14px;
             margin-bottom: 18px;
             padding-bottom: 14px;
-            border-bottom: 1px solid var(--mod-card-border);
         }
 
         .tos-section-number {
@@ -226,11 +226,6 @@
             line-height: 1.7;
             padding: 6px 0 6px 24px;
             position: relative;
-            border-bottom: 1px solid rgba(48, 54, 61, .4);
-        }
-
-        .tos-list li:last-child {
-            border-bottom: none;
         }
 
         .tos-list li::before {
@@ -266,6 +261,8 @@
             background: rgba(255, 180, 0, .04);
             border: 1px solid rgba(255, 180, 0, .15);
             border-left: 3px solid #ffb400;
+            display: flex;
+            align-items: center;
         }
     </style>
 </head>
@@ -402,8 +399,9 @@
                     <li>Damage to devices or operating systems</li>
                     <li>Network misuse or abuse</li>
                 </ul>
-                <p>Users are solely responsible for evaluating the trustworthiness and safety of any third-party
-                    software before installation.</p>
+                <div class="tos-warning"><i data-lucide="alert-triangle"
+                        style="color:#ffb400;margin-right:8px"></i>Users are solely responsible for evaluating the trustworthiness and safety of any third-party
+                    software before installation.</div>
             </div>
 
             <div class="tos-section" id="s8">
