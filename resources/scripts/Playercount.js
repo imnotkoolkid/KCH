@@ -61,7 +61,7 @@
 
         async function updatePlayerCount() {
           try {
-            const regions = ['eu', 'na', 'sa', 'asia', 'oceania'];
+            const regions = ['eu', 'na', 'asia'];
             const counts = await Promise.all(regions.map(region => playercountgetter(region)));
             const globalplayercount = counts.reduce((sum, num) => sum + Number(num), 0);
 
@@ -69,9 +69,7 @@
               createHTMLelement("TOTAL", globalplayercount, "playcountelement"),
               createHTMLelement("EU", counts[0], "playcountelementeu"),
               createHTMLelement("NA", counts[1], "playcountelementna"),
-              createHTMLelement("SA", counts[2], "playcountelementsa"),
-              createHTMLelement("ASIA", counts[3], "playcountelementasia"),
-              createHTMLelement("OCE", counts[4], "playcountelementoce")
+              createHTMLelement("ASIA", counts[2], "playcountelementasia")
             ]);
 
             const currentlyplaying = document.createElement("div");

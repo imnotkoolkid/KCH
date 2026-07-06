@@ -3,7 +3,7 @@
     {
       "name": "Custom Skin Link",
       "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/coustomskinlink.js",
-      "owner": "unknown",
+      "owner": "boden, infi, SheriffCarry, skywalk",
       "discord": "",
       "description": "customize player body and head colors or use a custom skin via a skin URL. (client only)",
       "previewImage": ""
@@ -11,8 +11,8 @@
     {
       "name": "WASD Shown",
       "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/WasdShown.js",
-      "owner": "unknown",
-      "discord": "",
+      "owner": "grubbify",
+      "discord": "https://discord.com/users/1424710564348821504",
       "description": "displays a live WASD key overlay to show movement inputs.",
       "previewImage": ""
     },
@@ -70,14 +70,6 @@
       "owner": "unknown",
       "discord": "",
       "description": "automatically opens all available cards at once",
-      "previewImage": ""
-    },
-    {
-      "name": "Fabinglbs",
-      "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/Fabinglbs.js",
-      "owner": "unknown",
-      "discord": "",
-      "description": "loads custom glb models for smaller guns",
       "previewImage": ""
     },
     {
