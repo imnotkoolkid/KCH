@@ -79,16 +79,6 @@
     "development": "inactive",
     "downloadUrl": "https://github.com/42infi/juice-client/releases"
   },
-    {
-    "name": "Obsidian Client",
-    "owner": "imnotkoolkid",
-    "icon": "https://raw.githubusercontent.com/imnotkoolkid/OBSIDIAN-CLIENT-preview/refs/heads/main/assets/Obsidian%20Client.ico",
-    "description": "Obsidian Client for Kirka.io",
-    "platforms": ["Windows", "macOS"],
-    "source": "open source",
-    "development": "inactive",
-    "downloadUrl": "https://github.com/imnotkoolkid/OBSIDIAN-CLIENT-preview/releases"
-  },
   {
     "name": "Dawn Client v2",
     "owner": "zVipexx",
