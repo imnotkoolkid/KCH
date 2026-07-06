@@ -187,21 +187,16 @@
 
         .contrib-section-label {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            align-items: center;
             gap: 10px;
             padding-top: 4px;
         }
 
         .contrib-section-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 10px;
-            background: rgba(27, 217, 106, 0.1);
-            border: 1px solid rgba(27, 217, 106, 0.2);
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 4px;
         }
 
         .contrib-section-icon svg {
@@ -269,23 +264,6 @@
             background: rgba(27, 217, 106, 0.04);
         }
 
-        .contrib-way-dot {
-            width: 28px;
-            height: 28px;
-            border-radius: 8px;
-            background: rgba(27, 217, 106, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            margin-top: 1px;
-        }
-
-        .contrib-way-dot svg {
-            width: 14px;
-            height: 14px;
-            color: #1bd96a;
-        }
 
         .contrib-way-text strong {
             display: block;
@@ -442,14 +420,13 @@
                     <p>This project grows because people add to it. If you’ve built something cool, found a bug, or just have an idea you can help out.</p>
                     <div class="contrib-ways">  
                         <div class="contrib-way">
-                            <div class="contrib-way-dot"><i data-lucide="palette"></i></div>
                             <div class="contrib-way-text">
                                 <strong>Submit CSS</strong>
                                <span>Made a custom CSS theme for Kirka.io? Submit it to the catalogue, or help keep older themes working with the latest version of the game.</span>
                             </div>
                         </div>
                         <div class="contrib-way">
-                            <div class="contrib-way-dot"><i data-lucide="code-2"></i></div>
+       
                             <div class="contrib-way-text">
                                 <strong>Help build the site</strong>
                                 <span>Front-end work, bug fixes, new features, refactors are open for pull requests on
@@ -457,7 +434,7 @@
                             </div>
                         </div>
                         <div class="contrib-way">
-                            <div class="contrib-way-dot"><i data-lucide="bug"></i></div>
+               
                             <div class="contrib-way-text">
                                 <strong>Report bugs or issues</strong>
                                 <span>Spotted something broken or weird? Open an issue on the GitHub repo so it can be
@@ -465,7 +442,7 @@
                             </div>
                         </div>
                         <div class="contrib-way">
-                            <div class="contrib-way-dot"><i data-lucide="lightbulb"></i></div>
+                 
                             <div class="contrib-way-text">
                                 <strong>Suggest ideas</strong>
                                 <span>Have a feature request or idea for what the hub should include? Drop it as a
@@ -473,7 +450,7 @@
                             </div>
                         </div>
                         <div class="contrib-way">
-                            <div class="contrib-way-dot"><i data-lucide="megaphone"></i></div>
+                    
                             <div class="contrib-way-text">
                                 <strong>Spread the word</strong>
                                 <span>Share the hub with other Kirka players. Growing the community is one of the most
