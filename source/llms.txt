@@ -5,7 +5,7 @@
 - Assets: /assets.html (Scripts, Skyboxes, Kill Icons, and Sounds)
 - CSS Themes: /css.html (Free and paid themes for Kirka)
 - Crosshairs: /crosshairs.html (crosshair overlays)
-- Maps: /maps.html (custom & cummunit maps)
+- Maps: /maps.html (custom & community maps)
 - Textures: /textures.html (Custom map textures)
 - Clients: /clients.html  (game clients for kirka)
 
@@ -15,3 +15,6 @@
 - Submission: /submit-content.html (Community contribution portal)
 - Contribution: /contribution.html (Guide to contributing to KCH)
 - Legal: /tos.html (Terms of Service) and /report.html (Report issues)
+
+## Developer
+- API Reference: /api.html (Public API for all KCH data – CSS themes, crosshairs, textures, clients, scripts, skyboxes, sounds, maps, and kill icons)

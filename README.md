@@ -17,6 +17,7 @@ community-driven, open source resource hub for [Kirka.io](https://kirka.io) host
 | `clients.html` | Community game clients and launchers |
 | `assets.html` | Scripts, skyboxes, kill icons, and sound packs |
 | `maps.html` | kirka maps catalogue |
+| `api.html` | Public API reference for all KCH data endpoints |
 | `contribution.html` | Contribution guide |
 | `submit-content.html` | Content submission form |
 | `tos.html` | Terms of Service |

@@ -48,4 +48,8 @@
     <loc>https://kirkacommunityhub.pages.dev/maps.html</loc>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://kirkacommunityhub.pages.dev/api.html</loc>
+    <priority>0.7</priority>
+  </url>
 </urlset>
