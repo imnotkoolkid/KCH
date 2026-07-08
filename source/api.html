@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kirka Community Hub - API Reference</title>
+    <link rel="icon" type="image/png" href="assets/icon.png">
+    <link rel="stylesheet" href="src/pages.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <meta name="description"
+        content="KCH API Reference - Full documentation for all Kirka Community Hub JSON data endpoints.">
+    <meta name="theme-color" content="#1bd96a">
+    <style>
+        .api-hero {
+            padding: 140px 0 60px;
+            text-align: center;
+            background:
+                radial-gradient(circle at 50% 0%, rgba(27, 217, 106, .08) 0%, transparent 70%),
+                linear-gradient(rgba(255, 255, 255, .04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, .04) 1px, transparent 1px);
+            background-size: 100% 100%, 50px 50px, 50px 50px;
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .api-hero::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+            background: linear-gradient(transparent, var(--bg));
+            pointer-events: none;
+        }
+
+        .api-header {
+            position: relative;
+            z-index: 1;
+        }
+
+        .api-header h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            margin-bottom: 14px;
+            color: #fff;
+        }
+
+        .api-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .api-container {
+            max-width: 900px;
+            margin: 0 auto 40px;
+            padding: 0 20px;
+        }
+
+        .api-endpoint {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 30px;
+            border: 1px solid var(--border);
+        }
+
+        .api-endpoint-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .api-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .api-url-wrapper {
+            display: flex;
+            align-items: stretch;
+            gap: 8px;
+            width: 100%;
+            flex: 1 0 100%;
+        }
+
+        .api-url {
+            background: rgba(27, 217, 106, 0.1);
+            color: var(--green);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            flex: 1 1 0%;
+            min-width: 0;
+            overflow: hidden;
+        }
+
+        .api-url a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .api-url a:hover {
+            text-decoration: underline;
+        }
+
+        .copy-btn-box {
+            flex: 0 0 auto;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .copy-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px 10px;
+            border-radius: 6px;
+            transition: color 0.2s, background 0.2s;
+        }
+
+        .copy-btn:hover {
+            color: var(--text);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .copy-btn i {
+            width: 18px;
+            height: 18px;
+        }
+
+        .api-description {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .api-code-block {
+            background: #0d1117;
+            padding: 16px;
+            border-radius: 8px;
+            overflow-x: auto;
+            border: 1px solid var(--border);
+        }
+
+        .api-code-block pre {
+            margin: 0;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: #c9d1d9;
+            line-height: 1.5;
+        }
+
+        .api-fields-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        .api-fields-table th,
+        .api-fields-table td {
+            text-align: left;
+            padding: 12px 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .api-fields-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .api-fields-table th {
+            color: #fff;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.03);
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.5px;
+        }
+
+        .api-fields-table td:first-child {
+            font-family: 'JetBrains Mono', monospace;
+            color: #7ee787;
+        }
+
+        .api-fields-table td:nth-child(2) {
+            color: #a5d6ff;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+        }
+
+        .api-fields-table td:last-child {
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        .code-string {
+            color: #a5d6ff;
+        }
+
+        .code-key {
+            color: #7ee787;
+        }
+
+        .code-boolean,
+        .code-number {
+            color: #79c0ff;
+        }
+
+        .code-null {
+            color: #ff7b72;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="assets/icon.png" alt="Kirka Logo" onerror="this.style.display='none'">
+                <span>Kirka Community Hub</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link"><i data-lucide="chevron-left"></i> Back</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="api-hero">
+            <div class="api-header container">
+                <h1>API Reference</h1>
+                <p>Public API endpoints for all Kirka Community Hub data.<br>All endpoints support standard GET
+                    requests.</p>
+            </div>
+        </div>
+
+        <div class="api-container">
+
+            <div class="api-endpoint">
+                <div class="api-endpoint-header">
+                    <div class="api-title">CSS Themes</div>
+                    <div class="api-url-wrapper">
+                        <div class="api-url">
+                            <a href="https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/data/css.json"
+                                target="_blank">https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/data/css.json</a>
+                        </div>
+                        <div class="copy-btn-box">
+                            <button class="copy-btn"
+                                onclick="copyApiUrl(this, 'https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/data/css.json')"
+                                title="Copy URL">
+                                <i data-lucide="copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="api-description">Example output: (returns an array)</div>
+                <div class="api-code-block">
+                    <pre class="json-code">[
+  {
+    "title": "css_name",
+    "description": "desc",
+    "homeImage": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/css-imgs/css_name.webp",
+    "ingameImage": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/css-imgs/css_name_ingame.webp",
+    "tags": ["tag_1", "tag_2", "tag_3"],
+    "availability": "free",
+    "owner": "owner_name",
+    "discord": "https://discord.com/users/owner_user_id",
+    "label": "featured",
+    "downloadUrl": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/css-files/css_name.css"
+  }
+]</pre>
+                </div>
+
+                <table class="api-fields-table">
+                    <thead>
+                        <tr>
+                            <th>Field</th>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>availability</td>
+                            <td>string</td>
+                            <td>Can be <code>"free"</code>, <code>"paid"</code>, or <code>"showcase"</code>. Determines
+                                how the theme is presented to the user.</td>
+                        </tr>
+                        <tr>
+                            <td>label</td>
+                            <td>string</td>
+                            <td>Set to <code>"featured"</code> to display the theme in the featured section. Will be
+                                empty for regular themes.</td>
+                        </tr>
+                        <tr>
+                            <td>downloadUrl</td>
+                            <td>string</td>
+                            <td>Direct URL to the `.css` file. <strong>Note:</strong> empty for <code>"paid"</code> and
+                                <code>"showcase"</code> availability.</td>
+                        </tr>
+                        <tr>
+                            <td>discord</td>
+                            <td>string</td>
+                            <td>Optional link to the creator's discord profile. Empty if unknown.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="api-endpoint">
+                <div class="api-endpoint-header">
+                    <div class="api-title">Crosshairs</div>
+                    <div class="api-url-wrapper">
+                        <div class="api-url">
+                            <a href="https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/data/crosshair.json"
+                                target="_blank">https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/data/crosshair.json</a>
+                        </div>
+                        <div class="copy-btn-box">
+                            <button class="copy-btn"
+                                onclick="copyApiUrl(this, 'https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/data/crosshair.json')"
+                                title="Copy URL">
+                                <i data-lucide="copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="api-description">Example output: (returns an array)</div>
+                <div class="api-code-block">
+                    <pre class="json-code">[
+  {
+    "owner": "owner_name",
+    "tags": ["tag_1", "tag_2"],
+    "Crosshair": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/crosshairs/crosshair_file_name.png",
+    "id": "crosshair_id",
+    "discord": "https://discord.com/users/owner_user_id",
+    "label": "featured"
+  }
+]</pre>
+                </div>
+
+                <table class="api-fields-table">
+                    <thead>
+                        <tr>
+                            <th>Field</th>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td>label</td>
+                            <td>string</td>
+                            <td>Set to <code>"featured"</code> for highlighted crosshairs. Will be empty or omitted
+                                otherwise.</td>
+                        </tr>
+                        <tr>
+                            <td>discord</td>
+                            <td>string</td>
+                            <td>Optional link to the creator's discord profile. Empty if unknown.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="api-endpoint">
+                <div class="api-endpoint-header">
+                    <div class="api-title">Textures</div>
+                    <div class="api-url-wrapper">
+                        <div class="api-url">
+                            <a href="https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/data/texture.json"
+                                target="_blank">https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/data/texture.json</a>
+                        </div>
+                        <div class="copy-btn-box">
+                            <button class="copy-btn"
+                                onclick="copyApiUrl(this, 'https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/data/texture.json')"
+                                title="Copy URL">
+                                <i data-lucide="copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="api-description">Example output: (returns an array)</div>
+                <div class="api-code-block">
+                    <pre class="json-code">[
+  {
+    "owner": "owner_name",
+    "tags": ["tag_1", "tag_2", "tag_3"],
+    "textureImage": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/textures/texture_file_name.png",
+    "id": "texture_id",
+    "discord": "https://discord.com/users/owner_user_id",
+    "label": "featured"
+  }
+]</pre>
+                </div>
+
+                <table class="api-fields-table">
+                    <thead>
+                        <tr>
+                            <th>Field</th>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>label</td>
+                            <td>string</td>
+                            <td>Set to <code>"featured"</code> for highlighted textures. Will be empty or omitted
+                                otherwise.</td>
+                        </tr>
+                        <tr>
+                            <td>discord</td>
+                            <td>string</td>
+                            <td>Optional link to the creator's discord profile. Empty if unknown.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="api-endpoint">
+                <div class="api-endpoint-header">
+                    <div class="api-title">Clients</div>
+                    <div class="api-url-wrapper">
+                        <div class="api-url">
+                            <a href="https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/data/clients.json"
+                                target="_blank">https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/data/clients.json</a>
+                        </div>
+                        <div class="copy-btn-box">
+                            <button class="copy-btn"
+                                onclick="copyApiUrl(this, 'https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/data/clients.json')"
+                                title="Copy URL">
+                                <i data-lucide="copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="api-description">Example output: (returns an array)</div>
+                <div class="api-code-block">
+                    <pre class="json-code">[
+  {
+    "name": "Client_name",
+    "owner": "Client_owner",
+    "icon": "client_icon.png",
+    "description": "Client_description",
+    "platforms": ["platform_1", "platform_2"],
+    "source": "open source",
+    "development": "active",
+    "downloadUrl": "download_url"
+  }
+]</pre>
+                </div>
+
+                <table class="api-fields-table">
+                    <thead>
+                        <tr>
+                            <th>Field</th>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>platforms</td>
+                            <td>array</td>
+                            <td>Array of supported operating systems (e.g., <code>["Windows", "macOS", "Linux"]</code>).
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>source</td>
+                            <td>string</td>
+                            <td>Can be <code>"open source"</code> or <code>"closed source"</code>.</td>
+                        </tr>
+                        <tr>
+                            <td>development</td>
+                            <td>string</td>
+                            <td>Status of the project, <code>"active"</code> or <code>"inactive"</code>.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="api-endpoint">
+                <div class="api-endpoint-header">
+                    <div class="api-title">Scripts</div>
+                    <div class="api-url-wrapper">
+                        <div class="api-url">
+                            <a href="https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/data/script.json"
+                                target="_blank">https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/data/script.json</a>
+                        </div>
+                        <div class="copy-btn-box">
+                            <button class="copy-btn"
+                                onclick="copyApiUrl(this, 'https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/data/script.json')"
+                                title="Copy URL">
+                                <i data-lucide="copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="api-description">Example output: (returns an object)</div>
+                <div class="api-code-block">
+                    <pre class="json-code">{
+  "scripts": [
+    {
+      "name": "script_name",
+      "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/scripts/script_name.js",
+      "owner": "script_owner",
+      "discord": "https://discord.com/users/owner_user_id",
+      "description": "script_description",
+      "previewImage": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/script-imgs/script_name.png"
+    }
+  ]
+}</pre>
+                </div>
+
+                <table class="api-fields-table">
+                    <thead>
+                        <tr>
+                            <th>Field</th>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>previewImage</td>
+                            <td>string</td>
+                            <td>Optional link to an image showcasing the script. May be empty.</td>
+                        </tr>
+                        <tr>
+                            <td>discord</td>
+                            <td>string</td>
+                            <td>Optional link to the creator's discord profile. Empty if unknown.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="api-endpoint">
+                <div class="api-endpoint-header">
+                    <div class="api-title">Skyboxes</div>
+                    <div class="api-url-wrapper">
+                        <div class="api-url">
+                            <a href="https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/data/skyboxes.json"
+                                target="_blank">https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/data/skyboxes.json</a>
+                        </div>
+                        <div class="copy-btn-box">
+                            <button class="copy-btn"
+                                onclick="copyApiUrl(this, 'https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/data/skyboxes.json')"
+                                title="Copy URL">
+                                <i data-lucide="copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="api-description">Example output: (returns an object)</div>
+                <div class="api-code-block">
+                    <pre class="json-code">{
+  "skyboxes": [
+    {
+      "id": "skybox_id",
+      "name": "skybox_name",
+      "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/skyboxs/skybox_file_name.png",
+      "owner": "owner_name",
+      "discord": "https://discord.com/users/owner_user_id",
+      "isPack": false
+    },
+    {
+      "id": "skybox_pack_id",
+      "name": "skybox_pack_name",
+      "owner": "owner_name",
+      "discord": "https://discord.com/users/owner_user_id",
+      "isPack": true,
+      "images": [
+                {
+                    "name": "up",
+                    "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/skyboxs/skybox_pack_name/up.png"
+                },
+                {
+                    "name": "down",
+                    "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/skyboxs/skybox_pack_name/down.png"
+                },
+                {
+                    "name": "back",
+                    "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/skyboxs/skybox_pack_name/back.png"
+                },
+                {
+                    "name": "front",
+                    "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/skyboxs/skybox_pack_name/front.png"
+                },
+                {
+                    "name": "right",
+                    "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/skyboxs/skybox_pack_name/right.png"
+                },
+                {
+                    "name": "left",
+                    "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/skyboxs/skybox_pack_name/left.png"
+                }
+            ]
+    }
+  ]
+}</pre>
+                </div>
+
+                <table class="api-fields-table">
+                    <thead>
+                        <tr>
+                            <th>Field</th>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>isPack</td>
+                            <td>boolean</td>
+                            <td>If <code>true</code>, indicates that it containing multiple skyboxes instead of a single
+                                image.</td>
+                        </tr>
+                        <tr>
+                            <td>discord</td>
+                            <td>string</td>
+                            <td>Optional link to the creator's discord profile. Empty if unknown.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="api-endpoint">
+                <div class="api-endpoint-header">
+                    <div class="api-title">Sounds</div>
+                    <div class="api-url-wrapper">
+                        <div class="api-url">
+                            <a href="https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/data/sounds.json"
+                                target="_blank">https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/data/sounds.json</a>
+                        </div>
+                        <div class="copy-btn-box">
+                            <button class="copy-btn"
+                                onclick="copyApiUrl(this, 'https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/data/sounds.json')"
+                                title="Copy URL">
+                                <i data-lucide="copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="api-description">Example output: (returns an object)</div>
+                <div class="api-code-block">
+                    <pre class="json-code">{
+  "sounds": [
+    {
+      "name": "Sound_Pack_Name ",
+      "owner": "owner_name",
+      "audioFiles": [
+        {
+          "name": "Earth",
+          "url": "https://rawcdn.githack.com/imnotkoolkid/KCH/bcf452d8a640911d87cad088efcfb8d695fe0d9c/resources/sounds/sound_file_name/__Earth__.37abd171.mp3"
+        },
+        {
+          "name": "Grass",
+          "url": "https://rawcdn.githack.com/imnotkoolkid/KCH/bcf452d8a640911d87cad088efcfb8d695fe0d9c/resources/sounds/sound_file_name/__Grass__.9d721edd.mp3"
+        },
+        . . .
+      ]
+    }
+}</pre>
+                </div>
+            </div>
+
+            <div class="api-endpoint">
+                <div class="api-endpoint-header">
+                    <div class="api-title">Maps</div>
+                    <div class="api-url-wrapper">
+                        <div class="api-url">
+                            <a href="https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/data/maps.json"
+                                target="_blank">https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/data/maps.json</a>
+                        </div>
+                        <div class="copy-btn-box">
+                            <button class="copy-btn"
+                                onclick="copyApiUrl(this, 'https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/data/maps.json')"
+                                title="Copy URL">
+                                <i data-lucide="copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="api-description">Example output: (returns an array)</div>
+                <div class="api-code-block">
+                    <pre class="json-code">[
+    {
+        "name": "map_name",
+        "img": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/map-imgs/map_name.webp",
+        "downloadUrl": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/maps/map_name.json"
+    }
+]</pre>
+                </div>
+
+
+            </div>
+
+            <div class="api-endpoint">
+                <div class="api-endpoint-header">
+                    <div class="api-title">Kill Icons</div>
+                    <div class="api-url-wrapper">
+                        <div class="api-url">
+                            <a href="https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/data/kill_icons.json"
+                                target="_blank">https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/data/kill_icons.json</a>
+                        </div>
+                        <div class="copy-btn-box">
+                            <button class="copy-btn"
+                                onclick="copyApiUrl(this, 'https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/data/kill_icons.json')"
+                                title="Copy URL">
+                                <i data-lucide="copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="api-description">Example output: (returns an object)</div>
+                <div class="api-code-block">
+                    <pre class="json-code">{
+  "killIcons": [
+    {
+      "id": "kill_icon_id",
+      "name": "Kill_Icon_Name",
+      "url": "https://raw.githubusercontent.com/imnotkoolkid/KCH/refs/heads/main/resources/kill%20icons/kill_icon_id.webp",
+      "owner": "owner_name",
+      "discord": "https://discord.com/users/owner_user_id"
+    }
+  ]
+}</pre>
+                </div>
+
+                <table class="api-fields-table">
+                    <thead>
+                        <tr>
+                            <th>Field</th>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>discord</td>
+                            <td>string</td>
+                            <td>Optional link to the creator's discord profile. Empty if unknown.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div>
+                <a href="index.html" class="footer-logo">
+                    <img src="assets/icon.png" width="30" onerror="this.style.display='none'">
+                    <span>Kirka Community Hub</span>
+                </a>
+                <p style="color:var(--text-muted);font-size:.9rem;max-width:300px">Not affiliated with
+                    Kirka.io.<br>Built by the community, for the community.</p>
+            </div>
+            <div class="footer-links-wrapper">
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://github.com/imnotkoolkid/kch" target="_blank" rel="noopener noreferrer">github</a></li>
+                        <li><a href="api.html">api</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="contribution.html">contribution</a></li>
+                        <li><a href="submit-content.html">Submit Content</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="tos.html">Terms Of Service</a></li>
+                        <li><a href="report.html">Report</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function syntaxHighlight(json) {
+            json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
+                var cls = 'code-string';
+                if (/^"/.test(match)) {
+                    if (/:$/.test(match)) {
+                        cls = 'code-key';
+                    }
+                } else if (/true|false/.test(match)) {
+                    cls = 'code-boolean';
+                } else if (/null/.test(match)) {
+                    cls = 'code-null';
+                } else if (/^-?\d/.test(match)) {
+                    cls = 'code-number';
+                }
+                return '<span class="' + cls + '">' + match + '</span>';
+            });
+        }
+
+        async function copyApiUrl(btn, url) {
+            try {
+                await navigator.clipboard.writeText(url);
+                const icon = btn.querySelector('[data-lucide]');
+                if (!icon) return;
+                const oldIcon = icon.getAttribute('data-lucide');
+                icon.setAttribute('data-lucide', 'check-check');
+                icon.style.color = 'var(--green)';
+                lucide.createIcons();
+                setTimeout(() => {
+                    const refreshedIcon = btn.querySelector('[data-lucide]');
+                    if (refreshedIcon) {
+                        refreshedIcon.setAttribute('data-lucide', oldIcon);
+                        refreshedIcon.style.color = '';
+                    }
+                    lucide.createIcons();
+                }, 600);
+            } catch (err) {
+                console.error('Failed to copy', err);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll('.json-code').forEach(el => {
+                el.innerHTML = syntaxHighlight(el.textContent);
+            });
+            lucide.createIcons();
+        });
+    </script>
+</body>
+
+</html>
