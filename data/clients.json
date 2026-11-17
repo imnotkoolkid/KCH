@@ -66,17 +66,17 @@
     "description": "Electron client for Kirka.io",
     "platforms": ["Windows", "Linux"],
     "source": "open source",
-    "development": "active",
+    "development": "inactive",
     "downloadUrl": "https://github.com/OBS-Akuma/smudgy-client/releases"
   },
   {
     "name": "Aero Client",
     "owner": "daymian",
-    "icon": "",
+    "icon": "https://aeroclient.xyz/img/aero-symbol.png",
     "description": "Tauri client for Kirka.io",
     "platforms": ["Windows", "Linux"],
     "source": "closed source",
-    "development": "inactive",
+    "development": "active",
     "downloadUrl": "https://github.com/d4ym1an/aero-client-releases/releases"
   },
   {
